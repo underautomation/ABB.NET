@@ -1,0 +1,59 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationIcon>Resources\ua.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="Resources\ua.ico" />
+  </ItemGroup>
+
+  <ItemGroup Condition="$(SolutionName.EndsWith(`Dev`))">
+    <ProjectReference Include="..\..\..\ABB\ABB.csproj" />
+  </ItemGroup>
+  <ItemGroup Condition="!$(SolutionName.EndsWith(`Dev`))">
+    <Reference Include="UnderAutomation.ABB">
+      <HintPath>..\Libraries\netstandard2.1\UnderAutomation.ABB.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Compile Update="Components\RmiControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Components\FeaturesControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Components\ErrorListControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Components\ProgramStatesControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Components\DpmControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Components\TPEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>
