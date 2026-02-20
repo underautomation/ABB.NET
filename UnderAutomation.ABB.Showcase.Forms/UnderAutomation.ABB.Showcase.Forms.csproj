@@ -27,6 +27,9 @@
     <Compile Update="Components\RmiControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="Components\Rws2Control.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Components\FeaturesControl.cs">
       <SubType>UserControl</SubType>
     </Compile>

@@ -1,5 +1,6 @@
 ﻿using UnderAutomation.ABB;
 using UnderAutomation.ABB.License;
+using UnderAutomation.ABB.Rws2;
 
 public partial class ConnectControl : UserControl, IUserControl
 {
@@ -20,6 +21,13 @@ public partial class ConnectControl : UserControl, IUserControl
         // Use stored information or set to default
         txtIP.Text = parameters.Address ?? "192.168.0.1";
 
+        // RWS2 parameters
+        var rws2 = parameters.Rws2 ?? new Rws2ConnectParameters();
+        chkRws2.Checked = rws2.Enable;
+        txtRws2User.Text = rws2.Username;
+        txtRws2Password.Text = rws2.Password;
+        udRws2Port.Value = rws2.Port;
+        chkRws2Https.Checked = rws2.UseHttps;
     }
 
 
@@ -58,14 +66,19 @@ public partial class ConnectControl : UserControl, IUserControl
         var parameters = new ConnectionParameters();
         parameters.Address = txtIP.Text;
 
+        // RWS2 parameters
+        parameters.Rws2 = new Rws2ConnectParameters
+        {
+            Enable = chkRws2.Checked,
+            Username = txtRws2User.Text,
+            Password = txtRws2Password.Text,
+            Port = (int)udRws2Port.Value,
+            UseHttps = chkRws2Https.Checked
+        };
+
         // Store information
         Config.Current.ConnectParameters = parameters;
         Config.Save();
-
-        if (parameters.Address == "127.0.0.1" || string.Equals(parameters.Address, "localhost", StringComparison.InvariantCultureIgnoreCase) || string.Equals(parameters.Address, "loopback", StringComparison.InvariantCultureIgnoreCase))
-        {
-            if (MessageBox.Show("Please enter the path to your ROBOGUIDE folder instead of the localhost IP so that the SDK can read the services.txt and connect to the correct TCP ports. Go on anyway?", "Make sure you use localhost ?", MessageBoxButtons.YesNo) != DialogResult.Yes) return;
-        }
 
         try
         {

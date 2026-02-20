@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>UnderAutomation.ABB.Tests.Rws2</RootNamespace>
+    <!-- Each test is a separate .cs with its own Main. Select via /p:StartupObject=ClassName -->
+    <StartupObject>Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Abb\ABB.csproj" />
+  </ItemGroup>
+</Project>

@@ -26,6 +26,7 @@ public partial class MainForm : Form
 
         // Add nodes in left menu and instanciate associated control 
         AddNode(new ConnectControl(_robot));
+        AddNode(new Rws2Control(_robot));
         AddNode(new ContactControl());
         AddNode(new LicenseControl());
 
