@@ -1,6 +1,6 @@
 ﻿using UnderAutomation.ABB;
 using UnderAutomation.ABB.License;
-using UnderAutomation.ABB.Rws2;
+using UnderAutomation.ABB.Rws;
 
 public partial class ConnectControl : UserControl, IUserControl
 {
@@ -21,13 +21,14 @@ public partial class ConnectControl : UserControl, IUserControl
         // Use stored information or set to default
         txtIP.Text = parameters.Address ?? "192.168.0.1";
 
-        // RWS2 parameters
-        var rws2 = parameters.Rws2 ?? new Rws2ConnectParameters();
-        chkRws2.Checked = rws2.Enable;
-        txtRws2User.Text = rws2.Username;
-        txtRws2Password.Text = rws2.Password;
-        udRws2Port.Value = rws2.Port;
-        chkRws2Https.Checked = rws2.UseHttps;
+        // RWS parameters
+        var rws = parameters.Rws ?? new RwsConnectParameters();
+        chkRws.Checked = rws.Enable;
+        txtRws2User.Text = rws.Username;
+        txtRws2Password.Text = rws.Password;
+        udRws2Port.Value = rws.Port;
+        chkRws2Https.Checked = rws.UseHttps;
+        cbVersion.SelectedItem = rws.Version.ToString();
     }
 
 
@@ -67,13 +68,14 @@ public partial class ConnectControl : UserControl, IUserControl
         parameters.Address = txtIP.Text;
 
         // RWS2 parameters
-        parameters.Rws2 = new Rws2ConnectParameters
+        parameters.Rws = new RwsConnectParameters
         {
-            Enable = chkRws2.Checked,
+            Enable = chkRws.Checked,
             Username = txtRws2User.Text,
             Password = txtRws2Password.Text,
             Port = (int)udRws2Port.Value,
-            UseHttps = chkRws2Https.Checked
+            UseHttps = chkRws2Https.Checked,
+            Version = (int)cbVersion.SelectedItem
         };
 
         // Store information
