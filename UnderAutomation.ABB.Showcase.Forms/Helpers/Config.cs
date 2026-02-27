@@ -44,12 +44,11 @@ public class Config
 
     public ConnectionParameters ConnectParameters { get; set; } = new ConnectionParameters();
 
-    public string[] CheckedVariableFiles { get; set; }
 
     #region HMI Properties
     public string Licensee { get; set; }
     public string Key { get; set; }
-    public string FtpPath { get; set; }
+    public string FilePath { get; set; }
     #endregion
 }
 

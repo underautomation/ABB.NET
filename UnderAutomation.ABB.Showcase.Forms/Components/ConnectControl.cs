@@ -75,7 +75,7 @@ public partial class ConnectControl : UserControl, IUserControl
             Password = txtRws2Password.Text,
             Port = (int)udRws2Port.Value,
             UseHttps = chkRws2Https.Checked,
-            Version = (int)cbVersion.SelectedItem
+            Version = int.Parse(cbVersion.SelectedItem.ToString())
         };
 
         // Store information

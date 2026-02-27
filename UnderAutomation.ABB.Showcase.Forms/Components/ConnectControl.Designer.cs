@@ -301,6 +301,7 @@ partial class ConnectControl
         // 
         // cbVersion
         // 
+        cbVersion.DropDownStyle = ComboBoxStyle.DropDownList;
         cbVersion.FormattingEnabled = true;
         cbVersion.Items.AddRange(new object[] { "1", "2" });
         cbVersion.Location = new Point(208, 118);
