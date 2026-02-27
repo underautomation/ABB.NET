@@ -293,7 +293,6 @@ public partial class RwsFileControl : UserControl, IUserControl
         btnDownload.Enabled = selected is FileItem;
         btnRename.Enabled = selected != null;
         btnDelete.Enabled = selected != null;
-
         // Copy: enabled only for files/directories whose name doesn't start with $
         bool canCopy = (selected is FileItem || selected is DirectoryItem)
             && selected.Name != null
@@ -372,4 +371,5 @@ public partial class RwsFileControl : UserControl, IUserControl
         ReloadList();
         SelectFile(_copiedItem.Name);
     }
+
 }
