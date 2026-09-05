@@ -49,6 +49,7 @@ partial class ConnectControl
         label3 = new Label();
         cbVersion = new ComboBox();
         addressTooltip = new ToolTip(components);
+        label4 = new Label();
         tableLayoutPanel1.SuspendLayout();
         panel2.SuspendLayout();
         ((System.ComponentModel.ISupportInitialize)udRws2Port).BeginInit();
@@ -61,6 +62,7 @@ partial class ConnectControl
         tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 205F));
         tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 250F));
         tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle());
+        tableLayoutPanel1.Controls.Add(label4, 2, 5);
         tableLayoutPanel1.Controls.Add(panel2, 1, 6);
         tableLayoutPanel1.Controls.Add(chkRws, 1, 2);
         tableLayoutPanel1.Controls.Add(lblConnected, 1, 10);
@@ -317,6 +319,16 @@ partial class ConnectControl
         addressTooltip.UseAnimation = false;
         addressTooltip.UseFading = false;
         // 
+        // label4
+        // 
+        label4.Anchor = AnchorStyles.Left;
+        label4.AutoSize = true;
+        label4.Location = new Point(458, 180);
+        label4.Name = "label4";
+        label4.Size = new Size(150, 15);
+        label4.TabIndex = 11;
+        label4.Text = "Default password : robotics";
+        // 
         // ConnectControl
         // 
         AutoScaleDimensions = new SizeF(7F, 15F);
@@ -356,4 +368,5 @@ partial class ConnectControl
     private Label label2;
     private Label label3;
     private ComboBox cbVersion;
+    private Label label4;
 }

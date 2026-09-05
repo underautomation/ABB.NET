@@ -27,9 +27,6 @@
     <Compile Update="Components\RmiControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="Components\Rws2Control.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Update="Components\FeaturesControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -40,6 +37,12 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Components\DpmControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Components\RwsIoControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Components\RwsControllerControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Components\TPEditorControl.cs">

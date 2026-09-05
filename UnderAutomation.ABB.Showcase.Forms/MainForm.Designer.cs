@@ -241,7 +241,7 @@ partial class MainForm
         panelTitle.Location = new Point(0, 0);
         panelTitle.Margin = new Padding(4, 0, 4, 0);
         panelTitle.Name = "panelTitle";
-        panelTitle.Size = new Size(766, 59);
+        panelTitle.Size = new Size(733, 59);
         panelTitle.TabIndex = 0;
         panelTitle.Text = "...";
         panelTitle.TextAlign = ContentAlignment.MiddleCenter;
@@ -250,9 +250,9 @@ partial class MainForm
         // 
         lnkSource.Cursor = Cursors.Hand;
         lnkSource.Dock = DockStyle.Right;
-        lnkSource.Location = new Point(766, 0);
+        lnkSource.Location = new Point(733, 0);
         lnkSource.Name = "lnkSource";
-        lnkSource.Size = new Size(130, 59);
+        lnkSource.Size = new Size(163, 59);
         lnkSource.TabIndex = 2;
         lnkSource.TabStop = true;
         lnkSource.Text = "View C# page source\r\naaa.cs";
