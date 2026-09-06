@@ -7,18 +7,18 @@ using System.Windows.Forms;
 using UnderAutomation.ABB;
 using UnderAutomation.ABB.Rws.Data;
 
-public partial class RwsSystemControl : UserControl, IUserControl
+public partial class RwsRapidControl : UserControl, IUserControl
 {
     private AbbController _robot;
 
-    public RwsSystemControl(AbbController robot)
+    public RwsRapidControl(AbbController robot)
     {
         _robot = robot;
         InitializeComponent();
     }
 
     #region IUserControl
-    public string Title => "System (RWS)";
+    public string Title => "RAPID (RWS)";
 
     public bool FeatureEnabled => _robot?.Rws != null && _robot.Rws.Enabled;
 

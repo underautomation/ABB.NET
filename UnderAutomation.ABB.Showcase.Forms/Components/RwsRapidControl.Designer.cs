@@ -1,5 +1,5 @@
 ﻿
-    partial class RwsSystemControl
+    partial class RwsRapidControl
 {
         /// <summary> 
         /// Variable nécessaire au concepteur.
@@ -29,12 +29,12 @@
     {
         SuspendLayout();
         // 
-        // RwsMotionSystemControl
+        // RwsRapidControl
         // 
         AutoScaleDimensions = new SizeF(7F, 15F);
         AutoScaleMode = AutoScaleMode.Font;
         Margin = new Padding(4, 3, 4, 3);
-        Name = "RwsMotionSystemControl";
+        Name = "RwsRapidControl";
         Size = new Size(818, 764);
         ResumeLayout(false);
     }
