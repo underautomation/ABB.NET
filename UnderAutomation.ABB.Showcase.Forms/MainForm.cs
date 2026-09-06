@@ -24,11 +24,15 @@ public partial class MainForm : Form
 
         InitializeComponent();
 
-        // Add nodes in left menu and instanciate associated control 
+        // Add nodes in left menu and instantiate associated control 
         AddNode(new ConnectControl(_robot));
         AddNode(new RwsControllerControl(_robot));
+        AddNode(new RwsSystemControl(_robot));
         AddNode(new RwsFileControl(_robot));
         AddNode(new RwsIoControl(_robot));
+        AddNode(new RwsMotionSystemControl(_robot));
+        AddNode(new RwsRapidControl(_robot));
+        AddNode(new RwsPanelControl(_robot));
         AddNode(new ContactControl());
         AddNode(new LicenseControl());
 

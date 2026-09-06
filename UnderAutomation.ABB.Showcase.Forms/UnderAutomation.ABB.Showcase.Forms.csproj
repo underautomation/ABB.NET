@@ -39,6 +39,18 @@
     <Compile Update="Components\DpmControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="Components\RwsSystemControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Components\RwsRapidControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Components\RwsPanelControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Components\RwsMotionSystemControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Components\RwsIoControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
