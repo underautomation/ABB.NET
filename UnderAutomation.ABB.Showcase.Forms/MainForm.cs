@@ -33,6 +33,7 @@ public partial class MainForm : Form
         AddNode(new RwsMotionSystemControl(_robot));
         AddNode(new RwsRapidControl(_robot));
         AddNode(new RwsPanelControl(_robot));
+        AddNode(new RwsELogControl(_robot));
         AddNode(new ContactControl());
         AddNode(new LicenseControl());
 
