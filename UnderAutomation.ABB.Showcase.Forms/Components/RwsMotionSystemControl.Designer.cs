@@ -27,6 +27,10 @@ partial class RwsMotionSystemControl
     /// </summary>
     private void InitializeComponent()
     {
+        pnlMastership = new Panel();
+        lblMastershipStatus = new Label();
+        btnTakeMastership = new Button();
+        btnReleaseMastership = new Button();
         tabControl = new TabControl();
         tabSystem = new TabPage();
         flowSystem = new FlowLayoutPanel();
@@ -539,10 +543,56 @@ partial class RwsMotionSystemControl
         ((System.ComponentModel.ISupportInitialize)numGetAllJointSolutionsQ2).BeginInit();
         ((System.ComponentModel.ISupportInitialize)numGetAllJointSolutionsQ3).BeginInit();
         ((System.ComponentModel.ISupportInitialize)numGetAllJointSolutionsQ4).BeginInit();
+        pnlMastership.SuspendLayout();
         SuspendLayout();
         // 
+        // pnlMastership
+        //
+        pnlMastership.BackColor = Color.FromArgb(255, 236, 179);
+        pnlMastership.Controls.Add(lblMastershipStatus);
+        pnlMastership.Controls.Add(btnTakeMastership);
+        pnlMastership.Controls.Add(btnReleaseMastership);
+        pnlMastership.Dock = DockStyle.Top;
+        pnlMastership.Location = new Point(0, 0);
+        pnlMastership.Name = "pnlMastership";
+        pnlMastership.Padding = new Padding(8, 6, 8, 6);
+        pnlMastership.Size = new Size(890, 42);
+        pnlMastership.TabIndex = 0;
+        //
+        // lblMastershipStatus
+        //
+        lblMastershipStatus.Dock = DockStyle.Fill;
+        lblMastershipStatus.Location = new Point(8, 6);
+        lblMastershipStatus.Name = "lblMastershipStatus";
+        lblMastershipStatus.Size = new Size(542, 30);
+        lblMastershipStatus.TabIndex = 0;
+        lblMastershipStatus.Text = "Mastership";
+        lblMastershipStatus.TextAlign = ContentAlignment.MiddleLeft;
+        //
+        // btnTakeMastership
+        //
+        btnTakeMastership.Dock = DockStyle.Right;
+        btnTakeMastership.Location = new Point(550, 6);
+        btnTakeMastership.Name = "btnTakeMastership";
+        btnTakeMastership.Size = new Size(162, 30);
+        btnTakeMastership.TabIndex = 1;
+        btnTakeMastership.Text = "1. Take mastership";
+        btnTakeMastership.UseVisualStyleBackColor = true;
+        btnTakeMastership.Click += btnTakeMastership_Click;
+        //
+        // btnReleaseMastership
+        //
+        btnReleaseMastership.Dock = DockStyle.Right;
+        btnReleaseMastership.Location = new Point(712, 6);
+        btnReleaseMastership.Name = "btnReleaseMastership";
+        btnReleaseMastership.Size = new Size(162, 30);
+        btnReleaseMastership.TabIndex = 2;
+        btnReleaseMastership.Text = "3. Release mastership";
+        btnReleaseMastership.UseVisualStyleBackColor = true;
+        btnReleaseMastership.Click += btnReleaseMastership_Click;
+        //
         // tabControl
-        // 
+        //
         tabControl.Controls.Add(tabSystem);
         tabControl.Controls.Add(tabUnits);
         tabControl.Controls.Add(tabPositions);
@@ -4872,6 +4922,7 @@ partial class RwsMotionSystemControl
         AutoScaleDimensions = new SizeF(7F, 15F);
         AutoScaleMode = AutoScaleMode.Font;
         Controls.Add(tabControl);
+        Controls.Add(pnlMastership);
         Margin = new Padding(4, 3, 4, 3);
         Name = "RwsMotionSystemControl";
         Size = new Size(890, 491);
@@ -5015,10 +5066,16 @@ partial class RwsMotionSystemControl
         ((System.ComponentModel.ISupportInitialize)numGetAllJointSolutionsQ2).EndInit();
         ((System.ComponentModel.ISupportInitialize)numGetAllJointSolutionsQ3).EndInit();
         ((System.ComponentModel.ISupportInitialize)numGetAllJointSolutionsQ4).EndInit();
+        pnlMastership.ResumeLayout(false);
         ResumeLayout(false);
     }
 
     #endregion
+
+    private Panel pnlMastership;
+    private Label lblMastershipStatus;
+    private Button btnTakeMastership;
+    private Button btnReleaseMastership;
 
     private TabControl tabControl;
 

@@ -1,8 +1,11 @@
-using System;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
+using System.Drawing;
 using System.Windows.Forms;
 using UnderAutomation.ABB;
 using UnderAutomation.ABB.Common;
+using UnderAutomation.ABB.Rws;
 using UnderAutomation.ABB.Rws.Data;
 
 public partial class RwsMotionSystemControl : UserControl, IUserControl
@@ -14,6 +17,22 @@ public partial class RwsMotionSystemControl : UserControl, IUserControl
     private ExternalJoints _positionTargetExternalAxes = new ExternalJoints();
     private ExternalJoints _mechanicalUnitPositionExternalAxes = new ExternalJoints();
 
+    // The writes the controller refuses unless this client holds the mastership, and the domain each one
+    // belongs to. They are the only controls the bar below locks: everything else reads, and the lead
+    // through state and the collision prediction mode are the two writes a plain connection may make.
+    private (Button Button, MastershipDomain Domain)[] _mastershipButtons =
+        Array.Empty<(Button, MastershipDomain)>();
+
+    // The button captions without the padlock, so that the prefix can be swapped without piling up
+    private readonly Dictionary<Button, string> _mastershipCaptions = new Dictionary<Button, string>();
+
+    private readonly ToolTip _mastershipToolTip = new ToolTip();
+
+    private bool _motionHeld;
+    private bool _editHeld;
+    private string? _mastershipFailure;
+    private bool _wasConnected;
+
     public RwsMotionSystemControl(AbbController robot)
     {
         _robot = robot;
@@ -21,6 +40,7 @@ public partial class RwsMotionSystemControl : UserControl, IUserControl
 
         RegisterGridTypes();
         FillCombos();
+        RegisterMastershipButtons();
     }
 
     // The property grids show these types, and an array of them, as expandable read only rows
@@ -131,6 +151,23 @@ public partial class RwsMotionSystemControl : UserControl, IUserControl
     public void PeriodicUpdate()
     {
         this.Enabled = FeatureEnabled;
+
+        // This runs five times a second, so the bar is only touched when the connection itself changes
+        if (FeatureEnabled == _wasConnected) return;
+        _wasConnected = FeatureEnabled;
+
+        if (FeatureEnabled)
+        {
+            // A fresh connection holds nothing, but the controller is the one that says so
+            ReadMastershipState();
+        }
+        else
+        {
+            // A connection that went away took the mastership with it: the bar must stop claiming it
+            _motionHeld = _editHeld = false;
+            _mastershipFailure = null;
+            ApplyMastershipState();
+        }
     }
 
     public void OnClose()
@@ -139,7 +176,152 @@ public partial class RwsMotionSystemControl : UserControl, IUserControl
 
     public void OnOpen()
     {
+        ReadMastershipState();
     }
+    #endregion
+
+    #region Mastership
+
+    // Every write of this control that the controller gates on the mastership. The motion domain covers
+    // the jogging, the units, the positions, the supervisions and the calibration; the non motion
+    // execution mode lives under the motion system but belongs to the editing domain, which is why the
+    // bar takes both at once.
+    private void RegisterMastershipButtons()
+    {
+        _mastershipButtons = new[]
+        {
+            (btnSetJoggingMechanicalUnit, MastershipDomain.Motion),
+            (btnJog, MastershipDomain.Motion),
+            (btnSetPositionTarget, MastershipDomain.Motion),
+            (btnSetMechanicalUnit, MastershipDomain.Motion),
+            (btnSetAxisPose, MastershipDomain.Motion),
+            (btnSetBaseFrame, MastershipDomain.Motion),
+            (btnSetMechanicalUnitPosition, MastershipDomain.Motion),
+            (btnSetMotionSupervisionMode, MastershipDomain.Motion),
+            (btnSetMotionSupervisionLevel, MastershipDomain.Motion),
+            (btnSetPathSupervisionMode, MastershipDomain.Motion),
+            (btnSetPathSupervisionLevel, MastershipDomain.Motion),
+            (btnSetSmbData, MastershipDomain.Motion),
+            (btnClearSmbData, MastershipDomain.Motion),
+            (btnFineCalibrate, MastershipDomain.Motion),
+            (btnUpdateRevolutionCounter, MastershipDomain.Motion),
+            (btnSynchronizeAxisRevolutionCounter, MastershipDomain.Motion),
+            (btnCommutate, MastershipDomain.Motion),
+
+            (btnSetNonMotionExecutionMode, MastershipDomain.Edit),
+        };
+
+        foreach (var (button, domain) in _mastershipButtons)
+        {
+            _mastershipCaptions[button] = button.Text;
+            _mastershipToolTip.SetToolTip(button, "Needs the mastership of the " + domain + " domain");
+        }
+
+        lblMastershipStatus.Font = new Font(lblMastershipStatus.Font, FontStyle.Bold);
+
+        ApplyMastershipState();
+    }
+
+    // Asks the controller who holds the two domains. The periodic update runs five times a second, far
+    // too often to poll a controller, so the bar is read when the tab opens and after a take or a release.
+    private void ReadMastershipState()
+    {
+        if (!FeatureEnabled)
+        {
+            _motionHeld = _editHeld = false;
+            _mastershipFailure = null;
+        }
+        else
+        {
+            try
+            {
+                _motionHeld = _robot.Rws.Mastership.GetInfo(MastershipDomain.Motion).HeldByMe;
+                _editHeld = _robot.Rws.Mastership.GetInfo(MastershipDomain.Edit).HeldByMe;
+                _mastershipFailure = null;
+            }
+            catch (RwsException ex)
+            {
+                // Saying so beats leaving the bar claiming a state nobody checked
+                _motionHeld = _editHeld = false;
+                _mastershipFailure = ex.Message;
+            }
+        }
+
+        ApplyMastershipState();
+    }
+
+    // Locked buttons stay visible and stay in place: the point of the showcase is to see what the
+    // mastership unlocks, so only the padlock and the enabled state change.
+    private void ApplyMastershipState()
+    {
+        foreach (var (button, domain) in _mastershipButtons)
+        {
+            var unlocked = domain == MastershipDomain.Motion ? _motionHeld : _editHeld;
+
+            button.Enabled = unlocked;
+            button.Text = (unlocked ? "\U0001F513 " : "\U0001F512 ") + _mastershipCaptions[button];
+
+            button.UseVisualStyleBackColor = !unlocked;
+            if (unlocked)
+                button.BackColor = UnlockedButton;
+        }
+
+        btnTakeMastership.Enabled = !(_motionHeld && _editHeld);
+        btnReleaseMastership.Enabled = _motionHeld || _editHeld;
+
+        if (_mastershipFailure != null)
+        {
+            PaintMastershipBar(FailureBar, FailureText);
+            lblMastershipStatus.Text = "Mastership state unknown - " + _mastershipFailure;
+        }
+        else if (_motionHeld && _editHeld)
+        {
+            PaintMastershipBar(HeldBar, HeldText);
+            lblMastershipStatus.Text = "\U0001F513  Mastership held on Motion and Edit"
+                                     + "     2. use the unlocked buttons";
+        }
+        else if (_motionHeld || _editHeld)
+        {
+            PaintMastershipBar(LockedBar, LockedText);
+            lblMastershipStatus.Text = "\U0001F513  Mastership held on " + (_motionHeld ? "Motion" : "Edit")
+                                     + " only     1. take it again for the other domain";
+        }
+        else
+        {
+            PaintMastershipBar(LockedBar, LockedText);
+            lblMastershipStatus.Text = "\U0001F512  Mastership not held - the \U0001F512 buttons below are disabled"
+                                     + "     1. take it to unlock them";
+        }
+    }
+
+    private static readonly Color LockedBar = Color.FromArgb(255, 236, 179);
+    private static readonly Color LockedText = Color.FromArgb(126, 82, 0);
+    private static readonly Color HeldBar = Color.FromArgb(200, 230, 201);
+    private static readonly Color HeldText = Color.FromArgb(27, 94, 32);
+    private static readonly Color FailureBar = Color.FromArgb(255, 205, 210);
+    private static readonly Color FailureText = Color.FromArgb(150, 30, 40);
+    private static readonly Color UnlockedButton = Color.FromArgb(226, 243, 226);
+
+    private void PaintMastershipBar(Color background, Color foreground)
+    {
+        pnlMastership.BackColor = background;
+        lblMastershipStatus.ForeColor = foreground;
+    }
+
+    private void btnTakeMastership_Click(object sender, EventArgs e)
+    {
+        // Both domains in one request, and refused while somebody else holds one of them
+        _robot.Rws.Mastership.Request();
+        ReadMastershipState();
+    }
+
+    private void btnReleaseMastership_Click(object sender, EventArgs e)
+    {
+        // Giving everything back is accepted whatever is held, so this never fails for having nothing to give
+        _robot.Rws.Mastership.Release();
+        ReadMastershipState();
+    }
+
     #endregion
 
     #region Helpers
@@ -241,7 +423,8 @@ public partial class RwsMotionSystemControl : UserControl, IUserControl
 
     private void btnSetNonMotionExecutionMode_Click(object sender, EventArgs e)
     {
-        // Needs mastership of the motion domain
+        // Lives under the motion system but needs the mastership of the editing domain: holding the
+        // motion one alone is answered with a refusal naming the missing mastership
         _robot.Rws.MotionSystem.SetNonMotionExecutionMode(chkNonMotionExecutionMode.Checked);
         chkNonMotionExecutionMode.Checked = _robot.Rws.MotionSystem.GetNonMotionExecutionMode();
     }

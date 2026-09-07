@@ -48,6 +48,9 @@
     <Compile Update="Components\RwsPanelControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="Components\RwsMastershipControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Components\RwsMotionSystemControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
