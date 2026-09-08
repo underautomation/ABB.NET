@@ -29,6 +29,7 @@ partial class ConnectControl
     {
         components = new System.ComponentModel.Container();
         tableLayoutPanel1 = new TableLayoutPanel();
+        label4 = new Label();
         panel2 = new Panel();
         label2 = new Label();
         udRws2Port = new NumericUpDown();
@@ -49,7 +50,6 @@ partial class ConnectControl
         label3 = new Label();
         cbVersion = new ComboBox();
         addressTooltip = new ToolTip(components);
-        label4 = new Label();
         tableLayoutPanel1.SuspendLayout();
         panel2.SuspendLayout();
         ((System.ComponentModel.ISupportInitialize)udRws2Port).BeginInit();
@@ -100,6 +100,16 @@ partial class ConnectControl
         tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
         tableLayoutPanel1.Size = new Size(628, 585);
         tableLayoutPanel1.TabIndex = 10;
+        // 
+        // label4
+        // 
+        label4.Anchor = AnchorStyles.Left;
+        label4.AutoSize = true;
+        label4.Location = new Point(458, 180);
+        label4.Name = "label4";
+        label4.Size = new Size(150, 15);
+        label4.TabIndex = 11;
+        label4.Text = "Default password : robotics";
         // 
         // panel2
         // 
@@ -305,7 +315,6 @@ partial class ConnectControl
         // 
         cbVersion.DropDownStyle = ComboBoxStyle.DropDownList;
         cbVersion.FormattingEnabled = true;
-        cbVersion.Items.AddRange(new object[] { "1", "2" });
         cbVersion.Location = new Point(208, 118);
         cbVersion.Name = "cbVersion";
         cbVersion.Size = new Size(140, 23);
@@ -318,16 +327,6 @@ partial class ConnectControl
         addressTooltip.ToolTipTitle = "Examples :";
         addressTooltip.UseAnimation = false;
         addressTooltip.UseFading = false;
-        // 
-        // label4
-        // 
-        label4.Anchor = AnchorStyles.Left;
-        label4.AutoSize = true;
-        label4.Location = new Point(458, 180);
-        label4.Name = "label4";
-        label4.Size = new Size(150, 15);
-        label4.TabIndex = 11;
-        label4.Text = "Default password : robotics";
         // 
         // ConnectControl
         // 

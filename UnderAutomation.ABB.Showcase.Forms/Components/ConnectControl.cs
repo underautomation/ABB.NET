@@ -1,6 +1,7 @@
 ﻿using UnderAutomation.ABB;
 using UnderAutomation.ABB.License;
 using UnderAutomation.ABB.Rws;
+using System.Linq;
 
 public partial class ConnectControl : UserControl, IUserControl
 {
@@ -21,6 +22,8 @@ public partial class ConnectControl : UserControl, IUserControl
         // Use stored information or set to default
         txtIP.Text = parameters.Address ?? "192.168.0.1";
 
+        cbVersion.Items.AddRange(Enum.GetValues(typeof(RwsVersion)).OfType<object>().ToArray());
+
         // RWS parameters
         var rws = parameters.Rws ?? new RwsConnectParameters();
         chkRws.Checked = rws.Enable;
@@ -28,7 +31,7 @@ public partial class ConnectControl : UserControl, IUserControl
         txtRws2Password.Text = rws.Password;
         udRws2Port.Value = rws.Port;
         chkRws2Https.Checked = rws.UseHttps;
-        cbVersion.SelectedItem = rws.Version.ToString();
+        cbVersion.SelectedItem = rws.Version;
     }
 
 
@@ -75,7 +78,7 @@ public partial class ConnectControl : UserControl, IUserControl
             Password = txtRws2Password.Text,
             Port = (int)udRws2Port.Value,
             UseHttps = chkRws2Https.Checked,
-            Version = int.Parse(cbVersion.SelectedItem.ToString())
+            Version = (RwsVersion)cbVersion.SelectedItem
         };
 
         // Store information
