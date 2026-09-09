@@ -1,7 +1,5 @@
 # ABB Robot Communication SDK for .NET
 
-[<img src="https://underautomation.com/abb/abb-communication.svg" alt="UnderAutomation ABB SDK" width="100%">](https://underautomation.com/abb)
-
 [![NuGet](https://img.shields.io/nuget/v/UnderAutomation.ABB?label=NuGet&logo=nuget)](https://www.nuget.org/packages/UnderAutomation.ABB/)
 [![NuGet downloads](https://img.shields.io/nuget/dt/UnderAutomation.ABB?label=Downloads&logo=nuget)](https://www.nuget.org/packages/UnderAutomation.ABB/)
 [![.NET Framework](https://img.shields.io/badge/.NET_Framework-3.5+-blueviolet)](#compatibility)
@@ -18,7 +16,7 @@ files and backups, and follow the state of the controller, from a normal .NET ap
 
 - 📖 **More information:** [underautomation.com/abb](https://underautomation.com/abb)
 - 📚 **Documentation:** [underautomation.com/abb/documentation](https://underautomation.com/abb/documentation)
-- 📦 **Also available for** [🐍 Python](https://github.com/underautomation/ABB.py) and [🎨 LabVIEW](https://github.com/underautomation/ABB.vi)
+- 📦 **Also available for** [🐍 Python](https://github.com/underautomation/ABB.py)
 
 ---
 
@@ -262,10 +260,10 @@ await robot.Rws.Io.SetSignalValueAsync("EtherNetIP", "d652", "DO_01", 1, cancell
 ABB robots expose Robot Web Services in two versions. This SDK covers both. The same code runs on an
 old IRC5 and on a new OmniCore. Only the connection parameters change.
 
-| Controller | RobotWare | Robot Web Services | `RwsVersion` value |
-|---|---|---|---|
-| IRC5 | RobotWare 6 and earlier | RWS 1.0 | `RwsVersion.Irc5_V1_0` |
-| OmniCore | RobotWare 7 and later | RWS 2.0 | `RwsVersion.OmniCore_V2_0` |
+| Controller | RobotWare               | Robot Web Services | `RwsVersion` value         |
+| ---------- | ----------------------- | ------------------ | -------------------------- |
+| IRC5       | RobotWare 6 and earlier | RWS 1.0            | `RwsVersion.Irc5_V1_0`     |
+| OmniCore   | RobotWare 7 and later   | RWS 2.0            | `RwsVersion.OmniCore_V2_0` |
 
 HTTP or HTTPS is a separate setting (`UseHttps`), independent of the controller generation.
 
@@ -273,13 +271,13 @@ HTTP or HTTPS is a separate setting (`UseHttps`), independent of the controller 
 
 ## Compatibility
 
-| Target Framework | Supported | Async methods |
-|---|---|---|
-| .NET 9.0 / 8.0 / 6.0 / 5.0 | ✅ | ✅ |
-| .NET Core 3.0 | ✅ | ✅ |
-| .NET Standard 2.1 / 2.0 | ✅ | ✅ |
-| .NET Framework 4.5 to 4.8 | ✅ | ✅ |
-| .NET Framework 3.5 / 4.0 | ✅ | ❌ (sync only) |
+| Target Framework           | Supported | Async methods  |
+| -------------------------- | --------- | -------------- |
+| .NET 9.0 / 8.0 / 6.0 / 5.0 | ✅        | ✅             |
+| .NET Core 3.0              | ✅        | ✅             |
+| .NET Standard 2.1 / 2.0    | ✅        | ✅             |
+| .NET Framework 4.5 to 4.8  | ✅        | ✅             |
+| .NET Framework 3.5 / 4.0   | ✅        | ❌ (sync only) |
 
 - **Operating systems:** Windows, Linux, macOS
 - **No native dependency**, no external NuGet package
