@@ -6,17 +6,14 @@ using System;
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// One argument of the template the controller suggests for an instruction or a data type.
-	/// <p>Carried by <xref href="UnderAutomation.ABB.Rws.Data.RapidInstructionTemplate" data-throw-if-not-resolved="false"></xref>.</p>
 	/// 
+	/// <p>Carried by <xref href="UnderAutomation.ABB.Rws.Data.RapidInstructionTemplate" data-throw-if-not-resolved="false"></xref>.</p>
 	/// </summary>
-	public class RapidInstructionTemplateArgument : Object {
+	public class RapidInstructionTemplateArgument {
 
 		/// <summary>
-		/// 
 		/// Initializes a new instance of the <xref href="UnderAutomation.ABB.Rws.Data.RapidInstructionTemplateArgument" data-throw-if-not-resolved="false"></xref> class
-		/// 
 		/// </summary>
 		public RapidInstructionTemplateArgument()
 		{
@@ -24,9 +21,7 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
 		/// Returns a string representation of this argument
-		/// 
 		/// </summary>
 		public override string ToString()
 		{
@@ -35,74 +30,54 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
 		/// Position of the argument, null when the controller did not report it
-		/// 
 		/// </summary>
-		public Nullable<int> ArgumentNumber { get; set; }
+		public int? ArgumentNumber { get; set; }
 
 		/// <summary>
-		/// 
 		/// Whether the argument has to be given, null when the controller did not report it
-		/// 
 		/// </summary>
-		public Nullable<bool> Required { get; set; }
+		public bool? Required { get; set; }
 
 		/// <summary>
-		/// 
-		/// Name of the argument, for example &quot;ToPoint&quot;
-		/// 
+		/// Name of the argument, for example "ToPoint"
 		/// </summary>
 		public string Name { get; set; }
 
 		/// <summary>
-		/// 
 		/// Whether inserting the instruction also needs a declaration to be created for this argument,
 		/// null when the controller did not report it
-		/// 
 		/// </summary>
-		public Nullable<bool> DeclarationNeeded { get; set; }
+		public bool? DeclarationNeeded { get; set; }
 
 		/// <summary>
-		/// 
 		/// Name of the symbol the argument refers to, empty when the argument is written as a literal
-		/// 
 		/// </summary>
 		public string Symbol { get; set; }
 
 		/// <summary>
-		/// 
 		/// Value the argument is suggested with, written the way RAPID writes it
-		/// 
 		/// </summary>
 		public string Value { get; set; }
 
 		/// <summary>
-		/// 
-		/// Type of the argument, for example &quot;robtarget&quot;
-		/// 
+		/// Type of the argument, for example "robtarget"
 		/// </summary>
 		public string DataType { get; set; }
 
 		/// <summary>
-		/// 
-		/// How the suggested symbol is declared, for example &quot;CONST&quot; or &quot;TASK PERS&quot;
-		/// 
+		/// How the suggested symbol is declared, for example "CONST" or "TASK PERS"
 		/// </summary>
 		public string ObjectType { get; set; }
 
 		/// <summary>
-		/// 
 		/// Whether the suggested symbol is local to its module, null when the controller did not report it
-		/// 
 		/// </summary>
-		public Nullable<bool> Local { get; set; }
+		public bool? Local { get; set; }
 
 		/// <summary>
-		/// 
 		/// Number of array dimensions of the argument, null when the controller did not report it
-		/// 
 		/// </summary>
-		public Nullable<int> Dimensions { get; set; }
+		public int? Dimensions { get; set; }
 	}
 }

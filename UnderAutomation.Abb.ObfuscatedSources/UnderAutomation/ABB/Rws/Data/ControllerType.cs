@@ -5,34 +5,23 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// Type of the robot controller (real or virtual)
-	/// 
 	/// </summary>
-	public sealed class ControllerType : Enum {
-
-
-		public int value__;
+	public enum ControllerType {
 
 		/// <summary>
-		/// 
 		/// The controller type could not be determined
-		/// 
 		/// </summary>
-		public const ControllerType Unknown;
+		Unknown = 0,
 
 		/// <summary>
-		/// 
 		/// Physical robot controller (RC)
-		/// 
 		/// </summary>
-		public const ControllerType RealController;
+		RealController = 1,
 
 		/// <summary>
-		/// 
 		/// Virtual controller (VC), for example running in RobotStudio
-		/// 
 		/// </summary>
-		public const ControllerType VirtualController;
+		VirtualController = 2,
 	}
 }

@@ -6,17 +6,14 @@ using System;
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// A routine of a task the program pointer can be moved to.
-	/// <p>Returned by <code>RapidService.GetServiceRoutines()</code>.</p>
 	/// 
+	/// <p>Returned by <code>RapidService.GetServiceRoutines()</code>.</p>
 	/// </summary>
-	public class RapidServiceRoutineItem : Object {
+	public class RapidServiceRoutineItem {
 
 		/// <summary>
-		/// 
 		/// Initializes a new instance of the <xref href="UnderAutomation.ABB.Rws.Data.RapidServiceRoutineItem" data-throw-if-not-resolved="false"></xref> class
-		/// 
 		/// </summary>
 		public RapidServiceRoutineItem()
 		{
@@ -24,9 +21,7 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
 		/// Returns a string representation of this routine
-		/// 
 		/// </summary>
 		public override string ToString()
 		{
@@ -35,25 +30,19 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
-		/// Name of the routine, for example &quot;LoadIdentify&quot;
-		/// 
+		/// Name of the routine, for example "LoadIdentify"
 		/// </summary>
 		public string Name { get; set; }
 
 		/// <summary>
-		/// 
 		/// Path of the routine, which <code>RapidService.SetProgramPointerToRoutineUrl()</code> takes
-		/// 
 		/// </summary>
 		public string Url { get; set; }
 
 		/// <summary>
-		/// 
 		/// Whether this is a service routine rather than an ordinary one, null when the controller
 		/// did not report it
-		/// 
 		/// </summary>
-		public Nullable<bool> IsServiceRoutine { get; set; }
+		public bool? IsServiceRoutine { get; set; }
 	}
 }

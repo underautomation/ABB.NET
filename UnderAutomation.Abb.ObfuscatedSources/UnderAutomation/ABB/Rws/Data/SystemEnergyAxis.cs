@@ -6,17 +6,14 @@ using System;
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// Energy consumed by one axis of a mechanical unit during the current measurement interval.
-	/// <p>Held by <xref href="UnderAutomation.ABB.Rws.Data.SystemEnergyMechanicalUnit" data-throw-if-not-resolved="false"></xref>.</p>
 	/// 
+	/// <p>Held by <xref href="UnderAutomation.ABB.Rws.Data.SystemEnergyMechanicalUnit" data-throw-if-not-resolved="false"></xref>.</p>
 	/// </summary>
-	public class SystemEnergyAxis : Object {
+	public class SystemEnergyAxis {
 
 		/// <summary>
-		/// 
 		/// Initializes a new instance of the <xref href="UnderAutomation.ABB.Rws.Data.SystemEnergyAxis" data-throw-if-not-resolved="false"></xref> class
-		/// 
 		/// </summary>
 		public SystemEnergyAxis()
 		{
@@ -24,9 +21,7 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
 		/// Returns a string representation of this axis
-		/// 
 		/// </summary>
 		public override string ToString()
 		{
@@ -35,18 +30,14 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
 		/// Number of the axis inside its mechanical unit, starting at 1
-		/// 
 		/// </summary>
 		public int Number { get; set; }
 
 		/// <summary>
-		/// 
 		/// Energy the axis consumed during the current measurement interval, in joules,
 		/// null when the controller did not report it
-		/// 
 		/// </summary>
-		public Nullable<double> IntervalEnergy { get; set; }
+		public double? IntervalEnergy { get; set; }
 	}
 }

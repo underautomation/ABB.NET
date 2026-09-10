@@ -5,76 +5,53 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// Which of the lists a RAPID object holds is being asked about
-	/// 
 	/// </summary>
-	public sealed class RapidObjectListType : Enum {
-
-
-		public int value__;
+	public enum RapidObjectListType {
 
 		/// <summary>
-		/// 
 		/// The statements of the object
-		/// 
 		/// </summary>
-		public const RapidObjectListType Statements;
+		Statements = 0,
 
 		/// <summary>
-		/// 
 		/// The statements of its BACKWARD handler
-		/// 
 		/// </summary>
-		public const RapidObjectListType BackwardStatements;
+		BackwardStatements = 1,
 
 		/// <summary>
-		/// 
 		/// The statements of its ERROR handler
-		/// 
 		/// </summary>
-		public const RapidObjectListType ErrorStatements;
+		ErrorStatements = 2,
 
 		/// <summary>
-		/// 
 		/// The statements of its UNDO handler
-		/// 
 		/// </summary>
-		public const RapidObjectListType UndoStatements;
+		UndoStatements = 3,
 
 		/// <summary>
-		/// 
 		/// The type declarations it holds
-		/// 
 		/// </summary>
-		public const RapidObjectListType TypeDeclarations;
+		TypeDeclarations = 4,
 
 		/// <summary>
-		/// 
 		/// The data declarations it holds
-		/// 
 		/// </summary>
-		public const RapidObjectListType DataDeclarations;
+		DataDeclarations = 5,
 
 		/// <summary>
-		/// 
 		/// The parameter declarations it holds
-		/// 
 		/// </summary>
-		public const RapidObjectListType ParameterDeclarations;
+		ParameterDeclarations = 6,
 
 		/// <summary>
-		/// 
 		/// The routine declarations it holds
-		/// 
 		/// </summary>
-		public const RapidObjectListType RoutineDeclarations;
+		RoutineDeclarations = 7,
 
 		/// <summary>
-		/// 
 		/// The attributes it declares
-		/// 
 		/// </summary>
-		public const RapidObjectListType Attributes;
+		Attributes = 8,
 	}
 }

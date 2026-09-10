@@ -5,34 +5,23 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// Whether a mechanical unit is activated and can be moved
-	/// 
 	/// </summary>
-	public sealed class MechanicalUnitMode : Enum {
-
-
-		public int value__;
+	public enum MechanicalUnitMode {
 
 		/// <summary>
-		/// 
 		/// The controller reported a mode this library does not know
-		/// 
 		/// </summary>
-		public const MechanicalUnitMode Unknown;
+		Unknown = 0,
 
 		/// <summary>
-		/// 
 		/// The mechanical unit is activated and takes part in the motion
-		/// 
 		/// </summary>
-		public const MechanicalUnitMode Activated;
+		Activated = 1,
 
 		/// <summary>
-		/// 
 		/// The mechanical unit is deactivated and stays where it is
-		/// 
 		/// </summary>
-		public const MechanicalUnitMode Deactivated;
+		Deactivated = 2,
 	}
 }

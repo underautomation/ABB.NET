@@ -5,17 +5,14 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// Energy consumed by one mechanical unit, broken down per axis.
-	/// <p>Held by <xref href="UnderAutomation.ABB.Rws.Data.SystemEnergy" data-throw-if-not-resolved="false"></xref>.</p>
 	/// 
+	/// <p>Held by <xref href="UnderAutomation.ABB.Rws.Data.SystemEnergy" data-throw-if-not-resolved="false"></xref>.</p>
 	/// </summary>
-	public class SystemEnergyMechanicalUnit : Object {
+	public class SystemEnergyMechanicalUnit {
 
 		/// <summary>
-		/// 
 		/// Initializes a new instance of the <xref href="UnderAutomation.ABB.Rws.Data.SystemEnergyMechanicalUnit" data-throw-if-not-resolved="false"></xref> class
-		/// 
 		/// </summary>
 		public SystemEnergyMechanicalUnit()
 		{
@@ -23,9 +20,7 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
 		/// Returns a string representation of this mechanical unit
-		/// 
 		/// </summary>
 		public override string ToString()
 		{
@@ -34,23 +29,17 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
-		/// Name of the mechanical unit, for example &quot;ROB_1&quot;
-		/// 
+		/// Name of the mechanical unit, for example "ROB_1"
 		/// </summary>
 		public string Name { get; set; }
 
 		/// <summary>
-		/// 
 		/// Energy consumed by each axis of the mechanical unit during the current measurement interval
-		/// 
 		/// </summary>
 		public SystemEnergyAxis[] Axes { get; set; }
 
 		/// <summary>
-		/// 
 		/// Number of axes the controller reported for this mechanical unit
-		/// 
 		/// </summary>
 		public int AxisCount { get; }
 	}

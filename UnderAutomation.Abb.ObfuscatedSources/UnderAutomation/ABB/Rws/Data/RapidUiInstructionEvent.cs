@@ -5,41 +5,28 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// What a UI instruction is asking of the client
-	/// 
 	/// </summary>
-	public sealed class RapidUiInstructionEvent : Enum {
-
-
-		public int value__;
+	public enum RapidUiInstructionEvent {
 
 		/// <summary>
-		/// 
 		/// The controller reported an event this library does not know
-		/// 
 		/// </summary>
-		public const RapidUiInstructionEvent Unknown;
+		Unknown = 0,
 
 		/// <summary>
-		/// 
 		/// The instruction is waiting for an answer
-		/// 
 		/// </summary>
-		public const RapidUiInstructionEvent Send;
+		Send = 1,
 
 		/// <summary>
-		/// 
 		/// The instruction only displays something and expects no answer
-		/// 
 		/// </summary>
-		public const RapidUiInstructionEvent Post;
+		Post = 2,
 
 		/// <summary>
-		/// 
 		/// The instruction has been abandoned and no answer is expected any more
-		/// 
 		/// </summary>
-		public const RapidUiInstructionEvent Abort;
+		Abort = 3,
 	}
 }

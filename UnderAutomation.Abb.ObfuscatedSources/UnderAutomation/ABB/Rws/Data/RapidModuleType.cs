@@ -5,34 +5,23 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// Whether a module belongs to the program or to the system
-	/// 
 	/// </summary>
-	public sealed class RapidModuleType : Enum {
-
-
-		public int value__;
+	public enum RapidModuleType {
 
 		/// <summary>
-		/// 
 		/// The controller reported a type this library does not know
-		/// 
 		/// </summary>
-		public const RapidModuleType Unknown;
+		Unknown = 0,
 
 		/// <summary>
-		/// 
 		/// A module of the program, saved and loaded with it
-		/// 
 		/// </summary>
-		public const RapidModuleType ProgramModule;
+		ProgramModule = 1,
 
 		/// <summary>
-		/// 
 		/// A module of the system, which survives loading another program
-		/// 
 		/// </summary>
-		public const RapidModuleType SystemModule;
+		SystemModule = 2,
 	}
 }

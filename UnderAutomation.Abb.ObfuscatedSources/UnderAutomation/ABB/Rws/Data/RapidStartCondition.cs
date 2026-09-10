@@ -5,27 +5,18 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// Condition the controller checks before it starts executing
-	/// 
 	/// </summary>
-	public sealed class RapidStartCondition : Enum {
-
-
-		public int value__;
+	public enum RapidStartCondition {
 
 		/// <summary>
-		/// 
 		/// Start without any additional check
-		/// 
 		/// </summary>
-		public const RapidStartCondition None;
+		None = 0,
 
 		/// <summary>
-		/// 
 		/// Start only when the call chain of the program pointer is still valid
-		/// 
 		/// </summary>
-		public const RapidStartCondition CallChain;
+		CallChain = 1,
 	}
 }

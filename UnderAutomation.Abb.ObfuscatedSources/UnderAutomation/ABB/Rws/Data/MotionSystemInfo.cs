@@ -6,17 +6,14 @@ using System;
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// Overview of the motion system of the controller.
-	/// <p>Returned by <code>MotionSystemService.GetInfo()</code>.</p>
 	/// 
+	/// <p>Returned by <code>MotionSystemService.GetInfo()</code>.</p>
 	/// </summary>
-	public class MotionSystemInfo : Object {
+	public class MotionSystemInfo {
 
 		/// <summary>
-		/// 
 		/// Initializes a new instance of the <xref href="UnderAutomation.ABB.Rws.Data.MotionSystemInfo" data-throw-if-not-resolved="false"></xref> class
-		/// 
 		/// </summary>
 		public MotionSystemInfo()
 		{
@@ -24,9 +21,7 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
 		/// Returns a string representation of this motion system
-		/// 
 		/// </summary>
 		public override string ToString()
 		{
@@ -35,41 +30,32 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
 		/// Counter the controller increments on every change of the motion system.
+		/// 
 		/// <p>Pass it to <code>MotionSystemService.HasChanged()</code> to find out whether anything moved
 		/// since a previous reading, without fetching the whole state again.</p>
-		/// 
 		/// </summary>
-		public Nullable<int> ChangeCount { get; set; }
+		public int? ChangeCount { get; set; }
 
 		/// <summary>
-		/// 
 		/// Name of the mechanical unit the jogging commands currently apply to
-		/// 
 		/// </summary>
 		public string MechanicalUnitName { get; set; }
 
 		/// <summary>
-		/// 
 		/// Rate at which the controller refreshes the motion system state, null when it did not report it
-		/// 
 		/// </summary>
-		public Nullable<int> PollRate { get; set; }
+		public int? PollRate { get; set; }
 
 		/// <summary>
-		/// 
 		/// Whether the payload of the robot is set by the running program rather than by the mechanical unit,
 		/// null when the controller did not report it
-		/// 
 		/// </summary>
-		public Nullable<bool> ModalPayloadMode { get; set; }
+		public bool? ModalPayloadMode { get; set; }
 
 		/// <summary>
-		/// 
 		/// Whether absolute accuracy is switched on, null when the controller did not report it
-		/// 
 		/// </summary>
-		public Nullable<bool> AbsoluteAccuracyActive { get; set; }
+		public bool? AbsoluteAccuracyActive { get; set; }
 	}
 }

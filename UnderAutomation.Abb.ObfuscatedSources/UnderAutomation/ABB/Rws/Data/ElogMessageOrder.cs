@@ -5,27 +5,18 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// Order in which the event log messages of a domain are returned
-	/// 
 	/// </summary>
-	public sealed class ElogMessageOrder : Enum {
-
-
-		public int value__;
+	public enum ElogMessageOrder {
 
 		/// <summary>
-		/// 
 		/// Most recent message first
-		/// 
 		/// </summary>
-		public const ElogMessageOrder NewestFirst;
+		NewestFirst = 0,
 
 		/// <summary>
-		/// 
 		/// Oldest message first
-		/// 
 		/// </summary>
-		public const ElogMessageOrder OldestFirst;
+		OldestFirst = 1,
 	}
 }

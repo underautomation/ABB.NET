@@ -5,27 +5,18 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// How hard the controller tries to apply a change to the source of a running task
-	/// 
 	/// </summary>
-	public sealed class RapidTextQueryMode : Enum {
-
-
-		public int value__;
+	public enum RapidTextQueryMode {
 
 		/// <summary>
-		/// 
 		/// Apply the change even when it invalidates the program pointer
-		/// 
 		/// </summary>
-		public const RapidTextQueryMode Force;
+		Force = 0,
 
 		/// <summary>
-		/// 
 		/// Apply the change only when the program pointer survives it
-		/// 
 		/// </summary>
-		public const RapidTextQueryMode Try;
+		Try = 1,
 	}
 }

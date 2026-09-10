@@ -5,69 +5,48 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// Stepping mode a task was last started with
-	/// 
 	/// </summary>
-	public sealed class RapidTaskExecutionMode : Enum {
-
-
-		public int value__;
+	public enum RapidTaskExecutionMode {
 
 		/// <summary>
-		/// 
 		/// The controller reported a mode this library does not know
-		/// 
 		/// </summary>
-		public const RapidTaskExecutionMode Unknown;
+		Unknown = 0,
 
 		/// <summary>
-		/// 
 		/// The task runs without stepping
-		/// 
 		/// </summary>
-		public const RapidTaskExecutionMode Continuous;
+		Continuous = 1,
 
 		/// <summary>
-		/// 
 		/// The task steps over the routine calls
-		/// 
 		/// </summary>
-		public const RapidTaskExecutionMode StepOver;
+		StepOver = 2,
 
 		/// <summary>
-		/// 
 		/// The task steps into the routine calls
-		/// 
 		/// </summary>
-		public const RapidTaskExecutionMode StepIn;
+		StepIn = 3,
 
 		/// <summary>
-		/// 
 		/// The task steps out of the current routine
-		/// 
 		/// </summary>
-		public const RapidTaskExecutionMode StepOutOf;
+		StepOutOf = 4,
 
 		/// <summary>
-		/// 
 		/// The task steps backwards
-		/// 
 		/// </summary>
-		public const RapidTaskExecutionMode StepBack;
+		StepBack = 5,
 
 		/// <summary>
-		/// 
 		/// The task steps to the last instruction
-		/// 
 		/// </summary>
-		public const RapidTaskExecutionMode StepLast;
+		StepLast = 6,
 
 		/// <summary>
-		/// 
 		/// The task advances one instruction at a time
-		/// 
 		/// </summary>
-		public const RapidTaskExecutionMode StepWise;
+		StepWise = 7,
 	}
 }

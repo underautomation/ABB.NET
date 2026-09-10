@@ -5,34 +5,23 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// Content included when restoring a backup
-	/// 
 	/// </summary>
-	public sealed class BackupRestoreInclude : Enum {
-
-
-		public int value__;
+	public enum BackupRestoreInclude {
 
 		/// <summary>
-		/// 
 		/// Restore configuration files and RAPID modules
-		/// 
 		/// </summary>
-		public const BackupRestoreInclude All;
+		All = 0,
 
 		/// <summary>
-		/// 
 		/// Restore configuration files only
-		/// 
 		/// </summary>
-		public const BackupRestoreInclude Cfg;
+		Cfg = 1,
 
 		/// <summary>
-		/// 
 		/// Restore RAPID modules only
-		/// 
 		/// </summary>
-		public const BackupRestoreInclude Modules;
+		Modules = 2,
 	}
 }

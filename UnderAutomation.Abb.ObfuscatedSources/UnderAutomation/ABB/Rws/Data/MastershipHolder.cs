@@ -5,48 +5,33 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// Who holds the mastership of a domain
-	/// 
 	/// </summary>
-	public sealed class MastershipHolder : Enum {
-
-
-		public int value__;
+	public enum MastershipHolder {
 
 		/// <summary>
-		/// 
 		/// The controller reported a holder this library does not know
-		/// 
 		/// </summary>
-		public const MastershipHolder Unknown;
+		Unknown = 0,
 
 		/// <summary>
-		/// 
 		/// Nobody holds the mastership, it is free to be taken
-		/// 
 		/// </summary>
-		public const MastershipHolder None;
+		None = 1,
 
 		/// <summary>
-		/// 
 		/// A client connected over the network holds it, possibly this one
-		/// 
 		/// </summary>
-		public const MastershipHolder Remote;
+		Remote = 2,
 
 		/// <summary>
-		/// 
 		/// A device attached to the controller holds it, the teach pendant for instance
-		/// 
 		/// </summary>
-		public const MastershipHolder Local;
+		Local = 3,
 
 		/// <summary>
-		/// 
 		/// The controller itself holds it, while it runs an operation that must not be interrupted
-		/// 
 		/// </summary>
-		public const MastershipHolder Internal;
+		Internal = 4,
 	}
 }

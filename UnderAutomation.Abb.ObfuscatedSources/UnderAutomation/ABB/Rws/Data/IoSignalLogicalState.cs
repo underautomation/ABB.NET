@@ -5,34 +5,23 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// Logical state of an I/O signal
-	/// 
 	/// </summary>
-	public sealed class IoSignalLogicalState : Enum {
-
-
-		public int value__;
+	public enum IoSignalLogicalState {
 
 		/// <summary>
-		/// 
 		/// The logical state could not be determined
-		/// 
 		/// </summary>
-		public const IoSignalLogicalState Unknown;
+		Unknown = 0,
 
 		/// <summary>
-		/// 
 		/// The signal is simulated: its logical value is forced and no longer follows the physical value
-		/// 
 		/// </summary>
-		public const IoSignalLogicalState Simulated;
+		Simulated = 1,
 
 		/// <summary>
-		/// 
 		/// The signal is not simulated
-		/// 
 		/// </summary>
-		public const IoSignalLogicalState NotSimulated;
+		NotSimulated = 2,
 	}
 }

@@ -5,48 +5,33 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// How many times the controller runs the program before stopping
-	/// 
 	/// </summary>
-	public sealed class RapidExecutionCycle : Enum {
-
-
-		public int value__;
+	public enum RapidExecutionCycle {
 
 		/// <summary>
-		/// 
 		/// The controller reported a cycle this library does not know
-		/// 
 		/// </summary>
-		public const RapidExecutionCycle Unknown;
+		Unknown = 0,
 
 		/// <summary>
-		/// 
 		/// The program runs again every time it reaches its end
-		/// 
 		/// </summary>
-		public const RapidExecutionCycle Forever;
+		Forever = 1,
 
 		/// <summary>
-		/// 
 		/// The cycle currently configured is left untouched
-		/// 
 		/// </summary>
-		public const RapidExecutionCycle AsIs;
+		AsIs = 2,
 
 		/// <summary>
-		/// 
 		/// The program runs once and stops at its end
-		/// 
 		/// </summary>
-		public const RapidExecutionCycle Once;
+		Once = 3,
 
 		/// <summary>
-		/// 
 		/// The program was asked to run once and has finished doing so
-		/// 
 		/// </summary>
-		public const RapidExecutionCycle OnceDone;
+		OnceDone = 4,
 	}
 }

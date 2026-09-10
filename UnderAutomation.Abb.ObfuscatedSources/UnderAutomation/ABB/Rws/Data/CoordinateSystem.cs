@@ -5,48 +5,33 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// Reference frame a cartesian position is expressed in
-	/// 
 	/// </summary>
-	public sealed class CoordinateSystem : Enum {
-
-
-		public int value__;
+	public enum CoordinateSystem {
 
 		/// <summary>
-		/// 
 		/// The controller reported a frame this library does not know
-		/// 
 		/// </summary>
-		public const CoordinateSystem Unknown;
+		Unknown = 0,
 
 		/// <summary>
-		/// 
 		/// The world frame, shared by every mechanical unit of the system
-		/// 
 		/// </summary>
-		public const CoordinateSystem World;
+		World = 1,
 
 		/// <summary>
-		/// 
 		/// The base frame of the mechanical unit
-		/// 
 		/// </summary>
-		public const CoordinateSystem Base;
+		Base = 2,
 
 		/// <summary>
-		/// 
 		/// The frame of the active tool
-		/// 
 		/// </summary>
-		public const CoordinateSystem Tool;
+		Tool = 3,
 
 		/// <summary>
-		/// 
 		/// The frame of the active work object
-		/// 
 		/// </summary>
-		public const CoordinateSystem WorkObject;
+		WorkObject = 4,
 	}
 }

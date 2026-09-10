@@ -6,18 +6,15 @@ using System;
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// The two counters a task keeps of what has changed in it, so that a client can tell whether it needs
 	/// to read the task again instead of fetching everything periodically.
-	/// <p>Returned by <code>RapidService.GetStructuralChangeCount()</code>.</p>
 	/// 
+	/// <p>Returned by <code>RapidService.GetStructuralChangeCount()</code>.</p>
 	/// </summary>
-	public class RapidStructuralChangeCount : Object {
+	public class RapidStructuralChangeCount {
 
 		/// <summary>
-		/// 
 		/// Initializes a new instance of the <xref href="UnderAutomation.ABB.Rws.Data.RapidStructuralChangeCount" data-throw-if-not-resolved="false"></xref> class
-		/// 
 		/// </summary>
 		public RapidStructuralChangeCount()
 		{
@@ -25,9 +22,7 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
 		/// Returns a string representation of these counters
-		/// 
 		/// </summary>
 		public override string ToString()
 		{
@@ -36,18 +31,15 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
 		/// Counter the controller increments whenever anything relevant changes in the task
-		/// 
 		/// </summary>
-		public Nullable<int> ChangeCount { get; set; }
+		public int? ChangeCount { get; set; }
 
 		/// <summary>
-		/// 
 		/// Counter the controller increments when a module is loaded, unloaded or renamed.
-		/// <p>A rename counts as an unload followed by a load.</p>
 		/// 
+		/// <p>A rename counts as an unload followed by a load.</p>
 		/// </summary>
-		public Nullable<int> StructuralChangeCount { get; set; }
+		public int? StructuralChangeCount { get; set; }
 	}
 }

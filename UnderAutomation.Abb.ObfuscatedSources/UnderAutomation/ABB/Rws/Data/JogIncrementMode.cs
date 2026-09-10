@@ -5,48 +5,33 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// Size of the step a jogging command moves the robot by
-	/// 
 	/// </summary>
-	public sealed class JogIncrementMode : Enum {
-
-
-		public int value__;
+	public enum JogIncrementMode {
 
 		/// <summary>
-		/// 
 		/// The robot moves for as long as the command is repeated, with no fixed step
-		/// 
 		/// </summary>
-		public const JogIncrementMode None;
+		None = 0,
 
 		/// <summary>
-		/// 
 		/// One step of the size configured in the system parameters
-		/// 
 		/// </summary>
-		public const JogIncrementMode User;
+		User = 1,
 
 		/// <summary>
-		/// 
 		/// One small step
-		/// 
 		/// </summary>
-		public const JogIncrementMode Small;
+		Small = 2,
 
 		/// <summary>
-		/// 
 		/// One medium step
-		/// 
 		/// </summary>
-		public const JogIncrementMode Medium;
+		Medium = 3,
 
 		/// <summary>
-		/// 
 		/// One large step
-		/// 
 		/// </summary>
-		public const JogIncrementMode Large;
+		Large = 4,
 	}
 }

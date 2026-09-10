@@ -6,17 +6,14 @@ using System;
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// The source of a module and the counters that go with it.
-	/// <p>Returned by <code>RapidService.GetModuleText()</code>.</p>
 	/// 
+	/// <p>Returned by <code>RapidService.GetModuleText()</code>.</p>
 	/// </summary>
-	public class RapidModuleText : Object {
+	public class RapidModuleText {
 
 		/// <summary>
-		/// 
 		/// Initializes a new instance of the <xref href="UnderAutomation.ABB.Rws.Data.RapidModuleText" data-throw-if-not-resolved="false"></xref> class
-		/// 
 		/// </summary>
 		public RapidModuleText()
 		{
@@ -24,9 +21,7 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
 		/// Returns a string representation of this module source
-		/// 
 		/// </summary>
 		public override string ToString()
 		{
@@ -35,26 +30,21 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
 		/// Source of the module
-		/// 
 		/// </summary>
 		public string Text { get; set; }
 
 		/// <summary>
-		/// 
 		/// Counter the controller increments whenever the module changes, null when it did not report it
-		/// 
 		/// </summary>
-		public Nullable<int> ChangeCount { get; set; }
+		public int? ChangeCount { get; set; }
 
 		/// <summary>
-		/// 
 		/// Length the controller declares for the module, null when it did not report it.
+		/// 
 		/// <p>This is the size the controller reserves for the module and not the length of
 		/// <xref href="UnderAutomation.ABB.Rws.Data.RapidModuleText.Text" data-throw-if-not-resolved="false"></xref>, so the two normally differ.</p>
-		/// 
 		/// </summary>
-		public Nullable<int> DeclaredLength { get; set; }
+		public int? DeclaredLength { get; set; }
 	}
 }

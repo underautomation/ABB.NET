@@ -6,17 +6,14 @@ using System;
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// State of the mastership of one domain: who holds it, and whether this connection is the holder.
-	/// <p>Returned by <code>MastershipService.GetInfo()</code>.</p>
 	/// 
+	/// <p>Returned by <code>MastershipService.GetInfo()</code>.</p>
 	/// </summary>
-	public class MastershipInfo : Object {
+	public class MastershipInfo {
 
 		/// <summary>
-		/// 
 		/// Initializes a new instance of the <xref href="UnderAutomation.ABB.Rws.Data.MastershipInfo" data-throw-if-not-resolved="false"></xref> class
-		/// 
 		/// </summary>
 		public MastershipInfo()
 		{
@@ -24,9 +21,7 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
 		/// Returns a string representation of this mastership state
-		/// 
 		/// </summary>
 		public override string ToString()
 		{
@@ -35,52 +30,38 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
 		/// Domain this state describes
-		/// 
 		/// </summary>
 		public MastershipDomain Domain { get; set; }
 
 		/// <summary>
-		/// 
 		/// Who holds the mastership of the domain
-		/// 
 		/// </summary>
 		public MastershipHolder Holder { get; set; }
 
 		/// <summary>
-		/// 
 		/// Whether this connection is the one holding the mastership, and is therefore allowed to write in
 		/// the domain
-		/// 
 		/// </summary>
 		public bool HeldByMe { get; set; }
 
 		/// <summary>
-		/// 
 		/// Identifier the controller gave the user holding the mastership, null when nobody holds it
-		/// 
 		/// </summary>
-		public Nullable<long> UserId { get; set; }
+		public long? UserId { get; set; }
 
 		/// <summary>
-		/// 
 		/// Where the holder is, as it declared itself, null when nobody holds the mastership
-		/// 
 		/// </summary>
 		public string Location { get; set; }
 
 		/// <summary>
-		/// 
 		/// Alternate name of the location of the holder, null when nobody holds the mastership
-		/// 
 		/// </summary>
 		public string Alias { get; set; }
 
 		/// <summary>
-		/// 
 		/// Name of the application holding the mastership, null when nobody holds it
-		/// 
 		/// </summary>
 		public string Application { get; set; }
 	}

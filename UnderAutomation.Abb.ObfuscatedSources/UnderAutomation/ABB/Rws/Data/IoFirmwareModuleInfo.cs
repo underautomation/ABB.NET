@@ -5,17 +5,14 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// Firmware upgrade status of one module of an I/O device.
-	/// <p>Returned by <code>IoService.GetDeviceUpgradeInfo()</code>.</p>
 	/// 
+	/// <p>Returned by <code>IoService.GetDeviceUpgradeInfo()</code>.</p>
 	/// </summary>
-	public class IoFirmwareModuleInfo : Object {
+	public class IoFirmwareModuleInfo {
 
 		/// <summary>
-		/// 
 		/// Initializes a new instance of the <xref href="UnderAutomation.ABB.Rws.Data.IoFirmwareModuleInfo" data-throw-if-not-resolved="false"></xref> class
-		/// 
 		/// </summary>
 		public IoFirmwareModuleInfo()
 		{
@@ -23,9 +20,7 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
 		/// Returns a string representation of this module
-		/// 
 		/// </summary>
 		public override string ToString()
 		{
@@ -34,51 +29,37 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
-		/// Index of the module inside the device (&quot;0&quot;, &quot;1&quot;, ...)
-		/// 
+		/// Index of the module inside the device ("0", "1", ...)
 		/// </summary>
 		public string Index { get; set; }
 
 		/// <summary>
-		/// 
 		/// Progress of the firmware upgrade of this module
-		/// 
 		/// </summary>
 		public IoFirmwareUpgradeState State { get; set; }
 
 		/// <summary>
-		/// 
 		/// Result of the firmware upgrade of this module
-		/// 
 		/// </summary>
 		public IoFirmwareUpgradeStatus Status { get; set; }
 
 		/// <summary>
-		/// 
-		/// Name of the program installed on the module, for example &quot;A_HYPIOM_B_3_8&quot;
-		/// 
+		/// Name of the program installed on the module, for example "A_HYPIOM_B_3_8"
 		/// </summary>
 		public string ProgramName { get; set; }
 
 		/// <summary>
-		/// 
 		/// Serial number of the module
-		/// 
 		/// </summary>
 		public string SerialNumber { get; set; }
 
 		/// <summary>
-		/// 
-		/// Hardware revision of the module, for example &quot;C.1&quot;
-		/// 
+		/// Hardware revision of the module, for example "C.1"
 		/// </summary>
 		public string HardwareRevision { get; set; }
 
 		/// <summary>
-		/// 
 		/// Name of the latest program available for the module
-		/// 
 		/// </summary>
 		public string LatestProgramNameAvailable { get; set; }
 	}

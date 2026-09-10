@@ -5,62 +5,43 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// How far the program advances when execution is started
-	/// 
 	/// </summary>
-	public sealed class RapidExecutionMode : Enum {
-
-
-		public int value__;
+	public enum RapidExecutionMode {
 
 		/// <summary>
-		/// 
 		/// Run until something stops it
-		/// 
 		/// </summary>
-		public const RapidExecutionMode Continue;
+		Continue = 0,
 
 		/// <summary>
-		/// 
 		/// Step into the routine called by the current instruction
-		/// 
 		/// </summary>
-		public const RapidExecutionMode StepIn;
+		StepIn = 1,
 
 		/// <summary>
-		/// 
 		/// Run the current instruction whole, without entering the routine it calls
-		/// 
 		/// </summary>
-		public const RapidExecutionMode StepOver;
+		StepOver = 2,
 
 		/// <summary>
-		/// 
 		/// Run until the current routine returns
-		/// 
 		/// </summary>
-		public const RapidExecutionMode StepOut;
+		StepOut = 3,
 
 		/// <summary>
-		/// 
 		/// Step one instruction backwards
-		/// 
 		/// </summary>
-		public const RapidExecutionMode StepBack;
+		StepBack = 4,
 
 		/// <summary>
-		/// 
 		/// Step to the last instruction
-		/// 
 		/// </summary>
-		public const RapidExecutionMode StepLast;
+		StepLast = 5,
 
 		/// <summary>
-		/// 
 		/// Step to the next motion instruction
-		/// 
 		/// </summary>
-		public const RapidExecutionMode StepMotion;
+		StepMotion = 6,
 	}
 }

@@ -5,27 +5,18 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// Which of the two copies of the serial measurement board data is erased
-	/// 
 	/// </summary>
-	public sealed class SmbDataMemory : Enum {
-
-
-		public int value__;
+	public enum SmbDataMemory {
 
 		/// <summary>
-		/// 
 		/// The copy held by the robot itself
-		/// 
 		/// </summary>
-		public const SmbDataMemory Robot;
+		Robot = 0,
 
 		/// <summary>
-		/// 
 		/// The copy held by the controller cabinet
-		/// 
 		/// </summary>
-		public const SmbDataMemory Controller;
+		Controller = 1,
 	}
 }

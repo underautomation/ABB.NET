@@ -5,48 +5,33 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// What an external joint of a task is doing
-	/// 
 	/// </summary>
-	public sealed class RapidJointState : Enum {
-
-
-		public int value__;
+	public enum RapidJointState {
 
 		/// <summary>
-		/// 
 		/// The controller reported a state this library does not know
-		/// 
 		/// </summary>
-		public const RapidJointState Unknown;
+		Unknown = 0,
 
 		/// <summary>
-		/// 
 		/// The joint moves along a line
-		/// 
 		/// </summary>
-		public const RapidJointState Linear;
+		Linear = 1,
 
 		/// <summary>
-		/// 
 		/// The joint turns
-		/// 
 		/// </summary>
-		public const RapidJointState Rotating;
+		Rotating = 2,
 
 		/// <summary>
-		/// 
 		/// The joint is not active
-		/// 
 		/// </summary>
-		public const RapidJointState NotActive;
+		NotActive = 3,
 
 		/// <summary>
-		/// 
 		/// The joint is active but has no position
-		/// 
 		/// </summary>
-		public const RapidJointState NoPosition;
+		NoPosition = 4,
 	}
 }

@@ -5,62 +5,43 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// Type of an I/O signal
-	/// 
 	/// </summary>
-	public sealed class IoSignalType : Enum {
-
-
-		public int value__;
+	public enum IoSignalType {
 
 		/// <summary>
-		/// 
 		/// The signal type could not be determined
-		/// 
 		/// </summary>
-		public const IoSignalType Unknown;
+		Unknown = 0,
 
 		/// <summary>
-		/// 
 		/// Digital output
-		/// 
 		/// </summary>
-		public const IoSignalType DigitalOutput;
+		DigitalOutput = 1,
 
 		/// <summary>
-		/// 
 		/// Digital input
-		/// 
 		/// </summary>
-		public const IoSignalType DigitalInput;
+		DigitalInput = 2,
 
 		/// <summary>
-		/// 
 		/// Analog output
-		/// 
 		/// </summary>
-		public const IoSignalType AnalogOutput;
+		AnalogOutput = 3,
 
 		/// <summary>
-		/// 
 		/// Analog input
-		/// 
 		/// </summary>
-		public const IoSignalType AnalogInput;
+		AnalogInput = 4,
 
 		/// <summary>
-		/// 
 		/// Group input
-		/// 
 		/// </summary>
-		public const IoSignalType GroupInput;
+		GroupInput = 5,
 
 		/// <summary>
-		/// 
 		/// Group output
-		/// 
 		/// </summary>
-		public const IoSignalType GroupOutput;
+		GroupOutput = 6,
 	}
 }

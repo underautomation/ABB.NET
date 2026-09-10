@@ -5,48 +5,33 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// Configuration type applied to an I/O network by <code>IoService.SetNetworkConfigurationType()</code>
-	/// 
 	/// </summary>
-	public sealed class IoNetworkConfigurationType : Enum {
-
-
-		public int value__;
+	public enum IoNetworkConfigurationType {
 
 		/// <summary>
-		/// 
 		/// Configure the signals of the network
-		/// 
 		/// </summary>
-		public const IoNetworkConfigurationType Bits;
+		Bits = 0,
 
 		/// <summary>
-		/// 
 		/// Configure the signal groups of the network
-		/// 
 		/// </summary>
-		public const IoNetworkConfigurationType Groups;
+		Groups = 1,
 
 		/// <summary>
-		/// 
 		/// Configure both the signals and the signal groups
-		/// 
 		/// </summary>
-		public const IoNetworkConfigurationType Both;
+		Both = 2,
 
 		/// <summary>
-		/// 
 		/// Scan the network for connected devices
-		/// 
 		/// </summary>
-		public const IoNetworkConfigurationType Scan;
+		Scan = 3,
 
 		/// <summary>
-		/// 
 		/// Configure the devices of the network
-		/// 
 		/// </summary>
-		public const IoNetworkConfigurationType Units;
+		Units = 4,
 	}
 }

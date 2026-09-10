@@ -5,17 +5,14 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// One software product installed on the controller.
-	/// <p>Returned by <code>SystemService.GetProducts()</code>.</p>
 	/// 
+	/// <p>Returned by <code>SystemService.GetProducts()</code>.</p>
 	/// </summary>
-	public class SystemProduct : Object {
+	public class SystemProduct {
 
 		/// <summary>
-		/// 
 		/// Initializes a new instance of the <xref href="UnderAutomation.ABB.Rws.Data.SystemProduct" data-throw-if-not-resolved="false"></xref> class
-		/// 
 		/// </summary>
 		public SystemProduct()
 		{
@@ -23,9 +20,7 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
 		/// Returns a string representation of this product
-		/// 
 		/// </summary>
 		public override string ToString()
 		{
@@ -34,24 +29,19 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
-		/// Name of the product, for example &quot;RobotWare&quot; or &quot;RobotControl&quot;
-		/// 
+		/// Name of the product, for example "RobotWare" or "RobotControl"
 		/// </summary>
 		public string Name { get; set; }
 
 		/// <summary>
-		/// 
 		/// Full version of the product, build information included.
-		/// <p>Null when the controller only reports the version name.</p>
 		/// 
+		/// <p>Null when the controller only reports the version name.</p>
 		/// </summary>
 		public string Version { get; set; }
 
 		/// <summary>
-		/// 
 		/// Human readable version of the product
-		/// 
 		/// </summary>
 		public string VersionName { get; set; }
 	}

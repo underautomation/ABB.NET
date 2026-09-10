@@ -5,18 +5,15 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// A data type the controller suggests for one argument of an instruction, so that an editor can offer
 	/// the operator the types that fit where the cursor stands.
-	/// <p>Returned by <code>RapidService.GetPreferredDataTypes()</code>.</p>
 	/// 
+	/// <p>Returned by <code>RapidService.GetPreferredDataTypes()</code>.</p>
 	/// </summary>
-	public class RapidPreferredDataTypeItem : Object {
+	public class RapidPreferredDataTypeItem {
 
 		/// <summary>
-		/// 
 		/// Initializes a new instance of the <xref href="UnderAutomation.ABB.Rws.Data.RapidPreferredDataTypeItem" data-throw-if-not-resolved="false"></xref> class
-		/// 
 		/// </summary>
 		public RapidPreferredDataTypeItem()
 		{
@@ -24,9 +21,7 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
 		/// Returns a string representation of this suggestion
-		/// 
 		/// </summary>
 		public override string ToString()
 		{
@@ -35,16 +30,12 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
-		/// Name of the suggestion, for example &quot;signaldi&quot;
-		/// 
+		/// Name of the suggestion, for example "signaldi"
 		/// </summary>
 		public string Name { get; set; }
 
 		/// <summary>
-		/// 
 		/// Data type of the suggestion
-		/// 
 		/// </summary>
 		public string DataType { get; set; }
 	}

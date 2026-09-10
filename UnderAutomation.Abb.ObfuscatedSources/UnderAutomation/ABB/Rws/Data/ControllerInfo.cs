@@ -6,17 +6,14 @@ using System;
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// Overview of the controller resources.
-	/// <p>Returned by <code>ControllerService.GetInfo()</code>.</p>
 	/// 
+	/// <p>Returned by <code>ControllerService.GetInfo()</code>.</p>
 	/// </summary>
-	public class ControllerInfo : Object {
+	public class ControllerInfo {
 
 		/// <summary>
-		/// 
 		/// Initializes a new instance of the <xref href="UnderAutomation.ABB.Rws.Data.ControllerInfo" data-throw-if-not-resolved="false"></xref> class
-		/// 
 		/// </summary>
 		public ControllerInfo()
 		{
@@ -24,9 +21,7 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
 		/// Returns a string representation of this controller information
-		/// 
 		/// </summary>
 		public override string ToString()
 		{
@@ -35,37 +30,27 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
 		/// Current system time of the controller (UTC), if available
-		/// 
 		/// </summary>
-		public Nullable<DateTime> SystemTime { get; set; }
+		public DateTime? SystemTime { get; set; }
 
 		/// <summary>
-		/// 
 		/// Name of the controller
-		/// 
 		/// </summary>
 		public string Name { get; set; }
 
 		/// <summary>
-		/// 
 		/// Indicates whether the controller is a real or a virtual controller
-		/// 
 		/// </summary>
 		public ControllerType Type { get; set; }
 
 		/// <summary>
-		/// 
 		/// Indicates whether the controller runs at system level or in bootserver mode
-		/// 
 		/// </summary>
 		public ControllerLevel Level { get; set; }
 
 		/// <summary>
-		/// 
-		/// Names of the sub resources exposed by the controller (&quot;clock&quot;, &quot;identity&quot;, &quot;network&quot;, ...)
-		/// 
+		/// Names of the sub resources exposed by the controller ("clock", "identity", "network", ...)
 		/// </summary>
 		public string[] Resources { get; set; }
 	}

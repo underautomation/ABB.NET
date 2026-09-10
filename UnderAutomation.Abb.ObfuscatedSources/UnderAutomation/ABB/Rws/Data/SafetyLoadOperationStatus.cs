@@ -5,62 +5,43 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// Indicates whether a new safety configuration is allowed to be loaded
-	/// 
 	/// </summary>
-	public sealed class SafetyLoadOperationStatus : Enum {
-
-
-		public int value__;
+	public enum SafetyLoadOperationStatus {
 
 		/// <summary>
-		/// 
 		/// The status could not be determined
-		/// 
 		/// </summary>
-		public const SafetyLoadOperationStatus Unknown;
+		Unknown = 0,
 
 		/// <summary>
-		/// 
 		/// Loading a new safety configuration is allowed
-		/// 
 		/// </summary>
-		public const SafetyLoadOperationStatus Ok;
+		Ok = 1,
 
 		/// <summary>
-		/// 
 		/// The safety option is not present on the controller (SCORCH_ERR_OPTION_NOT_PRESENT)
-		/// 
 		/// </summary>
-		public const SafetyLoadOperationStatus OptionNotPresent;
+		OptionNotPresent = 2,
 
 		/// <summary>
-		/// 
 		/// The controller is not in manual mode (SCORCH_ERR_NOT_IN_MANUAL_MODE)
-		/// 
 		/// </summary>
-		public const SafetyLoadOperationStatus NotInManualMode;
+		NotInManualMode = 3,
 
 		/// <summary>
-		/// 
 		/// The motors are not switched off (SCORCH_ERR_NOT_IN_MOTORS_OFF)
-		/// 
 		/// </summary>
-		public const SafetyLoadOperationStatus NotInMotorsOff;
+		NotInMotorsOff = 4,
 
 		/// <summary>
-		/// 
 		/// The current safety configuration is locked (SCORCH_ERR_CURRENT_CONFIG_LOCKED)
-		/// 
 		/// </summary>
-		public const SafetyLoadOperationStatus CurrentConfigurationLocked;
+		CurrentConfigurationLocked = 5,
 
 		/// <summary>
-		/// 
 		/// The user does not have the required grant (SCORCH_ERR_USER_GRANT_IS_MISSING)
-		/// 
 		/// </summary>
-		public const SafetyLoadOperationStatus UserGrantMissing;
+		UserGrantMissing = 6,
 	}
 }

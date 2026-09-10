@@ -5,18 +5,15 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// One argument of an event log message. The arguments are the values the controller substitutes
 	/// into the text of the message, for example the name of the task that was started.
-	/// <p>Held by <xref href="UnderAutomation.ABB.Rws.Data.ElogMessage.Arguments" data-throw-if-not-resolved="false"></xref>.</p>
 	/// 
+	/// <p>Held by <xref href="UnderAutomation.ABB.Rws.Data.ElogMessage.Arguments" data-throw-if-not-resolved="false"></xref>.</p>
 	/// </summary>
-	public class ElogMessageArgument : Object {
+	public class ElogMessageArgument {
 
 		/// <summary>
-		/// 
 		/// Initializes a new instance of the <xref href="UnderAutomation.ABB.Rws.Data.ElogMessageArgument" data-throw-if-not-resolved="false"></xref> class
-		/// 
 		/// </summary>
 		public ElogMessageArgument()
 		{
@@ -24,9 +21,7 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
 		/// Returns a string representation of this argument
-		/// 
 		/// </summary>
 		public override string ToString()
 		{
@@ -35,23 +30,17 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
 		/// Position of the argument in the message, starting at 1
-		/// 
 		/// </summary>
 		public int Index { get; set; }
 
 		/// <summary>
-		/// 
-		/// Type of the argument reported by the controller, for example &quot;string&quot;, &quot;long&quot; or &quot;float&quot;
-		/// 
+		/// Type of the argument reported by the controller, for example "string", "long" or "float"
 		/// </summary>
 		public string Type { get; set; }
 
 		/// <summary>
-		/// 
 		/// Value of the argument, always as text
-		/// 
 		/// </summary>
 		public string Value { get; set; }
 	}

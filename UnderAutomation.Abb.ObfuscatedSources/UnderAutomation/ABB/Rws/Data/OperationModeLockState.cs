@@ -5,55 +5,38 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// Lock state of the operating mode selector
-	/// 
 	/// </summary>
-	public sealed class OperationModeLockState : Enum {
-
-
-		public int value__;
+	public enum OperationModeLockState {
 
 		/// <summary>
-		/// 
 		/// The lock state could not be determined
-		/// 
 		/// </summary>
-		public const OperationModeLockState Unknown;
+		Unknown = 0,
 
 		/// <summary>
-		/// 
 		/// The controller reports an error on the mode selector lock
-		/// 
 		/// </summary>
-		public const OperationModeLockState Error;
+		Error = 1,
 
 		/// <summary>
-		/// 
 		/// The operating mode can be changed freely
-		/// 
 		/// </summary>
-		public const OperationModeLockState Unlocked;
+		Unlocked = 2,
 
 		/// <summary>
-		/// 
 		/// The operating mode is locked and can be unlocked again with the pin code it was locked with
-		/// 
 		/// </summary>
-		public const OperationModeLockState Locked;
+		Locked = 3,
 
 		/// <summary>
-		/// 
 		/// The operating mode is permanently locked
-		/// 
 		/// </summary>
-		public const OperationModeLockState PermanentlyLocked;
+		PermanentlyLocked = 4,
 
 		/// <summary>
-		/// 
 		/// A permanent lock has been requested and is not effective yet
-		/// 
 		/// </summary>
-		public const OperationModeLockState PendingPermanentLock;
+		PendingPermanentLock = 5,
 	}
 }

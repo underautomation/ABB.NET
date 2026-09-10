@@ -5,41 +5,28 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// Mismatches between a backup and the current system that are ignored when restoring
-	/// 
 	/// </summary>
-	public sealed class BackupRestoreIgnore : Enum {
-
-
-		public int value__;
+	public enum BackupRestoreIgnore {
 
 		/// <summary>
-		/// 
 		/// No mismatch is ignored
-		/// 
 		/// </summary>
-		public const BackupRestoreIgnore None;
+		None = 0,
 
 		/// <summary>
-		/// 
 		/// All mismatches are ignored
-		/// 
 		/// </summary>
-		public const BackupRestoreIgnore All;
+		All = 1,
 
 		/// <summary>
-		/// 
 		/// A mismatch between the system id of the backup and the system id of the current system is ignored
-		/// 
 		/// </summary>
-		public const BackupRestoreIgnore SystemId;
+		SystemId = 2,
 
 		/// <summary>
-		/// 
 		/// A mismatch between the template id of the backup and the template id of the current system is ignored
-		/// 
 		/// </summary>
-		public const BackupRestoreIgnore TemplateId;
+		TemplateId = 3,
 	}
 }

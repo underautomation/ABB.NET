@@ -5,34 +5,23 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// Logical state of an I/O device
-	/// 
 	/// </summary>
-	public sealed class IoDeviceLogicalState : Enum {
-
-
-		public int value__;
+	public enum IoDeviceLogicalState {
 
 		/// <summary>
-		/// 
 		/// The logical state could not be determined
-		/// 
 		/// </summary>
-		public const IoDeviceLogicalState Unknown;
+		Unknown = 0,
 
 		/// <summary>
-		/// 
 		/// The device is enabled
-		/// 
 		/// </summary>
-		public const IoDeviceLogicalState Enabled;
+		Enabled = 1,
 
 		/// <summary>
-		/// 
 		/// The device is disabled
-		/// 
 		/// </summary>
-		public const IoDeviceLogicalState Disabled;
+		Disabled = 2,
 	}
 }

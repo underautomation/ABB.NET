@@ -6,17 +6,14 @@ using System;
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// One argument of the routine call found at a given position of a module, and where it sits in the source.
-	/// <p>Returned by <code>RapidService.GetRoutineArguments()</code>.</p>
 	/// 
+	/// <p>Returned by <code>RapidService.GetRoutineArguments()</code>.</p>
 	/// </summary>
-	public class RapidRoutineArgument : Object {
+	public class RapidRoutineArgument {
 
 		/// <summary>
-		/// 
 		/// Initializes a new instance of the <xref href="UnderAutomation.ABB.Rws.Data.RapidRoutineArgument" data-throw-if-not-resolved="false"></xref> class
-		/// 
 		/// </summary>
 		public RapidRoutineArgument()
 		{
@@ -24,9 +21,7 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
 		/// Returns a string representation of this argument
-		/// 
 		/// </summary>
 		public override string ToString()
 		{
@@ -35,73 +30,53 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
 		/// Position of the argument in the call, counted from 0
-		/// 
 		/// </summary>
-		public Nullable<int> ParameterNumber { get; set; }
+		public int? ParameterNumber { get; set; }
 
 		/// <summary>
-		/// 
 		/// Which alternative of the parameter this argument fills, null when the controller did not report it
-		/// 
 		/// </summary>
-		public Nullable<int> AlternateArgument { get; set; }
+		public int? AlternateArgument { get; set; }
 
 		/// <summary>
-		/// 
 		/// Line the argument starts at, null when the controller did not report it
-		/// 
 		/// </summary>
-		public Nullable<int> StartRow { get; set; }
+		public int? StartRow { get; set; }
 
 		/// <summary>
-		/// 
 		/// Column the argument starts at, null when the controller did not report it
-		/// 
 		/// </summary>
-		public Nullable<int> StartColumn { get; set; }
+		public int? StartColumn { get; set; }
 
 		/// <summary>
-		/// 
 		/// Line the argument ends at, null when the controller did not report it
-		/// 
 		/// </summary>
-		public Nullable<int> EndRow { get; set; }
+		public int? EndRow { get; set; }
 
 		/// <summary>
-		/// 
 		/// Column the argument ends at, null when the controller did not report it
-		/// 
 		/// </summary>
-		public Nullable<int> EndColumn { get; set; }
+		public int? EndColumn { get; set; }
 
 		/// <summary>
-		/// 
 		/// What the argument is, for example a required argument or a name reference
-		/// 
 		/// </summary>
 		public string ObjectType { get; set; }
 
 		/// <summary>
-		/// 
-		/// Type of the argument, for example &quot;num&quot;
-		/// 
+		/// Type of the argument, for example "num"
 		/// </summary>
 		public string DataType { get; set; }
 
 		/// <summary>
-		/// 
 		/// Position of the argument in the argument list, null when the controller did not report it
-		/// 
 		/// </summary>
-		public Nullable<int> ListNumber { get; set; }
+		public int? ListNumber { get; set; }
 
 		/// <summary>
-		/// 
 		/// Length of the argument list, null when the controller did not report it
-		/// 
 		/// </summary>
-		public Nullable<int> ListLength { get; set; }
+		public int? ListLength { get; set; }
 	}
 }

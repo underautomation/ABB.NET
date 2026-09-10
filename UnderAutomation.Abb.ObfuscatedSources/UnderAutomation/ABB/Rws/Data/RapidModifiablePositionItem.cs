@@ -6,18 +6,15 @@ using System;
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// One motion instruction of the system whose position can be rewritten to where the robot currently
 	/// stands, wherever in whichever task it sits.
-	/// <p>Returned by <code>RapidService.GetAllModifiablePositions()</code>.</p>
 	/// 
+	/// <p>Returned by <code>RapidService.GetAllModifiablePositions()</code>.</p>
 	/// </summary>
-	public class RapidModifiablePositionItem : Object {
+	public class RapidModifiablePositionItem {
 
 		/// <summary>
-		/// 
 		/// Initializes a new instance of the <xref href="UnderAutomation.ABB.Rws.Data.RapidModifiablePositionItem" data-throw-if-not-resolved="false"></xref> class
-		/// 
 		/// </summary>
 		public RapidModifiablePositionItem()
 		{
@@ -25,9 +22,7 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
 		/// Returns a string representation of this instruction
-		/// 
 		/// </summary>
 		public override string ToString()
 		{
@@ -36,45 +31,33 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
 		/// Name of the module holding the instruction
-		/// 
 		/// </summary>
 		public string ModuleName { get; set; }
 
 		/// <summary>
-		/// 
 		/// Name of the task holding the module
-		/// 
 		/// </summary>
 		public string TaskName { get; set; }
 
 		/// <summary>
-		/// 
 		/// Line the instruction starts at, null when the controller did not report it
-		/// 
 		/// </summary>
-		public Nullable<int> StartRow { get; set; }
+		public int? StartRow { get; set; }
 
 		/// <summary>
-		/// 
 		/// Column the instruction starts at, null when the controller did not report it
-		/// 
 		/// </summary>
-		public Nullable<int> StartColumn { get; set; }
+		public int? StartColumn { get; set; }
 
 		/// <summary>
-		/// 
 		/// Line the instruction ends at, null when the controller did not report it
-		/// 
 		/// </summary>
-		public Nullable<int> EndRow { get; set; }
+		public int? EndRow { get; set; }
 
 		/// <summary>
-		/// 
 		/// Column the instruction ends at, null when the controller did not report it
-		/// 
 		/// </summary>
-		public Nullable<int> EndColumn { get; set; }
+		public int? EndColumn { get; set; }
 	}
 }

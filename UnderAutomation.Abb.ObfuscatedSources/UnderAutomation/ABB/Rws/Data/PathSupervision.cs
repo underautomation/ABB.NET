@@ -6,17 +6,14 @@ using System;
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// Collision detection settings of one mechanical unit while it follows a programmed path.
-	/// <p>Returned by <code>MotionSystemService.GetPathSupervision()</code>.</p>
 	/// 
+	/// <p>Returned by <code>MotionSystemService.GetPathSupervision()</code>.</p>
 	/// </summary>
-	public class PathSupervision : Object {
+	public class PathSupervision {
 
 		/// <summary>
-		/// 
 		/// Initializes a new instance of the <xref href="UnderAutomation.ABB.Rws.Data.PathSupervision" data-throw-if-not-resolved="false"></xref> class
-		/// 
 		/// </summary>
 		public PathSupervision()
 		{
@@ -24,9 +21,7 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
 		/// Returns a string representation of these settings
-		/// 
 		/// </summary>
 		public override string ToString()
 		{
@@ -35,18 +30,14 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
 		/// Whether the supervision is switched on, null when the controller did not report it
-		/// 
 		/// </summary>
-		public Nullable<bool> Enabled { get; set; }
+		public bool? Enabled { get; set; }
 
 		/// <summary>
-		/// 
 		/// Sensitivity of the supervision, as a percentage: the lower the value, the sooner a collision is
 		/// reported. Null when the controller did not report it.
-		/// 
 		/// </summary>
-		public Nullable<int> Level { get; set; }
+		public int? Level { get; set; }
 	}
 }

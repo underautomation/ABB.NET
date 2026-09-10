@@ -5,48 +5,33 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// Level at which the code of a task is currently executing
-	/// 
 	/// </summary>
-	public sealed class RapidExecutionLevel : Enum {
-
-
-		public int value__;
+	public enum RapidExecutionLevel {
 
 		/// <summary>
-		/// 
 		/// The controller reported a level this library does not know
-		/// 
 		/// </summary>
-		public const RapidExecutionLevel Unknown;
+		Unknown = 0,
 
 		/// <summary>
-		/// 
 		/// Nothing is executing
-		/// 
 		/// </summary>
-		public const RapidExecutionLevel None;
+		None = 1,
 
 		/// <summary>
-		/// 
 		/// The normal user code is executing
-		/// 
 		/// </summary>
-		public const RapidExecutionLevel Normal;
+		Normal = 2,
 
 		/// <summary>
-		/// 
 		/// A trap routine is executing
-		/// 
 		/// </summary>
-		public const RapidExecutionLevel Trap;
+		Trap = 3,
 
 		/// <summary>
-		/// 
 		/// A user routine is executing
-		/// 
 		/// </summary>
-		public const RapidExecutionLevel User;
+		User = 4,
 	}
 }

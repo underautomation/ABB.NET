@@ -5,55 +5,38 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// Physical state of an I/O network
-	/// 
 	/// </summary>
-	public sealed class IoNetworkPhysicalState : Enum {
-
-
-		public int value__;
+	public enum IoNetworkPhysicalState {
 
 		/// <summary>
-		/// 
 		/// The physical state could not be determined
-		/// 
 		/// </summary>
-		public const IoNetworkPhysicalState Unknown;
+		Unknown = 0,
 
 		/// <summary>
-		/// 
 		/// The network is halted
-		/// 
 		/// </summary>
-		public const IoNetworkPhysicalState Halted;
+		Halted = 1,
 
 		/// <summary>
-		/// 
 		/// The network is running
-		/// 
 		/// </summary>
-		public const IoNetworkPhysicalState Running;
+		Running = 2,
 
 		/// <summary>
-		/// 
 		/// The network reports an error
-		/// 
 		/// </summary>
-		public const IoNetworkPhysicalState Error;
+		Error = 3,
 
 		/// <summary>
-		/// 
 		/// The network is starting up
-		/// 
 		/// </summary>
-		public const IoNetworkPhysicalState Startup;
+		Startup = 4,
 
 		/// <summary>
-		/// 
 		/// The network is initializing
-		/// 
 		/// </summary>
-		public const IoNetworkPhysicalState Init;
+		Init = 5,
 	}
 }

@@ -5,18 +5,15 @@
 
 namespace UnderAutomation.ABB.Common {
 	/// <summary>
-	/// 
 	/// The six joint values of a robot arm.
+	/// 
 	/// <p>Readings of the controller express them in degrees, while the kinematics calculations work
 	/// in radians. The method that returns or takes them says which one it uses.</p>
-	/// 
 	/// </summary>
-	public class RobotJoints : Object {
+	public class RobotJoints {
 
 		/// <summary>
-		/// 
 		/// Initializes the six axes to zero
-		/// 
 		/// </summary>
 		public RobotJoints()
 		{
@@ -24,9 +21,7 @@ namespace UnderAutomation.ABB.Common {
 		}
 
 		/// <summary>
-		/// 
 		/// Initializes the six axes
-		/// 
 		/// </summary>
 		/// <param name="axis1">Value of axis 1</param>
 		/// <param name="axis2">Value of axis 2</param>
@@ -40,9 +35,7 @@ namespace UnderAutomation.ABB.Common {
 		}
 
 		/// <summary>
-		/// 
 		/// Returns a string representation of these joint values
-		/// 
 		/// </summary>
 		public override string ToString()
 		{
@@ -51,44 +44,32 @@ namespace UnderAutomation.ABB.Common {
 		}
 
 		/// <summary>
-		/// 
 		/// Value of axis 1
-		/// 
 		/// </summary>
 		public double Axis1 { get; set; }
 
 		/// <summary>
-		/// 
 		/// Value of axis 2
-		/// 
 		/// </summary>
 		public double Axis2 { get; set; }
 
 		/// <summary>
-		/// 
 		/// Value of axis 3
-		/// 
 		/// </summary>
 		public double Axis3 { get; set; }
 
 		/// <summary>
-		/// 
 		/// Value of axis 4
-		/// 
 		/// </summary>
 		public double Axis4 { get; set; }
 
 		/// <summary>
-		/// 
 		/// Value of axis 5
-		/// 
 		/// </summary>
 		public double Axis5 { get; set; }
 
 		/// <summary>
-		/// 
 		/// Value of axis 6
-		/// 
 		/// </summary>
 		public double Axis6 { get; set; }
 	}

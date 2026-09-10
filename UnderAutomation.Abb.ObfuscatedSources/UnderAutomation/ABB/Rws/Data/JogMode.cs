@@ -5,62 +5,43 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// How the jogging commands sent to a mechanical unit are interpreted
-	/// 
 	/// </summary>
-	public sealed class JogMode : Enum {
-
-
-		public int value__;
+	public enum JogMode {
 
 		/// <summary>
-		/// 
 		/// The controller reported a mode this library does not know
-		/// 
 		/// </summary>
-		public const JogMode Unknown;
+		Unknown = 0,
 
 		/// <summary>
-		/// 
 		/// Each command moves one axis of the first axis group
-		/// 
 		/// </summary>
-		public const JogMode AxisGroup1;
+		AxisGroup1 = 1,
 
 		/// <summary>
-		/// 
 		/// Each command moves one axis of the second axis group
-		/// 
 		/// </summary>
-		public const JogMode AxisGroup2;
+		AxisGroup2 = 2,
 
 		/// <summary>
-		/// 
 		/// The tool is moved along the axes of the active coordinate system
-		/// 
 		/// </summary>
-		public const JogMode Cartesian;
+		Cartesian = 3,
 
 		/// <summary>
-		/// 
 		/// The tool is aligned with the closest axis of the active coordinate system
-		/// 
 		/// </summary>
-		public const JogMode Align;
+		Align = 4,
 
 		/// <summary>
-		/// 
 		/// The robot moves to a given position
-		/// 
 		/// </summary>
-		public const JogMode GoToPosition;
+		GoToPosition = 5,
 
 		/// <summary>
-		/// 
 		/// The robot changes axis configuration without moving the tool center point
-		/// 
 		/// </summary>
-		public const JogMode ConfigurationJog;
+		ConfigurationJog = 6,
 	}
 }

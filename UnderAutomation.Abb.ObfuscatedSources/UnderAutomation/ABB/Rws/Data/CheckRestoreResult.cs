@@ -5,17 +5,14 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// Result of a backup restore check.
-	/// <p>Returned by <code>ControllerService.CheckRestore(...)</code>.</p>
 	/// 
+	/// <p>Returned by <code>ControllerService.CheckRestore(...)</code>.</p>
 	/// </summary>
-	public class CheckRestoreResult : Object {
+	public class CheckRestoreResult {
 
 		/// <summary>
-		/// 
 		/// Initializes a new instance of the <xref href="UnderAutomation.ABB.Rws.Data.CheckRestoreResult" data-throw-if-not-resolved="false"></xref> class
-		/// 
 		/// </summary>
 		public CheckRestoreResult()
 		{
@@ -23,9 +20,7 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
 		/// Returns a string representation of this check result
-		/// 
 		/// </summary>
 		public override string ToString()
 		{
@@ -34,23 +29,17 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
 		/// Status of the check
-		/// 
 		/// </summary>
 		public CheckRestoreStatus Status { get; set; }
 
 		/// <summary>
-		/// 
 		/// Indicates whether the backup can be restored
-		/// 
 		/// </summary>
 		public bool IsAccepted { get; }
 
 		/// <summary>
-		/// 
 		/// File missing or corrupted in the backup, if reported by the controller
-		/// 
 		/// </summary>
 		public string Path { get; set; }
 	}

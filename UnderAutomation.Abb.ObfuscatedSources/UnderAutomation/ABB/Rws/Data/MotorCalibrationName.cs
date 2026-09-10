@@ -5,17 +5,14 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// Names one joint of a mechanical unit carries: the joint itself and the calibration data attached to it.
-	/// <p>Returned by <code>MotionSystemService.GetMotorCalibrationNames()</code>.</p>
 	/// 
+	/// <p>Returned by <code>MotionSystemService.GetMotorCalibrationNames()</code>.</p>
 	/// </summary>
-	public class MotorCalibrationName : Object {
+	public class MotorCalibrationName {
 
 		/// <summary>
-		/// 
 		/// Initializes a new instance of the <xref href="UnderAutomation.ABB.Rws.Data.MotorCalibrationName" data-throw-if-not-resolved="false"></xref> class
-		/// 
 		/// </summary>
 		public MotorCalibrationName()
 		{
@@ -23,9 +20,7 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
 		/// Returns a string representation of these names
-		/// 
 		/// </summary>
 		public override string ToString()
 		{
@@ -34,23 +29,17 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
 		/// Number of the joint inside its mechanical unit, starting at 1
-		/// 
 		/// </summary>
 		public int Number { get; set; }
 
 		/// <summary>
-		/// 
-		/// Name of the joint, for example &quot;rob1_1&quot;
-		/// 
+		/// Name of the joint, for example "rob1_1"
 		/// </summary>
 		public string JointName { get; set; }
 
 		/// <summary>
-		/// 
 		/// Name of the calibration data of the joint, usually the same as <xref href="UnderAutomation.ABB.Rws.Data.MotorCalibrationName.JointName" data-throw-if-not-resolved="false"></xref>
-		/// 
 		/// </summary>
 		public string CalibrationName { get; set; }
 	}

@@ -5,34 +5,23 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// Where new text is put relative to the range it is written against
-	/// 
 	/// </summary>
-	public sealed class RapidTextReplaceMode : Enum {
-
-
-		public int value__;
+	public enum RapidTextReplaceMode {
 
 		/// <summary>
-		/// 
 		/// Insert the new text after the range, leaving it in place
-		/// 
 		/// </summary>
-		public const RapidTextReplaceMode After;
+		After = 0,
 
 		/// <summary>
-		/// 
 		/// Insert the new text before the range, leaving it in place
-		/// 
 		/// </summary>
-		public const RapidTextReplaceMode Before;
+		Before = 1,
 
 		/// <summary>
-		/// 
 		/// Replace the range with the new text
-		/// 
 		/// </summary>
-		public const RapidTextReplaceMode Replace;
+		Replace = 2,
 	}
 }

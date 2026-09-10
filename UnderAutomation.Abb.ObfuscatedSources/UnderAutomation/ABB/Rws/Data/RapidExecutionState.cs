@@ -5,34 +5,23 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// Whether the controller is currently executing RAPID code
-	/// 
 	/// </summary>
-	public sealed class RapidExecutionState : Enum {
-
-
-		public int value__;
+	public enum RapidExecutionState {
 
 		/// <summary>
-		/// 
 		/// The controller reported a state this library does not know
-		/// 
 		/// </summary>
-		public const RapidExecutionState Unknown;
+		Unknown = 0,
 
 		/// <summary>
-		/// 
 		/// RAPID execution is running
-		/// 
 		/// </summary>
-		public const RapidExecutionState Running;
+		Running = 1,
 
 		/// <summary>
-		/// 
 		/// RAPID execution is stopped
-		/// 
 		/// </summary>
-		public const RapidExecutionState Stopped;
+		Stopped = 2,
 	}
 }

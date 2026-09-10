@@ -6,19 +6,16 @@ using System;
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// What a RAPID symbol is declared as.
+	/// 
 	/// <p>Returned by <code>RapidService.GetSymbolProperties()</code> and <code>RapidService.SearchSymbols()</code>.
 	/// A search fills in <xref href="UnderAutomation.ABB.Rws.Data.RapidSymbolProperties.Name" data-throw-if-not-resolved="false"></xref> and leaves <xref href="UnderAutomation.ABB.Rws.Data.RapidSymbolProperties.Storage" data-throw-if-not-resolved="false"></xref> alone, a direct read does the
 	/// opposite on some controllers, so treat both as optional.</p>
-	/// 
 	/// </summary>
-	public class RapidSymbolProperties : Object {
+	public class RapidSymbolProperties {
 
 		/// <summary>
-		/// 
 		/// Initializes a new instance of the <xref href="UnderAutomation.ABB.Rws.Data.RapidSymbolProperties" data-throw-if-not-resolved="false"></xref> class
-		/// 
 		/// </summary>
 		public RapidSymbolProperties()
 		{
@@ -26,9 +23,7 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
 		/// Returns a string representation of this symbol
-		/// 
 		/// </summary>
 		public override string ToString()
 		{
@@ -37,100 +32,72 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
 		/// Path of the symbol, which the other symbol methods take
-		/// 
 		/// </summary>
 		public string SymbolUrl { get; set; }
 
 		/// <summary>
-		/// 
-		/// Name of the symbol, for example &quot;reg1&quot;
-		/// 
+		/// Name of the symbol, for example "reg1"
 		/// </summary>
 		public string Name { get; set; }
 
 		/// <summary>
-		/// 
 		/// What kind of symbol this is
-		/// 
 		/// </summary>
 		public RapidSymbolType SymbolType { get; set; }
 
 		/// <summary>
-		/// 
 		/// Whether the symbol is named, null when the controller did not report it
-		/// 
 		/// </summary>
-		public Nullable<bool> Named { get; set; }
+		public bool? Named { get; set; }
 
 		/// <summary>
-		/// 
-		/// Name of the type of the symbol, for example &quot;num&quot;
-		/// 
+		/// Name of the type of the symbol, for example "num"
 		/// </summary>
 		public string DataType { get; set; }
 
 		/// <summary>
-		/// 
 		/// Number of array dimensions of the symbol, null when the controller did not report it
-		/// 
 		/// </summary>
-		public Nullable<int> Dimensions { get; set; }
+		public int? Dimensions { get; set; }
 
 		/// <summary>
-		/// 
 		/// Size of each array dimension as the controller worded it, empty when the symbol is not an array
-		/// 
 		/// </summary>
 		public string Dimension { get; set; }
 
 		/// <summary>
-		/// 
 		/// Whether the symbol is allocated on the heap, null when the controller did not report it
-		/// 
 		/// </summary>
-		public Nullable<bool> Heap { get; set; }
+		public bool? Heap { get; set; }
 
 		/// <summary>
-		/// 
 		/// Whether the declaration is complete, null when the controller did not report it
-		/// 
 		/// </summary>
-		public Nullable<bool> Linked { get; set; }
+		public bool? Linked { get; set; }
 
 		/// <summary>
-		/// 
 		/// Whether the symbol is local to its module, null when the controller did not report it
-		/// 
 		/// </summary>
-		public Nullable<bool> Local { get; set; }
+		public bool? Local { get; set; }
 
 		/// <summary>
-		/// 
 		/// Whether the symbol may not be written, null when the controller did not report it
-		/// 
 		/// </summary>
-		public Nullable<bool> ReadOnly { get; set; }
+		public bool? ReadOnly { get; set; }
 
 		/// <summary>
-		/// 
 		/// Whether the symbol is global within its task, null when the controller did not report it
-		/// 
 		/// </summary>
-		public Nullable<bool> TaskVariable { get; set; }
+		public bool? TaskVariable { get; set; }
 
 		/// <summary>
-		/// 
-		/// How the controller stores the symbol, for example &quot;loaded&quot;
-		/// 
+		/// How the controller stores the symbol, for example "loaded"
 		/// </summary>
 		public string Storage { get; set; }
 
 		/// <summary>
-		/// 
-		/// Path of the type of the symbol, for example &quot;RAPID/num&quot;
-		/// 
+		/// Path of the type of the symbol, for example "RAPID/num"
 		/// </summary>
 		public string TypeUrl { get; set; }
 	}

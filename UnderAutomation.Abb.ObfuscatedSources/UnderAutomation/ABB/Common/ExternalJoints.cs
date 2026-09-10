@@ -5,25 +5,20 @@
 
 namespace UnderAutomation.ABB.Common {
 	/// <summary>
-	/// 
 	/// The six external axis values that travel with a robot position.
-	/// <p>An axis the robot system does not define comes back as 9E9, which is how the controller says
-	/// &quot;not in use&quot; rather than an actual position.</p>
 	/// 
+	/// <p>An axis the robot system does not define comes back as 9E9, which is how the controller says
+	/// "not in use" rather than an actual position.</p>
 	/// </summary>
-	public class ExternalJoints : Object {
+	public class ExternalJoints {
 
 		/// <summary>
-		/// 
 		/// Value the controller reports for an external axis that is not in use
-		/// 
 		/// </summary>
 		public const double NotInUse = 9000000000;
 
 		/// <summary>
-		/// 
 		/// Initializes the six external axes to zero
-		/// 
 		/// </summary>
 		public ExternalJoints()
 		{
@@ -31,9 +26,7 @@ namespace UnderAutomation.ABB.Common {
 		}
 
 		/// <summary>
-		/// 
 		/// Initializes the six external axes
-		/// 
 		/// </summary>
 		/// <param name="axisA">Value of external axis A</param>
 		/// <param name="axisB">Value of external axis B</param>
@@ -47,9 +40,7 @@ namespace UnderAutomation.ABB.Common {
 		}
 
 		/// <summary>
-		/// 
 		/// Returns a string representation of these external axis values
-		/// 
 		/// </summary>
 		public override string ToString()
 		{
@@ -58,44 +49,32 @@ namespace UnderAutomation.ABB.Common {
 		}
 
 		/// <summary>
-		/// 
 		/// Value of external axis A
-		/// 
 		/// </summary>
 		public double AxisA { get; set; }
 
 		/// <summary>
-		/// 
 		/// Value of external axis B
-		/// 
 		/// </summary>
 		public double AxisB { get; set; }
 
 		/// <summary>
-		/// 
 		/// Value of external axis C
-		/// 
 		/// </summary>
 		public double AxisC { get; set; }
 
 		/// <summary>
-		/// 
 		/// Value of external axis D
-		/// 
 		/// </summary>
 		public double AxisD { get; set; }
 
 		/// <summary>
-		/// 
 		/// Value of external axis E
-		/// 
 		/// </summary>
 		public double AxisE { get; set; }
 
 		/// <summary>
-		/// 
 		/// Value of external axis F
-		/// 
 		/// </summary>
 		public double AxisF { get; set; }
 	}

@@ -5,62 +5,43 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// A property declared on a module, which restricts what may be done with it
-	/// 
 	/// </summary>
-	public sealed class RapidModuleAttribute : Enum {
-
-
-		public int value__;
+	public enum RapidModuleAttribute {
 
 		/// <summary>
-		/// 
 		/// The controller reported an attribute this library does not know
-		/// 
 		/// </summary>
-		public const RapidModuleAttribute Unknown;
+		Unknown = 0,
 
 		/// <summary>
-		/// 
 		/// The module belongs to the system rather than to the program
-		/// 
 		/// </summary>
-		public const RapidModuleAttribute SystemModule;
+		SystemModule = 1,
 
 		/// <summary>
-		/// 
 		/// The source of the module is encoded and cannot be read back
-		/// 
 		/// </summary>
-		public const RapidModuleAttribute Encoded;
+		Encoded = 2,
 
 		/// <summary>
-		/// 
 		/// The source of the module may not be displayed
-		/// 
 		/// </summary>
-		public const RapidModuleAttribute NoView;
+		NoView = 3,
 
 		/// <summary>
-		/// 
 		/// Execution may not step into the routines of the module
-		/// 
 		/// </summary>
-		public const RapidModuleAttribute NoStepIn;
+		NoStepIn = 4,
 
 		/// <summary>
-		/// 
 		/// The source may be displayed but not changed
-		/// 
 		/// </summary>
-		public const RapidModuleAttribute ViewOnly;
+		ViewOnly = 5,
 
 		/// <summary>
-		/// 
 		/// The module may not be changed
-		/// 
 		/// </summary>
-		public const RapidModuleAttribute ReadOnly;
+		ReadOnly = 6,
 	}
 }

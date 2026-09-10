@@ -5,34 +5,23 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// Whether the controller is recording the RAPID execution trace to a file
-	/// 
 	/// </summary>
-	public sealed class RapidSpyStatus : Enum {
-
-
-		public int value__;
+	public enum RapidSpyStatus {
 
 		/// <summary>
-		/// 
 		/// The controller reported a status this library does not know
-		/// 
 		/// </summary>
-		public const RapidSpyStatus Unknown;
+		Unknown = 0,
 
 		/// <summary>
-		/// 
 		/// The execution trace is being written
-		/// 
 		/// </summary>
-		public const RapidSpyStatus Logging;
+		Logging = 1,
 
 		/// <summary>
-		/// 
 		/// No execution trace is being written
-		/// 
 		/// </summary>
-		public const RapidSpyStatus NotLogging;
+		NotLogging = 2,
 	}
 }

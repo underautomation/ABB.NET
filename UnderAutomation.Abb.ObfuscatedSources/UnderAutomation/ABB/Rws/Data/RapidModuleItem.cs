@@ -5,18 +5,15 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// A module loaded into a task, as listed by <code>RapidService.GetModules()</code>.
+	/// 
 	/// <p><code>RapidService.GetModule()</code> returns a <xref href="UnderAutomation.ABB.Rws.Data.RapidModuleInfo" data-throw-if-not-resolved="false"></xref>, which adds the file the
 	/// module came from and the attributes declared on it.</p>
-	/// 
 	/// </summary>
-	public class RapidModuleItem : Object {
+	public class RapidModuleItem {
 
 		/// <summary>
-		/// 
 		/// Initializes a new instance of the <xref href="UnderAutomation.ABB.Rws.Data.RapidModuleItem" data-throw-if-not-resolved="false"></xref> class
-		/// 
 		/// </summary>
 		public RapidModuleItem()
 		{
@@ -24,9 +21,7 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
 		/// Returns a string representation of this module
-		/// 
 		/// </summary>
 		public override string ToString()
 		{
@@ -35,16 +30,12 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
-		/// Name of the module, for example &quot;MainModule&quot;
-		/// 
+		/// Name of the module, for example "MainModule"
 		/// </summary>
 		public string Name { get; set; }
 
 		/// <summary>
-		/// 
 		/// Whether the module belongs to the program or to the system
-		/// 
 		/// </summary>
 		public RapidModuleType Type { get; set; }
 	}

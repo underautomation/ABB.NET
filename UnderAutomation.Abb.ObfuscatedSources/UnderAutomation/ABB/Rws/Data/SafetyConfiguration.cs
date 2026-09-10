@@ -6,17 +6,14 @@ using System;
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// Safety supervision configuration of the controller.
-	/// <p>Returned by <code>ControllerService.GetSafetyConfiguration()</code>.</p>
 	/// 
+	/// <p>Returned by <code>ControllerService.GetSafetyConfiguration()</code>.</p>
 	/// </summary>
-	public class SafetyConfiguration : Object {
+	public class SafetyConfiguration {
 
 		/// <summary>
-		/// 
 		/// Initializes a new instance of the <xref href="UnderAutomation.ABB.Rws.Data.SafetyConfiguration" data-throw-if-not-resolved="false"></xref> class
-		/// 
 		/// </summary>
 		public SafetyConfiguration()
 		{
@@ -24,9 +21,7 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
 		/// Returns a string representation of this safety configuration
-		/// 
 		/// </summary>
 		public override string ToString()
 		{
@@ -35,80 +30,59 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
+		/// Status of the configuration, for example "SCORCH_CONFIG_LOADED".
 		/// 
-		/// Status of the configuration, for example &quot;SCORCH_CONFIG_LOADED&quot;.
 		/// <p>Only available when connected with version 2.</p>
-		/// 
 		/// </summary>
 		public string ConfigurationStatus { get; set; }
 
 		/// <summary>
-		/// 
 		/// Safety software major version
-		/// 
 		/// </summary>
-		public Nullable<int> SoftwareMajorVersion { get; set; }
+		public int? SoftwareMajorVersion { get; set; }
 
 		/// <summary>
-		/// 
 		/// Safety software minor version
-		/// 
 		/// </summary>
-		public Nullable<int> SoftwareMinorVersion { get; set; }
+		public int? SoftwareMinorVersion { get; set; }
 
 		/// <summary>
-		/// 
 		/// Safety software revision
-		/// 
 		/// </summary>
-		public Nullable<int> SoftwareRevision { get; set; }
+		public int? SoftwareRevision { get; set; }
 
 		/// <summary>
-		/// 
 		/// Configuration file major version
-		/// 
 		/// </summary>
-		public Nullable<int> FileMajorVersion { get; set; }
+		public int? FileMajorVersion { get; set; }
 
 		/// <summary>
-		/// 
 		/// Configuration file minor version
-		/// 
 		/// </summary>
-		public Nullable<int> FileMinorVersion { get; set; }
+		public int? FileMinorVersion { get; set; }
 
 		/// <summary>
-		/// 
 		/// Configuration file revision
-		/// 
 		/// </summary>
-		public Nullable<int> FileRevision { get; set; }
+		public int? FileRevision { get; set; }
 
 		/// <summary>
-		/// 
 		/// Creation date of the configuration, if available
-		/// 
 		/// </summary>
-		public Nullable<DateTime> CreationDate { get; set; }
+		public DateTime? CreationDate { get; set; }
 
 		/// <summary>
-		/// 
 		/// Author of the configuration
-		/// 
 		/// </summary>
 		public string CreatedBy { get; set; }
 
 		/// <summary>
-		/// 
 		/// Name of the configuration
-		/// 
 		/// </summary>
 		public string Name { get; set; }
 
 		/// <summary>
-		/// 
 		/// Checksum of the configuration, as base64 encoded data
-		/// 
 		/// </summary>
 		public string Checksum { get; set; }
 	}

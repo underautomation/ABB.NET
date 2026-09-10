@@ -5,69 +5,48 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// Operating mode selected on the robot controller
-	/// 
 	/// </summary>
-	public sealed class OperationMode : Enum {
-
-
-		public int value__;
+	public enum OperationMode {
 
 		/// <summary>
-		/// 
 		/// The operating mode could not be determined
-		/// 
 		/// </summary>
-		public const OperationMode Unknown;
+		Unknown = 0,
 
 		/// <summary>
-		/// 
 		/// The controller is initializing
-		/// 
 		/// </summary>
-		public const OperationMode Init;
+		Init = 1,
 
 		/// <summary>
-		/// 
 		/// A change to the automatic mode has been requested and is waiting to be acknowledged
-		/// 
 		/// </summary>
-		public const OperationMode AutomaticChangeRequest;
+		AutomaticChangeRequest = 2,
 
 		/// <summary>
-		/// 
 		/// A change to the manual full speed mode has been requested and is waiting to be acknowledged
-		/// 
 		/// </summary>
-		public const OperationMode ManualFullSpeedChangeRequest;
+		ManualFullSpeedChangeRequest = 3,
 
 		/// <summary>
-		/// 
 		/// Manual mode at reduced speed
-		/// 
 		/// </summary>
-		public const OperationMode ManualReducedSpeed;
+		ManualReducedSpeed = 4,
 
 		/// <summary>
-		/// 
 		/// Manual mode at full speed
-		/// 
 		/// </summary>
-		public const OperationMode ManualFullSpeed;
+		ManualFullSpeed = 5,
 
 		/// <summary>
-		/// 
 		/// Automatic mode
-		/// 
 		/// </summary>
-		public const OperationMode Automatic;
+		Automatic = 6,
 
 		/// <summary>
-		/// 
 		/// The controller reports an undefined operating mode
-		/// 
 		/// </summary>
-		public const OperationMode Undefined;
+		Undefined = 7,
 	}
 }

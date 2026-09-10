@@ -5,118 +5,83 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// Progress of a firmware upgrade of an I/O device
-	/// 
 	/// </summary>
-	public sealed class IoFirmwareUpgradeState : Enum {
-
-
-		public int value__;
+	public enum IoFirmwareUpgradeState {
 
 		/// <summary>
-		/// 
 		/// The state is unknown, or could not be parsed
-		/// 
 		/// </summary>
-		public const IoFirmwareUpgradeState Unknown;
+		Unknown = 0,
 
 		/// <summary>
-		/// 
 		/// The upgrade is performed automatically
-		/// 
 		/// </summary>
-		public const IoFirmwareUpgradeState Automatic;
+		Automatic = 1,
 
 		/// <summary>
-		/// 
 		/// The upgrade has to be started manually
-		/// 
 		/// </summary>
-		public const IoFirmwareUpgradeState Manual;
+		Manual = 2,
 
 		/// <summary>
-		/// 
 		/// The firmware information is being collected
-		/// 
 		/// </summary>
-		public const IoFirmwareUpgradeState Info;
+		Info = 3,
 
 		/// <summary>
-		/// 
 		/// The upgrade resources are being allocated
-		/// 
 		/// </summary>
-		public const IoFirmwareUpgradeState Allocate;
+		Allocate = 4,
 
 		/// <summary>
-		/// 
 		/// The upgrade is starting
-		/// 
 		/// </summary>
-		public const IoFirmwareUpgradeState Start;
+		Start = 5,
 
 		/// <summary>
-		/// 
 		/// The upgrade is running
-		/// 
 		/// </summary>
-		public const IoFirmwareUpgradeState Running;
+		Running = 6,
 
 		/// <summary>
-		/// 
 		/// The device acknowledged the start of the upgrade
-		/// 
 		/// </summary>
-		public const IoFirmwareUpgradeState RunningStartReceived;
+		RunningStartReceived = 7,
 
 		/// <summary>
-		/// 
 		/// The firmware is being checked
-		/// 
 		/// </summary>
-		public const IoFirmwareUpgradeState RunningCheckInProgress;
+		RunningCheckInProgress = 8,
 
 		/// <summary>
-		/// 
 		/// The device memory is being erased
-		/// 
 		/// </summary>
-		public const IoFirmwareUpgradeState RunningEraseInProgress;
+		RunningEraseInProgress = 9,
 
 		/// <summary>
-		/// 
 		/// The firmware is being written to the device
-		/// 
 		/// </summary>
-		public const IoFirmwareUpgradeState RunningBurnInProgress;
+		RunningBurnInProgress = 10,
 
 		/// <summary>
-		/// 
 		/// The device acknowledged the end of the upgrade
-		/// 
 		/// </summary>
-		public const IoFirmwareUpgradeState RunningEndReceived;
+		RunningEndReceived = 11,
 
 		/// <summary>
-		/// 
 		/// The upgraded firmware is being verified
-		/// 
 		/// </summary>
-		public const IoFirmwareUpgradeState Check;
+		Check = 12,
 
 		/// <summary>
-		/// 
 		/// The upgrade resources are being released
-		/// 
 		/// </summary>
-		public const IoFirmwareUpgradeState Deallocate;
+		Deallocate = 13,
 
 		/// <summary>
-		/// 
 		/// The upgrade is finished
-		/// 
 		/// </summary>
-		public const IoFirmwareUpgradeState Finished;
+		Finished = 14,
 	}
 }

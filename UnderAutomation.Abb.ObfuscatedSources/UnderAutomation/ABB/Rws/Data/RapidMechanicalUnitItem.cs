@@ -5,19 +5,16 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// A mechanical unit the positions of a task are expressed in.
+	/// 
 	/// <p>Returned by <code>RapidService.GetMechanicalUnits()</code>. This is the view the RAPID task has of the
 	/// unit; <code>MotionSystemService.GetMechanicalUnits()</code> answers with everything the motion system knows
 	/// about the same units.</p>
-	/// 
 	/// </summary>
-	public class RapidMechanicalUnitItem : Object {
+	public class RapidMechanicalUnitItem {
 
 		/// <summary>
-		/// 
 		/// Initializes a new instance of the <xref href="UnderAutomation.ABB.Rws.Data.RapidMechanicalUnitItem" data-throw-if-not-resolved="false"></xref> class
-		/// 
 		/// </summary>
 		public RapidMechanicalUnitItem()
 		{
@@ -25,9 +22,7 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
 		/// Returns a string representation of this unit
-		/// 
 		/// </summary>
 		public override string ToString()
 		{
@@ -36,23 +31,17 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
-		/// Name of the unit, for example &quot;ROB_1&quot;
-		/// 
+		/// Name of the unit, for example "ROB_1"
 		/// </summary>
 		public string Name { get; set; }
 
 		/// <summary>
-		/// 
 		/// Whether the unit is activated
-		/// 
 		/// </summary>
 		public MechanicalUnitMode Mode { get; set; }
 
 		/// <summary>
-		/// 
 		/// Kind of unit
-		/// 
 		/// </summary>
 		public MechanicalUnitType Type { get; set; }
 	}

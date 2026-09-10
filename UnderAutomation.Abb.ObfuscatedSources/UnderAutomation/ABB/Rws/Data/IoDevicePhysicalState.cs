@@ -5,76 +5,53 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// Physical state of an I/O device
-	/// 
 	/// </summary>
-	public sealed class IoDevicePhysicalState : Enum {
-
-
-		public int value__;
+	public enum IoDevicePhysicalState {
 
 		/// <summary>
-		/// 
 		/// The physical state could not be determined
-		/// 
 		/// </summary>
-		public const IoDevicePhysicalState Unknown;
+		Unknown = 0,
 
 		/// <summary>
-		/// 
 		/// The device is deactivated
-		/// 
 		/// </summary>
-		public const IoDevicePhysicalState Deactivated;
+		Deactivated = 1,
 
 		/// <summary>
-		/// 
 		/// The device is running
-		/// 
 		/// </summary>
-		public const IoDevicePhysicalState Running;
+		Running = 2,
 
 		/// <summary>
-		/// 
 		/// The device reports an error
-		/// 
 		/// </summary>
-		public const IoDevicePhysicalState Error;
+		Error = 3,
 
 		/// <summary>
-		/// 
 		/// The device is not connected
-		/// 
 		/// </summary>
-		public const IoDevicePhysicalState Unconnected;
+		Unconnected = 4,
 
 		/// <summary>
-		/// 
 		/// The device is not configured
-		/// 
 		/// </summary>
-		public const IoDevicePhysicalState Unconfigured;
+		Unconfigured = 5,
 
 		/// <summary>
-		/// 
 		/// The device is starting up
-		/// 
 		/// </summary>
-		public const IoDevicePhysicalState Startup;
+		Startup = 6,
 
 		/// <summary>
-		/// 
 		/// The device is initializing
-		/// 
 		/// </summary>
-		public const IoDevicePhysicalState Init;
+		Init = 7,
 
 		/// <summary>
-		/// 
 		/// The device is halted
-		/// 
 		/// </summary>
-		public const IoDevicePhysicalState Halted;
+		Halted = 8,
 	}
 }

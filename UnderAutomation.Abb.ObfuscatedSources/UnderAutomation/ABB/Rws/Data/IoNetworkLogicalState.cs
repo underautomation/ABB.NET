@@ -5,34 +5,23 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// Logical state of an I/O network
-	/// 
 	/// </summary>
-	public sealed class IoNetworkLogicalState : Enum {
-
-
-		public int value__;
+	public enum IoNetworkLogicalState {
 
 		/// <summary>
-		/// 
 		/// The logical state could not be determined
-		/// 
 		/// </summary>
-		public const IoNetworkLogicalState Unknown;
+		Unknown = 0,
 
 		/// <summary>
-		/// 
 		/// The network is started
-		/// 
 		/// </summary>
-		public const IoNetworkLogicalState Started;
+		Started = 1,
 
 		/// <summary>
-		/// 
 		/// The network is stopped
-		/// 
 		/// </summary>
-		public const IoNetworkLogicalState Stopped;
+		Stopped = 2,
 	}
 }

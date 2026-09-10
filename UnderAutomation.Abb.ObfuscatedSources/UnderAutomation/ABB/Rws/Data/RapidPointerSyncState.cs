@@ -5,34 +5,23 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// Whether the pointers of every task are synchronized with each other
-	/// 
 	/// </summary>
-	public sealed class RapidPointerSyncState : Enum {
-
-
-		public int value__;
+	public enum RapidPointerSyncState {
 
 		/// <summary>
-		/// 
 		/// The controller reported a state this library does not know
-		/// 
 		/// </summary>
-		public const RapidPointerSyncState Unknown;
+		Unknown = 0,
 
 		/// <summary>
-		/// 
 		/// The pointers are synchronized
-		/// 
 		/// </summary>
-		public const RapidPointerSyncState On;
+		On = 1,
 
 		/// <summary>
-		/// 
 		/// The pointers are not synchronized
-		/// 
 		/// </summary>
-		public const RapidPointerSyncState Off;
+		Off = 2,
 	}
 }

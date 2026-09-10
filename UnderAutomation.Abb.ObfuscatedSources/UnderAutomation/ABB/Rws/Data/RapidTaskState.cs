@@ -5,55 +5,38 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// How far the controller has got in preparing the program of a task
-	/// 
 	/// </summary>
-	public sealed class RapidTaskState : Enum {
-
-
-		public int value__;
+	public enum RapidTaskState {
 
 		/// <summary>
-		/// 
 		/// The controller reported a state this library does not know
-		/// 
 		/// </summary>
-		public const RapidTaskState Unknown;
+		Unknown = 0,
 
 		/// <summary>
-		/// 
 		/// The task holds no program
-		/// 
 		/// </summary>
-		public const RapidTaskState Empty;
+		Empty = 1,
 
 		/// <summary>
-		/// 
 		/// The task has been created but its program is not linked yet
-		/// 
 		/// </summary>
-		public const RapidTaskState Initiated;
+		Initiated = 2,
 
 		/// <summary>
-		/// 
 		/// The program of the task is linked and ready to run
-		/// 
 		/// </summary>
-		public const RapidTaskState Linked;
+		Linked = 3,
 
 		/// <summary>
-		/// 
 		/// A program is loaded into the task but not linked yet
-		/// 
 		/// </summary>
-		public const RapidTaskState Loaded;
+		Loaded = 4,
 
 		/// <summary>
-		/// 
 		/// The task is not initialized
-		/// 
 		/// </summary>
-		public const RapidTaskState Uninitialized;
+		Uninitialized = 5,
 	}
 }

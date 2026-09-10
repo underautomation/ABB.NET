@@ -6,17 +6,14 @@ using System;
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// An error the controller found while linking the program of a task.
-	/// <p>Returned by <code>RapidService.GetBuildErrors()</code>.</p>
 	/// 
+	/// <p>Returned by <code>RapidService.GetBuildErrors()</code>.</p>
 	/// </summary>
-	public class RapidBuildError : Object {
+	public class RapidBuildError {
 
 		/// <summary>
-		/// 
 		/// Initializes a new instance of the <xref href="UnderAutomation.ABB.Rws.Data.RapidBuildError" data-throw-if-not-resolved="false"></xref> class
-		/// 
 		/// </summary>
 		public RapidBuildError()
 		{
@@ -24,9 +21,7 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
 		/// Returns a string representation of this build error
-		/// 
 		/// </summary>
 		public override string ToString()
 		{
@@ -35,37 +30,27 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
 		/// Name of the module the error was found in
-		/// 
 		/// </summary>
 		public string ModuleName { get; set; }
 
 		/// <summary>
-		/// 
 		/// Line the error was found at, null when the controller did not report it
-		/// 
 		/// </summary>
-		public Nullable<int> Row { get; set; }
+		public int? Row { get; set; }
 
 		/// <summary>
-		/// 
 		/// Column the error was found at, null when the controller did not report it
-		/// 
 		/// </summary>
-		public Nullable<int> Column { get; set; }
+		public int? Column { get; set; }
 
 		/// <summary>
-		/// 
 		/// Numeric identifier of the error, null when the controller did not report it
-		/// 
 		/// </summary>
-		public Nullable<int> ErrorNumber { get; set; }
+		public int? ErrorNumber { get; set; }
 
 		/// <summary>
-		/// 
 		/// Description of the error as the controller worded it
-		/// 
 		/// </summary>
 		public string Error { get; set; }
 	}

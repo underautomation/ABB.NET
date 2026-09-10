@@ -5,55 +5,38 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// Result status of a backup restore check
-	/// 
 	/// </summary>
-	public sealed class CheckRestoreStatus : Enum {
-
-
-		public int value__;
+	public enum CheckRestoreStatus {
 
 		/// <summary>
-		/// 
 		/// The status could not be determined
-		/// 
 		/// </summary>
-		public const CheckRestoreStatus Unknown;
+		Unknown = 0,
 
 		/// <summary>
-		/// 
 		/// The backup is accepted and can be restored
-		/// 
 		/// </summary>
-		public const CheckRestoreStatus Accepted;
+		Accepted = 1,
 
 		/// <summary>
-		/// 
 		/// The backup was not created from the current system, there might be differences in active options and selected languages
-		/// 
 		/// </summary>
-		public const CheckRestoreStatus RestoreMismatchSystemId;
+		RestoreMismatchSystemId = 2,
 
 		/// <summary>
-		/// 
 		/// The current system and the backed up system may be generated from different key ids, possibly with different robot types
-		/// 
 		/// </summary>
-		public const CheckRestoreStatus RestoreMismatchTemplateId;
+		RestoreMismatchTemplateId = 3,
 
 		/// <summary>
-		/// 
 		/// The backup directory is not complete
-		/// 
 		/// </summary>
-		public const CheckRestoreStatus DirectoryNotComplete;
+		DirectoryNotComplete = 4,
 
 		/// <summary>
-		/// 
 		/// Error in the configuration data of the backup
-		/// 
 		/// </summary>
-		public const CheckRestoreStatus ConfigurationDataIncorrect;
+		ConfigurationDataIncorrect = 5,
 	}
 }

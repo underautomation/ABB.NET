@@ -6,17 +6,14 @@ using System;
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// A span of source between two positions, counted from 1.
-	/// <p>Used wherever the controller reports where something is declared or where a statement sits.</p>
 	/// 
+	/// <p>Used wherever the controller reports where something is declared or where a statement sits.</p>
 	/// </summary>
-	public class RapidTextRange : Object {
+	public class RapidTextRange {
 
 		/// <summary>
-		/// 
 		/// Initializes a new instance of the <xref href="UnderAutomation.ABB.Rws.Data.RapidTextRange" data-throw-if-not-resolved="false"></xref> class
-		/// 
 		/// </summary>
 		public RapidTextRange()
 		{
@@ -24,9 +21,7 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
 		/// Returns a string representation of this range
-		/// 
 		/// </summary>
 		public override string ToString()
 		{
@@ -35,31 +30,23 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
 		/// Line the range begins at, null when the controller did not report it
-		/// 
 		/// </summary>
-		public Nullable<int> BeginRow { get; set; }
+		public int? BeginRow { get; set; }
 
 		/// <summary>
-		/// 
 		/// Column the range begins at, null when the controller did not report it
-		/// 
 		/// </summary>
-		public Nullable<int> BeginColumn { get; set; }
+		public int? BeginColumn { get; set; }
 
 		/// <summary>
-		/// 
 		/// Line the range ends at, null when the controller did not report it
-		/// 
 		/// </summary>
-		public Nullable<int> EndRow { get; set; }
+		public int? EndRow { get; set; }
 
 		/// <summary>
-		/// 
 		/// Column the range ends at, null when the controller did not report it
-		/// 
 		/// </summary>
-		public Nullable<int> EndColumn { get; set; }
+		public int? EndColumn { get; set; }
 	}
 }

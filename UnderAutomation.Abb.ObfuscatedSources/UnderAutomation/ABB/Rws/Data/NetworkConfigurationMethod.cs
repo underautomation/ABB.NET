@@ -5,34 +5,23 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// IP configuration method of a controller LAN adapter
-	/// 
 	/// </summary>
-	public sealed class NetworkConfigurationMethod : Enum {
-
-
-		public int value__;
+	public enum NetworkConfigurationMethod {
 
 		/// <summary>
-		/// 
 		/// Fixed IP address, the address, mask and gateway have to be provided
-		/// 
 		/// </summary>
-		public const NetworkConfigurationMethod FixIp;
+		FixIp = 0,
 
 		/// <summary>
-		/// 
 		/// IP address obtained from a DHCP server
-		/// 
 		/// </summary>
-		public const NetworkConfigurationMethod Dhcp;
+		Dhcp = 1,
 
 		/// <summary>
-		/// 
 		/// No IP address configured on the adapter
-		/// 
 		/// </summary>
-		public const NetworkConfigurationMethod NoIp;
+		NoIp = 2,
 	}
 }

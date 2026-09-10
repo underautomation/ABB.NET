@@ -5,62 +5,43 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// What kind of code a task is currently running
-	/// 
 	/// </summary>
-	public sealed class RapidExecutionType : Enum {
-
-
-		public int value__;
+	public enum RapidExecutionType {
 
 		/// <summary>
-		/// 
 		/// The controller reported a type this library does not know
-		/// 
 		/// </summary>
-		public const RapidExecutionType Unknown;
+		Unknown = 0,
 
 		/// <summary>
-		/// 
 		/// Nothing is running
-		/// 
 		/// </summary>
-		public const RapidExecutionType None;
+		None = 1,
 
 		/// <summary>
-		/// 
 		/// The normal program is running
-		/// 
 		/// </summary>
-		public const RapidExecutionType Normal;
+		Normal = 2,
 
 		/// <summary>
-		/// 
 		/// An interrupt is running
-		/// 
 		/// </summary>
-		public const RapidExecutionType Interrupt;
+		Interrupt = 3,
 
 		/// <summary>
-		/// 
 		/// An external interrupt is running
-		/// 
 		/// </summary>
-		public const RapidExecutionType ExternalInterrupt;
+		ExternalInterrupt = 4,
 
 		/// <summary>
-		/// 
 		/// A user routine is running
-		/// 
 		/// </summary>
-		public const RapidExecutionType UserRoutine;
+		UserRoutine = 5,
 
 		/// <summary>
-		/// 
 		/// An event routine is running
-		/// 
 		/// </summary>
-		public const RapidExecutionType EventRoutine;
+		EventRoutine = 6,
 	}
 }

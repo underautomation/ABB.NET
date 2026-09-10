@@ -5,17 +5,14 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// Overall RAPID execution state of the controller.
-	/// <p>Returned by <code>RapidService.GetExecutionState()</code>.</p>
 	/// 
+	/// <p>Returned by <code>RapidService.GetExecutionState()</code>.</p>
 	/// </summary>
-	public class RapidExecutionInfo : Object {
+	public class RapidExecutionInfo {
 
 		/// <summary>
-		/// 
 		/// Initializes a new instance of the <xref href="UnderAutomation.ABB.Rws.Data.RapidExecutionInfo" data-throw-if-not-resolved="false"></xref> class
-		/// 
 		/// </summary>
 		public RapidExecutionInfo()
 		{
@@ -23,9 +20,7 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
 		/// Returns a string representation of this execution state
-		/// 
 		/// </summary>
 		public override string ToString()
 		{
@@ -34,16 +29,12 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
 		/// Whether RAPID code is currently running
-		/// 
 		/// </summary>
 		public RapidExecutionState State { get; set; }
 
 		/// <summary>
-		/// 
 		/// Number of cycles the program is set to run
-		/// 
 		/// </summary>
 		public RapidExecutionCycle Cycle { get; set; }
 	}

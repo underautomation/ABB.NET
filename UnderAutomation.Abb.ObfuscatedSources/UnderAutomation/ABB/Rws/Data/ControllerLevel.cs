@@ -5,34 +5,23 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// Level the controller is currently running at
-	/// 
 	/// </summary>
-	public sealed class ControllerLevel : Enum {
-
-
-		public int value__;
+	public enum ControllerLevel {
 
 		/// <summary>
-		/// 
 		/// The controller level could not be determined
-		/// 
 		/// </summary>
-		public const ControllerLevel Unknown;
+		Unknown = 0,
 
 		/// <summary>
-		/// 
 		/// A system is loaded and running (system level)
-		/// 
 		/// </summary>
-		public const ControllerLevel SystemLevel;
+		SystemLevel = 1,
 
 		/// <summary>
-		/// 
 		/// The controller runs the boot application (bootserver mode)
-		/// 
 		/// </summary>
-		public const ControllerLevel BootLevel;
+		BootLevel = 2,
 	}
 }

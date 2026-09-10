@@ -6,18 +6,15 @@ using UnderAutomation.ABB.Common;
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// Where the base of a mechanical unit sits, and what kind of base it is: a <xref href="UnderAutomation.ABB.Common.Pose" data-throw-if-not-resolved="false"></xref>
 	/// extended with the type of the frame.
-	/// <p>Returned by <code>MotionSystemService.GetBaseFrame()</code>. The position is expressed in millimetres.</p>
 	/// 
+	/// <p>Returned by <code>MotionSystemService.GetBaseFrame()</code>. The position is expressed in millimetres.</p>
 	/// </summary>
 	public class BaseFrame : Pose {
 
 		/// <summary>
-		/// 
 		/// Initializes a new base frame at the origin, with no rotation
-		/// 
 		/// </summary>
 		public BaseFrame()
 		{
@@ -25,9 +22,7 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
 		/// Returns a string representation of this base frame
-		/// 
 		/// </summary>
 		public override string ToString()
 		{
@@ -36,9 +31,7 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
-		/// Kind of base frame the controller reports, for example &quot;IRBRobot&quot;
-		/// 
+		/// Kind of base frame the controller reports, for example "IRBRobot"
 		/// </summary>
 		public string Type { get; set; }
 	}

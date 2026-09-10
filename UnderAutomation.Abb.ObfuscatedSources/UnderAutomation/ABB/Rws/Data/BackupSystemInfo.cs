@@ -5,17 +5,14 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// Information about a backup stored on the controller file system.
-	/// <p>Returned by <code>ControllerService.GetBackupInfo(backupPath)</code>.</p>
 	/// 
+	/// <p>Returned by <code>ControllerService.GetBackupInfo(backupPath)</code>.</p>
 	/// </summary>
-	public class BackupSystemInfo : Object {
+	public class BackupSystemInfo {
 
 		/// <summary>
-		/// 
 		/// Initializes a new instance of the <xref href="UnderAutomation.ABB.Rws.Data.BackupSystemInfo" data-throw-if-not-resolved="false"></xref> class
-		/// 
 		/// </summary>
 		public BackupSystemInfo()
 		{
@@ -23,9 +20,7 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
 		/// Returns a string representation of this backup information
-		/// 
 		/// </summary>
 		public override string ToString()
 		{
@@ -34,47 +29,38 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
 		/// Name of the backed up system
-		/// 
 		/// </summary>
 		public string SystemName { get; set; }
 
 		/// <summary>
-		/// 
 		/// RobotWare version of the backed up system.
-		/// <p>Only available when connected with version 1.</p>
 		/// 
+		/// <p>Only available when connected with version 1.</p>
 		/// </summary>
 		public string RobotWareVersion { get; set; }
 
 		/// <summary>
-		/// 
 		/// RobotControl version of the backed up system.
-		/// <p>Only available when connected with version 2.</p>
 		/// 
+		/// <p>Only available when connected with version 2.</p>
 		/// </summary>
 		public string RobotControlVersion { get; set; }
 
 		/// <summary>
-		/// 
 		/// RobotOS version of the backed up system.
-		/// <p>Only available when connected with version 2.</p>
 		/// 
+		/// <p>Only available when connected with version 2.</p>
 		/// </summary>
 		public string RobotOsVersion { get; set; }
 
 		/// <summary>
-		/// 
 		/// Options installed on the backed up system
-		/// 
 		/// </summary>
 		public string[] Options { get; set; }
 
 		/// <summary>
-		/// 
 		/// Number of options installed on the backed up system
-		/// 
 		/// </summary>
 		public int OptionCount { get; }
 	}

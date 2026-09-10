@@ -6,16 +6,12 @@ using UnderAutomation.ABB.Rws;
 
 namespace UnderAutomation.ABB {
 	/// <summary>
-	/// 
 	/// Connection parameters for an ABB robot controller
-	/// 
 	/// </summary>
-	public class ConnectionParameters : Object {
+	public class ConnectionParameters {
 
 		/// <summary>
-		/// 
 		/// Instantiate new connection parameters with default values
-		/// 
 		/// </summary>
 		public ConnectionParameters()
 		{
@@ -23,9 +19,7 @@ namespace UnderAutomation.ABB {
 		}
 
 		/// <summary>
-		/// 
 		/// Instantiate new connection parameters with a specified address
-		/// 
 		/// </summary>
 		/// <param name="address">IP address or hostname of the robot controller</param>
 		public ConnectionParameters(string address)
@@ -55,23 +49,17 @@ namespace UnderAutomation.ABB {
 		}
 
 		/// <summary>
-		/// 
 		/// Address of the robot controller (IP or host name), default value is 127.0.0.1
-		/// 
 		/// </summary>
 		public string Address { get; set; }
 
 		/// <summary>
-		/// 
 		/// Send a ping command before initializing any connections
-		/// 
 		/// </summary>
 		public bool PingBeforeConnect { get; set; }
 
 		/// <summary>
-		/// 
 		/// RWS2 (Robot Web Services 2) connection parameters
-		/// 
 		/// </summary>
 		public RwsConnectParameters Rws { get; set; }
 	}

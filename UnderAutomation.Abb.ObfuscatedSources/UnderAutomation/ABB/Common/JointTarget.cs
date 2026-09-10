@@ -5,16 +5,12 @@
 
 namespace UnderAutomation.ABB.Common {
 	/// <summary>
-	/// 
 	/// A robot position expressed joint by joint: the six axes of the arm and the six external axes.
-	/// 
 	/// </summary>
-	public class JointTarget : Object {
+	public class JointTarget {
 
 		/// <summary>
-		/// 
 		/// Initializes a new joint target with every axis at zero
-		/// 
 		/// </summary>
 		public JointTarget()
 		{
@@ -22,9 +18,7 @@ namespace UnderAutomation.ABB.Common {
 		}
 
 		/// <summary>
-		/// 
 		/// Initializes a new joint target
-		/// 
 		/// </summary>
 		/// <param name="robotAxes">Values of the six axes of the robot arm, zero when null</param>
 		/// <param name="externalAxes">Values of the six external axes, zero when null</param>
@@ -34,9 +28,7 @@ namespace UnderAutomation.ABB.Common {
 		}
 
 		/// <summary>
-		/// 
 		/// Returns a string representation of this joint target
-		/// 
 		/// </summary>
 		public override string ToString()
 		{
@@ -45,16 +37,12 @@ namespace UnderAutomation.ABB.Common {
 		}
 
 		/// <summary>
-		/// 
 		/// Values of the six axes of the robot arm. Never null.
-		/// 
 		/// </summary>
 		public RobotJoints RobotAxes { get; set; }
 
 		/// <summary>
-		/// 
 		/// Values of the six external axes. Never null.
-		/// 
 		/// </summary>
 		public ExternalJoints ExternalAxes { get; set; }
 	}

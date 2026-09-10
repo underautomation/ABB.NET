@@ -5,27 +5,18 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// What happens to the modules already in a task when a program is loaded into it
-	/// 
 	/// </summary>
-	public sealed class RapidProgramLoadMode : Enum {
-
-
-		public int value__;
+	public enum RapidProgramLoadMode {
 
 		/// <summary>
-		/// 
 		/// Keep the modules already loaded and add the ones of the program
-		/// 
 		/// </summary>
-		public const RapidProgramLoadMode Add;
+		Add = 0,
 
 		/// <summary>
-		/// 
 		/// Replace everything the task holds with the program
-		/// 
 		/// </summary>
-		public const RapidProgramLoadMode Replace;
+		Replace = 1,
 	}
 }

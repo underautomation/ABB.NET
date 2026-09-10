@@ -5,34 +5,23 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// State of the hold-to-run control that gates RAPID execution in manual mode
-	/// 
 	/// </summary>
-	public sealed class RapidHoldToRunState : Enum {
-
-
-		public int value__;
+	public enum RapidHoldToRunState {
 
 		/// <summary>
-		/// 
 		/// Ask for execution to be allowed to start
-		/// 
 		/// </summary>
-		public const RapidHoldToRunState Press;
+		Press = 0,
 
 		/// <summary>
-		/// 
 		/// Confirm that execution may keep running, which has to be repeated about every two seconds
-		/// 
 		/// </summary>
-		public const RapidHoldToRunState Held;
+		Held = 1,
 
 		/// <summary>
-		/// 
 		/// Stop execution immediately
-		/// 
 		/// </summary>
-		public const RapidHoldToRunState Release;
+		Release = 2,
 	}
 }

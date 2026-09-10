@@ -5,20 +5,17 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// Where one of the lists of a RAPID object sits in the source: the span of the whole list, and the
 	/// spans of its first and last elements.
+	/// 
 	/// <p>Returned by <code>RapidService.GetObjectListExtension()</code>. An editor uses it to jump to the
 	/// beginning or the end of a list without reading the module.</p>
 	/// <p>The controller reports an empty span when the object holds no such list.</p>
-	/// 
 	/// </summary>
-	public class RapidObjectListExtension : Object {
+	public class RapidObjectListExtension {
 
 		/// <summary>
-		/// 
 		/// Initializes a new instance of the <xref href="UnderAutomation.ABB.Rws.Data.RapidObjectListExtension" data-throw-if-not-resolved="false"></xref> class
-		/// 
 		/// </summary>
 		public RapidObjectListExtension()
 		{
@@ -26,9 +23,7 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
 		/// Returns a string representation of this extension
-		/// 
 		/// </summary>
 		public override string ToString()
 		{
@@ -37,23 +32,17 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
 		/// Span of the whole list
-		/// 
 		/// </summary>
 		public RapidTextRange List { get; set; }
 
 		/// <summary>
-		/// 
 		/// Span of the first element of the list
-		/// 
 		/// </summary>
 		public RapidTextRange First { get; set; }
 
 		/// <summary>
-		/// 
 		/// Span of the last element of the list
-		/// 
 		/// </summary>
 		public RapidTextRange Last { get; set; }
 	}

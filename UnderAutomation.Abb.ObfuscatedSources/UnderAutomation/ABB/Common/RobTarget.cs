@@ -5,17 +5,13 @@
 
 namespace UnderAutomation.ABB.Common {
 	/// <summary>
-	/// 
 	/// A complete robot target: a <xref href="UnderAutomation.ABB.Common.Pose" data-throw-if-not-resolved="false"></xref> extended with the axis configuration used to reach it
 	/// and the external axis values that travel with it.
-	/// 
 	/// </summary>
 	public class RobTarget : Pose {
 
 		/// <summary>
-		/// 
 		/// Initializes a new target at the origin, with no rotation
-		/// 
 		/// </summary>
 		public RobTarget()
 		{
@@ -23,9 +19,7 @@ namespace UnderAutomation.ABB.Common {
 		}
 
 		/// <summary>
-		/// 
 		/// Initializes a new target
-		/// 
 		/// </summary>
 		/// <param name="x">Coordinate along the X axis</param>
 		/// <param name="y">Coordinate along the Y axis</param>
@@ -39,9 +33,7 @@ namespace UnderAutomation.ABB.Common {
 		}
 
 		/// <summary>
-		/// 
 		/// Returns a string representation of this target
-		/// 
 		/// </summary>
 		public override string ToString()
 		{
@@ -50,16 +42,12 @@ namespace UnderAutomation.ABB.Common {
 		}
 
 		/// <summary>
-		/// 
 		/// Axis configuration used to reach the pose. Never null.
-		/// 
 		/// </summary>
 		public RobotConfiguration Configuration { get; set; }
 
 		/// <summary>
-		/// 
 		/// Values of the six external axes, null when the reading does not report them
-		/// 
 		/// </summary>
 		public ExternalJoints ExternalAxes { get; set; }
 	}

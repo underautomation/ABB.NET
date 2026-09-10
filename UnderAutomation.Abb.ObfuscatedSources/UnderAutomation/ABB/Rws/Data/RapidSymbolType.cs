@@ -5,139 +5,98 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// What a RAPID symbol is: a value, a routine, a type or one of the structural elements of the language
-	/// 
 	/// </summary>
-	public sealed class RapidSymbolType : Enum {
-
-
-		public int value__;
+	public enum RapidSymbolType {
 
 		/// <summary>
-		/// 
 		/// The controller reported a type this library does not know
-		/// 
 		/// </summary>
-		public const RapidSymbolType Unknown;
+		Unknown = 0,
 
 		/// <summary>
-		/// 
 		/// The type is not defined
-		/// 
 		/// </summary>
-		public const RapidSymbolType Undefined;
+		Undefined = 1,
 
 		/// <summary>
-		/// 
 		/// A built-in type such as num or string
-		/// 
 		/// </summary>
-		public const RapidSymbolType Atomic;
+		Atomic = 2,
 
 		/// <summary>
-		/// 
 		/// A record type
-		/// 
 		/// </summary>
-		public const RapidSymbolType Record;
+		Record = 3,
 
 		/// <summary>
-		/// 
 		/// An alias of another type
-		/// 
 		/// </summary>
-		public const RapidSymbolType Alias;
+		Alias = 4,
 
 		/// <summary>
-		/// 
 		/// One component of a record
-		/// 
 		/// </summary>
-		public const RapidSymbolType RecordComponent;
+		RecordComponent = 5,
 
 		/// <summary>
-		/// 
 		/// A constant
-		/// 
 		/// </summary>
-		public const RapidSymbolType Constant;
+		Constant = 6,
 
 		/// <summary>
-		/// 
 		/// A variable
-		/// 
 		/// </summary>
-		public const RapidSymbolType Variable;
+		Variable = 7,
 
 		/// <summary>
-		/// 
 		/// A persistent variable, whose value survives a restart
-		/// 
 		/// </summary>
-		public const RapidSymbolType Persistent;
+		Persistent = 8,
 
 		/// <summary>
-		/// 
 		/// A parameter of a routine
-		/// 
 		/// </summary>
-		public const RapidSymbolType Parameter;
+		Parameter = 9,
 
 		/// <summary>
-		/// 
 		/// A label
-		/// 
 		/// </summary>
-		public const RapidSymbolType Label;
+		Label = 10,
 
 		/// <summary>
-		/// 
 		/// The loop variable of a FOR statement
-		/// 
 		/// </summary>
-		public const RapidSymbolType ForVariable;
+		ForVariable = 11,
 
 		/// <summary>
-		/// 
 		/// A function
-		/// 
 		/// </summary>
-		public const RapidSymbolType Function;
+		Function = 12,
 
 		/// <summary>
-		/// 
 		/// A procedure
-		/// 
 		/// </summary>
-		public const RapidSymbolType Procedure;
+		Procedure = 13,
 
 		/// <summary>
-		/// 
 		/// A trap routine
-		/// 
 		/// </summary>
-		public const RapidSymbolType Trap;
+		Trap = 14,
 
 		/// <summary>
-		/// 
 		/// A module
-		/// 
 		/// </summary>
-		public const RapidSymbolType Module;
+		Module = 15,
 
 		/// <summary>
-		/// 
 		/// A task
-		/// 
 		/// </summary>
-		public const RapidSymbolType Task;
+		Task = 16,
 
 		/// <summary>
-		/// 
 		/// Any of the other types, which a search uses to mean that it does not filter on the type
-		/// 
 		/// </summary>
-		public const RapidSymbolType Any;
+		Any = 17,
 	}
 }

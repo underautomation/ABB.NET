@@ -5,19 +5,16 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// What each of the six external joints of a task is doing, which says how to read the corresponding
 	/// value of an external axis.
+	/// 
 	/// <p>Returned by <code>RapidService.GetExternalJointStates()</code>. A joint reported as
 	/// <xref href="UnderAutomation.ABB.Rws.Data.RapidJointState.NotActive" data-throw-if-not-resolved="false"></xref> carries no meaningful position.</p>
-	/// 
 	/// </summary>
-	public class RapidExternalJointStates : Object {
+	public class RapidExternalJointStates {
 
 		/// <summary>
-		/// 
 		/// Initializes a new instance of the <xref href="UnderAutomation.ABB.Rws.Data.RapidExternalJointStates" data-throw-if-not-resolved="false"></xref> class
-		/// 
 		/// </summary>
 		public RapidExternalJointStates()
 		{
@@ -25,9 +22,7 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
 		/// Returns a string representation of these joint states
-		/// 
 		/// </summary>
 		public override string ToString()
 		{
@@ -36,44 +31,32 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
 		/// State of the first external joint
-		/// 
 		/// </summary>
 		public RapidJointState Joint1 { get; set; }
 
 		/// <summary>
-		/// 
 		/// State of the second external joint
-		/// 
 		/// </summary>
 		public RapidJointState Joint2 { get; set; }
 
 		/// <summary>
-		/// 
 		/// State of the third external joint
-		/// 
 		/// </summary>
 		public RapidJointState Joint3 { get; set; }
 
 		/// <summary>
-		/// 
 		/// State of the fourth external joint
-		/// 
 		/// </summary>
 		public RapidJointState Joint4 { get; set; }
 
 		/// <summary>
-		/// 
 		/// State of the fifth external joint
-		/// 
 		/// </summary>
 		public RapidJointState Joint5 { get; set; }
 
 		/// <summary>
-		/// 
 		/// State of the sixth external joint
-		/// 
 		/// </summary>
 		public RapidJointState Joint6 { get; set; }
 	}

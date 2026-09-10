@@ -5,18 +5,15 @@
 
 namespace UnderAutomation.ABB.Common {
 	/// <summary>
-	/// 
 	/// A point in space, expressed in the coordinate system of whoever produced it.
+	/// 
 	/// <p>Most readings of the controller express a position in millimetres, while the kinematics
 	/// calculations work in metres. The method that returns or takes a position says which one it uses.</p>
-	/// 
 	/// </summary>
-	public class Position : Object {
+	public class Position {
 
 		/// <summary>
-		/// 
 		/// Initializes a new position at the origin
-		/// 
 		/// </summary>
 		public Position()
 		{
@@ -24,9 +21,7 @@ namespace UnderAutomation.ABB.Common {
 		}
 
 		/// <summary>
-		/// 
 		/// Initializes a new position
-		/// 
 		/// </summary>
 		/// <param name="x">Coordinate along the X axis</param>
 		/// <param name="y">Coordinate along the Y axis</param>
@@ -37,9 +32,7 @@ namespace UnderAutomation.ABB.Common {
 		}
 
 		/// <summary>
-		/// 
 		/// Returns a string representation of this position
-		/// 
 		/// </summary>
 		public override string ToString()
 		{
@@ -48,23 +41,17 @@ namespace UnderAutomation.ABB.Common {
 		}
 
 		/// <summary>
-		/// 
 		/// Coordinate along the X axis
-		/// 
 		/// </summary>
 		public double X { get; set; }
 
 		/// <summary>
-		/// 
 		/// Coordinate along the Y axis
-		/// 
 		/// </summary>
 		public double Y { get; set; }
 
 		/// <summary>
-		/// 
 		/// Coordinate along the Z axis
-		/// 
 		/// </summary>
 		public double Z { get; set; }
 	}

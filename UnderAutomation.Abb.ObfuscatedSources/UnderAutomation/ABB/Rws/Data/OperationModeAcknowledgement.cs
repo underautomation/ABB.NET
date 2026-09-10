@@ -5,34 +5,23 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// Pending change that an operating mode acknowledgement confirms
-	/// 
 	/// </summary>
-	public sealed class OperationModeAcknowledgement : Enum {
-
-
-		public int value__;
+	public enum OperationModeAcknowledgement {
 
 		/// <summary>
-		/// 
 		/// Confirms the switch to the automatic mode
-		/// 
 		/// </summary>
-		public const OperationModeAcknowledgement Automatic;
+		Automatic = 0,
 
 		/// <summary>
-		/// 
 		/// Confirms the switch to the manual full speed mode
-		/// 
 		/// </summary>
-		public const OperationModeAcknowledgement ManualFullSpeed;
+		ManualFullSpeed = 1,
 
 		/// <summary>
-		/// 
 		/// Confirms a collision detection
-		/// 
 		/// </summary>
-		public const OperationModeAcknowledgement CollisionDetection;
+		CollisionDetection = 2,
 	}
 }

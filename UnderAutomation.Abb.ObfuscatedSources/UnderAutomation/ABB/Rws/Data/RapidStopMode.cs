@@ -5,41 +5,28 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// How abruptly RAPID execution is stopped
-	/// 
 	/// </summary>
-	public sealed class RapidStopMode : Enum {
-
-
-		public int value__;
+	public enum RapidStopMode {
 
 		/// <summary>
-		/// 
 		/// Stop when the current cycle ends
-		/// 
 		/// </summary>
-		public const RapidStopMode Cycle;
+		Cycle = 0,
 
 		/// <summary>
-		/// 
 		/// Stop when the current instruction ends
-		/// 
 		/// </summary>
-		public const RapidStopMode Instruction;
+		Instruction = 1,
 
 		/// <summary>
-		/// 
 		/// Stop as soon as the robot can decelerate along its path
-		/// 
 		/// </summary>
-		public const RapidStopMode Stop;
+		Stop = 2,
 
 		/// <summary>
-		/// 
 		/// Stop as fast as the robot can, leaving the path
-		/// 
 		/// </summary>
-		public const RapidStopMode QuickStop;
+		QuickStop = 3,
 	}
 }

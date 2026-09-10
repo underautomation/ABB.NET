@@ -6,19 +6,16 @@ using System;
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// How many motion instructions of a range can have their position rewritten to where the robot
 	/// currently stands, and which range they cover.
+	/// 
 	/// <p>Returned by <code>RapidService.GetModifiablePositions()</code>. The controller leaves the range empty
 	/// when it found nothing modifiable.</p>
-	/// 
 	/// </summary>
-	public class RapidModifiablePositions : Object {
+	public class RapidModifiablePositions {
 
 		/// <summary>
-		/// 
 		/// Initializes a new instance of the <xref href="UnderAutomation.ABB.Rws.Data.RapidModifiablePositions" data-throw-if-not-resolved="false"></xref> class
-		/// 
 		/// </summary>
 		public RapidModifiablePositions()
 		{
@@ -26,9 +23,7 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
 		/// Returns a string representation of this result
-		/// 
 		/// </summary>
 		public override string ToString()
 		{
@@ -37,38 +32,28 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
 		/// Number of motion instructions of the range whose position can be rewritten
-		/// 
 		/// </summary>
 		public int ModifiableLineCount { get; set; }
 
 		/// <summary>
-		/// 
 		/// Line the modifiable range starts at, null when the controller did not report it
-		/// 
 		/// </summary>
-		public Nullable<int> StartRow { get; set; }
+		public int? StartRow { get; set; }
 
 		/// <summary>
-		/// 
 		/// Column the modifiable range starts at, null when the controller did not report it
-		/// 
 		/// </summary>
-		public Nullable<int> StartColumn { get; set; }
+		public int? StartColumn { get; set; }
 
 		/// <summary>
-		/// 
 		/// Line the modifiable range ends at, null when the controller did not report it
-		/// 
 		/// </summary>
-		public Nullable<int> EndRow { get; set; }
+		public int? EndRow { get; set; }
 
 		/// <summary>
-		/// 
 		/// Column the modifiable range ends at, null when the controller did not report it
-		/// 
 		/// </summary>
-		public Nullable<int> EndColumn { get; set; }
+		public int? EndColumn { get; set; }
 	}
 }

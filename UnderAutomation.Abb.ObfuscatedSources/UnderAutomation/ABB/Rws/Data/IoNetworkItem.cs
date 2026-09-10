@@ -5,17 +5,14 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// I/O network defined in the robot controller.
-	/// <p>Returned by <code>IoService.GetNetworks()</code>, <code>IoService.GetNetwork()</code> and <code>IoService.SearchNetworks()</code>.</p>
 	/// 
+	/// <p>Returned by <code>IoService.GetNetworks()</code>, <code>IoService.GetNetwork()</code> and <code>IoService.SearchNetworks()</code>.</p>
 	/// </summary>
-	public class IoNetworkItem : Object {
+	public class IoNetworkItem {
 
 		/// <summary>
-		/// 
 		/// Initializes a new instance of the <xref href="UnderAutomation.ABB.Rws.Data.IoNetworkItem" data-throw-if-not-resolved="false"></xref> class
-		/// 
 		/// </summary>
 		public IoNetworkItem()
 		{
@@ -23,9 +20,7 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
 		/// Returns a string representation of this network
-		/// 
 		/// </summary>
 		public override string ToString()
 		{
@@ -34,30 +29,22 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
-		/// Name of the network, for example &quot;Local&quot;, &quot;Virtual&quot; or &quot;EtherNetIP&quot;
-		/// 
+		/// Name of the network, for example "Local", "Virtual" or "EtherNetIP"
 		/// </summary>
 		public string Name { get; set; }
 
 		/// <summary>
-		/// 
-		/// Full path of the network, which is its name for a network (for example &quot;Local&quot;)
-		/// 
+		/// Full path of the network, which is its name for a network (for example "Local")
 		/// </summary>
 		public string Path { get; set; }
 
 		/// <summary>
-		/// 
 		/// Physical state of the network
-		/// 
 		/// </summary>
 		public IoNetworkPhysicalState PhysicalState { get; set; }
 
 		/// <summary>
-		/// 
 		/// Logical state of the network
-		/// 
 		/// </summary>
 		public IoNetworkLogicalState LogicalState { get; set; }
 	}

@@ -5,41 +5,28 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// Severity of an event log message
-	/// 
 	/// </summary>
-	public sealed class ElogMessageType : Enum {
-
-
-		public int value__;
+	public enum ElogMessageType {
 
 		/// <summary>
-		/// 
 		/// The message type could not be determined
-		/// 
 		/// </summary>
-		public const ElogMessageType Unknown;
+		Unknown = 0,
 
 		/// <summary>
-		/// 
 		/// State change, or informational event
-		/// 
 		/// </summary>
-		public const ElogMessageType Information;
+		Information = 1,
 
 		/// <summary>
-		/// 
 		/// Warning event
-		/// 
 		/// </summary>
-		public const ElogMessageType Warning;
+		Warning = 2,
 
 		/// <summary>
-		/// 
 		/// Error event
-		/// 
 		/// </summary>
-		public const ElogMessageType Error;
+		Error = 3,
 	}
 }

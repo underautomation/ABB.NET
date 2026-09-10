@@ -6,17 +6,14 @@ using System;
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// Time server used by the controller to synchronize its clock.
-	/// <p>Returned by <code>ControllerService.GetTimeServer()</code>.</p>
 	/// 
+	/// <p>Returned by <code>ControllerService.GetTimeServer()</code>.</p>
 	/// </summary>
-	public class TimeServerInfo : Object {
+	public class TimeServerInfo {
 
 		/// <summary>
-		/// 
 		/// Initializes a new instance of the <xref href="UnderAutomation.ABB.Rws.Data.TimeServerInfo" data-throw-if-not-resolved="false"></xref> class
-		/// 
 		/// </summary>
 		public TimeServerInfo()
 		{
@@ -24,9 +21,7 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
 		/// Returns a string representation of this time server
-		/// 
 		/// </summary>
 		public override string ToString()
 		{
@@ -35,18 +30,15 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
 		/// Address of the time server
-		/// 
 		/// </summary>
 		public string Address { get; set; }
 
 		/// <summary>
-		/// 
 		/// Time reported by the time server (UTC), if available.
-		/// <p>Only available when connected with version 2.</p>
 		/// 
+		/// <p>Only available when connected with version 2.</p>
 		/// </summary>
-		public Nullable<DateTime> Time { get; set; }
+		public DateTime? Time { get; set; }
 	}
 }

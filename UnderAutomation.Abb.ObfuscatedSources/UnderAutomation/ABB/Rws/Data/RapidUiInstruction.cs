@@ -5,19 +5,16 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// The dialogue a running RAPID program is currently asking an operator for.
+	/// 
 	/// <p>Returned by <code>RapidService.GetActiveUiInstruction()</code>, which returns null when no
 	/// instruction is pending. Answering one means writing its parameters with
 	/// <code>RapidService.SetUiInstructionParameter()</code>, using <xref href="UnderAutomation.ABB.Rws.Data.RapidUiInstruction.StackUrl" data-throw-if-not-resolved="false"></xref> to address them.</p>
-	/// 
 	/// </summary>
-	public class RapidUiInstruction : Object {
+	public class RapidUiInstruction {
 
 		/// <summary>
-		/// 
 		/// Initializes a new instance of the <xref href="UnderAutomation.ABB.Rws.Data.RapidUiInstruction" data-throw-if-not-resolved="false"></xref> class
-		/// 
 		/// </summary>
 		public RapidUiInstruction()
 		{
@@ -25,9 +22,7 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
 		/// Returns a string representation of this instruction
-		/// 
 		/// </summary>
 		public override string ToString()
 		{
@@ -36,37 +31,27 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
-		/// Name of the RAPID instruction that opened the dialogue, for example &quot;TPReadNum&quot;
-		/// 
+		/// Name of the RAPID instruction that opened the dialogue, for example "TPReadNum"
 		/// </summary>
 		public string Instruction { get; set; }
 
 		/// <summary>
-		/// 
 		/// What the instruction is asking of the client
-		/// 
 		/// </summary>
 		public RapidUiInstructionEvent Event { get; set; }
 
 		/// <summary>
-		/// 
 		/// Path identifying the call, which the parameter methods take
-		/// 
 		/// </summary>
 		public string StackUrl { get; set; }
 
 		/// <summary>
-		/// 
 		/// Level at which the instruction is executing
-		/// 
 		/// </summary>
 		public RapidExecutionLevel ExecutionLevel { get; set; }
 
 		/// <summary>
-		/// 
 		/// Text the instruction displays
-		/// 
 		/// </summary>
 		public string Message { get; set; }
 	}

@@ -5,48 +5,33 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// State of the collision detection of the robot controller
-	/// 
 	/// </summary>
-	public sealed class CollisionDetectionState : Enum {
-
-
-		public int value__;
+	public enum CollisionDetectionState {
 
 		/// <summary>
-		/// 
 		/// The collision detection state could not be determined
-		/// 
 		/// </summary>
-		public const CollisionDetectionState Unknown;
+		Unknown = 0,
 
 		/// <summary>
-		/// 
 		/// No collision has been detected since the controller started
-		/// 
 		/// </summary>
-		public const CollisionDetectionState Init;
+		Init = 1,
 
 		/// <summary>
-		/// 
 		/// A collision has been detected and is waiting to be confirmed
-		/// 
 		/// </summary>
-		public const CollisionDetectionState Triggered;
+		Triggered = 2,
 
 		/// <summary>
-		/// 
 		/// A detected collision has been confirmed
-		/// 
 		/// </summary>
-		public const CollisionDetectionState Confirmed;
+		Confirmed = 3,
 
 		/// <summary>
-		/// 
 		/// A detected collision has been acknowledged by an operator
-		/// 
 		/// </summary>
-		public const CollisionDetectionState TriggeredAcknowledged;
+		TriggeredAcknowledged = 4,
 	}
 }

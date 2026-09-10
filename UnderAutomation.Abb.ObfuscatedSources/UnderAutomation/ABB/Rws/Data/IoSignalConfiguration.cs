@@ -6,17 +6,14 @@ using System;
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// Runtime configuration properties of an I/O signal.
-	/// <p>Returned by <code>IoService.GetSignalConfiguration()</code>.</p>
 	/// 
+	/// <p>Returned by <code>IoService.GetSignalConfiguration()</code>.</p>
 	/// </summary>
-	public class IoSignalConfiguration : Object {
+	public class IoSignalConfiguration {
 
 		/// <summary>
-		/// 
 		/// Initializes a new instance of the <xref href="UnderAutomation.ABB.Rws.Data.IoSignalConfiguration" data-throw-if-not-resolved="false"></xref> class
-		/// 
 		/// </summary>
 		public IoSignalConfiguration()
 		{
@@ -24,9 +21,7 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
 		/// Returns a string representation of this signal configuration
-		/// 
 		/// </summary>
 		public override string ToString()
 		{
@@ -35,60 +30,45 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
-		/// Name of the signal, for example &quot;DRV1CHAIN2&quot;
-		/// 
+		/// Name of the signal, for example "DRV1CHAIN2"
 		/// </summary>
 		public string SignalName { get; set; }
 
 		/// <summary>
-		/// 
 		/// Number of bits of the signal, null when not reported
-		/// 
 		/// </summary>
-		public Nullable<int> SignalBits { get; set; }
+		public int? SignalBits { get; set; }
 
 		/// <summary>
-		/// 
 		/// Whether a RAPID client can write the signal in both manual and auto mode
-		/// 
 		/// </summary>
-		public Nullable<bool> Rapid { get; set; }
+		public bool? Rapid { get; set; }
 
 		/// <summary>
-		/// 
 		/// Whether a local client can write the signal in manual mode
-		/// 
 		/// </summary>
-		public Nullable<bool> LocalManual { get; set; }
+		public bool? LocalManual { get; set; }
 
 		/// <summary>
-		/// 
 		/// Whether a local client can write the signal in auto mode
-		/// 
 		/// </summary>
-		public Nullable<bool> LocalAuto { get; set; }
+		public bool? LocalAuto { get; set; }
 
 		/// <summary>
-		/// 
 		/// Whether a remote client can write the signal in manual mode
-		/// 
 		/// </summary>
-		public Nullable<bool> RemoteManual { get; set; }
+		public bool? RemoteManual { get; set; }
 
 		/// <summary>
-		/// 
 		/// Whether a remote client can write the signal in auto mode
-		/// 
 		/// </summary>
-		public Nullable<bool> RemoteAuto { get; set; }
+		public bool? RemoteAuto { get; set; }
 
 		/// <summary>
-		/// 
 		/// Whether the bits of this signal are set by a device transfer operation.
-		/// <p>Not reported by every controller, null when absent from the response.</p>
 		/// 
+		/// <p>Not reported by every controller, null when absent from the response.</p>
 		/// </summary>
-		public Nullable<bool> SetByDeviceTransfer { get; set; }
+		public bool? SetByDeviceTransfer { get; set; }
 	}
 }

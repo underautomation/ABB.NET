@@ -5,34 +5,23 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// Physical state of an I/O signal
-	/// 
 	/// </summary>
-	public sealed class IoSignalPhysicalState : Enum {
-
-
-		public int value__;
+	public enum IoSignalPhysicalState {
 
 		/// <summary>
-		/// 
 		/// The physical state could not be determined
-		/// 
 		/// </summary>
-		public const IoSignalPhysicalState Unknown;
+		Unknown = 0,
 
 		/// <summary>
-		/// 
 		/// The physical value of the signal is valid
-		/// 
 		/// </summary>
-		public const IoSignalPhysicalState Valid;
+		Valid = 1,
 
 		/// <summary>
-		/// 
 		/// The physical value of the signal is not valid
-		/// 
 		/// </summary>
-		public const IoSignalPhysicalState Invalid;
+		Invalid = 2,
 	}
 }

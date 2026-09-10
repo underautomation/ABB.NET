@@ -6,17 +6,14 @@ using System;
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// State of one axis of a mechanical unit.
-	/// <p>Returned by <code>MotionSystemService.GetAxis()</code>.</p>
 	/// 
+	/// <p>Returned by <code>MotionSystemService.GetAxis()</code>.</p>
 	/// </summary>
-	public class AxisInfo : Object {
+	public class AxisInfo {
 
 		/// <summary>
-		/// 
 		/// Initializes a new instance of the <xref href="UnderAutomation.ABB.Rws.Data.AxisInfo" data-throw-if-not-resolved="false"></xref> class
-		/// 
 		/// </summary>
 		public AxisInfo()
 		{
@@ -24,9 +21,7 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
 		/// Returns a string representation of this axis
-		/// 
 		/// </summary>
 		public override string ToString()
 		{
@@ -35,24 +30,18 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
 		/// Number of the axis inside its mechanical unit, starting at 1
-		/// 
 		/// </summary>
 		public int Number { get; set; }
 
 		/// <summary>
-		/// 
 		/// Calibration and synchronization state of the axis
-		/// 
 		/// </summary>
 		public MechanicalUnitStatus Status { get; set; }
 
 		/// <summary>
-		/// 
 		/// Logical joint number of the axis, null when the controller did not report it
-		/// 
 		/// </summary>
-		public Nullable<int> LogicalAxis { get; set; }
+		public int? LogicalAxis { get; set; }
 	}
 }

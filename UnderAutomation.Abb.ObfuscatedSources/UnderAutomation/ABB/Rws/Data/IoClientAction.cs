@@ -5,44 +5,33 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// Action the client is expected to take after an I/O network auto configuration,
 	/// returned by <code>IoService.SetNetworkConfigurationType()</code>.
-	/// <p>Only available when connected with version 2.</p>
 	/// 
+	/// <p>Only available when connected with version 2.</p>
 	/// </summary>
-	public sealed class IoClientAction : Enum {
-
-
-		public int value__;
+	public enum IoClientAction {
 
 		/// <summary>
-		/// 
 		/// The controller did not report any client action.
+		/// 
 		/// <p>Always returned when connected with version 1, which does not report this information.</p>
-		/// 
 		/// </summary>
-		public const IoClientAction Unknown;
+		Unknown = 0,
 
 		/// <summary>
-		/// 
 		/// Nothing to do
-		/// 
 		/// </summary>
-		public const IoClientAction None;
+		None = 1,
 
 		/// <summary>
-		/// 
 		/// The user should be informed of the configuration result
-		/// 
 		/// </summary>
-		public const IoClientAction Info;
+		Info = 2,
 
 		/// <summary>
-		/// 
 		/// The controller has to be restarted for the configuration to take effect
-		/// 
 		/// </summary>
-		public const IoClientAction Restart;
+		Restart = 3,
 	}
 }

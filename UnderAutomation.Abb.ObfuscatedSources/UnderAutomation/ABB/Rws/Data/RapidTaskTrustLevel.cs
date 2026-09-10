@@ -5,48 +5,33 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// What the controller does to the system when a task that is not a normal one stops unexpectedly
-	/// 
 	/// </summary>
-	public sealed class RapidTaskTrustLevel : Enum {
-
-
-		public int value__;
+	public enum RapidTaskTrustLevel {
 
 		/// <summary>
-		/// 
 		/// The controller reported a level this library does not know
-		/// 
 		/// </summary>
-		public const RapidTaskTrustLevel Unknown;
+		Unknown = 0,
 
 		/// <summary>
-		/// 
 		/// The system carries on
-		/// 
 		/// </summary>
-		public const RapidTaskTrustLevel None;
+		None = 1,
 
 		/// <summary>
-		/// 
 		/// The whole system fails
-		/// 
 		/// </summary>
-		public const RapidTaskTrustLevel SystemFailure;
+		SystemFailure = 2,
 
 		/// <summary>
-		/// 
 		/// The system halts
-		/// 
 		/// </summary>
-		public const RapidTaskTrustLevel SystemHalt;
+		SystemHalt = 3,
 
 		/// <summary>
-		/// 
 		/// The system stops
-		/// 
 		/// </summary>
-		public const RapidTaskTrustLevel SystemStop;
+		SystemStop = 4,
 	}
 }

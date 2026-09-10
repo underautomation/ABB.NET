@@ -6,18 +6,15 @@ using System;
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
+	/// One category of the instruction palette the FlexPendant editor offers, for example "Prog.Flow".
 	/// 
-	/// One category of the instruction palette the FlexPendant editor offers, for example &quot;Prog.Flow&quot;.
 	/// <p>Returned by <code>RapidService.GetPalletHeads()</code>; its <xref href="UnderAutomation.ABB.Rws.Data.RapidPalletHeadItem.Number" data-throw-if-not-resolved="false"></xref> is what
 	/// <code>RapidService.GetPallet()</code> takes.</p>
-	/// 
 	/// </summary>
-	public class RapidPalletHeadItem : Object {
+	public class RapidPalletHeadItem {
 
 		/// <summary>
-		/// 
 		/// Initializes a new instance of the <xref href="UnderAutomation.ABB.Rws.Data.RapidPalletHeadItem" data-throw-if-not-resolved="false"></xref> class
-		/// 
 		/// </summary>
 		public RapidPalletHeadItem()
 		{
@@ -25,9 +22,7 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
 		/// Returns a string representation of this category
-		/// 
 		/// </summary>
 		public override string ToString()
 		{
@@ -36,17 +31,13 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
-		/// Name of the category, for example &quot;Motion&amp;Proc.&quot;
-		/// 
+		/// Name of the category, for example "Motion&amp;Proc."
 		/// </summary>
 		public string Name { get; set; }
 
 		/// <summary>
-		/// 
 		/// Number identifying the category, null when the controller did not report it
-		/// 
 		/// </summary>
-		public Nullable<int> Number { get; set; }
+		public int? Number { get; set; }
 	}
 }

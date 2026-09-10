@@ -5,27 +5,18 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// Whether an execution command applies to the normal tasks only or to every task
-	/// 
 	/// </summary>
-	public sealed class RapidTaskScope : Enum {
-
-
-		public int value__;
+	public enum RapidTaskScope {
 
 		/// <summary>
-		/// 
 		/// Apply to the tasks the task selection panel has enabled
-		/// 
 		/// </summary>
-		public const RapidTaskScope Normal;
+		Normal = 0,
 
 		/// <summary>
-		/// 
 		/// Apply to every task of the system
-		/// 
 		/// </summary>
-		public const RapidTaskScope AllTasks;
+		AllTasks = 1,
 	}
 }

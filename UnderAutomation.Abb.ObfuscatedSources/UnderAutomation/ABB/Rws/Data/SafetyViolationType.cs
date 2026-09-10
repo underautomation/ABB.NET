@@ -5,118 +5,83 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// Type of safety violation reported by the safety controller
-	/// 
 	/// </summary>
-	public sealed class SafetyViolationType : Enum {
-
-
-		public int value__;
+	public enum SafetyViolationType {
 
 		/// <summary>
-		/// 
 		/// The violation type could not be determined
-		/// 
 		/// </summary>
-		public const SafetyViolationType Unknown;
+		Unknown = 0,
 
 		/// <summary>
-		/// 
 		/// No violation
-		/// 
 		/// </summary>
-		public const SafetyViolationType None;
+		None = 1,
 
 		/// <summary>
-		/// 
 		/// Safe Tool Zone (stz)
-		/// 
 		/// </summary>
-		public const SafetyViolationType SafeToolZone;
+		SafeToolZone = 2,
 
 		/// <summary>
-		/// 
 		/// Safe Axis Range (sar)
-		/// 
 		/// </summary>
-		public const SafetyViolationType SafeAxisRange;
+		SafeAxisRange = 3,
 
 		/// <summary>
-		/// 
 		/// Safe Tool Speed (sts)
-		/// 
 		/// </summary>
-		public const SafetyViolationType SafeToolSpeed;
+		SafeToolSpeed = 4,
 
 		/// <summary>
-		/// 
 		/// Safe Axis Speed (sas)
-		/// 
 		/// </summary>
-		public const SafetyViolationType SafeAxisSpeed;
+		SafeAxisSpeed = 5,
 
 		/// <summary>
-		/// 
 		/// Tool Orientation Monitoring (tom)
-		/// 
 		/// </summary>
-		public const SafetyViolationType ToolOrientationMonitoring;
+		ToolOrientationMonitoring = 6,
 
 		/// <summary>
-		/// 
 		/// Operational Safety Range (osr)
-		/// 
 		/// </summary>
-		public const SafetyViolationType OperationalSafetyRange;
+		OperationalSafetyRange = 7,
 
 		/// <summary>
-		/// 
 		/// Safe Standstill (sst)
-		/// 
 		/// </summary>
-		public const SafetyViolationType SafeStandstill;
+		SafeStandstill = 8,
 
 		/// <summary>
-		/// 
 		/// Reduced Tool Speed in manual mode (red_tool_speed)
-		/// 
 		/// </summary>
-		public const SafetyViolationType ReducedToolSpeed;
+		ReducedToolSpeed = 9,
 
 		/// <summary>
-		/// 
 		/// Reduced Axis Speed in manual mode (red_axis_speed)
-		/// 
 		/// </summary>
-		public const SafetyViolationType ReducedAxisSpeed;
+		ReducedAxisSpeed = 10,
 
 		/// <summary>
-		/// 
 		/// Reduced Axis Speed due to unsynchronized robot (unsync_speed_lim)
-		/// 
 		/// </summary>
-		public const SafetyViolationType UnsynchronizedSpeedLimit;
+		UnsynchronizedSpeedLimit = 11,
 
 		/// <summary>
-		/// 
 		/// Emergency stop triggered (empstop)
-		/// 
 		/// </summary>
-		public const SafetyViolationType EmergencyStop;
+		EmergencyStop = 12,
 
 		/// <summary>
-		/// 
 		/// Internal error (other)
-		/// 
 		/// </summary>
-		public const SafetyViolationType Other;
+		Other = 13,
 
 		/// <summary>
-		/// 
 		/// The safety controller reports an invalid violation
-		/// 
 		/// </summary>
-		public const SafetyViolationType Invalid;
+		Invalid = 14,
 	}
 }

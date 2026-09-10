@@ -5,55 +5,38 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// Kind of mechanical unit the controller drives
-	/// 
 	/// </summary>
-	public sealed class MechanicalUnitType : Enum {
-
-
-		public int value__;
+	public enum MechanicalUnitType {
 
 		/// <summary>
-		/// 
 		/// The controller reported a type this library does not know
-		/// 
 		/// </summary>
-		public const MechanicalUnitType Unknown;
+		Unknown = 0,
 
 		/// <summary>
-		/// 
 		/// No mechanical unit
-		/// 
 		/// </summary>
-		public const MechanicalUnitType None;
+		None = 1,
 
 		/// <summary>
-		/// 
 		/// A robot arm holding a tool center point, which can be moved in cartesian coordinates
-		/// 
 		/// </summary>
-		public const MechanicalUnitType TcpRobot;
+		TcpRobot = 2,
 
 		/// <summary>
-		/// 
 		/// A robot arm without a tool center point, which can only be moved axis by axis
-		/// 
 		/// </summary>
-		public const MechanicalUnitType Robot;
+		Robot = 3,
 
 		/// <summary>
-		/// 
 		/// A single external axis, such as a track or a positioner
-		/// 
 		/// </summary>
-		public const MechanicalUnitType Single;
+		Single = 4,
 
 		/// <summary>
-		/// 
 		/// The controller knows the unit but does not report what it is
-		/// 
 		/// </summary>
-		public const MechanicalUnitType Undefined;
+		Undefined = 5,
 	}
 }

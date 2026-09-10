@@ -5,48 +5,33 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// State of the virtual time server of a virtual controller
-	/// 
 	/// </summary>
-	public sealed class VirtualTimeState : Enum {
-
-
-		public int value__;
+	public enum VirtualTimeState {
 
 		/// <summary>
-		/// 
 		/// The state could not be determined
-		/// 
 		/// </summary>
-		public const VirtualTimeState Unknown;
+		Unknown = 0,
 
 		/// <summary>
-		/// 
 		/// Virtual time is stopped (VTSTOP)
-		/// 
 		/// </summary>
-		public const VirtualTimeState Stop;
+		Stop = 1,
 
 		/// <summary>
-		/// 
 		/// Virtual time runs freely (VTFREERUN)
-		/// 
 		/// </summary>
-		public const VirtualTimeState FreeRun;
+		FreeRun = 2,
 
 		/// <summary>
-		/// 
 		/// Virtual time runs one time slice at a time (VTRUNSLICE)
-		/// 
 		/// </summary>
-		public const VirtualTimeState RunSlice;
+		RunSlice = 3,
 
 		/// <summary>
-		/// 
 		/// Virtual time runs until the next event (VTNEXTEVENT)
-		/// 
 		/// </summary>
-		public const VirtualTimeState NextEvent;
+		NextEvent = 4,
 	}
 }

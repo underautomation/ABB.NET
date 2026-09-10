@@ -5,42 +5,29 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// Which part of the system a symbol search walks
-	/// 
 	/// </summary>
-	public sealed class RapidSymbolSearchView : Enum {
-
-
-		public int value__;
+	public enum RapidSymbolSearchView {
 
 		/// <summary>
-		/// 
 		/// Let the controller decide
-		/// 
 		/// </summary>
-		public const RapidSymbolSearchView Undefined;
+		Undefined = 0,
 
 		/// <summary>
-		/// 
 		/// Search the block the search path names, and optionally what it contains
-		/// 
 		/// </summary>
-		public const RapidSymbolSearchView Block;
+		Block = 1,
 
 		/// <summary>
-		/// 
 		/// Search what is visible from a position of the source, which the search path and the
 		/// position both have to be given for
-		/// 
 		/// </summary>
-		public const RapidSymbolSearchView Scope;
+		Scope = 2,
 
 		/// <summary>
-		/// 
 		/// Search what is visible from a frame of the call stack, which needs the program pointer to be set
-		/// 
 		/// </summary>
-		public const RapidSymbolSearchView Stack;
+		Stack = 3,
 	}
 }

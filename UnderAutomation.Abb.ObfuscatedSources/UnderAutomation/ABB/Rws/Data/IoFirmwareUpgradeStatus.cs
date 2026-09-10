@@ -5,48 +5,33 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// Result of a firmware upgrade of an I/O device
-	/// 
 	/// </summary>
-	public sealed class IoFirmwareUpgradeStatus : Enum {
-
-
-		public int value__;
+	public enum IoFirmwareUpgradeStatus {
 
 		/// <summary>
-		/// 
 		/// The controller did not report a status, or it could not be parsed
-		/// 
 		/// </summary>
-		public const IoFirmwareUpgradeStatus Unknown;
+		Unknown = 0,
 
 		/// <summary>
-		/// 
 		/// The upgrade failed
-		/// 
 		/// </summary>
-		public const IoFirmwareUpgradeStatus Error;
+		Error = 1,
 
 		/// <summary>
-		/// 
 		/// The upgrade finished, the firmware was already up to date
-		/// 
 		/// </summary>
-		public const IoFirmwareUpgradeStatus Ok;
+		Ok = 2,
 
 		/// <summary>
-		/// 
 		/// The upgrade finished, the firmware was updated
-		/// 
 		/// </summary>
-		public const IoFirmwareUpgradeStatus Upgraded;
+		Upgraded = 3,
 
 		/// <summary>
-		/// 
 		/// The upgrade is pending
-		/// 
 		/// </summary>
-		public const IoFirmwareUpgradeStatus Pending;
+		Pending = 4,
 	}
 }

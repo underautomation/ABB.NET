@@ -5,48 +5,33 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// Represents the type of storage device
-	/// 
 	/// </summary>
-	public sealed class DeviceType : Enum {
-
-
-		public int value__;
+	public enum DeviceType {
 
 		/// <summary>
-		/// 
 		/// Fixed storage device (hard drive)
-		/// 
 		/// </summary>
-		public const DeviceType Fixed;
+		Fixed = 0,
 
 		/// <summary>
-		/// 
 		/// Removable storage device (USB, SD card, etc.)
-		/// 
 		/// </summary>
-		public const DeviceType Removable;
+		Removable = 1,
 
 		/// <summary>
-		/// 
 		/// RAM disk
-		/// 
 		/// </summary>
-		public const DeviceType RamDisk;
+		RamDisk = 2,
 
 		/// <summary>
-		/// 
 		/// Remote or network storage
-		/// 
 		/// </summary>
-		public const DeviceType Remote;
+		Remote = 3,
 
 		/// <summary>
-		/// 
 		/// Unknown device type
-		/// 
 		/// </summary>
-		public const DeviceType Unknown;
+		Unknown = 4,
 	}
 }

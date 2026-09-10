@@ -5,10 +5,8 @@
 
 namespace UnderAutomation.ABB.Rws.Internal {
 	/// <summary>
-	/// 
 	/// Internal RWS client for use by <xref href="UnderAutomation.ABB.AbbController" data-throw-if-not-resolved="false"></xref>.
 	/// This class is used internally and should not be instantiated directly.
-	/// 
 	/// </summary>
 	public class RwsClientInternal : RwsClientBase {
 	}

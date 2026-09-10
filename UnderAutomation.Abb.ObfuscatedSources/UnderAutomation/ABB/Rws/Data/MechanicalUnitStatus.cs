@@ -5,83 +5,58 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// Calibration and synchronization state of a mechanical unit or of one of its axes
-	/// 
 	/// </summary>
-	public sealed class MechanicalUnitStatus : Enum {
-
-
-		public int value__;
+	public enum MechanicalUnitStatus {
 
 		/// <summary>
-		/// 
 		/// The controller reported a state this library does not know
-		/// 
 		/// </summary>
-		public const MechanicalUnitStatus Unknown;
+		Unknown = 0,
 
 		/// <summary>
-		/// 
 		/// The unit is starting up
-		/// 
 		/// </summary>
-		public const MechanicalUnitStatus Initiated;
+		Initiated = 1,
 
 		/// <summary>
-		/// 
 		/// One or several motors have not been commutated
-		/// 
 		/// </summary>
-		public const MechanicalUnitStatus NotCommutated;
+		NotCommutated = 2,
 
 		/// <summary>
-		/// 
 		/// The unit has never been calibrated
-		/// 
 		/// </summary>
-		public const MechanicalUnitStatus NotCalibrated;
+		NotCalibrated = 3,
 
 		/// <summary>
-		/// 
 		/// One or several absolute measurement axes are not synchronized
-		/// 
 		/// </summary>
-		public const MechanicalUnitStatus NotAbsoluteSynchronized;
+		NotAbsoluteSynchronized = 4,
 
 		/// <summary>
-		/// 
 		/// One or several relative measurement axes are not synchronized
-		/// 
 		/// </summary>
-		public const MechanicalUnitStatus NotRelativeSynchronized;
+		NotRelativeSynchronized = 5,
 
 		/// <summary>
-		/// 
 		/// The unit is calibrated and synchronized, and can be moved
-		/// 
 		/// </summary>
-		public const MechanicalUnitStatus Synchronized;
+		Synchronized = 6,
 
 		/// <summary>
-		/// 
 		/// The unit is locked and refuses to move
-		/// 
 		/// </summary>
-		public const MechanicalUnitStatus Locked;
+		Locked = 7,
 
 		/// <summary>
-		/// 
 		/// The unit is locked, and the controller shows it as such
-		/// 
 		/// </summary>
-		public const MechanicalUnitStatus LockedShow;
+		LockedShow = 8,
 
 		/// <summary>
-		/// 
 		/// The controller knows the unit but does not report its state
-		/// 
 		/// </summary>
-		public const MechanicalUnitStatus Undefined;
+		Undefined = 9,
 	}
 }

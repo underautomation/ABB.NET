@@ -6,17 +6,14 @@ using System;
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// How big the source of a module is, which is what it takes to ask for the whole of it as a range.
-	/// <p>Returned by <code>RapidService.GetModuleExtension()</code>.</p>
 	/// 
+	/// <p>Returned by <code>RapidService.GetModuleExtension()</code>.</p>
 	/// </summary>
-	public class RapidModuleExtension : Object {
+	public class RapidModuleExtension {
 
 		/// <summary>
-		/// 
 		/// Initializes a new instance of the <xref href="UnderAutomation.ABB.Rws.Data.RapidModuleExtension" data-throw-if-not-resolved="false"></xref> class
-		/// 
 		/// </summary>
 		public RapidModuleExtension()
 		{
@@ -24,9 +21,7 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
 		/// Returns a string representation of this extension
-		/// 
 		/// </summary>
 		public override string ToString()
 		{
@@ -35,24 +30,18 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
 		/// Number of lines the module holds, null when the controller did not report it
-		/// 
 		/// </summary>
-		public Nullable<int> LineCount { get; set; }
+		public int? LineCount { get; set; }
 
 		/// <summary>
-		/// 
 		/// Length of the longest line of the module, null when the controller did not report it
-		/// 
 		/// </summary>
-		public Nullable<int> MaxColumnCount { get; set; }
+		public int? MaxColumnCount { get; set; }
 
 		/// <summary>
-		/// 
 		/// Counter the controller increments whenever the module changes, null when it did not report it
-		/// 
 		/// </summary>
-		public Nullable<int> ChangeCount { get; set; }
+		public int? ChangeCount { get; set; }
 	}
 }

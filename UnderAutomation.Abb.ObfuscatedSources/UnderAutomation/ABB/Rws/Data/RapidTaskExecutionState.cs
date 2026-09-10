@@ -5,48 +5,33 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// Whether a single task is running, and whether it could be
-	/// 
 	/// </summary>
-	public sealed class RapidTaskExecutionState : Enum {
-
-
-		public int value__;
+	public enum RapidTaskExecutionState {
 
 		/// <summary>
-		/// 
 		/// The controller reported a state this library does not know
-		/// 
 		/// </summary>
-		public const RapidTaskExecutionState Unknown;
+		Unknown = 0,
 
 		/// <summary>
-		/// 
 		/// The task is ready to be started
-		/// 
 		/// </summary>
-		public const RapidTaskExecutionState Ready;
+		Ready = 1,
 
 		/// <summary>
-		/// 
 		/// The task was running and has been stopped
-		/// 
 		/// </summary>
-		public const RapidTaskExecutionState Stopped;
+		Stopped = 2,
 
 		/// <summary>
-		/// 
 		/// The task is running
-		/// 
 		/// </summary>
-		public const RapidTaskExecutionState Started;
+		Started = 3,
 
 		/// <summary>
-		/// 
 		/// The task is not initialized
-		/// 
 		/// </summary>
-		public const RapidTaskExecutionState Uninitialized;
+		Uninitialized = 4,
 	}
 }

@@ -6,17 +6,14 @@ using System;
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// How a mechanical unit was calibrated, joint by joint.
-	/// <p>Returned by <code>MotionSystemService.GetCalibrationInfo()</code>.</p>
 	/// 
+	/// <p>Returned by <code>MotionSystemService.GetCalibrationInfo()</code>.</p>
 	/// </summary>
-	public class CalibrationInfo : Object {
+	public class CalibrationInfo {
 
 		/// <summary>
-		/// 
 		/// Initializes a new instance of the <xref href="UnderAutomation.ABB.Rws.Data.CalibrationInfo" data-throw-if-not-resolved="false"></xref> class
-		/// 
 		/// </summary>
 		public CalibrationInfo()
 		{
@@ -24,9 +21,7 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
 		/// Returns a string representation of this calibration
-		/// 
 		/// </summary>
 		public override string ToString()
 		{
@@ -35,46 +30,34 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
 		/// Kind of calibration window the controller offers for this unit,
 		/// null when the controller did not report it
-		/// 
 		/// </summary>
-		public Nullable<int> CalibrationWindowType { get; set; }
+		public int? CalibrationWindowType { get; set; }
 
 		/// <summary>
-		/// 
 		/// Number of joints of the unit that are in use, null when the controller did not report it
-		/// 
 		/// </summary>
-		public Nullable<int> ActiveJointCount { get; set; }
+		public int? ActiveJointCount { get; set; }
 
 		/// <summary>
-		/// 
 		/// Number of entries in <xref href="UnderAutomation.ABB.Rws.Data.CalibrationInfo.Joints" data-throw-if-not-resolved="false"></xref>, which is fixed and larger than
 		/// <xref href="UnderAutomation.ABB.Rws.Data.CalibrationInfo.ActiveJointCount" data-throw-if-not-resolved="false"></xref>. Null when the controller did not report it.
-		/// 
 		/// </summary>
-		public Nullable<int> JointCount { get; set; }
+		public int? JointCount { get; set; }
 
 		/// <summary>
-		/// 
-		/// Name of the calibration method the unit was last calibrated with, for example &quot;AxisCalibration&quot;
-		/// 
+		/// Name of the calibration method the unit was last calibrated with, for example "AxisCalibration"
 		/// </summary>
 		public string CalibrationMethodUsed { get; set; }
 
 		/// <summary>
-		/// 
 		/// One entry per joint slot of the unit, the unused ones marked as such. Never null.
-		/// 
 		/// </summary>
 		public CalibrationJointInfo[] Joints { get; set; }
 
 		/// <summary>
-		/// 
 		/// Number of joints that exist on the unit, counted from <xref href="UnderAutomation.ABB.Rws.Data.CalibrationInfo.Joints" data-throw-if-not-resolved="false"></xref>
-		/// 
 		/// </summary>
 		public int ExistingJointCount { get; }
 	}

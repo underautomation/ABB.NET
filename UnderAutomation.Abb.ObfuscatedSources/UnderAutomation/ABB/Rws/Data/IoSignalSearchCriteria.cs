@@ -6,22 +6,19 @@ using System;
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// Criteria used to search I/O signals with <code>IoService.SearchSignals()</code> and
 	/// <code>IoService.SearchSignalsExtended()</code>.
+	/// 
 	/// <p>Every property is optional: the properties left to null are not sent to the controller,
 	/// and an empty criteria matches every signal.</p>
 	/// <p>Two criteria can be combined by passing a second instance to the search methods, in which case
 	/// a signal is returned only when it matches both. One of the two criteria should then have
 	/// <xref href="UnderAutomation.ABB.Rws.Data.IoSignalSearchCriteria.Invert" data-throw-if-not-resolved="false"></xref> set to true, otherwise the result is the same as with a single criteria.</p>
-	/// 
 	/// </summary>
-	public class IoSignalSearchCriteria : Object {
+	public class IoSignalSearchCriteria {
 
 		/// <summary>
-		/// 
 		/// Initializes a new instance of the <xref href="UnderAutomation.ABB.Rws.Data.IoSignalSearchCriteria" data-throw-if-not-resolved="false"></xref> class
-		/// 
 		/// </summary>
 		public IoSignalSearchCriteria()
 		{
@@ -29,9 +26,7 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
 		/// Returns a string representation of this search criteria
-		/// 
 		/// </summary>
 		public override string ToString()
 		{
@@ -40,59 +35,43 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
 		/// Name of the searched signals
-		/// 
 		/// </summary>
 		public string Name { get; set; }
 
 		/// <summary>
-		/// 
 		/// Name of the device the searched signals are connected to
-		/// 
 		/// </summary>
 		public string DeviceName { get; set; }
 
 		/// <summary>
-		/// 
 		/// Name of the network the searched signals belong to
-		/// 
 		/// </summary>
 		public string NetworkName { get; set; }
 
 		/// <summary>
-		/// 
-		/// Category of the searched signals, for example &quot;safety&quot;
-		/// 
+		/// Category of the searched signals, for example "safety"
 		/// </summary>
 		public string Category { get; set; }
 
 		/// <summary>
-		/// 
 		/// Category prefix of the searched signals
-		/// 
 		/// </summary>
 		public string CategoryPrefix { get; set; }
 
 		/// <summary>
-		/// 
 		/// Type of the searched signals, null to search every type
-		/// 
 		/// </summary>
-		public Nullable<IoSignalType> Type { get; set; }
+		public IoSignalType? Type { get; set; }
 
 		/// <summary>
-		/// 
 		/// Whether the criteria is inverted: the signals matching it are excluded from the result
-		/// 
 		/// </summary>
-		public Nullable<bool> Invert { get; set; }
+		public bool? Invert { get; set; }
 
 		/// <summary>
-		/// 
 		/// Whether only the blocked (simulated) signals are searched
-		/// 
 		/// </summary>
-		public Nullable<bool> Blocked { get; set; }
+		public bool? Blocked { get; set; }
 	}
 }

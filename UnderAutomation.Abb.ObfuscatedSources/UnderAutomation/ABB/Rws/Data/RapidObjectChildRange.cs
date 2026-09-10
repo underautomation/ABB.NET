@@ -5,17 +5,14 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// One named part of a RAPID object, and where it sits in the source.
-	/// <p>Carried by <xref href="UnderAutomation.ABB.Rws.Data.RapidObjectChild" data-throw-if-not-resolved="false"></xref>.</p>
 	/// 
+	/// <p>Carried by <xref href="UnderAutomation.ABB.Rws.Data.RapidObjectChild" data-throw-if-not-resolved="false"></xref>.</p>
 	/// </summary>
-	public class RapidObjectChildRange : Object {
+	public class RapidObjectChildRange {
 
 		/// <summary>
-		/// 
 		/// Initializes a new instance of the <xref href="UnderAutomation.ABB.Rws.Data.RapidObjectChildRange" data-throw-if-not-resolved="false"></xref> class
-		/// 
 		/// </summary>
 		public RapidObjectChildRange()
 		{
@@ -23,9 +20,7 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
 		/// Returns a string representation of this part
-		/// 
 		/// </summary>
 		public override string ToString()
 		{
@@ -34,24 +29,18 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
-		/// Name of the part as the controller worded it, for example &quot;data-decl&quot; or &quot;endmod&quot;
-		/// 
+		/// Name of the part as the controller worded it, for example "data-decl" or "endmod"
 		/// </summary>
 		public string Name { get; set; }
 
 		/// <summary>
-		/// 
 		/// Where the part sits in the source
-		/// 
 		/// </summary>
 		public RapidTextRange Range { get; set; }
 
 		/// <summary>
-		/// 
 		/// Whether the controller reported a real span for the part, which it does not when the object
 		/// does not hold it
-		/// 
 		/// </summary>
 		public bool IsPresent { get; }
 	}

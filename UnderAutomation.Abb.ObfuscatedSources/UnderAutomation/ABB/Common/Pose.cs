@@ -5,17 +5,13 @@
 
 namespace UnderAutomation.ABB.Common {
 	/// <summary>
-	/// 
 	/// A position and the orientation the robot holds there: a <xref href="UnderAutomation.ABB.Common.Position" data-throw-if-not-resolved="false"></xref> extended with a
 	/// <xref href="UnderAutomation.ABB.Common.Quaternion" data-throw-if-not-resolved="false"></xref>.
-	/// 
 	/// </summary>
 	public class Pose : Position {
 
 		/// <summary>
-		/// 
 		/// Initializes a new pose at the origin, with no rotation
-		/// 
 		/// </summary>
 		public Pose()
 		{
@@ -23,9 +19,7 @@ namespace UnderAutomation.ABB.Common {
 		}
 
 		/// <summary>
-		/// 
 		/// Initializes a new pose
-		/// 
 		/// </summary>
 		/// <param name="x">Coordinate along the X axis</param>
 		/// <param name="y">Coordinate along the Y axis</param>
@@ -37,9 +31,7 @@ namespace UnderAutomation.ABB.Common {
 		}
 
 		/// <summary>
-		/// 
 		/// Initializes a new pose
-		/// 
 		/// </summary>
 		/// <param name="x">Coordinate along the X axis</param>
 		/// <param name="y">Coordinate along the Y axis</param>
@@ -54,9 +46,7 @@ namespace UnderAutomation.ABB.Common {
 		}
 
 		/// <summary>
-		/// 
 		/// Returns a string representation of this pose
-		/// 
 		/// </summary>
 		public override string ToString()
 		{
@@ -65,9 +55,7 @@ namespace UnderAutomation.ABB.Common {
 		}
 
 		/// <summary>
-		/// 
 		/// Orientation held at this position. Never null: a pose built without one carries the identity rotation.
-		/// 
 		/// </summary>
 		public Quaternion Orientation { get; set; }
 	}

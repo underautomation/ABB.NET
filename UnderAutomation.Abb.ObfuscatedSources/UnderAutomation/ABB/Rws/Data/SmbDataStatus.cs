@@ -5,48 +5,33 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// State of one block of serial measurement board data, on the controller side or on the robot side
-	/// 
 	/// </summary>
-	public sealed class SmbDataStatus : Enum {
-
-
-		public int value__;
+	public enum SmbDataStatus {
 
 		/// <summary>
-		/// 
 		/// The controller reported a state this library does not know
-		/// 
 		/// </summary>
-		public const SmbDataStatus Unknown;
+		Unknown = 0,
 
 		/// <summary>
-		/// 
 		/// The data is present and the two copies agree
-		/// 
 		/// </summary>
-		public const SmbDataStatus Valid;
+		Valid = 1,
 
 		/// <summary>
-		/// 
 		/// The data is present on both sides, but the two copies differ
-		/// 
 		/// </summary>
-		public const SmbDataStatus ValidNotEqual;
+		ValidNotEqual = 2,
 
 		/// <summary>
-		/// 
 		/// The data is missing or unusable
-		/// 
 		/// </summary>
-		public const SmbDataStatus NotValid;
+		NotValid = 3,
 
 		/// <summary>
-		/// 
 		/// The robot system does not use this block of data
-		/// 
 		/// </summary>
-		public const SmbDataStatus NotUsed;
+		NotUsed = 4,
 	}
 }

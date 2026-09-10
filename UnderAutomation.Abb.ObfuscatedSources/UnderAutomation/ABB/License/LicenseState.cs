@@ -5,62 +5,43 @@
 
 namespace UnderAutomation.ABB.License {
 	/// <summary>
-	/// 
 	/// States that can take a license
-	/// 
 	/// </summary>
-	public sealed class LicenseState : Enum {
-
-
-		public int value__;
+	public enum LicenseState {
 
 		/// <summary>
-		/// 
 		/// No license has been provided
-		/// 
 		/// </summary>
-		public const LicenseState None;
+		None = -1,
 
 		/// <summary>
-		/// 
 		/// The pair License Identifier and License Key are incompatible, you cannot use the library
-		/// 
 		/// </summary>
-		public const LicenseState Invalid;
+		Invalid = 0,
 
 		/// <summary>
-		/// 
 		/// The library is in a trial period, you can use the library
-		/// 
 		/// </summary>
-		public const LicenseState Trial;
+		Trial = 1,
 
 		/// <summary>
-		/// 
 		/// The library is in an extra trial period, you can use the library
-		/// 
 		/// </summary>
-		public const LicenseState ExtraTrial;
+		ExtraTrial = 2,
 
 		/// <summary>
-		/// 
 		/// The trial period as expired, you no more can use the library
-		/// 
 		/// </summary>
-		public const LicenseState Expired;
+		Expired = 3,
 
 		/// <summary>
-		/// 
 		/// Your license does not allow you to use such a recent release. Please buy maintenance to use this version
-		/// 
 		/// </summary>
-		public const LicenseState MaintenanceNeeded;
+		MaintenanceNeeded = 4,
 
 		/// <summary>
-		/// 
 		/// Congratulations, the library is licensed.
-		/// 
 		/// </summary>
-		public const LicenseState Licensed;
+		Licensed = 5,
 	}
 }

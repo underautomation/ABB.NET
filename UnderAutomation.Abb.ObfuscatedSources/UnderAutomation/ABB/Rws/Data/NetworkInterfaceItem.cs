@@ -6,17 +6,14 @@ using System;
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// Network interface of the robot controller.
-	/// <p>Returned by <code>ControllerService.GetNetworkInterfaces()</code>.</p>
 	/// 
+	/// <p>Returned by <code>ControllerService.GetNetworkInterfaces()</code>.</p>
 	/// </summary>
-	public class NetworkInterfaceItem : Object {
+	public class NetworkInterfaceItem {
 
 		/// <summary>
-		/// 
 		/// Initializes a new instance of the <xref href="UnderAutomation.ABB.Rws.Data.NetworkInterfaceItem" data-throw-if-not-resolved="false"></xref> class
-		/// 
 		/// </summary>
 		public NetworkInterfaceItem()
 		{
@@ -24,9 +21,7 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
 		/// Returns a string representation of this network interface
-		/// 
 		/// </summary>
 		public override string ToString()
 		{
@@ -35,68 +30,53 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
-		/// Physical port of the interface, for example &quot;X6&quot; or &quot;X23&quot;
-		/// 
+		/// Physical port of the interface, for example "X6" or "X23"
 		/// </summary>
 		public string Port { get; set; }
 
 		/// <summary>
-		/// 
-		/// Logical name of the interface, for example &quot;WAN&quot;, &quot;LAN1&quot; or &quot;SERVICE&quot;
-		/// 
+		/// Logical name of the interface, for example "WAN", "LAN1" or "SERVICE"
 		/// </summary>
 		public string LogicalName { get; set; }
 
 		/// <summary>
+		/// Network the interface belongs to ("Public", "Private", "Ability", "Drive").
 		/// 
-		/// Network the interface belongs to (&quot;Public&quot;, &quot;Private&quot;, &quot;Ability&quot;, &quot;Drive&quot;).
 		/// <p>Only available when connected with version 2.</p>
-		/// 
 		/// </summary>
 		public string Network { get; set; }
 
 		/// <summary>
-		/// 
 		/// IP address of the interface
-		/// 
 		/// </summary>
 		public string Address { get; set; }
 
 		/// <summary>
-		/// 
 		/// Subnet mask of the interface
-		/// 
 		/// </summary>
 		public string Mask { get; set; }
 
 		/// <summary>
-		/// 
 		/// Primary DNS server of the interface.
-		/// <p>Only available when connected with version 2.</p>
 		/// 
+		/// <p>Only available when connected with version 2.</p>
 		/// </summary>
 		public string PrimaryDns { get; set; }
 
 		/// <summary>
-		/// 
 		/// Secondary DNS server of the interface.
-		/// <p>Only available when connected with version 2.</p>
 		/// 
+		/// <p>Only available when connected with version 2.</p>
 		/// </summary>
 		public string SecondaryDns { get; set; }
 
 		/// <summary>
-		/// 
 		/// DHCP status of the interface, if reported by the controller
-		/// 
 		/// </summary>
-		public Nullable<bool> DhcpEnabled { get; set; }
+		public bool? DhcpEnabled { get; set; }
 
 		/// <summary>
-		/// 
 		/// Default gateway of the interface, if applicable
-		/// 
 		/// </summary>
 		public string Gateway { get; set; }
 	}

@@ -5,18 +5,15 @@
 
 namespace UnderAutomation.ABB.Common {
 	/// <summary>
-	/// 
 	/// The axis configuration the robot uses to reach a pose.
+	/// 
 	/// <p>Several joint combinations reach the same tool position and orientation. The configuration
 	/// names the one to use, as the quarter revolution each of the deciding axes sits in.</p>
-	/// 
 	/// </summary>
-	public class RobotConfiguration : Object {
+	public class RobotConfiguration {
 
 		/// <summary>
-		/// 
 		/// Initializes a new configuration with every quarter revolution set to zero
-		/// 
 		/// </summary>
 		public RobotConfiguration()
 		{
@@ -24,9 +21,7 @@ namespace UnderAutomation.ABB.Common {
 		}
 
 		/// <summary>
-		/// 
 		/// Initializes a new configuration
-		/// 
 		/// </summary>
 		/// <param name="quarter1">Quarter revolution axis 1 sits in</param>
 		/// <param name="quarter4">Quarter revolution axis 4 sits in</param>
@@ -38,9 +33,7 @@ namespace UnderAutomation.ABB.Common {
 		}
 
 		/// <summary>
-		/// 
 		/// Returns a string representation of this configuration
-		/// 
 		/// </summary>
 		public override string ToString()
 		{
@@ -49,30 +42,22 @@ namespace UnderAutomation.ABB.Common {
 		}
 
 		/// <summary>
-		/// 
 		/// Quarter revolution axis 1 sits in
-		/// 
 		/// </summary>
 		public int Quarter1 { get; set; }
 
 		/// <summary>
-		/// 
 		/// Quarter revolution axis 4 sits in
-		/// 
 		/// </summary>
 		public int Quarter4 { get; set; }
 
 		/// <summary>
-		/// 
 		/// Quarter revolution axis 6 sits in
-		/// 
 		/// </summary>
 		public int Quarter6 { get; set; }
 
 		/// <summary>
-		/// 
 		/// Index of the arm configuration, which tells the remaining joint combinations apart
-		/// 
 		/// </summary>
 		public int QuarterX { get; set; }
 	}

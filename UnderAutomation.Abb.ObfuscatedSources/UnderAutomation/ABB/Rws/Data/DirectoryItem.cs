@@ -5,16 +5,12 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// Represents a directory entry in the robot controller file system.
-	/// 
 	/// </summary>
 	public class DirectoryItem : FileSystemItem {
 
 		/// <summary>
-		/// 
 		/// Initializes a new instance of the <xref href="UnderAutomation.ABB.Rws.Data.DirectoryItem" data-throw-if-not-resolved="false"></xref> class
-		/// 
 		/// </summary>
 		public DirectoryItem()
 		{
@@ -22,9 +18,7 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
 		/// Returns a string representation of this directory entry
-		/// 
 		/// </summary>
 		public override string ToString()
 		{
@@ -33,9 +27,7 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
 		/// Indicates if the directory is read-only
-		/// 
 		/// </summary>
 		public bool IsReadOnly { get; set; }
 	}

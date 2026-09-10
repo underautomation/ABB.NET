@@ -5,18 +5,15 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// The program loaded into a task.
+	/// 
 	/// <p>Returned by <code>RapidService.GetProgram()</code>, which returns null when the task holds no
 	/// program at all.</p>
-	/// 
 	/// </summary>
-	public class RapidProgramInfo : Object {
+	public class RapidProgramInfo {
 
 		/// <summary>
-		/// 
 		/// Initializes a new instance of the <xref href="UnderAutomation.ABB.Rws.Data.RapidProgramInfo" data-throw-if-not-resolved="false"></xref> class
-		/// 
 		/// </summary>
 		public RapidProgramInfo()
 		{
@@ -24,9 +21,7 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
 		/// Returns a string representation of this program
-		/// 
 		/// </summary>
 		public override string ToString()
 		{
@@ -35,16 +30,12 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
 		/// Name of the program, null when the controller did not report it
-		/// 
 		/// </summary>
 		public string Name { get; set; }
 
 		/// <summary>
-		/// 
 		/// Routine the program pointer moves to when it is reset, null when the controller did not report it
-		/// 
 		/// </summary>
 		public string EntryPoint { get; set; }
 	}

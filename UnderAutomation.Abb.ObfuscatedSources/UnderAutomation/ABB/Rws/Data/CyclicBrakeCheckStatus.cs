@@ -6,17 +6,14 @@ using System;
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// Cyclic brake check status of a mechanical unit.
-	/// <p>Returned by <code>ControllerService.GetCyclicBrakeCheckStatus(driveNumber)</code>.</p>
 	/// 
+	/// <p>Returned by <code>ControllerService.GetCyclicBrakeCheckStatus(driveNumber)</code>.</p>
 	/// </summary>
-	public class CyclicBrakeCheckStatus : Object {
+	public class CyclicBrakeCheckStatus {
 
 		/// <summary>
-		/// 
 		/// Initializes a new instance of the <xref href="UnderAutomation.ABB.Rws.Data.CyclicBrakeCheckStatus" data-throw-if-not-resolved="false"></xref> class
-		/// 
 		/// </summary>
 		public CyclicBrakeCheckStatus()
 		{
@@ -24,9 +21,7 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
 		/// Returns a string representation of this cyclic brake check status
-		/// 
 		/// </summary>
 		public override string ToString()
 		{
@@ -35,30 +30,22 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
 		/// Drive number of the mechanical unit this status belongs to
-		/// 
 		/// </summary>
 		public int DriveNumber { get; set; }
 
 		/// <summary>
-		/// 
 		/// Remaining time before the next brake check is required, if reported by the controller
-		/// 
 		/// </summary>
-		public Nullable<long> NextBrakeCheckTime { get; set; }
+		public long? NextBrakeCheckTime { get; set; }
 
 		/// <summary>
-		/// 
 		/// Result of the last brake check
-		/// 
 		/// </summary>
 		public CyclicBrakeCheckTestStatus LastBrakeCheckStatus { get; set; }
 
 		/// <summary>
-		/// 
 		/// Current cyclic brake check state
-		/// 
 		/// </summary>
 		public CyclicBrakeCheckState Status { get; set; }
 	}

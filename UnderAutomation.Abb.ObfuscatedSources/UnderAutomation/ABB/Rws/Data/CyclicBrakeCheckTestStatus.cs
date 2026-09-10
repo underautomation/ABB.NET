@@ -5,48 +5,33 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// Result of the last cyclic brake check test
-	/// 
 	/// </summary>
-	public sealed class CyclicBrakeCheckTestStatus : Enum {
-
-
-		public int value__;
+	public enum CyclicBrakeCheckTestStatus {
 
 		/// <summary>
-		/// 
 		/// The test status could not be determined
-		/// 
 		/// </summary>
-		public const CyclicBrakeCheckTestStatus Unknown;
+		Unknown = 0,
 
 		/// <summary>
-		/// 
 		/// The last brake check succeeded (CBC_TEST_OK)
-		/// 
 		/// </summary>
-		public const CyclicBrakeCheckTestStatus Ok;
+		Ok = 1,
 
 		/// <summary>
-		/// 
 		/// The last brake check ended with a warning (CBC_TEST_WARNING)
-		/// 
 		/// </summary>
-		public const CyclicBrakeCheckTestStatus Warning;
+		Warning = 2,
 
 		/// <summary>
-		/// 
 		/// The last brake check failed (CBC_TEST_ERROR)
-		/// 
 		/// </summary>
-		public const CyclicBrakeCheckTestStatus Error;
+		Error = 3,
 
 		/// <summary>
-		/// 
 		/// No brake check has been performed yet (CBC_TEST_UNDEFINED)
-		/// 
 		/// </summary>
-		public const CyclicBrakeCheckTestStatus Undefined;
+		Undefined = 4,
 	}
 }

@@ -5,62 +5,43 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// State of the backup operation of the controller
-	/// 
 	/// </summary>
-	public sealed class BackupState : Enum {
-
-
-		public int value__;
+	public enum BackupState {
 
 		/// <summary>
-		/// 
 		/// The backup state could not be determined
-		/// 
 		/// </summary>
-		public const BackupState Unknown;
+		Unknown = 0,
 
 		/// <summary>
-		/// 
 		/// No backup operation
-		/// 
 		/// </summary>
-		public const BackupState None;
+		None = 1,
 
 		/// <summary>
-		/// 
 		/// A backup operation has been initialized
-		/// 
 		/// </summary>
-		public const BackupState InitState;
+		InitState = 2,
 
 		/// <summary>
-		/// 
 		/// A backup operation is running
-		/// 
 		/// </summary>
-		public const BackupState BackupInProgress;
+		BackupInProgress = 3,
 
 		/// <summary>
-		/// 
 		/// The backup operation finished successfully
-		/// 
 		/// </summary>
-		public const BackupState BackupReady;
+		BackupReady = 4,
 
 		/// <summary>
-		/// 
 		/// The backup operation failed
-		/// 
 		/// </summary>
-		public const BackupState ErrorDuringBackup;
+		ErrorDuringBackup = 5,
 
 		/// <summary>
-		/// 
 		/// The backup state is invalid
-		/// 
 		/// </summary>
-		public const BackupState Invalid;
+		Invalid = 6,
 	}
 }

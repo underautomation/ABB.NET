@@ -5,48 +5,33 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// Which variables a symbol search keeps, by what may be done with them
-	/// 
 	/// </summary>
-	public sealed class RapidSymbolVariableType : Enum {
-
-
-		public int value__;
+	public enum RapidSymbolVariableType {
 
 		/// <summary>
-		/// 
 		/// Let the controller decide
-		/// 
 		/// </summary>
-		public const RapidSymbolVariableType Undefined;
+		Undefined = 0,
 
 		/// <summary>
-		/// 
 		/// Only the variables that can be read and written
-		/// 
 		/// </summary>
-		public const RapidSymbolVariableType ReadWrite;
+		ReadWrite = 1,
 
 		/// <summary>
-		/// 
 		/// Only the variables that can be read but not written
-		/// 
 		/// </summary>
-		public const RapidSymbolVariableType ReadOnly;
+		ReadOnly = 2,
 
 		/// <summary>
-		/// 
 		/// Only the loop variables
-		/// 
 		/// </summary>
-		public const RapidSymbolVariableType Loop;
+		Loop = 3,
 
 		/// <summary>
-		/// 
 		/// Any of them
-		/// 
 		/// </summary>
-		public const RapidSymbolVariableType Any;
+		Any = 4,
 	}
 }

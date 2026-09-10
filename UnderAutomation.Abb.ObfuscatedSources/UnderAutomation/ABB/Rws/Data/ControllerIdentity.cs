@@ -5,17 +5,14 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// Identity of the robot controller.
-	/// <p>Returned by <code>ControllerService.GetIdentity()</code>.</p>
 	/// 
+	/// <p>Returned by <code>ControllerService.GetIdentity()</code>.</p>
 	/// </summary>
-	public class ControllerIdentity : Object {
+	public class ControllerIdentity {
 
 		/// <summary>
-		/// 
 		/// Initializes a new instance of the <xref href="UnderAutomation.ABB.Rws.Data.ControllerIdentity" data-throw-if-not-resolved="false"></xref> class
-		/// 
 		/// </summary>
 		public ControllerIdentity()
 		{
@@ -23,9 +20,7 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
 		/// Returns a string representation of this controller identity
-		/// 
 		/// </summary>
 		public override string ToString()
 		{
@@ -34,37 +29,27 @@ namespace UnderAutomation.ABB.Rws.Data {
 		}
 
 		/// <summary>
-		/// 
 		/// Name of the controller
-		/// 
 		/// </summary>
 		public string Name { get; set; }
 
 		/// <summary>
-		/// 
 		/// Controller id, available only for a real controller
-		/// 
 		/// </summary>
 		public string Id { get; set; }
 
 		/// <summary>
-		/// 
 		/// Indicates whether the controller is a real or a virtual controller
-		/// 
 		/// </summary>
 		public ControllerType Type { get; set; }
 
 		/// <summary>
-		/// 
 		/// MAC address of the controller, available only for a real controller
-		/// 
 		/// </summary>
 		public string MacAddress { get; set; }
 
 		/// <summary>
-		/// 
 		/// Indicates whether the controller runs at system level or in bootserver mode
-		/// 
 		/// </summary>
 		public ControllerLevel Level { get; set; }
 	}

@@ -5,34 +5,23 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// Whether an operator can push the robot arm around by hand
-	/// 
 	/// </summary>
-	public sealed class LeadThroughStatus : Enum {
-
-
-		public int value__;
+	public enum LeadThroughStatus {
 
 		/// <summary>
-		/// 
 		/// The controller reported a state this library does not know
-		/// 
 		/// </summary>
-		public const LeadThroughStatus Unknown;
+		Unknown = 0,
 
 		/// <summary>
-		/// 
 		/// The arm gives way when pushed
-		/// 
 		/// </summary>
-		public const LeadThroughStatus Active;
+		Active = 1,
 
 		/// <summary>
-		/// 
 		/// The arm holds its position
-		/// 
 		/// </summary>
-		public const LeadThroughStatus Inactive;
+		Inactive = 2,
 	}
 }

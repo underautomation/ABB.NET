@@ -6,38 +6,28 @@ using UnderAutomation.ABB.Rws.Internal;
 
 namespace UnderAutomation.ABB.Rws {
 	/// <summary>
-	/// 
 	/// Connection parameters for ABB Robot Web Services (RWS).
 	/// Supports both RWS v1 and v2.
-	/// 
 	/// </summary>
 	public class RwsConnectParameters : RwsConnectParametersBase {
 
 		/// <summary>
-		/// 
 		/// Default RWS port (80 for HTTP, 443 for HTTPS)
-		/// 
 		/// </summary>
 		public const int DEFAULT_PORT = 80;
 
 		/// <summary>
-		/// 
 		/// Default username for Digest Authentication
-		/// 
 		/// </summary>
 		public const string DEFAULT_USERNAME = "Default User";
 
 		/// <summary>
-		/// 
 		/// Default password for Digest Authentication
-		/// 
 		/// </summary>
 		public const string DEFAULT_PASSWORD = "robotics";
 
 		/// <summary>
-		/// 
 		/// Default timeout in milliseconds
-		/// 
 		/// </summary>
 		public const int DEFAULT_TIMEOUT = 10000;
 
@@ -48,9 +38,7 @@ namespace UnderAutomation.ABB.Rws {
 		}
 
 		/// <summary>
-		/// 
 		/// Enable or disable the RWS client connection
-		/// 
 		/// </summary>
 		public bool Enable { get; set; }
 	}

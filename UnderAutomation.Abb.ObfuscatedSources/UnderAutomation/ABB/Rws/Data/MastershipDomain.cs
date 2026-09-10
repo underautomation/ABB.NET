@@ -5,8 +5,8 @@
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// 
 	/// Domain of the controller a client can take the mastership of.
+	/// 
 	/// <p>Mastership is what a client has to hold before it is allowed to change anything in a domain.
 	/// Only one client at a time holds it, and it stays held until the client releases it or its connection
 	/// ends.</p>
@@ -14,45 +14,36 @@ namespace UnderAutomation.ABB.Rws.Data {
 	/// established with version 1 keeps the configuration and the RAPID programs apart, a connection
 	/// established with version 2 covers both with <xref href="UnderAutomation.ABB.Rws.Data.MastershipDomain.Edit" data-throw-if-not-resolved="false"></xref>. Whichever name is used, the service
 	/// asks the connected controller for the domains it really has.</p>
-	/// 
 	/// </summary>
-	public sealed class MastershipDomain : Enum {
-
-
-		public int value__;
+	public enum MastershipDomain {
 
 		/// <summary>
-		/// 
 		/// Everything that changes the system itself: its configuration and its RAPID programs.
+		/// 
 		/// <p>On a connection established with version 1, where the two are separate domains, asking for
 		/// this one takes <xref href="UnderAutomation.ABB.Rws.Data.MastershipDomain.Configuration" data-throw-if-not-resolved="false"></xref> and <xref href="UnderAutomation.ABB.Rws.Data.MastershipDomain.Rapid" data-throw-if-not-resolved="false"></xref> together.</p>
-		/// 
 		/// </summary>
-		public const MastershipDomain Edit;
+		Edit = 0,
 
 		/// <summary>
-		/// 
 		/// The movement of the robot: jogging, the mechanical units and everything that makes an axis move
-		/// 
 		/// </summary>
-		public const MastershipDomain Motion;
+		Motion = 1,
 
 		/// <summary>
-		/// 
 		/// The system parameters of the controller.
+		/// 
 		/// <p>On a connection established with version 2, where it is not a domain of its own, this is
 		/// the same domain as <xref href="UnderAutomation.ABB.Rws.Data.MastershipDomain.Edit" data-throw-if-not-resolved="false"></xref>.</p>
-		/// 
 		/// </summary>
-		public const MastershipDomain Configuration;
+		Configuration = 2,
 
 		/// <summary>
-		/// 
 		/// The RAPID programs and their data.
+		/// 
 		/// <p>On a connection established with version 2, where it is not a domain of its own, this is
 		/// the same domain as <xref href="UnderAutomation.ABB.Rws.Data.MastershipDomain.Edit" data-throw-if-not-resolved="false"></xref>.</p>
-		/// 
 		/// </summary>
-		public const MastershipDomain Rapid;
+		Rapid = 3,
 	}
 }
