@@ -46,6 +46,47 @@
             RWS client providing access to Robot Web Services API (controller, panel, IO, RAPID, file system, subscriptions)
             </summary>
         </member>
+        <member name="M:UnderAutomation.ABB.AbbController.Discover(System.Int32)">
+            <summary>
+            Search the local network for ABB robot controllers, during the given time.
+            <para>Two ways of finding a controller run together: the announcements the controllers of the
+            network send, and a test of the ports this machine serves, which is what finds the virtual
+            controllers of RobotStudio whatever port they were given. No license is needed.</para>
+            </summary>
+            <param name="timeoutMilliseconds">How long the search lasts, in milliseconds. Below 1000 ms a
+            slow controller may be missed. Default is 2000 ms.</param>
+            <returns>The controllers that answered, or an empty array when none did</returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">The given time is zero or negative</exception>
+            <remarks>
+            Only controllers on the same local network, and those running on this machine, are found. A
+            firewall, a router or a virtual private network between the PC and the robot usually blocks the
+            answer.
+            <para>A controller heard announcing itself carries its name and its RobotWare version, but its RWS
+            version is only deduced, see <see cref="P:UnderAutomation.ABB.Discovery.DiscoveredController.IsVersionDetected"/>. A controller
+            found on a port of this machine has no name, but its RWS version is certain.</para>
+            </remarks>
+        </member>
+        <member name="M:UnderAutomation.ABB.AbbController.DiscoverAsync(System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            Search the local network for ABB robot controllers, during the given time.
+            <para>Two ways of finding a controller run together: the announcements the controllers of the
+            network send, and a test of the ports this machine serves, which is what finds the virtual
+            controllers of RobotStudio whatever port they were given. No license is needed.</para>
+            </summary>
+            <param name="timeoutMilliseconds">How long the search lasts, in milliseconds. Below 1000 ms a
+            slow controller may be missed. Default is 2000 ms.</param>
+            <param name="cancellationToken">Token to cancel the search</param>
+            <returns>The controllers that answered, or an empty array when none did</returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">The given time is zero or negative</exception>
+            <remarks>
+            Only controllers on the same local network, and those running on this machine, are found. A
+            firewall, a router or a virtual private network between the PC and the robot usually blocks the
+            answer.
+            <para>A controller heard announcing itself carries its name and its RobotWare version, but its RWS
+            version is only deduced, see <see cref="P:UnderAutomation.ABB.Discovery.DiscoveredController.IsVersionDetected"/>. A controller
+            found on a port of this machine has no name, but its RWS version is certain.</para>
+            </remarks>
+        </member>
         <member name="M:UnderAutomation.ABB.AbbController.RegisterLicense(System.String,System.String)">
             <summary>
             If you have a license and a key, please call this static method to register the product and exit the trial period.
@@ -468,6 +509,90 @@
         </member>
         <member name="M:UnderAutomation.ABB.ConnectionParameters.GetHashCode">
             <inheritdoc />
+        </member>
+        <member name="T:UnderAutomation.ABB.Discovery.DiscoveredController">
+            <summary>
+            An ABB robot controller found on the local network.
+            <para>Returned by <see cref="M:UnderAutomation.ABB.AbbController.Discover(System.Int32)"/>.</para>
+            </summary>
+        </member>
+        <member name="P:UnderAutomation.ABB.Discovery.DiscoveredController.SystemName">
+            <summary>
+            Name of the robot system, as configured on the controller.
+            <para>Null when the controller was found by testing the ports of this machine rather than by
+            hearing it announce itself, because a port tells nothing about the name.</para>
+            </summary>
+        </member>
+        <member name="P:UnderAutomation.ABB.Discovery.DiscoveredController.InstanceName">
+            <summary>
+            Full name the controller publishes on the network. It contains <see cref="P:UnderAutomation.ABB.Discovery.DiscoveredController.SystemName"/>.
+            <para>Null when the controller did not announce itself.</para>
+            </summary>
+        </member>
+        <member name="P:UnderAutomation.ABB.Discovery.DiscoveredController.Address">
+            <summary>
+            IPv4 address of the controller
+            </summary>
+        </member>
+        <member name="P:UnderAutomation.ABB.Discovery.DiscoveredController.Port">
+            <summary>
+            Port the Robot Web Services interface listens on.
+            <para>A virtual controller gets a new port from RobotStudio at every start, so this value is
+            the reason to discover the controller instead of writing the port down.</para>
+            </summary>
+        </member>
+        <member name="P:UnderAutomation.ABB.Discovery.DiscoveredController.RobotWareVersion">
+            <summary>
+            RobotWare version of the controller, for example "7.21.0".
+            <para>Null when the controller does not publish it. Only OmniCore controllers do.</para>
+            </summary>
+        </member>
+        <member name="P:UnderAutomation.ABB.Discovery.DiscoveredController.SystemId">
+            <summary>
+            Unique identifier of the robot system.
+            <para>Null when the controller does not publish it. Only OmniCore controllers do.</para>
+            </summary>
+        </member>
+        <member name="P:UnderAutomation.ABB.Discovery.DiscoveredController.PcSdkPort">
+            <summary>
+            Port of the PC SDK interface of the controller, or 0 when the controller does not publish it.
+            <para>This SDK does not use that interface, the value is given for information.</para>
+            </summary>
+        </member>
+        <member name="P:UnderAutomation.ABB.Discovery.DiscoveredController.ProbableVersion">
+            <summary>
+            RWS version this controller most probably speaks.
+            <para>This is deduced from what the controller publishes, not from a request sent to it.
+            Check <see cref="P:UnderAutomation.ABB.Discovery.DiscoveredController.IsVersionDetected"/> before relying on it.</para>
+            </summary>
+        </member>
+        <member name="P:UnderAutomation.ABB.Discovery.DiscoveredController.IsVersionDetected">
+            <summary>
+            True when <see cref="P:UnderAutomation.ABB.Discovery.DiscoveredController.ProbableVersion"/> is more than a guess.
+            <para>It is always true for a controller found by testing the ports of this machine, because the
+            controller was asked. For a controller heard announcing itself, it is false when the announcement
+            did not carry what the version is deduced from, and <see cref="P:UnderAutomation.ABB.Discovery.DiscoveredController.ProbableVersion"/> then holds the
+            most common value rather than a deduction.</para>
+            </summary>
+        </member>
+        <member name="P:UnderAutomation.ABB.Discovery.DiscoveredController.UseHttps">
+            <summary>
+            True when the controller serves Robot Web Services over HTTPS.
+            <para>OmniCore controllers use HTTPS, IRC5 controllers use HTTP.</para>
+            </summary>
+        </member>
+        <member name="M:UnderAutomation.ABB.Discovery.DiscoveredController.ToConnectionParameters">
+            <summary>
+            Build connection parameters pointing at this controller, ready for <see cref="M:UnderAutomation.ABB.AbbController.Connect(UnderAutomation.ABB.ConnectionParameters)"/>.
+            <para>The address, the port, the scheme and the RWS version come from the discovery. The user name
+            and the password keep their default values, change them if the controller needs other ones.</para>
+            </summary>
+            <returns>Connection parameters for this controller</returns>
+        </member>
+        <member name="M:UnderAutomation.ABB.Discovery.DiscoveredController.ToString">
+            <summary>
+            Returns a string representation of this controller
+            </summary>
         </member>
         <member name="T:UnderAutomation.ABB.License.LicenseInfo">
             <summary>
@@ -7143,11 +7268,6 @@
             <summary>
             Base class for connection parameters.
             Contains core properties needed for RWS connection.
-            </summary>
-        </member>
-        <member name="P:UnderAutomation.ABB.Rws.Internal.RwsConnectParametersBase.Ip">
-            <summary>
-            IP address or hostname of the robot controller
             </summary>
         </member>
         <member name="P:UnderAutomation.ABB.Rws.Internal.RwsConnectParametersBase.Port">

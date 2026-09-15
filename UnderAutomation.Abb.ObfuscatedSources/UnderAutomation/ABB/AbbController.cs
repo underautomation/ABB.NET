@@ -2,6 +2,9 @@
 // This file is an empty shell containing only public C# items.
 // The internal code is hidden; to access it, you need to obtain a Source licence of the library.
 
+using UnderAutomation.ABB.Discovery;
+using System.Threading;
+using System.Threading.Tasks;
 using UnderAutomation.ABB.License;
 using UnderAutomation.ABB.Rws.Internal;
 
@@ -43,6 +46,39 @@ namespace UnderAutomation.ABB {
 		public void Disconnect()
 		{
 			// Source is hidden, a Source licence is needed to access internal code...
+		}
+
+		/// <summary>
+		/// Search the local network for ABB robot controllers, during the given time.
+		/// 
+		/// <p>Two ways of finding a controller run together: the announcements the controllers of the
+		/// network send, and a test of the ports this machine serves, which is what finds the virtual
+		/// controllers of RobotStudio whatever port they were given. No license is needed.</p>
+		/// </summary>
+		/// <param name="timeoutMilliseconds">How long the search lasts, in milliseconds. Below 1000 ms a
+		///             slow controller may be missed. Default is 2000 ms.</param>
+		/// <returns>The controllers that answered, or an empty array when none did</returns>
+		public static DiscoveredController[] Discover(int timeoutMilliseconds = 2000)
+		{
+			// Source is hidden, a Source licence is needed to access internal code...
+			return default;
+		}
+
+		/// <summary>
+		/// Search the local network for ABB robot controllers, during the given time.
+		/// 
+		/// <p>Two ways of finding a controller run together: the announcements the controllers of the
+		/// network send, and a test of the ports this machine serves, which is what finds the virtual
+		/// controllers of RobotStudio whatever port they were given. No license is needed.</p>
+		/// </summary>
+		/// <param name="timeoutMilliseconds">How long the search lasts, in milliseconds. Below 1000 ms a
+		///             slow controller may be missed. Default is 2000 ms.</param>
+		/// <param name="cancellationToken">Token to cancel the search</param>
+		/// <returns>The controllers that answered, or an empty array when none did</returns>
+		public static Task<DiscoveredController[]> DiscoverAsync(int timeoutMilliseconds = 2000, CancellationToken cancellationToken = default)
+		{
+			// Source is hidden, a Source licence is needed to access internal code...
+			return default;
 		}
 
 		/// <summary>

@@ -18,11 +18,6 @@ namespace UnderAutomation.ABB.Rws.Internal {
 		}
 
 		/// <summary>
-		/// IP address or hostname of the robot controller
-		/// </summary>
-		public string Ip { get; set; }
-
-		/// <summary>
 		/// RWS service port (if set to 0, the SDK will use 80 for HTTP, 443 for HTTPS)
 		/// </summary>
 		public int Port { get; set; }
