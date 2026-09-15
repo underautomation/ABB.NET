@@ -35,8 +35,6 @@ partial class ConnectControl
         udRws2Port = new NumericUpDown();
         chkRws = new CheckBox();
         lblConnected = new Label();
-        label1 = new Label();
-        txtIP = new TextBox();
         panel1 = new Panel();
         btnConnect = new Button();
         btnDisconnect = new Button();
@@ -49,6 +47,9 @@ partial class ConnectControl
         lblRws2User = new Label();
         label3 = new Label();
         cbVersion = new ComboBox();
+        btnScan = new Button();
+        lblScanResult = new Label();
+        cbDiscovered = new ComboBox();
         addressTooltip = new ToolTip(components);
         tableLayoutPanel1.SuspendLayout();
         panel2.SuspendLayout();
@@ -62,28 +63,28 @@ partial class ConnectControl
         tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 205F));
         tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 250F));
         tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle());
-        tableLayoutPanel1.Controls.Add(label4, 2, 5);
-        tableLayoutPanel1.Controls.Add(panel2, 1, 6);
-        tableLayoutPanel1.Controls.Add(chkRws, 1, 2);
-        tableLayoutPanel1.Controls.Add(lblConnected, 1, 10);
-        tableLayoutPanel1.Controls.Add(label1, 0, 0);
-        tableLayoutPanel1.Controls.Add(txtIP, 1, 0);
-        tableLayoutPanel1.Controls.Add(panel1, 1, 9);
-        tableLayoutPanel1.Controls.Add(lblLicense, 2, 9);
-        tableLayoutPanel1.Controls.Add(chkRws2Https, 1, 7);
-        tableLayoutPanel1.Controls.Add(txtRws2Password, 1, 5);
-        tableLayoutPanel1.Controls.Add(txtRws2User, 1, 4);
-        tableLayoutPanel1.Controls.Add(lblRws2Port, 0, 6);
-        tableLayoutPanel1.Controls.Add(lblRws2Password, 0, 5);
-        tableLayoutPanel1.Controls.Add(lblRws2User, 0, 4);
-        tableLayoutPanel1.Controls.Add(label3, 0, 3);
-        tableLayoutPanel1.Controls.Add(cbVersion, 1, 3);
+        tableLayoutPanel1.Controls.Add(label4, 2, 4);
+        tableLayoutPanel1.Controls.Add(panel2, 1, 5);
+        tableLayoutPanel1.Controls.Add(chkRws, 1, 1);
+        tableLayoutPanel1.Controls.Add(lblConnected, 1, 9);
+        tableLayoutPanel1.Controls.Add(panel1, 1, 8);
+        tableLayoutPanel1.Controls.Add(lblLicense, 2, 8);
+        tableLayoutPanel1.Controls.Add(chkRws2Https, 1, 6);
+        tableLayoutPanel1.Controls.Add(txtRws2Password, 1, 4);
+        tableLayoutPanel1.Controls.Add(txtRws2User, 1, 3);
+        tableLayoutPanel1.Controls.Add(lblRws2Port, 0, 5);
+        tableLayoutPanel1.Controls.Add(lblRws2Password, 0, 4);
+        tableLayoutPanel1.Controls.Add(lblRws2User, 0, 3);
+        tableLayoutPanel1.Controls.Add(label3, 0, 2);
+        tableLayoutPanel1.Controls.Add(cbVersion, 1, 2);
+        tableLayoutPanel1.Controls.Add(btnScan, 0, 0);
+        tableLayoutPanel1.Controls.Add(lblScanResult, 2, 0);
+        tableLayoutPanel1.Controls.Add(cbDiscovered, 1, 0);
         tableLayoutPanel1.Location = new Point(21, 32);
         tableLayoutPanel1.Margin = new Padding(4, 3, 4, 3);
         tableLayoutPanel1.Name = "tableLayoutPanel1";
-        tableLayoutPanel1.RowCount = 12;
-        tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 69F));
-        tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 17F));
+        tableLayoutPanel1.RowCount = 11;
+        tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 34F));
         tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 29F));
         tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 29F));
         tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 29F));
@@ -95,9 +96,6 @@ partial class ConnectControl
         tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 29F));
         tableLayoutPanel1.RowStyles.Add(new RowStyle());
         tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-        tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-        tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-        tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
         tableLayoutPanel1.Size = new Size(628, 585);
         tableLayoutPanel1.TabIndex = 10;
         // 
@@ -105,7 +103,7 @@ partial class ConnectControl
         // 
         label4.Anchor = AnchorStyles.Left;
         label4.AutoSize = true;
-        label4.Location = new Point(458, 180);
+        label4.Location = new Point(458, 128);
         label4.Name = "label4";
         label4.Size = new Size(150, 15);
         label4.TabIndex = 11;
@@ -117,7 +115,7 @@ partial class ConnectControl
         panel2.Controls.Add(label2);
         panel2.Controls.Add(udRws2Port);
         panel2.Dock = DockStyle.Fill;
-        panel2.Location = new Point(208, 205);
+        panel2.Location = new Point(208, 153);
         panel2.Name = "panel2";
         panel2.Size = new Size(417, 23);
         panel2.TabIndex = 11;
@@ -148,7 +146,7 @@ partial class ConnectControl
         chkRws.AutoSize = true;
         chkRws.Checked = true;
         chkRws.CheckState = CheckState.Checked;
-        chkRws.Location = new Point(208, 91);
+        chkRws.Location = new Point(208, 39);
         chkRws.Name = "chkRws";
         chkRws.Size = new Size(88, 19);
         chkRws.TabIndex = 0;
@@ -158,7 +156,7 @@ partial class ConnectControl
         // lblConnected
         // 
         lblConnected.Dock = DockStyle.Fill;
-        lblConnected.Location = new Point(209, 317);
+        lblConnected.Location = new Point(209, 265);
         lblConnected.Margin = new Padding(4, 0, 4, 0);
         lblConnected.Name = "lblConnected";
         lblConnected.Size = new Size(242, 29);
@@ -166,39 +164,12 @@ partial class ConnectControl
         lblConnected.Text = "______";
         lblConnected.TextAlign = ContentAlignment.MiddleCenter;
         // 
-        // label1
-        // 
-        label1.Anchor = AnchorStyles.Right;
-        label1.AutoSize = true;
-        label1.Cursor = Cursors.Help;
-        label1.Location = new Point(142, 27);
-        label1.Margin = new Padding(0);
-        label1.Name = "label1";
-        label1.Size = new Size(63, 15);
-        label1.TabIndex = 0;
-        label1.Text = "IP address:";
-        label1.TextAlign = ContentAlignment.MiddleCenter;
-        addressTooltip.SetToolTip(label1, "192.168.0.1\r\nC:\\ABB\\MyCell\\Myrobot\r\n\\\\my-dev-machine\\MyCell\\MyRobot");
-        // 
-        // txtIP
-        // 
-        txtIP.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-        tableLayoutPanel1.SetColumnSpan(txtIP, 2);
-        txtIP.Cursor = Cursors.Help;
-        txtIP.Location = new Point(209, 23);
-        txtIP.Margin = new Padding(4, 3, 4, 3);
-        txtIP.Name = "txtIP";
-        txtIP.Size = new Size(415, 23);
-        txtIP.TabIndex = 1;
-        txtIP.Text = "192.168.0.1";
-        addressTooltip.SetToolTip(txtIP, "192.168.0.1\r\nC:\\ABB\\MyCell\\MyRobot\r\n\\\\my-dev-machine\\MyCell\\MyRobot\r\n");
-        // 
         // panel1
         // 
         panel1.Controls.Add(btnConnect);
         panel1.Controls.Add(btnDisconnect);
         panel1.Dock = DockStyle.Fill;
-        panel1.Location = new Point(209, 280);
+        panel1.Location = new Point(209, 228);
         panel1.Margin = new Padding(4, 3, 4, 3);
         panel1.Name = "panel1";
         panel1.Size = new Size(242, 34);
@@ -232,7 +203,7 @@ partial class ConnectControl
         // 
         lblLicense.Anchor = AnchorStyles.Left;
         lblLicense.AutoSize = true;
-        lblLicense.Location = new Point(455, 289);
+        lblLicense.Location = new Point(455, 237);
         lblLicense.Margin = new Padding(0);
         lblLicense.Name = "lblLicense";
         lblLicense.Size = new Size(13, 15);
@@ -245,7 +216,7 @@ partial class ConnectControl
         chkRws2Https.AutoSize = true;
         chkRws2Https.Checked = true;
         chkRws2Https.CheckState = CheckState.Checked;
-        chkRws2Https.Location = new Point(208, 236);
+        chkRws2Https.Location = new Point(208, 184);
         chkRws2Https.Name = "chkRws2Https";
         chkRws2Https.Size = new Size(84, 19);
         chkRws2Https.TabIndex = 7;
@@ -255,7 +226,7 @@ partial class ConnectControl
         // txtRws2Password
         // 
         txtRws2Password.Anchor = AnchorStyles.Left;
-        txtRws2Password.Location = new Point(208, 176);
+        txtRws2Password.Location = new Point(208, 124);
         txtRws2Password.Name = "txtRws2Password";
         txtRws2Password.Size = new Size(140, 23);
         txtRws2Password.TabIndex = 4;
@@ -265,7 +236,7 @@ partial class ConnectControl
         // txtRws2User
         // 
         txtRws2User.Anchor = AnchorStyles.Left;
-        txtRws2User.Location = new Point(208, 147);
+        txtRws2User.Location = new Point(208, 95);
         txtRws2User.Name = "txtRws2User";
         txtRws2User.Size = new Size(140, 23);
         txtRws2User.TabIndex = 2;
@@ -275,7 +246,7 @@ partial class ConnectControl
         // 
         lblRws2Port.Anchor = AnchorStyles.Right;
         lblRws2Port.AutoSize = true;
-        lblRws2Port.Location = new Point(170, 209);
+        lblRws2Port.Location = new Point(170, 157);
         lblRws2Port.Name = "lblRws2Port";
         lblRws2Port.Size = new Size(32, 15);
         lblRws2Port.TabIndex = 5;
@@ -285,7 +256,7 @@ partial class ConnectControl
         // 
         lblRws2Password.Anchor = AnchorStyles.Right;
         lblRws2Password.AutoSize = true;
-        lblRws2Password.Location = new Point(142, 180);
+        lblRws2Password.Location = new Point(142, 128);
         lblRws2Password.Name = "lblRws2Password";
         lblRws2Password.Size = new Size(60, 15);
         lblRws2Password.TabIndex = 3;
@@ -295,7 +266,7 @@ partial class ConnectControl
         // 
         lblRws2User.Anchor = AnchorStyles.Right;
         lblRws2User.AutoSize = true;
-        lblRws2User.Location = new Point(139, 151);
+        lblRws2User.Location = new Point(139, 99);
         lblRws2User.Name = "lblRws2User";
         lblRws2User.Size = new Size(63, 15);
         lblRws2User.TabIndex = 1;
@@ -305,7 +276,7 @@ partial class ConnectControl
         // 
         label3.Anchor = AnchorStyles.Right;
         label3.AutoSize = true;
-        label3.Location = new Point(127, 122);
+        label3.Location = new Point(127, 70);
         label3.Name = "label3";
         label3.Size = new Size(75, 15);
         label3.TabIndex = 1;
@@ -315,10 +286,41 @@ partial class ConnectControl
         // 
         cbVersion.DropDownStyle = ComboBoxStyle.DropDownList;
         cbVersion.FormattingEnabled = true;
-        cbVersion.Location = new Point(208, 118);
+        cbVersion.Location = new Point(208, 66);
         cbVersion.Name = "cbVersion";
         cbVersion.Size = new Size(140, 23);
         cbVersion.TabIndex = 26;
+        // 
+        // btnScan
+        // 
+        btnScan.Anchor = AnchorStyles.Right;
+        btnScan.Location = new Point(79, 4);
+        btnScan.Name = "btnScan";
+        btnScan.Size = new Size(123, 25);
+        btnScan.TabIndex = 27;
+        btnScan.Text = "Scan for robots";
+        btnScan.UseVisualStyleBackColor = true;
+        btnScan.Click += btnScan_Click;
+        // 
+        // lblScanResult
+        // 
+        lblScanResult.Dock = DockStyle.Fill;
+        lblScanResult.Location = new Point(458, 0);
+        lblScanResult.Name = "lblScanResult";
+        lblScanResult.Size = new Size(167, 34);
+        lblScanResult.TabIndex = 29;
+        lblScanResult.TextAlign = ContentAlignment.MiddleLeft;
+        // 
+        // cbDiscovered
+        // 
+        cbDiscovered.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+        cbDiscovered.FormattingEnabled = true;
+        cbDiscovered.Location = new Point(208, 5);
+        cbDiscovered.Name = "cbDiscovered";
+        cbDiscovered.Size = new Size(244, 23);
+        cbDiscovered.TabIndex = 28;
+        cbDiscovered.Text = "127.0.0.1";
+        cbDiscovered.SelectedIndexChanged += cbDiscovered_SelectedIndexChanged;
         // 
         // addressTooltip
         // 
@@ -348,8 +350,6 @@ partial class ConnectControl
 
     private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     private System.Windows.Forms.Label lblConnected;
-    private System.Windows.Forms.Label label1;
-    private System.Windows.Forms.TextBox txtIP;
     private System.Windows.Forms.Panel panel1;
     private System.Windows.Forms.ToolTip addressTooltip;
     private Label lblLicense;
@@ -368,4 +368,7 @@ partial class ConnectControl
     private Label label3;
     private ComboBox cbVersion;
     private Label label4;
+    private Button btnScan;
+    private ComboBox cbDiscovered;
+    private Label lblScanResult;
 }

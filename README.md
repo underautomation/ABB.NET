@@ -41,6 +41,8 @@ files and backups, and follow the state of the controller, from a normal .NET ap
 - 📜 **Event log:** read the event log by domain, in the language you ask, and clear it.
 - 🔋 **System and energy:** read the system product list, the options and the energy counters.
 - 🔑 **Mastership:** request and release the edit and motion mastership, explicitly or implicitly.
+- 🔍 **Discovery:** find the ABB controllers of the local network, and the virtual controllers running on
+  this machine, without a license and without a known address.
 - 🔁 **One API for both controller generations:** the same code runs on IRC5 (RWS 1.0) and on OmniCore
   (RWS 2.0). Only one connection parameter changes.
 - ⏱️ **Sync and async:** every service method has a synchronous version and, from .NET Framework 4.5 on,
@@ -191,6 +193,21 @@ JointTarget joints = robot.Rws.MotionSystem.GetJointsFromCartesian("ROB_1", pose
 // Jog the robot
 robot.Rws.MotionSystem.SetJoggingMechanicalUnit("ROB_1");
 robot.Rws.MotionSystem.Jog(new RobotJoints { Axis1 = 5 }, changeCount: 0);
+```
+
+### 🔍 Discover controllers
+
+```csharp
+// Finds the controllers of the local network and the virtual controllers of this machine.
+// No connection is opened and no license is needed.
+DiscoveredController[] found = AbbController.Discover();
+
+foreach (var controller in found)
+    Console.WriteLine($"{controller.SystemName} at {controller.Address}:{controller.Port}");
+
+// ToConnectionParameters carries the address, the port, the scheme and the RWS version found
+var robot = new AbbController();
+robot.Connect(found[0].ToConnectionParameters());
 ```
 
 ### 🎛️ Controller and state
