@@ -4,7 +4,7 @@
 [![NuGet downloads](https://img.shields.io/nuget/dt/UnderAutomation.ABB?label=Downloads&logo=nuget)](https://www.nuget.org/packages/UnderAutomation.ABB/)
 [![.NET Framework](https://img.shields.io/badge/.NET_Framework-3.5+-blueviolet)](#compatibility)
 [![.NET Standard](https://img.shields.io/badge/.NET_Standard-2.0_2.1-blueviolet)](#compatibility)
-[![.NET](https://img.shields.io/badge/.NET-5_to_9-blueviolet)](#compatibility)
+[![.NET](https://img.shields.io/badge/.NET-5_to_10-blueviolet)](#compatibility)
 [![License](https://img.shields.io/badge/license-commercial-blue)](https://underautomation.com/abb/eula)
 
 **UnderAutomation.ABB** is a fully managed .NET SDK that talks to ABB industrial robot controllers over
@@ -14,50 +14,42 @@
 Use it to read and write RAPID variables, control I/O, read positions, jog the robot, manage programs,
 files and backups, and follow the state of the controller, from a normal .NET application.
 
-- 📖 **More information:** [underautomation.com/abb](https://underautomation.com/abb)
-- 📚 **Documentation:** [underautomation.com/abb/documentation](https://underautomation.com/abb/documentation)
-- 📦 **Also available for** [🐍 Python](https://github.com/underautomation/ABB.py)
-
----
-
-[⭐ Star this repository if it is useful to you](https://github.com/underautomation/ABB.NET/stargazers) · [👁️ Watch it to follow new releases](https://github.com/underautomation/ABB.NET/watchers)
-
----
+- Product page: [underautomation.com/abb](https://underautomation.com/abb)
+- Documentation: [underautomation.com/abb/documentation](https://underautomation.com/abb/documentation)
+- Also available for Python: [ABB.py](https://github.com/underautomation/ABB.py)
 
 ## What you can do
 
-- 🧾 **RAPID variables and programs:** read and write variables, persistents and constants, including
+- **RAPID variables and programs:** read and write variables, persistents and constants, including
   `robtarget` and record types. Start and stop tasks, move the program pointer, load and save modules,
   search the symbols of the loaded program.
-- ⚡ **Inputs / Outputs:** list, read and write digital, analog and group signals. Pulse, invert or
-  simulate a signal. Browse and configure I/O devices and networks.
-- 📐 **Position and kinematics:** read the current `robtarget` and `jointtarget`, convert between
-  Cartesian pose and joint values, jog the robot, set a position target.
-- 🎛️ **Controller and state:** read the identity and the options, follow the operation mode, the
-  controller state and the speed ratio, set the clock, the language and the network.
-- 💾 **Backup and restore:** create a full backup, check it, and restore it.
-- 📂 **File system:** browse the controller file system, download and upload files, create, copy, rename
+- **Inputs / Outputs:** list, read and write digital, analog and group signals. Pulse, invert or simulate
+  a signal. Browse and configure I/O devices and networks.
+- **Position and kinematics:** read the current `robtarget` and `jointtarget`, convert between Cartesian
+  pose and joint values, jog the robot, set a position target.
+- **Controller and state:** read the identity and the options, follow the operation mode, the controller
+  state and the speed ratio, set the clock, the language and the network.
+- **Backup and restore:** create a full backup, check it, and restore it.
+- **File system:** browse the controller file system, download and upload files, create, copy, rename
   and delete files and directories.
-- 📜 **Event log:** read the event log by domain, in the language you ask, and clear it.
-- 🔋 **System and energy:** read the system product list, the options and the energy counters.
-- 🔑 **Mastership:** request and release the edit and motion mastership, explicitly or implicitly.
-- 🔍 **Discovery:** find the ABB controllers of the local network, and the virtual controllers running on
+- **Event log:** read the event log by domain, in the language you ask, and clear it.
+- **System and energy:** read the system product list, the options and the energy counters.
+- **Mastership:** request and release the edit and motion mastership, explicitly or implicitly.
+- **Discovery:** find the ABB controllers of the local network, and the virtual controllers running on
   this machine, without a license and without a known address.
-- 🔁 **One API for both controller generations:** the same code runs on IRC5 (RWS 1.0) and on OmniCore
+- **One API for both controller generations:** the same code runs on IRC5 (RWS 1.0) and on OmniCore
   (RWS 2.0). Only one connection parameter changes.
-- ⏱️ **Sync and async:** every service method has a synchronous version and, from .NET Framework 4.5 on,
+- **Sync and async:** every service method has a synchronous version and, from .NET Framework 4.5 on,
   an `...Async` version that takes a `CancellationToken`.
 
 No ABB option is required on the controller. Robot Web Services is part of a standard system.
 
----
-
 ## Example application
 
-A Windows Forms application shows every feature of the SDK, with the source code included in this
-repository under [`UnderAutomation.ABB.Showcase.Forms`](UnderAutomation.ABB.Showcase.Forms).
+A Windows Forms application shows every feature of the SDK. Its source code is in this repository, in
+[`UnderAutomation.ABB.Showcase.Forms`](UnderAutomation.ABB.Showcase.Forms).
 
-📥 **Download:** [UnderAutomation.Abb.Showcase.Forms.exe](https://github.com/underautomation/ABB.NET/releases/latest/download/UnderAutomation.Abb.Showcase.Forms.exe) · [All releases](https://github.com/underautomation/ABB.NET/releases)
+**Download:** [UnderAutomation.ABB.Showcase.Forms.exe](https://github.com/underautomation/ABB.NET/releases/latest/download/UnderAutomation.ABB.Showcase.Forms.exe) ([all releases](https://github.com/underautomation/ABB.NET/releases))
 
 **Controller, backup and state**
 
@@ -75,8 +67,6 @@ repository under [`UnderAutomation.ABB.Showcase.Forms`](UnderAutomation.ABB.Show
 
 ![Motion system demo](https://underautomation.com/abb/WinformsScreenshots/RwsMotionSystem.jpg)
 
----
-
 ## Installation
 
 ```bash
@@ -89,10 +79,9 @@ Or with the NuGet Package Manager console:
 Install-Package UnderAutomation.ABB
 ```
 
-You can also download the DLL from the [releases page](https://github.com/underautomation/ABB.NET/releases)
-and reference it by hand.
-
----
+You can also download `UnderAutomation.ABB.zip` from the [releases page](https://github.com/underautomation/ABB.NET/releases).
+It contains one folder per target framework. On Windows, unblock the zip file before you extract it
+(right-click, "Properties", "Unblock"), then reference the DLL of your framework.
 
 ## Getting started
 
@@ -122,21 +111,19 @@ The rest of your code does not change.
 var parameters = new ConnectionParameters("192.168.125.1");
 parameters.Rws.Username = "Default User";
 parameters.Rws.Password = "robotics";
-parameters.Rws.UseHttps = true;                    // OmniCore is reached over HTTPS
+parameters.Rws.UseHttps = true;                     // OmniCore is reached over HTTPS
 parameters.Rws.Version  = RwsVersion.OmniCore_V2_0; // or RwsVersion.Irc5_V1_0 for IRC5
 
 var robot = new AbbController();
 robot.Connect(parameters);
 ```
 
----
-
 ## Features
 
 Everything is reached through `robot.Rws`, grouped by service:
 `Controller`, `Io`, `Rapid`, `MotionSystem`, `Panel`, `System`, `File`, `Elog`, `Mastership`.
 
-### 🧾 RAPID variables and programs
+### RAPID variables and programs
 
 ```csharp
 // Read a RAPID symbol, the value comes back the way RAPID writes it
@@ -158,7 +145,7 @@ var tasks = robot.Rws.Rapid.GetTasks();
 var state = robot.Rws.Rapid.GetExecutionState();
 ```
 
-### ⚡ Inputs / Outputs
+### Inputs / Outputs
 
 ```csharp
 // List every signal
@@ -177,7 +164,7 @@ robot.Rws.Io.InvertSignal("EtherNetIP", "d652", "DO_01", 1);
 robot.Rws.Io.SetSignalState("EtherNetIP", "d652", "DI_01", simulated: true);
 ```
 
-### 📐 Position and kinematics
+### Position and kinematics
 
 ```csharp
 // Current Cartesian and joint position of a mechanical unit
@@ -195,7 +182,7 @@ robot.Rws.MotionSystem.SetJoggingMechanicalUnit("ROB_1");
 robot.Rws.MotionSystem.Jog(new RobotJoints { Axis1 = 5 }, changeCount: 0);
 ```
 
-### 🔍 Discover controllers
+### Discover controllers
 
 ```csharp
 // Finds the controllers of the local network and the virtual controllers of this machine.
@@ -210,7 +197,7 @@ var robot = new AbbController();
 robot.Connect(found[0].ToConnectionParameters());
 ```
 
-### 🎛️ Controller and state
+### Controller and state
 
 ```csharp
 ControllerIdentity id = robot.Rws.Controller.GetIdentity();
@@ -226,7 +213,7 @@ robot.Rws.Controller.SetClock(DateTime.Now);
 bool hasOption = robot.Rws.Controller.HasOption("RobotWare-OS");
 ```
 
-### 💾 Backup and restore
+### Backup and restore
 
 ```csharp
 robot.Rws.Controller.CreateBackup("HOME:/backups/2026-01-15");
@@ -236,7 +223,7 @@ if (check.IsAccepted)
     robot.Rws.Controller.RestoreBackup("HOME:/backups/2026-01-15");
 ```
 
-### 📂 File system
+### File system
 
 ```csharp
 DirectoryListing listing = robot.Rws.File.ListDirectory("HOME:/");
@@ -251,7 +238,7 @@ string text = robot.Rws.File.GetFileAsText("HOME:/mymodule.mod");
 robot.Rws.File.DeleteFile("HOME:/old.mod");
 ```
 
-### 📜 Event log
+### Event log
 
 ```csharp
 ElogMessage[] messages = robot.Rws.Elog.GetMessages(domain: 0, language: "en");
@@ -261,7 +248,7 @@ foreach (var m in messages)
 robot.Rws.Elog.ClearAllMessages();
 ```
 
-### ⏱️ Asynchronous methods
+### Asynchronous methods
 
 Every method has an async version on .NET Framework 4.5 and later.
 
@@ -270,51 +257,55 @@ var identity = await robot.Rws.Controller.GetIdentityAsync(cancellationToken);
 await robot.Rws.Io.SetSignalValueAsync("EtherNetIP", "d652", "DO_01", 1, cancellationToken);
 ```
 
----
-
 ## IRC5 and OmniCore, one API
 
 ABB robots expose Robot Web Services in two versions. This SDK covers both. The same code runs on an
-old IRC5 and on a new OmniCore. Only the connection parameters change.
+IRC5 and on an OmniCore. Only the connection parameters change.
 
-| Controller | RobotWare               | Robot Web Services | `RwsVersion` value         |
-| ---------- | ----------------------- | ------------------ | -------------------------- |
-| IRC5       | RobotWare 6 and earlier | RWS 1.0            | `RwsVersion.Irc5_V1_0`     |
-| OmniCore   | RobotWare 7 and later   | RWS 2.0            | `RwsVersion.OmniCore_V2_0` |
+| Controller | RobotWare | Robot Web Services | `RwsVersion` value |
+| --- | --- | --- | --- |
+| IRC5 | RobotWare 6 and earlier | RWS 1.0 | `RwsVersion.Irc5_V1_0` |
+| OmniCore | RobotWare 7 and later | RWS 2.0 | `RwsVersion.OmniCore_V2_0` |
 
 HTTP or HTTPS is a separate setting (`UseHttps`), independent of the controller generation.
 
----
+## Shell sources
+
+The folder [`UnderAutomation.Abb.ObfuscatedSources`](UnderAutomation.Abb.ObfuscatedSources) contains
+every public type and member of the SDK, with its XML documentation. The bodies of the methods are
+replaced by "Source is hidden". Use it to:
+
+- browse the public API and its documentation on GitHub;
+- jump to a definition from your code editor;
+- see the structure of the code that is delivered with a source license.
+
+The source license gives the complete source code of the library, with the Visual Studio solution. See
+the [license page](https://underautomation.com/abb/documentation/license) of the documentation.
 
 ## Compatibility
 
-| Target Framework           | Supported | Async methods  |
-| -------------------------- | --------- | -------------- |
-| .NET 9.0 / 8.0 / 6.0 / 5.0 | ✅        | ✅             |
-| .NET Core 3.0              | ✅        | ✅             |
-| .NET Standard 2.1 / 2.0    | ✅        | ✅             |
-| .NET Framework 4.5 to 4.8  | ✅        | ✅             |
-| .NET Framework 3.5 / 4.0   | ✅        | ❌ (sync only) |
+| Target framework | Supported | Async methods |
+| --- | --- | --- |
+| .NET 10.0 / 9.0 / 8.0 / 6.0 / 5.0 | yes | yes |
+| .NET Core 3.0 | yes | yes |
+| .NET Standard 2.1 / 2.0 | yes | yes |
+| .NET Framework 4.5 to 4.8 | yes | yes |
+| .NET Framework 3.5 / 4.0 | yes | no (sync only) |
 
-- **Operating systems:** Windows, Linux, macOS
-- **No native dependency**, no external NuGet package
-- **Supported controllers:** IRC5, OmniCore, and their virtual controllers in RobotStudio
-
----
+- **Operating systems:** Windows, Linux, macOS.
+- **No native dependency**, no NuGet dependency.
+- **Controllers:** IRC5, OmniCore, and their virtual controllers in RobotStudio.
 
 ## License
 
-This SDK requires a commercial license. A 30-day free trial is available, no key needed.
+This SDK needs a commercial license. A 30-day trial starts at the first use, no key needed.
 
-- 🔑 **Trial and licensing:** [underautomation.com/abb/eula](https://underautomation.com/abb/eula)
-- 🛒 **Request a quote and order:** [underautomation.com/abb](https://underautomation.com/abb)
-
-See [License.md](License.md) for the full terms.
-
----
+- License agreement: [underautomation.com/abb/eula](https://underautomation.com/abb/eula) and [License.md](License.md)
+- Trial, license key and source license: [underautomation.com/abb/documentation/license](https://underautomation.com/abb/documentation/license)
+- Prices and quote: [underautomation.com/abb](https://underautomation.com/abb)
 
 ## Support
 
-- 📚 **Documentation:** [underautomation.com/abb/documentation](https://underautomation.com/abb/documentation)
-- 🐛 **Issues:** [GitHub Issues](https://github.com/underautomation/ABB.NET/issues)
-- 📩 **Contact:** [underautomation.com/contact](https://underautomation.com/contact)
+- Documentation: [underautomation.com/abb/documentation](https://underautomation.com/abb/documentation)
+- Issues: [GitHub Issues](https://github.com/underautomation/ABB.NET/issues)
+- Contact: [underautomation.com/contact](https://underautomation.com/contact)
