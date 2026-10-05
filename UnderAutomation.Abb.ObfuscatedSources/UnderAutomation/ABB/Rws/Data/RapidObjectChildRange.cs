@@ -7,12 +7,12 @@ namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
 	/// One named part of a RAPID object, and where it sits in the source.
 	/// 
-	/// <p>Carried by <xref href="UnderAutomation.ABB.Rws.Data.RapidObjectChild" data-throw-if-not-resolved="false"></xref>.</p>
+	/// <p>Carried by <see cref="UnderAutomation.ABB.Rws.Data.RapidObjectChild"/>.</p>
 	/// </summary>
 	public class RapidObjectChildRange {
 
 		/// <summary>
-		/// Initializes a new instance of the <xref href="UnderAutomation.ABB.Rws.Data.RapidObjectChildRange" data-throw-if-not-resolved="false"></xref> class
+		/// Initializes a new instance of the <see cref="UnderAutomation.ABB.Rws.Data.RapidObjectChildRange"/> class
 		/// </summary>
 		public RapidObjectChildRange()
 		{

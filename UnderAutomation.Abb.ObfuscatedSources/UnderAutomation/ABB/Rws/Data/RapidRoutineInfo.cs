@@ -14,7 +14,7 @@ namespace UnderAutomation.ABB.Rws.Data {
 	public class RapidRoutineInfo {
 
 		/// <summary>
-		/// Initializes a new instance of the <xref href="UnderAutomation.ABB.Rws.Data.RapidRoutineInfo" data-throw-if-not-resolved="false"></xref> class
+		/// Initializes a new instance of the <see cref="UnderAutomation.ABB.Rws.Data.RapidRoutineInfo"/> class
 		/// </summary>
 		public RapidRoutineInfo()
 		{

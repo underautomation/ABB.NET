@@ -8,12 +8,12 @@ namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
 	/// Abstract base class for all file system items returned by the File Service.
 	/// 
-	/// <p>Derived classes: <xref href="UnderAutomation.ABB.Rws.Data.FileItem" data-throw-if-not-resolved="false"></xref>, <xref href="UnderAutomation.ABB.Rws.Data.DirectoryItem" data-throw-if-not-resolved="false"></xref>, <xref href="UnderAutomation.ABB.Rws.Data.DeviceItem" data-throw-if-not-resolved="false"></xref></p>
+	/// <p>Derived classes: <see cref="UnderAutomation.ABB.Rws.Data.FileItem"/>, <see cref="UnderAutomation.ABB.Rws.Data.DirectoryItem"/>, <see cref="UnderAutomation.ABB.Rws.Data.DeviceItem"/></p>
 	/// </summary>
 	public abstract class FileSystemItem {
 
 		/// <summary>
-		/// Initializes a new instance of the <xref href="UnderAutomation.ABB.Rws.Data.FileSystemItem" data-throw-if-not-resolved="false"></xref> class
+		/// Initializes a new instance of the <see cref="UnderAutomation.ABB.Rws.Data.FileSystemItem"/> class
 		/// </summary>
 		protected FileSystemItem()
 		{

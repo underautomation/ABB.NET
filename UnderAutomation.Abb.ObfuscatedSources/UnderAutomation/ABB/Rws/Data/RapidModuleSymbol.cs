@@ -14,7 +14,7 @@ namespace UnderAutomation.ABB.Rws.Data {
 	public class RapidModuleSymbol {
 
 		/// <summary>
-		/// Initializes a new instance of the <xref href="UnderAutomation.ABB.Rws.Data.RapidModuleSymbol" data-throw-if-not-resolved="false"></xref> class
+		/// Initializes a new instance of the <see cref="UnderAutomation.ABB.Rws.Data.RapidModuleSymbol"/> class
 		/// </summary>
 		public RapidModuleSymbol()
 		{

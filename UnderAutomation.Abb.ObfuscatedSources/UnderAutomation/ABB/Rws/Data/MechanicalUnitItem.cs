@@ -9,12 +9,12 @@ namespace UnderAutomation.ABB.Rws.Data {
 	/// One mechanical unit of the motion system, as listed by <code>MotionSystemService.GetMechanicalUnits()</code>.
 	/// 
 	/// <p>Only the few properties the list carries are filled in. Read the unit itself with
-	/// <code>MotionSystemService.GetMechanicalUnit()</code> to get a <xref href="UnderAutomation.ABB.Rws.Data.MechanicalUnitInfo" data-throw-if-not-resolved="false"></xref>.</p>
+	/// <code>MotionSystemService.GetMechanicalUnit()</code> to get a <see cref="UnderAutomation.ABB.Rws.Data.MechanicalUnitInfo"/>.</p>
 	/// </summary>
 	public class MechanicalUnitItem {
 
 		/// <summary>
-		/// Initializes a new instance of the <xref href="UnderAutomation.ABB.Rws.Data.MechanicalUnitItem" data-throw-if-not-resolved="false"></xref> class
+		/// Initializes a new instance of the <see cref="UnderAutomation.ABB.Rws.Data.MechanicalUnitItem"/> class
 		/// </summary>
 		public MechanicalUnitItem()
 		{

@@ -12,7 +12,7 @@ namespace UnderAutomation.ABB.Rws.Data {
 	public class MotorCalibrationName {
 
 		/// <summary>
-		/// Initializes a new instance of the <xref href="UnderAutomation.ABB.Rws.Data.MotorCalibrationName" data-throw-if-not-resolved="false"></xref> class
+		/// Initializes a new instance of the <see cref="UnderAutomation.ABB.Rws.Data.MotorCalibrationName"/> class
 		/// </summary>
 		public MotorCalibrationName()
 		{
@@ -39,7 +39,7 @@ namespace UnderAutomation.ABB.Rws.Data {
 		public string JointName { get; set; }
 
 		/// <summary>
-		/// Name of the calibration data of the joint, usually the same as <xref href="UnderAutomation.ABB.Rws.Data.MotorCalibrationName.JointName" data-throw-if-not-resolved="false"></xref>
+		/// Name of the calibration data of the joint, usually the same as <see cref="UnderAutomation.ABB.Rws.Data.MotorCalibrationName.JointName"/>
 		/// </summary>
 		public string CalibrationName { get; set; }
 	}

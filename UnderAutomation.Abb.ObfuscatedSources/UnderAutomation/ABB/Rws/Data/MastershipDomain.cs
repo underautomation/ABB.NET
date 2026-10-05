@@ -12,7 +12,7 @@ namespace UnderAutomation.ABB.Rws.Data {
 	/// ends.</p>
 	/// <p>The two connection versions do not cut the controller in the same domains: a connection
 	/// established with version 1 keeps the configuration and the RAPID programs apart, a connection
-	/// established with version 2 covers both with <xref href="UnderAutomation.ABB.Rws.Data.MastershipDomain.Edit" data-throw-if-not-resolved="false"></xref>. Whichever name is used, the service
+	/// established with version 2 covers both with <see cref="UnderAutomation.ABB.Rws.Data.MastershipDomain.Edit"/>. Whichever name is used, the service
 	/// asks the connected controller for the domains it really has.</p>
 	/// </summary>
 	public enum MastershipDomain {
@@ -21,7 +21,7 @@ namespace UnderAutomation.ABB.Rws.Data {
 		/// Everything that changes the system itself: its configuration and its RAPID programs.
 		/// 
 		/// <p>On a connection established with version 1, where the two are separate domains, asking for
-		/// this one takes <xref href="UnderAutomation.ABB.Rws.Data.MastershipDomain.Configuration" data-throw-if-not-resolved="false"></xref> and <xref href="UnderAutomation.ABB.Rws.Data.MastershipDomain.Rapid" data-throw-if-not-resolved="false"></xref> together.</p>
+		/// this one takes <see cref="UnderAutomation.ABB.Rws.Data.MastershipDomain.Configuration"/> and <see cref="UnderAutomation.ABB.Rws.Data.MastershipDomain.Rapid"/> together.</p>
 		/// </summary>
 		Edit = 0,
 
@@ -34,7 +34,7 @@ namespace UnderAutomation.ABB.Rws.Data {
 		/// The system parameters of the controller.
 		/// 
 		/// <p>On a connection established with version 2, where it is not a domain of its own, this is
-		/// the same domain as <xref href="UnderAutomation.ABB.Rws.Data.MastershipDomain.Edit" data-throw-if-not-resolved="false"></xref>.</p>
+		/// the same domain as <see cref="UnderAutomation.ABB.Rws.Data.MastershipDomain.Edit"/>.</p>
 		/// </summary>
 		Configuration = 2,
 
@@ -42,7 +42,7 @@ namespace UnderAutomation.ABB.Rws.Data {
 		/// The RAPID programs and their data.
 		/// 
 		/// <p>On a connection established with version 2, where it is not a domain of its own, this is
-		/// the same domain as <xref href="UnderAutomation.ABB.Rws.Data.MastershipDomain.Edit" data-throw-if-not-resolved="false"></xref>.</p>
+		/// the same domain as <see cref="UnderAutomation.ABB.Rws.Data.MastershipDomain.Edit"/>.</p>
 		/// </summary>
 		Rapid = 3,
 	}

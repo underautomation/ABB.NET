@@ -13,7 +13,7 @@ namespace UnderAutomation.ABB.Rws.Data {
 	public class MotionSystemErrorState {
 
 		/// <summary>
-		/// Initializes a new instance of the <xref href="UnderAutomation.ABB.Rws.Data.MotionSystemErrorState" data-throw-if-not-resolved="false"></xref> class
+		/// Initializes a new instance of the <see cref="UnderAutomation.ABB.Rws.Data.MotionSystemErrorState"/> class
 		/// </summary>
 		public MotionSystemErrorState()
 		{
@@ -35,8 +35,8 @@ namespace UnderAutomation.ABB.Rws.Data {
 		public MotionErrorState State { get; set; }
 
 		/// <summary>
-		/// Error state exactly as the controller reported it, useful when <xref href="UnderAutomation.ABB.Rws.Data.MotionSystemErrorState.State" data-throw-if-not-resolved="false"></xref> is
-		/// <xref href="UnderAutomation.ABB.Rws.Data.MotionErrorState.Unknown" data-throw-if-not-resolved="false"></xref>
+		/// Error state exactly as the controller reported it, useful when <see cref="UnderAutomation.ABB.Rws.Data.MotionSystemErrorState.State"/> is
+		/// <see cref="UnderAutomation.ABB.Rws.Data.MotionErrorState.Unknown"/>
 		/// </summary>
 		public string RawState { get; set; }
 

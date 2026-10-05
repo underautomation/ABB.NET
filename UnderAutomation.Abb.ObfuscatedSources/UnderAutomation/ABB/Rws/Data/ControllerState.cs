@@ -15,13 +15,13 @@ namespace UnderAutomation.ABB.Rws.Data {
 		Unknown = 0,
 
 		/// <summary>
-		/// The robot is starting up. It will shift to <xref href="UnderAutomation.ABB.Rws.Data.ControllerState.MotorsOff" data-throw-if-not-resolved="false"></xref> once it has started.
+		/// The robot is starting up. It will shift to <see cref="UnderAutomation.ABB.Rws.Data.ControllerState.MotorsOff"/> once it has started.
 		/// </summary>
 		Init = 1,
 
 		/// <summary>
 		/// The robot is in a standby state where there is no power to its motors.
-		/// The state has to be shifted to <xref href="UnderAutomation.ABB.Rws.Data.ControllerState.MotorsOn" data-throw-if-not-resolved="false"></xref> before the robot can move.
+		/// The state has to be shifted to <see cref="UnderAutomation.ABB.Rws.Data.ControllerState.MotorsOn"/> before the robot can move.
 		/// </summary>
 		MotorsOff = 2,
 

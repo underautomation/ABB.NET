@@ -13,7 +13,7 @@ namespace UnderAutomation.ABB.Rws.Data {
 	public class RapidProgramInfo {
 
 		/// <summary>
-		/// Initializes a new instance of the <xref href="UnderAutomation.ABB.Rws.Data.RapidProgramInfo" data-throw-if-not-resolved="false"></xref> class
+		/// Initializes a new instance of the <see cref="UnderAutomation.ABB.Rws.Data.RapidProgramInfo"/> class
 		/// </summary>
 		public RapidProgramInfo()
 		{

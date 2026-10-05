@@ -13,7 +13,7 @@ namespace UnderAutomation.ABB.Rws.Data {
 	public class RapidModuleExtension {
 
 		/// <summary>
-		/// Initializes a new instance of the <xref href="UnderAutomation.ABB.Rws.Data.RapidModuleExtension" data-throw-if-not-resolved="false"></xref> class
+		/// Initializes a new instance of the <see cref="UnderAutomation.ABB.Rws.Data.RapidModuleExtension"/> class
 		/// </summary>
 		public RapidModuleExtension()
 		{

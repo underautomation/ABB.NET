@@ -70,7 +70,7 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// the robot itself (synchronous)
 		/// 
 		/// <p>The two copies are meant to agree. When they do not, one of them is written over the other with
-		/// <xref href="UnderAutomation.ABB.Rws.Services.MotionSystemService.SetSmbData(System.String%2cUnderAutomation.ABB.Rws.Data.SmbDataTransfer)" data-throw-if-not-resolved="false"></xref>.</p>
+		/// <see cref="UnderAutomation.ABB.Rws.Services.MotionSystemService.SetSmbData(System.String,UnderAutomation.ABB.Rws.Data.SmbDataTransfer)"/>.</p>
 		/// </summary>
 		/// <param name="mechanicalUnit">Name of the mechanical unit, for example "ROB_1"</param>
 		/// <returns>Both copies of the measurement board data</returns>
@@ -85,7 +85,7 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// the robot itself (asynchronous)
 		/// 
 		/// <p>The two copies are meant to agree. When they do not, one of them is written over the other with
-		/// <xref href="UnderAutomation.ABB.Rws.Services.MotionSystemService.SetSmbDataAsync(System.String%2cUnderAutomation.ABB.Rws.Data.SmbDataTransfer%2cSystem.Threading.CancellationToken)" data-throw-if-not-resolved="false"></xref>.</p>
+		/// <see cref="UnderAutomation.ABB.Rws.Services.MotionSystemService.SetSmbDataAsync(System.String,UnderAutomation.ABB.Rws.Data.SmbDataTransfer,System.Threading.CancellationToken)"/>.</p>
 		/// </summary>
 		/// <param name="mechanicalUnit">Name of the mechanical unit, for example "ROB_1"</param>
 		/// <param name="cancellationToken">Cancellation token</param>
@@ -166,7 +166,7 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// <summary>
 		/// Tells whether the motion system changed since it reported the given change count (synchronous)
 		/// 
-		/// <p>Reading <xref href="UnderAutomation.ABB.Rws.Data.MotionSystemInfo.ChangeCount" data-throw-if-not-resolved="false"></xref> once and asking this afterwards is cheaper
+		/// <p>Reading <see cref="UnderAutomation.ABB.Rws.Data.MotionSystemInfo.ChangeCount"/> once and asking this afterwards is cheaper
 		/// than fetching the whole state again to find out that nothing moved.</p>
 		/// </summary>
 		/// <param name="changeCount">Change count a previous reading reported</param>
@@ -180,7 +180,7 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// <summary>
 		/// Tells whether the motion system changed since it reported the given change count (asynchronous)
 		/// 
-		/// <p>Reading <xref href="UnderAutomation.ABB.Rws.Data.MotionSystemInfo.ChangeCount" data-throw-if-not-resolved="false"></xref> once and asking this afterwards is cheaper
+		/// <p>Reading <see cref="UnderAutomation.ABB.Rws.Data.MotionSystemInfo.ChangeCount"/> once and asking this afterwards is cheaper
 		/// than fetching the whole state again to find out that nothing moved.</p>
 		/// </summary>
 		/// <param name="changeCount">Change count a previous reading reported</param>
@@ -316,13 +316,13 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// <summary>
 		/// Moves the mechanical unit currently selected for jogging (synchronous)
 		/// 
-		/// <p>The unit is the one <xref href="UnderAutomation.ABB.Rws.Services.MotionSystemService.SetJoggingMechanicalUnit(System.String)" data-throw-if-not-resolved="false"></xref> chose, and how the six values are
+		/// <p>The unit is the one <see cref="UnderAutomation.ABB.Rws.Services.MotionSystemService.SetJoggingMechanicalUnit(System.String)"/> chose, and how the six values are
 		/// interpreted depends on its jog mode: axis by axis, along the axes of a coordinate system, and so on.</p>
 		/// </summary>
 		/// <param name="axes">Value requested for each of the six axes</param>
 		/// <param name="changeCount">Change count of the last reading of the motion system, which the controller
 		///             uses to reject a command based on a state that has moved on since</param>
-		/// <param name="incrementMode">Size of the step to move by, <xref href="UnderAutomation.ABB.Rws.Data.JogIncrementMode.None" data-throw-if-not-resolved="false"></xref> to move
+		/// <param name="incrementMode">Size of the step to move by, <see cref="UnderAutomation.ABB.Rws.Data.JogIncrementMode.None"/> to move
 		///             continuously for as long as the command is repeated</param>
 		public void Jog(RobotJoints axes, int changeCount, JogIncrementMode incrementMode = JogIncrementMode.None)
 		{
@@ -332,13 +332,13 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// <summary>
 		/// Moves the mechanical unit currently selected for jogging (asynchronous)
 		/// 
-		/// <p>The unit is the one <xref href="UnderAutomation.ABB.Rws.Services.MotionSystemService.SetJoggingMechanicalUnitAsync(System.String%2cSystem.Threading.CancellationToken)" data-throw-if-not-resolved="false"></xref> chose, and how the six values are
+		/// <p>The unit is the one <see cref="UnderAutomation.ABB.Rws.Services.MotionSystemService.SetJoggingMechanicalUnitAsync(System.String,System.Threading.CancellationToken)"/> chose, and how the six values are
 		/// interpreted depends on its jog mode: axis by axis, along the axes of a coordinate system, and so on.</p>
 		/// </summary>
 		/// <param name="axes">Value requested for each of the six axes</param>
 		/// <param name="changeCount">Change count of the last reading of the motion system, which the controller
 		///             uses to reject a command based on a state that has moved on since</param>
-		/// <param name="incrementMode">Size of the step to move by, <xref href="UnderAutomation.ABB.Rws.Data.JogIncrementMode.None" data-throw-if-not-resolved="false"></xref> to move
+		/// <param name="incrementMode">Size of the step to move by, <see cref="UnderAutomation.ABB.Rws.Data.JogIncrementMode.None"/> to move
 		///             continuously for as long as the command is repeated</param>
 		/// <param name="cancellationToken">Cancellation token</param>
 		public Task JogAsync(RobotJoints axes, int changeCount, JogIncrementMode incrementMode = JogIncrementMode.None, CancellationToken cancellationToken = default)
@@ -938,8 +938,8 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// <param name="tool">Name of the tool to measure from, null to use the tool active on the unit</param>
 		/// <param name="workObject">Name of the work object to measure against, null to use the one active on the unit</param>
 		/// <param name="logErrors">True to have the controller write an event log message when the reading fails</param>
-		/// <returns>Position, orientation and axis configuration of the tool. <xref href="UnderAutomation.ABB.Common.RobTarget.ExternalAxes" data-throw-if-not-resolved="false"></xref>
-		///             is null: this reading does not report them, use <xref href="UnderAutomation.ABB.Rws.Services.MotionSystemService.GetRobTarget(System.String%2cUnderAutomation.ABB.Rws.Data.CoordinateSystem%2cSystem.String%2cSystem.String)" data-throw-if-not-resolved="false"></xref> when they are needed.</returns>
+		/// <returns>Position, orientation and axis configuration of the tool. <see cref="UnderAutomation.ABB.Common.RobTarget.ExternalAxes"/>
+		///             is null: this reading does not report them, use <see cref="UnderAutomation.ABB.Rws.Services.MotionSystemService.GetRobTarget(System.String,UnderAutomation.ABB.Rws.Data.CoordinateSystem,System.String,System.String)"/> when they are needed.</returns>
 		public RobTarget GetCartesianPosition(string mechanicalUnit, CoordinateSystem coordinateSystem = CoordinateSystem.Base, string tool = null, string workObject = null, bool logErrors = false)
 		{
 			// Source is hidden, a Source licence is needed to access internal code...
@@ -957,8 +957,8 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// <param name="workObject">Name of the work object to measure against, null to use the one active on the unit</param>
 		/// <param name="logErrors">True to have the controller write an event log message when the reading fails</param>
 		/// <param name="cancellationToken">Cancellation token</param>
-		/// <returns>Position, orientation and axis configuration of the tool. <xref href="UnderAutomation.ABB.Common.RobTarget.ExternalAxes" data-throw-if-not-resolved="false"></xref>
-		///             is null: this reading does not report them, use <xref href="UnderAutomation.ABB.Rws.Services.MotionSystemService.GetRobTargetAsync(System.String%2cUnderAutomation.ABB.Rws.Data.CoordinateSystem%2cSystem.String%2cSystem.String%2cSystem.Threading.CancellationToken)" data-throw-if-not-resolved="false"></xref> when they are needed.</returns>
+		/// <returns>Position, orientation and axis configuration of the tool. <see cref="UnderAutomation.ABB.Common.RobTarget.ExternalAxes"/>
+		///             is null: this reading does not report them, use <see cref="UnderAutomation.ABB.Rws.Services.MotionSystemService.GetRobTargetAsync(System.String,UnderAutomation.ABB.Rws.Data.CoordinateSystem,System.String,System.String,System.Threading.CancellationToken)"/> when they are needed.</returns>
 		public Task<RobTarget> GetCartesianPositionAsync(string mechanicalUnit, CoordinateSystem coordinateSystem = CoordinateSystem.Base, string tool = null, string workObject = null, bool logErrors = false, CancellationToken cancellationToken = default)
 		{
 			// Source is hidden, a Source licence is needed to access internal code...

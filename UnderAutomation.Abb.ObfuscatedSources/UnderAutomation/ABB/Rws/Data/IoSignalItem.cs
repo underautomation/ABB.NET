@@ -16,7 +16,7 @@ namespace UnderAutomation.ABB.Rws.Data {
 	public class IoSignalItem {
 
 		/// <summary>
-		/// Initializes a new instance of the <xref href="UnderAutomation.ABB.Rws.Data.IoSignalItem" data-throw-if-not-resolved="false"></xref> class
+		/// Initializes a new instance of the <see cref="UnderAutomation.ABB.Rws.Data.IoSignalItem"/> class
 		/// </summary>
 		public IoSignalItem()
 		{

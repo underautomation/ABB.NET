@@ -8,12 +8,12 @@ namespace UnderAutomation.ABB.Rws.Data {
 	/// One argument of an event log message. The arguments are the values the controller substitutes
 	/// into the text of the message, for example the name of the task that was started.
 	/// 
-	/// <p>Held by <xref href="UnderAutomation.ABB.Rws.Data.ElogMessage.Arguments" data-throw-if-not-resolved="false"></xref>.</p>
+	/// <p>Held by <see cref="UnderAutomation.ABB.Rws.Data.ElogMessage.Arguments"/>.</p>
 	/// </summary>
 	public class ElogMessageArgument {
 
 		/// <summary>
-		/// Initializes a new instance of the <xref href="UnderAutomation.ABB.Rws.Data.ElogMessageArgument" data-throw-if-not-resolved="false"></xref> class
+		/// Initializes a new instance of the <see cref="UnderAutomation.ABB.Rws.Data.ElogMessageArgument"/> class
 		/// </summary>
 		public ElogMessageArgument()
 		{

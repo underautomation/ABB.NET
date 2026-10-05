@@ -9,12 +9,12 @@ namespace UnderAutomation.ABB.Rws.Data {
 	/// value of an external axis.
 	/// 
 	/// <p>Returned by <code>RapidService.GetExternalJointStates()</code>. A joint reported as
-	/// <xref href="UnderAutomation.ABB.Rws.Data.RapidJointState.NotActive" data-throw-if-not-resolved="false"></xref> carries no meaningful position.</p>
+	/// <see cref="UnderAutomation.ABB.Rws.Data.RapidJointState.NotActive"/> carries no meaningful position.</p>
 	/// </summary>
 	public class RapidExternalJointStates {
 
 		/// <summary>
-		/// Initializes a new instance of the <xref href="UnderAutomation.ABB.Rws.Data.RapidExternalJointStates" data-throw-if-not-resolved="false"></xref> class
+		/// Initializes a new instance of the <see cref="UnderAutomation.ABB.Rws.Data.RapidExternalJointStates"/> class
 		/// </summary>
 		public RapidExternalJointStates()
 		{

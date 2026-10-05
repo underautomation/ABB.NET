@@ -8,14 +8,14 @@ namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
 	/// Where one of the two pointers of a task stands.
 	/// 
-	/// <p>Carried by <xref href="UnderAutomation.ABB.Rws.Data.RapidPointers" data-throw-if-not-resolved="false"></xref>. <xref href="UnderAutomation.ABB.Rws.Data.RapidPointerPosition.Available" data-throw-if-not-resolved="false"></xref> tells apart a pointer that is
+	/// <p>Carried by <see cref="UnderAutomation.ABB.Rws.Data.RapidPointers"/>. <see cref="UnderAutomation.ABB.Rws.Data.RapidPointerPosition.Available"/> tells apart a pointer that is
 	/// really placed somewhere from one the controller could not report, which happens for the motion
 	/// pointer whenever the task has not moved yet.</p>
 	/// </summary>
 	public class RapidPointerPosition {
 
 		/// <summary>
-		/// Initializes a new instance of the <xref href="UnderAutomation.ABB.Rws.Data.RapidPointerPosition" data-throw-if-not-resolved="false"></xref> class
+		/// Initializes a new instance of the <see cref="UnderAutomation.ABB.Rws.Data.RapidPointerPosition"/> class
 		/// </summary>
 		public RapidPointerPosition()
 		{

@@ -13,7 +13,7 @@ namespace UnderAutomation.ABB.Rws.Data {
 	public class RapidModuleText {
 
 		/// <summary>
-		/// Initializes a new instance of the <xref href="UnderAutomation.ABB.Rws.Data.RapidModuleText" data-throw-if-not-resolved="false"></xref> class
+		/// Initializes a new instance of the <see cref="UnderAutomation.ABB.Rws.Data.RapidModuleText"/> class
 		/// </summary>
 		public RapidModuleText()
 		{
@@ -43,7 +43,7 @@ namespace UnderAutomation.ABB.Rws.Data {
 		/// Length the controller declares for the module, null when it did not report it.
 		/// 
 		/// <p>This is the size the controller reserves for the module and not the length of
-		/// <xref href="UnderAutomation.ABB.Rws.Data.RapidModuleText.Text" data-throw-if-not-resolved="false"></xref>, so the two normally differ.</p>
+		/// <see cref="UnderAutomation.ABB.Rws.Data.RapidModuleText.Text"/>, so the two normally differ.</p>
 		/// </summary>
 		public int? DeclaredLength { get; set; }
 	}

@@ -10,7 +10,7 @@ namespace UnderAutomation.ABB.Rws.Data {
 	public class DirectoryItem : FileSystemItem {
 
 		/// <summary>
-		/// Initializes a new instance of the <xref href="UnderAutomation.ABB.Rws.Data.DirectoryItem" data-throw-if-not-resolved="false"></xref> class
+		/// Initializes a new instance of the <see cref="UnderAutomation.ABB.Rws.Data.DirectoryItem"/> class
 		/// </summary>
 		public DirectoryItem()
 		{

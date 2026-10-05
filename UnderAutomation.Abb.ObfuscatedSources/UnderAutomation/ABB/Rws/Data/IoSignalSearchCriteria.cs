@@ -13,12 +13,12 @@ namespace UnderAutomation.ABB.Rws.Data {
 	/// and an empty criteria matches every signal.</p>
 	/// <p>Two criteria can be combined by passing a second instance to the search methods, in which case
 	/// a signal is returned only when it matches both. One of the two criteria should then have
-	/// <xref href="UnderAutomation.ABB.Rws.Data.IoSignalSearchCriteria.Invert" data-throw-if-not-resolved="false"></xref> set to true, otherwise the result is the same as with a single criteria.</p>
+	/// <see cref="UnderAutomation.ABB.Rws.Data.IoSignalSearchCriteria.Invert"/> set to true, otherwise the result is the same as with a single criteria.</p>
 	/// </summary>
 	public class IoSignalSearchCriteria {
 
 		/// <summary>
-		/// Initializes a new instance of the <xref href="UnderAutomation.ABB.Rws.Data.IoSignalSearchCriteria" data-throw-if-not-resolved="false"></xref> class
+		/// Initializes a new instance of the <see cref="UnderAutomation.ABB.Rws.Data.IoSignalSearchCriteria"/> class
 		/// </summary>
 		public IoSignalSearchCriteria()
 		{

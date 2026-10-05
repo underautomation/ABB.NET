@@ -6,7 +6,7 @@ using UnderAutomation.ABB.Common;
 
 namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
-	/// One of the joint combinations that reach a given pose: a <xref href="UnderAutomation.ABB.Common.JointTarget" data-throw-if-not-resolved="false"></xref> extended with the
+	/// One of the joint combinations that reach a given pose: a <see cref="UnderAutomation.ABB.Common.JointTarget"/> extended with the
 	/// axis configuration it corresponds to.
 	/// 
 	/// <p>Returned by <code>MotionSystemService.GetAllJointSolutions()</code>. The joint values are expressed

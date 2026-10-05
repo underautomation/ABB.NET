@@ -13,7 +13,7 @@ namespace UnderAutomation.ABB.Rws.Data {
 	public class RapidBuildError {
 
 		/// <summary>
-		/// Initializes a new instance of the <xref href="UnderAutomation.ABB.Rws.Data.RapidBuildError" data-throw-if-not-resolved="false"></xref> class
+		/// Initializes a new instance of the <see cref="UnderAutomation.ABB.Rws.Data.RapidBuildError"/> class
 		/// </summary>
 		public RapidBuildError()
 		{

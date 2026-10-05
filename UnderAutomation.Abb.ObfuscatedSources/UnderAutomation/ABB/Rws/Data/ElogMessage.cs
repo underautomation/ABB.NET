@@ -10,13 +10,13 @@ namespace UnderAutomation.ABB.Rws.Data {
 	/// 
 	/// <p>Returned by <code>ElogService.GetMessages()</code>, <code>ElogService.GetMessageTitles()</code>,
 	/// <code>ElogService.GetMessage()</code> and <code>ElogService.GetMessageBySequenceNumber()</code>.</p>
-	/// <p>The texts (<xref href="UnderAutomation.ABB.Rws.Data.ElogMessage.Title" data-throw-if-not-resolved="false"></xref>, <xref href="UnderAutomation.ABB.Rws.Data.ElogMessage.Description" data-throw-if-not-resolved="false"></xref>, <xref href="UnderAutomation.ABB.Rws.Data.ElogMessage.Consequences" data-throw-if-not-resolved="false"></xref>,
-	/// <xref href="UnderAutomation.ABB.Rws.Data.ElogMessage.Causes" data-throw-if-not-resolved="false"></xref> and <xref href="UnderAutomation.ABB.Rws.Data.ElogMessage.Actions" data-throw-if-not-resolved="false"></xref>) are only filled when a language was asked for.</p>
+	/// <p>The texts (<see cref="UnderAutomation.ABB.Rws.Data.ElogMessage.Title"/>, <see cref="UnderAutomation.ABB.Rws.Data.ElogMessage.Description"/>, <see cref="UnderAutomation.ABB.Rws.Data.ElogMessage.Consequences"/>,
+	/// <see cref="UnderAutomation.ABB.Rws.Data.ElogMessage.Causes"/> and <see cref="UnderAutomation.ABB.Rws.Data.ElogMessage.Actions"/>) are only filled when a language was asked for.</p>
 	/// </summary>
 	public class ElogMessage {
 
 		/// <summary>
-		/// Initializes a new instance of the <xref href="UnderAutomation.ABB.Rws.Data.ElogMessage" data-throw-if-not-resolved="false"></xref> class
+		/// Initializes a new instance of the <see cref="UnderAutomation.ABB.Rws.Data.ElogMessage"/> class
 		/// </summary>
 		public ElogMessage()
 		{

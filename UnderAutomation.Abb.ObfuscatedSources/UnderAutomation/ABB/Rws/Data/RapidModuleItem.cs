@@ -7,13 +7,13 @@ namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
 	/// A module loaded into a task, as listed by <code>RapidService.GetModules()</code>.
 	/// 
-	/// <p><code>RapidService.GetModule()</code> returns a <xref href="UnderAutomation.ABB.Rws.Data.RapidModuleInfo" data-throw-if-not-resolved="false"></xref>, which adds the file the
+	/// <p><code>RapidService.GetModule()</code> returns a <see cref="UnderAutomation.ABB.Rws.Data.RapidModuleInfo"/>, which adds the file the
 	/// module came from and the attributes declared on it.</p>
 	/// </summary>
 	public class RapidModuleItem {
 
 		/// <summary>
-		/// Initializes a new instance of the <xref href="UnderAutomation.ABB.Rws.Data.RapidModuleItem" data-throw-if-not-resolved="false"></xref> class
+		/// Initializes a new instance of the <see cref="UnderAutomation.ABB.Rws.Data.RapidModuleItem"/> class
 		/// </summary>
 		public RapidModuleItem()
 		{

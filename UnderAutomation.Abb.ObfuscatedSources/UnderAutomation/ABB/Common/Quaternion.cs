@@ -8,7 +8,7 @@ namespace UnderAutomation.ABB.Common {
 	/// An orientation in space, expressed as a unit quaternion.
 	/// 
 	/// <p>The controller rejects a quaternion that is not normalized, so keep
-	/// <xref href="UnderAutomation.ABB.Common.Quaternion.Q1" data-throw-if-not-resolved="false"></xref>² + <xref href="UnderAutomation.ABB.Common.Quaternion.Q2" data-throw-if-not-resolved="false"></xref>² + <xref href="UnderAutomation.ABB.Common.Quaternion.Q3" data-throw-if-not-resolved="false"></xref>² + <xref href="UnderAutomation.ABB.Common.Quaternion.Q4" data-throw-if-not-resolved="false"></xref>² equal to 1.</p>
+	/// <see cref="UnderAutomation.ABB.Common.Quaternion.Q1"/>² + <see cref="UnderAutomation.ABB.Common.Quaternion.Q2"/>² + <see cref="UnderAutomation.ABB.Common.Quaternion.Q3"/>² + <see cref="UnderAutomation.ABB.Common.Quaternion.Q4"/>² equal to 1.</p>
 	/// </summary>
 	public class Quaternion {
 

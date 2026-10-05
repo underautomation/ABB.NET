@@ -91,7 +91,7 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// Sets the system time of the controller (synchronous)
 		/// 
 		/// <p>The controller clock is always UTC, pass a UTC date and time.</p>
-		/// <p>Instead of setting the time explicitly, a time server can be configured with <xref href="UnderAutomation.ABB.Rws.Services.ControllerService.SetTimeServer(System.String)" data-throw-if-not-resolved="false"></xref>.</p>
+		/// <p>Instead of setting the time explicitly, a time server can be configured with <see cref="UnderAutomation.ABB.Rws.Services.ControllerService.SetTimeServer(System.String)"/>.</p>
 		/// </summary>
 		/// <param name="dateTime">New controller date and time (UTC)</param>
 		public void SetClock(DateTime dateTime)
@@ -103,7 +103,7 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// Sets the system time of the controller (asynchronous)
 		/// 
 		/// <p>The controller clock is always UTC, pass a UTC date and time.</p>
-		/// <p>Instead of setting the time explicitly, a time server can be configured with <xref href="UnderAutomation.ABB.Rws.Services.ControllerService.SetTimeServerAsync(System.String%2cSystem.Threading.CancellationToken)" data-throw-if-not-resolved="false"></xref>.</p>
+		/// <p>Instead of setting the time explicitly, a time server can be configured with <see cref="UnderAutomation.ABB.Rws.Services.ControllerService.SetTimeServerAsync(System.String,System.Threading.CancellationToken)"/>.</p>
 		/// </summary>
 		/// <param name="dateTime">New controller date and time (UTC)</param>
 		/// <param name="cancellationToken">Cancellation token</param>
@@ -308,9 +308,9 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// <p>Not supported by a virtual controller.</p>
 		/// </summary>
 		/// <param name="method">IP configuration method</param>
-		/// <param name="address">IP address, required when <code class="paramref">method</code> is <xref href="UnderAutomation.ABB.Rws.Data.NetworkConfigurationMethod.FixIp" data-throw-if-not-resolved="false"></xref></param>
-		/// <param name="mask">Subnet mask, required when <code class="paramref">method</code> is <xref href="UnderAutomation.ABB.Rws.Data.NetworkConfigurationMethod.FixIp" data-throw-if-not-resolved="false"></xref></param>
-		/// <param name="gateway">Default gateway, applicable when <code class="paramref">method</code> is <xref href="UnderAutomation.ABB.Rws.Data.NetworkConfigurationMethod.FixIp" data-throw-if-not-resolved="false"></xref></param>
+		/// <param name="address">IP address, required when <code class="paramref">method</code> is <see cref="UnderAutomation.ABB.Rws.Data.NetworkConfigurationMethod.FixIp"/></param>
+		/// <param name="mask">Subnet mask, required when <code class="paramref">method</code> is <see cref="UnderAutomation.ABB.Rws.Data.NetworkConfigurationMethod.FixIp"/></param>
+		/// <param name="gateway">Default gateway, applicable when <code class="paramref">method</code> is <see cref="UnderAutomation.ABB.Rws.Data.NetworkConfigurationMethod.FixIp"/></param>
 		public void SetNetworkConfiguration(NetworkConfigurationMethod method, string address = null, string mask = null, string gateway = null)
 		{
 			// Source is hidden, a Source licence is needed to access internal code...
@@ -323,9 +323,9 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// <p>Not supported by a virtual controller.</p>
 		/// </summary>
 		/// <param name="method">IP configuration method</param>
-		/// <param name="address">IP address, required when <code class="paramref">method</code> is <xref href="UnderAutomation.ABB.Rws.Data.NetworkConfigurationMethod.FixIp" data-throw-if-not-resolved="false"></xref></param>
-		/// <param name="mask">Subnet mask, required when <code class="paramref">method</code> is <xref href="UnderAutomation.ABB.Rws.Data.NetworkConfigurationMethod.FixIp" data-throw-if-not-resolved="false"></xref></param>
-		/// <param name="gateway">Default gateway, applicable when <code class="paramref">method</code> is <xref href="UnderAutomation.ABB.Rws.Data.NetworkConfigurationMethod.FixIp" data-throw-if-not-resolved="false"></xref></param>
+		/// <param name="address">IP address, required when <code class="paramref">method</code> is <see cref="UnderAutomation.ABB.Rws.Data.NetworkConfigurationMethod.FixIp"/></param>
+		/// <param name="mask">Subnet mask, required when <code class="paramref">method</code> is <see cref="UnderAutomation.ABB.Rws.Data.NetworkConfigurationMethod.FixIp"/></param>
+		/// <param name="gateway">Default gateway, applicable when <code class="paramref">method</code> is <see cref="UnderAutomation.ABB.Rws.Data.NetworkConfigurationMethod.FixIp"/></param>
 		/// <param name="cancellationToken">Cancellation token</param>
 		public Task SetNetworkConfigurationAsync(NetworkConfigurationMethod method, string address = null, string mask = null, string gateway = null, CancellationToken cancellationToken = default)
 		{
@@ -479,7 +479,7 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// <summary>
 		/// Gets the state of the backup operation of the controller (synchronous)
 		/// 
-		/// <p>Used to follow a backup started with <xref href="UnderAutomation.ABB.Rws.Services.ControllerService.CreateBackup(System.String%2cSystem.Boolean)" data-throw-if-not-resolved="false"></xref>.</p>
+		/// <p>Used to follow a backup started with <see cref="UnderAutomation.ABB.Rws.Services.ControllerService.CreateBackup(System.String,System.Boolean)"/>.</p>
 		/// </summary>
 		/// <returns>Current backup state</returns>
 		public BackupState GetBackupState()
@@ -491,7 +491,7 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// <summary>
 		/// Gets the state of the backup operation of the controller (asynchronous)
 		/// 
-		/// <p>Used to follow a backup started with <xref href="UnderAutomation.ABB.Rws.Services.ControllerService.CreateBackupAsync(System.String%2cSystem.Boolean%2cSystem.Threading.CancellationToken)" data-throw-if-not-resolved="false"></xref>.</p>
+		/// <p>Used to follow a backup started with <see cref="UnderAutomation.ABB.Rws.Services.ControllerService.CreateBackupAsync(System.String,System.Boolean,System.Threading.CancellationToken)"/>.</p>
 		/// </summary>
 		/// <param name="cancellationToken">Cancellation token</param>
 		/// <returns>Current backup state</returns>
@@ -505,7 +505,7 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// Creates a backup of the current system on the controller file system (synchronous)
 		/// 
 		/// <p>The backup is created asynchronously by the controller: this method returns as soon as the request is accepted.
-		/// Poll <xref href="UnderAutomation.ABB.Rws.Services.ControllerService.GetBackupState" data-throw-if-not-resolved="false"></xref> to know when the backup is finished.</p>
+		/// Poll <see cref="UnderAutomation.ABB.Rws.Services.ControllerService.GetBackupState"/> to know when the backup is finished.</p>
 		/// <p>Requires the UAS grant UAS_BACKUP. Creating a backup may affect RAPID execution and can cause system stops.</p>
 		/// </summary>
 		/// <param name="backupPath">Destination path of the backup, it must be part of the controller file system. Environment variables such as $TEMP or $SYSTEM
@@ -521,7 +521,7 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// Creates a backup of the current system on the controller file system (asynchronous)
 		/// 
 		/// <p>The backup is created asynchronously by the controller: this method returns as soon as the request is accepted.
-		/// Poll <xref href="UnderAutomation.ABB.Rws.Services.ControllerService.GetBackupStateAsync(System.Threading.CancellationToken)" data-throw-if-not-resolved="false"></xref> to know when the backup is finished.</p>
+		/// Poll <see cref="UnderAutomation.ABB.Rws.Services.ControllerService.GetBackupStateAsync(System.Threading.CancellationToken)"/> to know when the backup is finished.</p>
 		/// <p>Requires the UAS grant UAS_BACKUP. Creating a backup may affect RAPID execution and can cause system stops.</p>
 		/// </summary>
 		/// <param name="backupPath">Destination path of the backup, it must be part of the controller file system. Environment variables such as $TEMP or $SYSTEM
@@ -539,7 +539,7 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// Restores a backup stored on the controller file system (synchronous)
 		/// 
 		/// <p>When the backup can be restored, the controller restarts.</p>
-		/// <p>Requires the UAS grant to restore a backup. Use <xref href="UnderAutomation.ABB.Rws.Services.ControllerService.CheckRestore(System.String%2cUnderAutomation.ABB.Rws.Data.BackupRestoreIgnore%2cSystem.Boolean%2cSystem.Boolean%2cUnderAutomation.ABB.Rws.Data.BackupRestoreInclude)" data-throw-if-not-resolved="false"></xref> first to detect mismatches.</p>
+		/// <p>Requires the UAS grant to restore a backup. Use <see cref="UnderAutomation.ABB.Rws.Services.ControllerService.CheckRestore(System.String,UnderAutomation.ABB.Rws.Data.BackupRestoreIgnore,System.Boolean,System.Boolean,UnderAutomation.ABB.Rws.Data.BackupRestoreInclude)"/> first to detect mismatches.</p>
 		/// </summary>
 		/// <param name="backupPath">Path of the backup folder on the controller file system. Environment variables are allowed, written either "$temp/mybackup" or "~temp/mybackup", with or without the "/fileservice" prefix.</param>
 		/// <param name="ignore">Mismatches between the backup and the current system that are ignored</param>
@@ -556,7 +556,7 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// Restores a backup stored on the controller file system (asynchronous)
 		/// 
 		/// <p>When the backup can be restored, the controller restarts.</p>
-		/// <p>Requires the UAS grant to restore a backup. Use <xref href="UnderAutomation.ABB.Rws.Services.ControllerService.CheckRestoreAsync(System.String%2cUnderAutomation.ABB.Rws.Data.BackupRestoreIgnore%2cSystem.Boolean%2cSystem.Boolean%2cUnderAutomation.ABB.Rws.Data.BackupRestoreInclude%2cSystem.Threading.CancellationToken)" data-throw-if-not-resolved="false"></xref> first to detect mismatches.</p>
+		/// <p>Requires the UAS grant to restore a backup. Use <see cref="UnderAutomation.ABB.Rws.Services.ControllerService.CheckRestoreAsync(System.String,UnderAutomation.ABB.Rws.Data.BackupRestoreIgnore,System.Boolean,System.Boolean,UnderAutomation.ABB.Rws.Data.BackupRestoreInclude,System.Threading.CancellationToken)"/> first to detect mismatches.</p>
 		/// </summary>
 		/// <param name="backupPath">Path of the backup folder on the controller file system. Environment variables are allowed, written either "$temp/mybackup" or "~temp/mybackup", with or without the "/fileservice" prefix.</param>
 		/// <param name="ignore">Mismatches between the backup and the current system that are ignored</param>
@@ -649,7 +649,7 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// 
 		/// <p>The controller must be in manual mode.</p>
 		/// </summary>
-		/// <param name="mode">New safety mode, one of <xref href="UnderAutomation.ABB.Rws.Data.SafetyMode.Active" data-throw-if-not-resolved="false"></xref>, <xref href="UnderAutomation.ABB.Rws.Data.SafetyMode.Commissioning" data-throw-if-not-resolved="false"></xref> or <xref href="UnderAutomation.ABB.Rws.Data.SafetyMode.Service" data-throw-if-not-resolved="false"></xref></param>
+		/// <param name="mode">New safety mode, one of <see cref="UnderAutomation.ABB.Rws.Data.SafetyMode.Active"/>, <see cref="UnderAutomation.ABB.Rws.Data.SafetyMode.Commissioning"/> or <see cref="UnderAutomation.ABB.Rws.Data.SafetyMode.Service"/></param>
 		public void SetSafetyMode(SafetyMode mode)
 		{
 			// Source is hidden, a Source licence is needed to access internal code...
@@ -660,7 +660,7 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// 
 		/// <p>The controller must be in manual mode.</p>
 		/// </summary>
-		/// <param name="mode">New safety mode, one of <xref href="UnderAutomation.ABB.Rws.Data.SafetyMode.Active" data-throw-if-not-resolved="false"></xref>, <xref href="UnderAutomation.ABB.Rws.Data.SafetyMode.Commissioning" data-throw-if-not-resolved="false"></xref> or <xref href="UnderAutomation.ABB.Rws.Data.SafetyMode.Service" data-throw-if-not-resolved="false"></xref></param>
+		/// <param name="mode">New safety mode, one of <see cref="UnderAutomation.ABB.Rws.Data.SafetyMode.Active"/>, <see cref="UnderAutomation.ABB.Rws.Data.SafetyMode.Commissioning"/> or <see cref="UnderAutomation.ABB.Rws.Data.SafetyMode.Service"/></param>
 		/// <param name="cancellationToken">Cancellation token</param>
 		public Task SetSafetyModeAsync(SafetyMode mode, CancellationToken cancellationToken = default)
 		{
@@ -693,7 +693,7 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// Loads a safety configuration file into the controller (synchronous)
 		/// 
 		/// <p>The configuration file must already exist on the controller file system.</p>
-		/// <p>Use <xref href="UnderAutomation.ABB.Rws.Services.ControllerService.GetSafetyLoadOperationStatus" data-throw-if-not-resolved="false"></xref> to check whether loading is currently allowed.</p>
+		/// <p>Use <see cref="UnderAutomation.ABB.Rws.Services.ControllerService.GetSafetyLoadOperationStatus"/> to check whether loading is currently allowed.</p>
 		/// </summary>
 		/// <param name="filePath">Path of the safety configuration file on the controller (e.g. "$home/file.xml")</param>
 		public void LoadSafetyConfiguration(string filePath)
@@ -705,7 +705,7 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// Loads a safety configuration file into the controller (asynchronous)
 		/// 
 		/// <p>The configuration file must already exist on the controller file system.</p>
-		/// <p>Use <xref href="UnderAutomation.ABB.Rws.Services.ControllerService.GetSafetyLoadOperationStatusAsync(System.Threading.CancellationToken)" data-throw-if-not-resolved="false"></xref> to check whether loading is currently allowed.</p>
+		/// <p>Use <see cref="UnderAutomation.ABB.Rws.Services.ControllerService.GetSafetyLoadOperationStatusAsync(System.Threading.CancellationToken)"/> to check whether loading is currently allowed.</p>
 		/// </summary>
 		/// <param name="filePath">Path of the safety configuration file on the controller (e.g. "$home/file.xml")</param>
 		/// <param name="cancellationToken">Cancellation token</param>
@@ -742,7 +742,7 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// 
 		/// <p>The user must have the safety services privileges.</p>
 		/// </summary>
-		/// <returns><xref href="UnderAutomation.ABB.Rws.Data.SafetyLoadOperationStatus.Ok" data-throw-if-not-resolved="false"></xref> when a configuration can be loaded, the blocking reason otherwise</returns>
+		/// <returns><see cref="UnderAutomation.ABB.Rws.Data.SafetyLoadOperationStatus.Ok"/> when a configuration can be loaded, the blocking reason otherwise</returns>
 		public SafetyLoadOperationStatus GetSafetyLoadOperationStatus()
 		{
 			// Source is hidden, a Source licence is needed to access internal code...
@@ -755,7 +755,7 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// <p>The user must have the safety services privileges.</p>
 		/// </summary>
 		/// <param name="cancellationToken">Cancellation token</param>
-		/// <returns><xref href="UnderAutomation.ABB.Rws.Data.SafetyLoadOperationStatus.Ok" data-throw-if-not-resolved="false"></xref> when a configuration can be loaded, the blocking reason otherwise</returns>
+		/// <returns><see cref="UnderAutomation.ABB.Rws.Data.SafetyLoadOperationStatus.Ok"/> when a configuration can be loaded, the blocking reason otherwise</returns>
 		public Task<SafetyLoadOperationStatus> GetSafetyLoadOperationStatusAsync(CancellationToken cancellationToken = default)
 		{
 			// Source is hidden, a Source licence is needed to access internal code...

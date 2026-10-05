@@ -13,7 +13,7 @@ namespace UnderAutomation.ABB.Rws.Data {
 	public class SystemInfo {
 
 		/// <summary>
-		/// Initializes a new instance of the <xref href="UnderAutomation.ABB.Rws.Data.SystemInfo" data-throw-if-not-resolved="false"></xref> class
+		/// Initializes a new instance of the <see cref="UnderAutomation.ABB.Rws.Data.SystemInfo"/> class
 		/// </summary>
 		public SystemInfo()
 		{

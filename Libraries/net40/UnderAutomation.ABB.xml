@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <doc>
     <assembly>
         <name>UnderAutomation.ABB</name>
@@ -62,7 +62,7 @@
             firewall, a router or a virtual private network between the PC and the robot usually blocks the
             answer.
             <para>A controller heard announcing itself carries its name and its RobotWare version, but its RWS
-            version is only deduced, see <see cref="P:UnderAutomation.ABB.Discovery.DiscoveredController.IsVersionDetected"/>. A controller
+            version is only deduced, see <see cref="P:UnderAutomation.ABB.Discovery.DiscoveredController.IsVersionDetected" />. A controller
             found on a port of this machine has no name, but its RWS version is certain.</para>
             </remarks>
         </member>
@@ -78,11 +78,6 @@
         <member name="P:UnderAutomation.ABB.AbbController.LicenseInfo">
             <summary>
             Return information about your license
-            </summary>
-        </member>
-        <member name="M:UnderAutomation.ABB.AbbController.AssertValidLicense">
-            <summary>
-            Throws an exception if no valid license is registered.
             </summary>
         </member>
         <member name="T:UnderAutomation.ABB.Common.ExternalJoints">
@@ -182,8 +177,8 @@
         </member>
         <member name="T:UnderAutomation.ABB.Common.Pose">
             <summary>
-            A position and the orientation the robot holds there: a <see cref="T:UnderAutomation.ABB.Common.Position"/> extended with a
-            <see cref="T:UnderAutomation.ABB.Common.Quaternion"/>.
+            A position and the orientation the robot holds there: a <see cref="T:UnderAutomation.ABB.Common.Position" /> extended with a
+            <see cref="T:UnderAutomation.ABB.Common.Quaternion" />.
             </summary>
         </member>
         <member name="P:UnderAutomation.ABB.Common.Pose.Orientation">
@@ -266,7 +261,7 @@
             <summary>
             An orientation in space, expressed as a unit quaternion.
             <para>The controller rejects a quaternion that is not normalized, so keep
-            <see cref="P:UnderAutomation.ABB.Common.Quaternion.Q1"/>² + <see cref="P:UnderAutomation.ABB.Common.Quaternion.Q2"/>² + <see cref="P:UnderAutomation.ABB.Common.Quaternion.Q3"/>² + <see cref="P:UnderAutomation.ABB.Common.Quaternion.Q4"/>² equal to 1.</para>
+            <see cref="P:UnderAutomation.ABB.Common.Quaternion.Q1" />² + <see cref="P:UnderAutomation.ABB.Common.Quaternion.Q2" />² + <see cref="P:UnderAutomation.ABB.Common.Quaternion.Q3" />² + <see cref="P:UnderAutomation.ABB.Common.Quaternion.Q4" />² equal to 1.</para>
             </summary>
         </member>
         <member name="P:UnderAutomation.ABB.Common.Quaternion.Q1">
@@ -414,7 +409,7 @@
         </member>
         <member name="T:UnderAutomation.ABB.Common.RobTarget">
             <summary>
-            A complete robot target: a <see cref="T:UnderAutomation.ABB.Common.Pose"/> extended with the axis configuration used to reach it
+            A complete robot target: a <see cref="T:UnderAutomation.ABB.Common.Pose" /> extended with the axis configuration used to reach it
             and the external axis values that travel with it.
             </summary>
         </member>
@@ -492,7 +487,7 @@
         <member name="T:UnderAutomation.ABB.Discovery.DiscoveredController">
             <summary>
             An ABB robot controller found on the local network.
-            <para>Returned by <see cref="M:UnderAutomation.ABB.AbbController.Discover(System.Int32)"/>.</para>
+            <para>Returned by <see cref="M:UnderAutomation.ABB.AbbController.Discover(System.Int32)" />.</para>
             </summary>
         </member>
         <member name="P:UnderAutomation.ABB.Discovery.DiscoveredController.SystemName">
@@ -504,7 +499,7 @@
         </member>
         <member name="P:UnderAutomation.ABB.Discovery.DiscoveredController.InstanceName">
             <summary>
-            Full name the controller publishes on the network. It contains <see cref="P:UnderAutomation.ABB.Discovery.DiscoveredController.SystemName"/>.
+            Full name the controller publishes on the network. It contains <see cref="P:UnderAutomation.ABB.Discovery.DiscoveredController.SystemName" />.
             <para>Null when the controller did not announce itself.</para>
             </summary>
         </member>
@@ -542,15 +537,15 @@
             <summary>
             RWS version this controller most probably speaks.
             <para>This is deduced from what the controller publishes, not from a request sent to it.
-            Check <see cref="P:UnderAutomation.ABB.Discovery.DiscoveredController.IsVersionDetected"/> before relying on it.</para>
+            Check <see cref="P:UnderAutomation.ABB.Discovery.DiscoveredController.IsVersionDetected" /> before relying on it.</para>
             </summary>
         </member>
         <member name="P:UnderAutomation.ABB.Discovery.DiscoveredController.IsVersionDetected">
             <summary>
-            True when <see cref="P:UnderAutomation.ABB.Discovery.DiscoveredController.ProbableVersion"/> is more than a guess.
+            True when <see cref="P:UnderAutomation.ABB.Discovery.DiscoveredController.ProbableVersion" /> is more than a guess.
             <para>It is always true for a controller found by testing the ports of this machine, because the
             controller was asked. For a controller heard announcing itself, it is false when the announcement
-            did not carry what the version is deduced from, and <see cref="P:UnderAutomation.ABB.Discovery.DiscoveredController.ProbableVersion"/> then holds the
+            did not carry what the version is deduced from, and <see cref="P:UnderAutomation.ABB.Discovery.DiscoveredController.ProbableVersion" /> then holds the
             most common value rather than a deduction.</para>
             </summary>
         </member>
@@ -562,7 +557,7 @@
         </member>
         <member name="M:UnderAutomation.ABB.Discovery.DiscoveredController.ToConnectionParameters">
             <summary>
-            Build connection parameters pointing at this controller, ready for <see cref="M:UnderAutomation.ABB.AbbController.Connect(UnderAutomation.ABB.ConnectionParameters)"/>.
+            Build connection parameters pointing at this controller, ready for <see cref="M:UnderAutomation.ABB.AbbController.Connect(UnderAutomation.ABB.ConnectionParameters)" />.
             <para>The address, the port, the scheme and the RWS version come from the discovery. The user name
             and the password keep their default values, change them if the controller needs other ones.</para>
             </summary>
@@ -571,139 +566,6 @@
         <member name="M:UnderAutomation.ABB.Discovery.DiscoveredController.ToString">
             <summary>
             Returns a string representation of this controller
-            </summary>
-        </member>
-        <member name="T:UnderAutomation.ABB.License.LicenseInfo">
-            <summary>
-            Information about a license key
-            </summary>
-        </member>
-        <member name="M:UnderAutomation.ABB.License.LicenseInfo.#ctor(System.String,System.String)">
-            <summary>
-            Create a new LicenseInfo instance to retrieve informations about a pair of identifier/key
-            This class should not be used to register your product. Please use static function RegisterLicense to specify your license.
-            </summary>
-            <param name="licenseIdentifier">The name of your organization (null for trial version)</param>
-            <param name="licenseKey">The key, associated to the identifier, supplied by UnderAutomation (null for trial version)</param>
-        </member>
-        <member name="M:UnderAutomation.ABB.License.LicenseInfo.AssertIsLicensed">
-            <summary>
-            Throw a InvalidLicenseException if the license is not valid
-            </summary>
-        </member>
-        <member name="P:UnderAutomation.ABB.License.LicenseInfo.IsLicensed">
-            <summary>
-            True if the license state is Licensed, Trial or ExtraTrial ; false otherwise
-            </summary>
-        </member>
-        <member name="P:UnderAutomation.ABB.License.LicenseInfo.LicenseKey">
-            <summary>
-            The license key supplied by UnderAutomation (null for trial period)
-            </summary>
-        </member>
-        <member name="P:UnderAutomation.ABB.License.LicenseInfo.Product">
-            <summary>
-            Commercial name of this .NET Software library
-            </summary>
-        </member>
-        <member name="P:UnderAutomation.ABB.License.LicenseInfo.EvaluationDaysLeft">
-            <summary>
-            Remaining days of the trial period. Null if the product is licensed. It could be negative if the trial period is ended since several days.
-            </summary>
-        </member>
-        <member name="P:UnderAutomation.ABB.License.LicenseInfo.EvaluationStartDate">
-            <summary>
-            The date the trial period starts. If the product is licensed, the date of the library first use.
-            </summary>
-        </member>
-        <member name="P:UnderAutomation.ABB.License.LicenseInfo.Licensee">
-            <summary>
-            Name of your organisation
-            </summary>
-        </member>
-        <member name="P:UnderAutomation.ABB.License.LicenseInfo.TrialPeriodExpirationDate">
-            <summary>
-            The date the product will expire. Null if the product is licensed.
-            </summary>
-        </member>
-        <member name="P:UnderAutomation.ABB.License.LicenseInfo.State">
-            <summary>
-            The current license state
-            </summary>
-        </member>
-        <member name="P:UnderAutomation.ABB.License.LicenseInfo.ProductReleaseDate">
-            <summary>
-            The date this version of the product was released.
-            </summary>
-        </member>
-        <member name="P:UnderAutomation.ABB.License.LicenseInfo.MaintenanceYears">
-            <summary>
-            Number of maintenance years included in your license
-            </summary>
-        </member>
-        <member name="P:UnderAutomation.ABB.License.LicenseInfo.LicenseIssuedDate">
-            <summary>
-            The date you get the license
-            </summary>
-        </member>
-        <member name="P:UnderAutomation.ABB.License.LicenseInfo.MaintenanceExpirationDate">
-            <summary>
-            The date your maintenance contract end and you no longer can use this license with newer versions.
-            </summary>
-        </member>
-        <member name="M:UnderAutomation.ABB.License.LicenseInfo.ToString">
-            <summary>
-            A human description of the license
-            </summary>
-        </member>
-        <member name="T:UnderAutomation.ABB.License.LicenseState">
-            <summary>
-            States that can take a license
-            </summary>
-        </member>
-        <member name="F:UnderAutomation.ABB.License.LicenseState.None">
-            <summary>
-            No license has been provided
-            </summary>
-        </member>
-        <member name="F:UnderAutomation.ABB.License.LicenseState.Invalid">
-            <summary>
-            The pair License Identifier and License Key are incompatible, you cannot use the library
-            </summary>
-        </member>
-        <member name="F:UnderAutomation.ABB.License.LicenseState.Trial">
-            <summary>
-            The library is in a trial period, you can use the library
-            </summary>
-        </member>
-        <member name="F:UnderAutomation.ABB.License.LicenseState.ExtraTrial">
-            <summary>
-            The library is in an extra trial period, you can use the library
-            </summary>
-        </member>
-        <member name="F:UnderAutomation.ABB.License.LicenseState.Expired">
-            <summary>
-            The trial period as expired, you no more can use the library
-            </summary>
-        </member>
-        <member name="F:UnderAutomation.ABB.License.LicenseState.MaintenanceNeeded">
-            <summary>
-            Your license does not allow you to use such a recent release. Please buy maintenance to use this version
-            </summary>
-        </member>
-        <member name="F:UnderAutomation.ABB.License.LicenseState.Licensed">
-            <summary>
-            Congratulations, the library is licensed.
-            </summary>
-        </member>
-        <member name="T:UnderAutomation.ABB.License.InvalidLicenseException">
-            <summary>
-            Exception thrown while using the product if the license is not valid.
-            </summary>
-        </member>
-        <member name="P:UnderAutomation.ABB.License.InvalidLicenseException.LicenseInfo">
-            <summary>
-            The license that causes this exception
             </summary>
         </member>
         <member name="T:UnderAutomation.ABB.Rws.Data.AxisInfo">
@@ -729,7 +591,7 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.AxisInfo.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.AxisInfo"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.AxisInfo" /> class
             </summary>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.AxisInfo.ToString">
@@ -863,7 +725,7 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.BackupSystemInfo.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.BackupSystemInfo"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.BackupSystemInfo" /> class
             </summary>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.BackupSystemInfo.ToString">
@@ -873,7 +735,7 @@
         </member>
         <member name="T:UnderAutomation.ABB.Rws.Data.BaseFrame">
             <summary>
-            Where the base of a mechanical unit sits, and what kind of base it is: a <see cref="T:UnderAutomation.ABB.Common.Pose"/>
+            Where the base of a mechanical unit sits, and what kind of base it is: a <see cref="T:UnderAutomation.ABB.Common.Pose" />
             extended with the type of the frame.
             <para>Returned by <c>MotionSystemService.GetBaseFrame()</c>. The position is expressed in millimetres.</para>
             </summary>
@@ -912,8 +774,8 @@
         </member>
         <member name="P:UnderAutomation.ABB.Rws.Data.CalibrationInfo.JointCount">
             <summary>
-            Number of entries in <see cref="P:UnderAutomation.ABB.Rws.Data.CalibrationInfo.Joints"/>, which is fixed and larger than
-            <see cref="P:UnderAutomation.ABB.Rws.Data.CalibrationInfo.ActiveJointCount"/>. Null when the controller did not report it.
+            Number of entries in <see cref="P:UnderAutomation.ABB.Rws.Data.CalibrationInfo.Joints" />, which is fixed and larger than
+            <see cref="P:UnderAutomation.ABB.Rws.Data.CalibrationInfo.ActiveJointCount" />. Null when the controller did not report it.
             </summary>
         </member>
         <member name="P:UnderAutomation.ABB.Rws.Data.CalibrationInfo.CalibrationMethodUsed">
@@ -928,12 +790,12 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.CalibrationInfo.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.CalibrationInfo"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.CalibrationInfo" /> class
             </summary>
         </member>
         <member name="P:UnderAutomation.ABB.Rws.Data.CalibrationInfo.ExistingJointCount">
             <summary>
-            Number of joints that exist on the unit, counted from <see cref="P:UnderAutomation.ABB.Rws.Data.CalibrationInfo.Joints"/>
+            Number of joints that exist on the unit, counted from <see cref="P:UnderAutomation.ABB.Rws.Data.CalibrationInfo.Joints" />
             </summary>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.CalibrationInfo.ToString">
@@ -944,7 +806,7 @@
         <member name="T:UnderAutomation.ABB.Rws.Data.CalibrationJointInfo">
             <summary>
             How one joint of a mechanical unit was calibrated.
-            <para>Held by <see cref="T:UnderAutomation.ABB.Rws.Data.CalibrationInfo"/>.</para>
+            <para>Held by <see cref="T:UnderAutomation.ABB.Rws.Data.CalibrationInfo" />.</para>
             </summary>
         </member>
         <member name="P:UnderAutomation.ABB.Rws.Data.CalibrationJointInfo.Exists">
@@ -970,7 +832,7 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.CalibrationJointInfo.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.CalibrationJointInfo"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.CalibrationJointInfo" /> class
             </summary>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.CalibrationJointInfo.ToString">
@@ -1001,7 +863,7 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.CheckRestoreResult.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.CheckRestoreResult"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.CheckRestoreResult" /> class
             </summary>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.CheckRestoreResult.ToString">
@@ -1107,7 +969,7 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.ControllerIdentity.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.ControllerIdentity"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.ControllerIdentity" /> class
             </summary>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.ControllerIdentity.ToString">
@@ -1148,7 +1010,7 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.ControllerInfo.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.ControllerInfo"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.ControllerInfo" /> class
             </summary>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.ControllerInfo.ToString">
@@ -1226,13 +1088,13 @@
         </member>
         <member name="F:UnderAutomation.ABB.Rws.Data.ControllerState.Init">
             <summary>
-            The robot is starting up. It will shift to <see cref="F:UnderAutomation.ABB.Rws.Data.ControllerState.MotorsOff"/> once it has started.
+            The robot is starting up. It will shift to <see cref="F:UnderAutomation.ABB.Rws.Data.ControllerState.MotorsOff" /> once it has started.
             </summary>
         </member>
         <member name="F:UnderAutomation.ABB.Rws.Data.ControllerState.MotorsOff">
             <summary>
             The robot is in a standby state where there is no power to its motors.
-            The state has to be shifted to <see cref="F:UnderAutomation.ABB.Rws.Data.ControllerState.MotorsOn"/> before the robot can move.
+            The state has to be shifted to <see cref="F:UnderAutomation.ABB.Rws.Data.ControllerState.MotorsOn" /> before the robot can move.
             </summary>
         </member>
         <member name="F:UnderAutomation.ABB.Rws.Data.ControllerState.MotorsOn">
@@ -1364,7 +1226,7 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.CyclicBrakeCheckStatus.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.CyclicBrakeCheckStatus"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.CyclicBrakeCheckStatus" /> class
             </summary>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.CyclicBrakeCheckStatus.ToString">
@@ -1436,7 +1298,7 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.DeviceItem.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.DeviceItem"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.DeviceItem" /> class
             </summary>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.DeviceItem.ToString">
@@ -1486,7 +1348,7 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.DirectoryItem.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.DirectoryItem"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.DirectoryItem" /> class
             </summary>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.DirectoryItem.ToString">
@@ -1498,8 +1360,8 @@
             <summary>
             Represents a directory listing containing files, subdirectories, and devices.
             <para>Returned by <c>FileService.ListDirectory(path)</c>.</para>
-            <para>When listing the root path ("/"), the <see cref="P:UnderAutomation.ABB.Rws.Data.DirectoryListing.Devices"/> array contains available storage devices (C:, hd0a, etc.).</para>
-            <para>When listing a subdirectory, only <see cref="P:UnderAutomation.ABB.Rws.Data.DirectoryListing.Files"/> and <see cref="P:UnderAutomation.ABB.Rws.Data.DirectoryListing.Directories"/> are typically populated.</para>
+            <para>When listing the root path ("/"), the <see cref="P:UnderAutomation.ABB.Rws.Data.DirectoryListing.Devices" /> array contains available storage devices (C:, hd0a, etc.).</para>
+            <para>When listing a subdirectory, only <see cref="P:UnderAutomation.ABB.Rws.Data.DirectoryListing.Files" /> and <see cref="P:UnderAutomation.ABB.Rws.Data.DirectoryListing.Directories" /> are typically populated.</para>
             </summary>
         </member>
         <member name="P:UnderAutomation.ABB.Rws.Data.DirectoryListing.Files">
@@ -1544,7 +1406,7 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.DirectoryListing.#ctor(System.String)">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.DirectoryListing"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.DirectoryListing" /> class
             </summary>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.DirectoryListing.ToString">
@@ -1582,7 +1444,7 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.ElogDomain.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.ElogDomain"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.ElogDomain" /> class
             </summary>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.ElogDomain.ToString">
@@ -1595,8 +1457,8 @@
             One message of the controller event log.
             <para>Returned by <c>ElogService.GetMessages()</c>, <c>ElogService.GetMessageTitles()</c>,
             <c>ElogService.GetMessage()</c> and <c>ElogService.GetMessageBySequenceNumber()</c>.</para>
-            <para>The texts (<see cref="P:UnderAutomation.ABB.Rws.Data.ElogMessage.Title"/>, <see cref="P:UnderAutomation.ABB.Rws.Data.ElogMessage.Description"/>, <see cref="P:UnderAutomation.ABB.Rws.Data.ElogMessage.Consequences"/>,
-            <see cref="P:UnderAutomation.ABB.Rws.Data.ElogMessage.Causes"/> and <see cref="P:UnderAutomation.ABB.Rws.Data.ElogMessage.Actions"/>) are only filled when a language was asked for.</para>
+            <para>The texts (<see cref="P:UnderAutomation.ABB.Rws.Data.ElogMessage.Title" />, <see cref="P:UnderAutomation.ABB.Rws.Data.ElogMessage.Description" />, <see cref="P:UnderAutomation.ABB.Rws.Data.ElogMessage.Consequences" />,
+            <see cref="P:UnderAutomation.ABB.Rws.Data.ElogMessage.Causes" /> and <see cref="P:UnderAutomation.ABB.Rws.Data.ElogMessage.Actions" />) are only filled when a language was asked for.</para>
             </summary>
         </member>
         <member name="P:UnderAutomation.ABB.Rws.Data.ElogMessage.DomainNumber">
@@ -1667,7 +1529,7 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.ElogMessage.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.ElogMessage"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.ElogMessage" /> class
             </summary>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.ElogMessage.ToString">
@@ -1679,7 +1541,7 @@
             <summary>
             One argument of an event log message. The arguments are the values the controller substitutes
             into the text of the message, for example the name of the task that was started.
-            <para>Held by <see cref="P:UnderAutomation.ABB.Rws.Data.ElogMessage.Arguments"/>.</para>
+            <para>Held by <see cref="P:UnderAutomation.ABB.Rws.Data.ElogMessage.Arguments" />.</para>
             </summary>
         </member>
         <member name="P:UnderAutomation.ABB.Rws.Data.ElogMessageArgument.Index">
@@ -1699,7 +1561,7 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.ElogMessageArgument.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.ElogMessageArgument"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.ElogMessageArgument" /> class
             </summary>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.ElogMessageArgument.ToString">
@@ -1764,7 +1626,7 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.FileItem.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.FileItem"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.FileItem" /> class
             </summary>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.FileItem.ToString">
@@ -1775,7 +1637,7 @@
         <member name="T:UnderAutomation.ABB.Rws.Data.FileSystemItem">
             <summary>
             Abstract base class for all file system items returned by the File Service.
-            <para>Derived classes: <see cref="T:UnderAutomation.ABB.Rws.Data.FileItem"/>, <see cref="T:UnderAutomation.ABB.Rws.Data.DirectoryItem"/>, <see cref="T:UnderAutomation.ABB.Rws.Data.DeviceItem"/></para>
+            <para>Derived classes: <see cref="T:UnderAutomation.ABB.Rws.Data.FileItem" />, <see cref="T:UnderAutomation.ABB.Rws.Data.DirectoryItem" />, <see cref="T:UnderAutomation.ABB.Rws.Data.DeviceItem" /></para>
             </summary>
         </member>
         <member name="P:UnderAutomation.ABB.Rws.Data.FileSystemItem.Name">
@@ -1795,7 +1657,7 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.FileSystemItem.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.FileSystemItem"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.FileSystemItem" /> class
             </summary>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.FileSystemItem.ToString">
@@ -1894,7 +1756,7 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.IoDeviceConfiguration.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.IoDeviceConfiguration"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.IoDeviceConfiguration" /> class
             </summary>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.IoDeviceConfiguration.ToString">
@@ -1970,7 +1832,7 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.IoDeviceItem.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.IoDeviceItem"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.IoDeviceItem" /> class
             </summary>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.IoDeviceItem.ToString">
@@ -2077,7 +1939,7 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.IoDeviceUpgradeInfo.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.IoDeviceUpgradeInfo"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.IoDeviceUpgradeInfo" /> class
             </summary>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.IoDeviceUpgradeInfo.ToString">
@@ -2128,7 +1990,7 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.IoFirmwareModuleInfo.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.IoFirmwareModuleInfo"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.IoFirmwareModuleInfo" /> class
             </summary>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.IoFirmwareModuleInfo.ToString">
@@ -2269,7 +2131,7 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.IoNetworkConfiguration.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.IoNetworkConfiguration"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.IoNetworkConfiguration" /> class
             </summary>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.IoNetworkConfiguration.ToString">
@@ -2335,7 +2197,7 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.IoNetworkItem.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.IoNetworkItem"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.IoNetworkItem" /> class
             </summary>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.IoNetworkItem.ToString">
@@ -2447,7 +2309,7 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.IoSignalConfiguration.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.IoSignalConfiguration"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.IoSignalConfiguration" /> class
             </summary>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.IoSignalConfiguration.ToString">
@@ -2550,7 +2412,7 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.IoSignalItem.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.IoSignalItem"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.IoSignalItem" /> class
             </summary>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.IoSignalItem.ToString">
@@ -2606,7 +2468,7 @@
             and an empty criteria matches every signal.</para>
             <para>Two criteria can be combined by passing a second instance to the search methods, in which case
             a signal is returned only when it matches both. One of the two criteria should then have
-            <see cref="P:UnderAutomation.ABB.Rws.Data.IoSignalSearchCriteria.Invert"/> set to true, otherwise the result is the same as with a single criteria.</para>
+            <see cref="P:UnderAutomation.ABB.Rws.Data.IoSignalSearchCriteria.Invert" /> set to true, otherwise the result is the same as with a single criteria.</para>
             </summary>
         </member>
         <member name="P:UnderAutomation.ABB.Rws.Data.IoSignalSearchCriteria.Name">
@@ -2651,7 +2513,7 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.IoSignalSearchCriteria.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.IoSignalSearchCriteria"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.IoSignalSearchCriteria" /> class
             </summary>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.IoSignalSearchCriteria.ToString">
@@ -2771,7 +2633,7 @@
         </member>
         <member name="T:UnderAutomation.ABB.Rws.Data.JointSolution">
             <summary>
-            One of the joint combinations that reach a given pose: a <see cref="T:UnderAutomation.ABB.Common.JointTarget"/> extended with the
+            One of the joint combinations that reach a given pose: a <see cref="T:UnderAutomation.ABB.Common.JointTarget" /> extended with the
             axis configuration it corresponds to.
             <para>Returned by <c>MotionSystemService.GetAllJointSolutions()</c>. The joint values are expressed
             in radians.</para>
@@ -2820,7 +2682,7 @@
             ends.</para>
             <para>The two connection versions do not cut the controller in the same domains: a connection
             established with version 1 keeps the configuration and the RAPID programs apart, a connection
-            established with version 2 covers both with <see cref="F:UnderAutomation.ABB.Rws.Data.MastershipDomain.Edit"/>. Whichever name is used, the service
+            established with version 2 covers both with <see cref="F:UnderAutomation.ABB.Rws.Data.MastershipDomain.Edit" />. Whichever name is used, the service
             asks the connected controller for the domains it really has.</para>
             </summary>
         </member>
@@ -2828,7 +2690,7 @@
             <summary>
             Everything that changes the system itself: its configuration and its RAPID programs.
             <para>On a connection established with version 1, where the two are separate domains, asking for
-            this one takes <see cref="F:UnderAutomation.ABB.Rws.Data.MastershipDomain.Configuration"/> and <see cref="F:UnderAutomation.ABB.Rws.Data.MastershipDomain.Rapid"/> together.</para>
+            this one takes <see cref="F:UnderAutomation.ABB.Rws.Data.MastershipDomain.Configuration" /> and <see cref="F:UnderAutomation.ABB.Rws.Data.MastershipDomain.Rapid" /> together.</para>
             </summary>
         </member>
         <member name="F:UnderAutomation.ABB.Rws.Data.MastershipDomain.Motion">
@@ -2840,14 +2702,14 @@
             <summary>
             The system parameters of the controller.
             <para>On a connection established with version 2, where it is not a domain of its own, this is
-            the same domain as <see cref="F:UnderAutomation.ABB.Rws.Data.MastershipDomain.Edit"/>.</para>
+            the same domain as <see cref="F:UnderAutomation.ABB.Rws.Data.MastershipDomain.Edit" />.</para>
             </summary>
         </member>
         <member name="F:UnderAutomation.ABB.Rws.Data.MastershipDomain.Rapid">
             <summary>
             The RAPID programs and their data.
             <para>On a connection established with version 2, where it is not a domain of its own, this is
-            the same domain as <see cref="F:UnderAutomation.ABB.Rws.Data.MastershipDomain.Edit"/>.</para>
+            the same domain as <see cref="F:UnderAutomation.ABB.Rws.Data.MastershipDomain.Edit" />.</para>
             </summary>
         </member>
         <member name="T:UnderAutomation.ABB.Rws.Data.MastershipHolder">
@@ -2924,7 +2786,7 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.MastershipInfo.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.MastershipInfo"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.MastershipInfo" /> class
             </summary>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.MastershipInfo.ToString">
@@ -3018,7 +2880,7 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.MechanicalUnitInfo.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.MechanicalUnitInfo"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.MechanicalUnitInfo" /> class
             </summary>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.MechanicalUnitInfo.ToString">
@@ -3030,7 +2892,7 @@
             <summary>
             One mechanical unit of the motion system, as listed by <c>MotionSystemService.GetMechanicalUnits()</c>.
             <para>Only the few properties the list carries are filled in. Read the unit itself with
-            <c>MotionSystemService.GetMechanicalUnit()</c> to get a <see cref="T:UnderAutomation.ABB.Rws.Data.MechanicalUnitInfo"/>.</para>
+            <c>MotionSystemService.GetMechanicalUnit()</c> to get a <see cref="T:UnderAutomation.ABB.Rws.Data.MechanicalUnitInfo" />.</para>
             </summary>
         </member>
         <member name="P:UnderAutomation.ABB.Rws.Data.MechanicalUnitItem.Name">
@@ -3055,7 +2917,7 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.MechanicalUnitItem.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.MechanicalUnitItem"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.MechanicalUnitItem" /> class
             </summary>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.MechanicalUnitItem.ToString">
@@ -3242,7 +3104,7 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.MotionSupervision.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.MotionSupervision"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.MotionSupervision" /> class
             </summary>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.MotionSupervision.ToString">
@@ -3263,8 +3125,8 @@
         </member>
         <member name="P:UnderAutomation.ABB.Rws.Data.MotionSystemErrorState.RawState">
             <summary>
-            Error state exactly as the controller reported it, useful when <see cref="P:UnderAutomation.ABB.Rws.Data.MotionSystemErrorState.State"/> is
-            <see cref="F:UnderAutomation.ABB.Rws.Data.MotionErrorState.Unknown"/>
+            Error state exactly as the controller reported it, useful when <see cref="P:UnderAutomation.ABB.Rws.Data.MotionSystemErrorState.State" /> is
+            <see cref="F:UnderAutomation.ABB.Rws.Data.MotionErrorState.Unknown" />
             </summary>
         </member>
         <member name="P:UnderAutomation.ABB.Rws.Data.MotionSystemErrorState.Count">
@@ -3275,7 +3137,7 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.MotionSystemErrorState.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.MotionSystemErrorState"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.MotionSystemErrorState" /> class
             </summary>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.MotionSystemErrorState.ToString">
@@ -3319,7 +3181,7 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.MotionSystemInfo.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.MotionSystemInfo"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.MotionSystemInfo" /> class
             </summary>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.MotionSystemInfo.ToString">
@@ -3345,12 +3207,12 @@
         </member>
         <member name="P:UnderAutomation.ABB.Rws.Data.MotorCalibrationName.CalibrationName">
             <summary>
-            Name of the calibration data of the joint, usually the same as <see cref="P:UnderAutomation.ABB.Rws.Data.MotorCalibrationName.JointName"/>
+            Name of the calibration data of the joint, usually the same as <see cref="P:UnderAutomation.ABB.Rws.Data.MotorCalibrationName.JointName" />
             </summary>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.MotorCalibrationName.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.MotorCalibrationName"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.MotorCalibrationName" /> class
             </summary>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.MotorCalibrationName.ToString">
@@ -3434,7 +3296,7 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.NetworkInterfaceItem.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.NetworkInterfaceItem"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.NetworkInterfaceItem" /> class
             </summary>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.NetworkInterfaceItem.ToString">
@@ -3561,7 +3423,7 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.PathSupervision.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.PathSupervision"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.PathSupervision" /> class
             </summary>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.PathSupervision.ToString">
@@ -3613,7 +3475,7 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.RapidActivationRecord.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.RapidActivationRecord"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.RapidActivationRecord" /> class
             </summary>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.RapidActivationRecord.ToString">
@@ -3645,7 +3507,7 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.RapidAliasIoItem.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.RapidAliasIoItem"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.RapidAliasIoItem" /> class
             </summary>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.RapidAliasIoItem.ToString">
@@ -3688,7 +3550,7 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.RapidBreakpoint.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.RapidBreakpoint"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.RapidBreakpoint" /> class
             </summary>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.RapidBreakpoint.ToString">
@@ -3729,7 +3591,7 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.RapidBuildError.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.RapidBuildError"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.RapidBuildError" /> class
             </summary>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.RapidBuildError.ToString">
@@ -3785,7 +3647,7 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.RapidExecutionInfo.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.RapidExecutionInfo"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.RapidExecutionInfo" /> class
             </summary>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.RapidExecutionInfo.ToString">
@@ -3928,7 +3790,7 @@
             What each of the six external joints of a task is doing, which says how to read the corresponding
             value of an external axis.
             <para>Returned by <c>RapidService.GetExternalJointStates()</c>. A joint reported as
-            <see cref="F:UnderAutomation.ABB.Rws.Data.RapidJointState.NotActive"/> carries no meaningful position.</para>
+            <see cref="F:UnderAutomation.ABB.Rws.Data.RapidJointState.NotActive" /> carries no meaningful position.</para>
             </summary>
         </member>
         <member name="P:UnderAutomation.ABB.Rws.Data.RapidExternalJointStates.Joint1">
@@ -3963,7 +3825,7 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.RapidExternalJointStates.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.RapidExternalJointStates"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.RapidExternalJointStates" /> class
             </summary>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.RapidExternalJointStates.ToString">
@@ -4031,7 +3893,7 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.RapidInstructionTemplate.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.RapidInstructionTemplate"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.RapidInstructionTemplate" /> class
             </summary>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.RapidInstructionTemplate.ToString">
@@ -4042,7 +3904,7 @@
         <member name="T:UnderAutomation.ABB.Rws.Data.RapidInstructionTemplateArgument">
             <summary>
             One argument of the template the controller suggests for an instruction or a data type.
-            <para>Carried by <see cref="T:UnderAutomation.ABB.Rws.Data.RapidInstructionTemplate"/>.</para>
+            <para>Carried by <see cref="T:UnderAutomation.ABB.Rws.Data.RapidInstructionTemplate" />.</para>
             </summary>
         </member>
         <member name="P:UnderAutomation.ABB.Rws.Data.RapidInstructionTemplateArgument.ArgumentNumber">
@@ -4098,7 +3960,7 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.RapidInstructionTemplateArgument.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.RapidInstructionTemplateArgument"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.RapidInstructionTemplateArgument" /> class
             </summary>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.RapidInstructionTemplateArgument.ToString">
@@ -4161,7 +4023,7 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.RapidMechanicalUnitItem.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.RapidMechanicalUnitItem"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.RapidMechanicalUnitItem" /> class
             </summary>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.RapidMechanicalUnitItem.ToString">
@@ -4208,7 +4070,7 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.RapidModifiablePositionItem.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.RapidModifiablePositionItem"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.RapidModifiablePositionItem" /> class
             </summary>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.RapidModifiablePositionItem.ToString">
@@ -4251,7 +4113,7 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.RapidModifiablePositions.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.RapidModifiablePositions"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.RapidModifiablePositions" /> class
             </summary>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.RapidModifiablePositions.ToString">
@@ -4322,7 +4184,7 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.RapidModuleExtension.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.RapidModuleExtension"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.RapidModuleExtension" /> class
             </summary>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.RapidModuleExtension.ToString">
@@ -4334,7 +4196,7 @@
             <summary>
             Everything the controller reports about one module.
             <para>Returned by <c>RapidService.GetModule()</c>; the module lists only carry the properties of the
-            <see cref="T:UnderAutomation.ABB.Rws.Data.RapidModuleItem"/> base class.</para>
+            <see cref="T:UnderAutomation.ABB.Rws.Data.RapidModuleItem" /> base class.</para>
             </summary>
         </member>
         <member name="P:UnderAutomation.ABB.Rws.Data.RapidModuleInfo.FileName">
@@ -4354,13 +4216,13 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.RapidModuleInfo.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.RapidModuleInfo"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.RapidModuleInfo" /> class
             </summary>
         </member>
         <member name="T:UnderAutomation.ABB.Rws.Data.RapidModuleItem">
             <summary>
             A module loaded into a task, as listed by <c>RapidService.GetModules()</c>.
-            <para><c>RapidService.GetModule()</c> returns a <see cref="T:UnderAutomation.ABB.Rws.Data.RapidModuleInfo"/>, which adds the file the
+            <para><c>RapidService.GetModule()</c> returns a <see cref="T:UnderAutomation.ABB.Rws.Data.RapidModuleInfo" />, which adds the file the
             module came from and the attributes declared on it.</para>
             </summary>
         </member>
@@ -4376,7 +4238,7 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.RapidModuleItem.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.RapidModuleItem"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.RapidModuleItem" /> class
             </summary>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.RapidModuleItem.ToString">
@@ -4453,7 +4315,7 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.RapidModuleSymbol.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.RapidModuleSymbol"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.RapidModuleSymbol" /> class
             </summary>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.RapidModuleSymbol.ToString">
@@ -4481,12 +4343,12 @@
             <summary>
             Length the controller declares for the module, null when it did not report it.
             <para>This is the size the controller reserves for the module and not the length of
-            <see cref="P:UnderAutomation.ABB.Rws.Data.RapidModuleText.Text"/>, so the two normally differ.</para>
+            <see cref="P:UnderAutomation.ABB.Rws.Data.RapidModuleText.Text" />, so the two normally differ.</para>
             </summary>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.RapidModuleText.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.RapidModuleText"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.RapidModuleText" /> class
             </summary>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.RapidModuleText.ToString">
@@ -4547,7 +4409,7 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.RapidObjectChild.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.RapidObjectChild"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.RapidObjectChild" /> class
             </summary>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.RapidObjectChild.ToString">
@@ -4558,7 +4420,7 @@
         <member name="T:UnderAutomation.ABB.Rws.Data.RapidObjectChildRange">
             <summary>
             One named part of a RAPID object, and where it sits in the source.
-            <para>Carried by <see cref="T:UnderAutomation.ABB.Rws.Data.RapidObjectChild"/>.</para>
+            <para>Carried by <see cref="T:UnderAutomation.ABB.Rws.Data.RapidObjectChild" />.</para>
             </summary>
         </member>
         <member name="P:UnderAutomation.ABB.Rws.Data.RapidObjectChildRange.Name">
@@ -4579,7 +4441,7 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.RapidObjectChildRange.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.RapidObjectChildRange"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.RapidObjectChildRange" /> class
             </summary>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.RapidObjectChildRange.ToString">
@@ -4613,7 +4475,7 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.RapidObjectListExtension.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.RapidObjectListExtension"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.RapidObjectListExtension" /> class
             </summary>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.RapidObjectListExtension.ToString">
@@ -4674,7 +4536,7 @@
         <member name="T:UnderAutomation.ABB.Rws.Data.RapidPalletHeadItem">
             <summary>
             One category of the instruction palette the FlexPendant editor offers, for example "Prog.Flow".
-            <para>Returned by <c>RapidService.GetPalletHeads()</c>; its <see cref="P:UnderAutomation.ABB.Rws.Data.RapidPalletHeadItem.Number"/> is what
+            <para>Returned by <c>RapidService.GetPalletHeads()</c>; its <see cref="P:UnderAutomation.ABB.Rws.Data.RapidPalletHeadItem.Number" /> is what
             <c>RapidService.GetPallet()</c> takes.</para>
             </summary>
         </member>
@@ -4690,7 +4552,7 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.RapidPalletHeadItem.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.RapidPalletHeadItem"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.RapidPalletHeadItem" /> class
             </summary>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.RapidPalletHeadItem.ToString">
@@ -4733,7 +4595,7 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.RapidPalletItem.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.RapidPalletItem"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.RapidPalletItem" /> class
             </summary>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.RapidPalletItem.ToString">
@@ -4744,7 +4606,7 @@
         <member name="T:UnderAutomation.ABB.Rws.Data.RapidPointerPosition">
             <summary>
             Where one of the two pointers of a task stands.
-            <para>Carried by <see cref="T:UnderAutomation.ABB.Rws.Data.RapidPointers"/>. <see cref="P:UnderAutomation.ABB.Rws.Data.RapidPointerPosition.Available"/> tells apart a pointer that is
+            <para>Carried by <see cref="T:UnderAutomation.ABB.Rws.Data.RapidPointers" />. <see cref="P:UnderAutomation.ABB.Rws.Data.RapidPointerPosition.Available" /> tells apart a pointer that is
             really placed somewhere from one the controller could not report, which happens for the motion
             pointer whenever the task has not moved yet.</para>
             </summary>
@@ -4796,7 +4658,7 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.RapidPointerPosition.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.RapidPointerPosition"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.RapidPointerPosition" /> class
             </summary>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.RapidPointerPosition.ToString">
@@ -4824,7 +4686,7 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.RapidPointers.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.RapidPointers"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.RapidPointers" /> class
             </summary>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.RapidPointers.ToString">
@@ -4871,7 +4733,7 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.RapidPreferredDataTypeItem.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.RapidPreferredDataTypeItem"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.RapidPreferredDataTypeItem" /> class
             </summary>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.RapidPreferredDataTypeItem.ToString">
@@ -4918,7 +4780,7 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.RapidProgramCounterPosition.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.RapidProgramCounterPosition"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.RapidProgramCounterPosition" /> class
             </summary>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.RapidProgramCounterPosition.ToString">
@@ -4945,7 +4807,7 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.RapidProgramInfo.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.RapidProgramInfo"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.RapidProgramInfo" /> class
             </summary>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.RapidProgramInfo.ToString">
@@ -5052,7 +4914,7 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.RapidRoutineArgument.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.RapidRoutineArgument"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.RapidRoutineArgument" /> class
             </summary>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.RapidRoutineArgument.ToString">
@@ -5100,7 +4962,7 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.RapidRoutineInfo.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.RapidRoutineInfo"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.RapidRoutineInfo" /> class
             </summary>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.RapidRoutineInfo.ToString">
@@ -5132,7 +4994,7 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.RapidServiceRoutineItem.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.RapidServiceRoutineItem"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.RapidServiceRoutineItem" /> class
             </summary>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.RapidServiceRoutineItem.ToString">
@@ -5164,7 +5026,7 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.RapidSetTextRangeResult.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.RapidSetTextRangeResult"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.RapidSetTextRangeResult" /> class
             </summary>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.RapidSetTextRangeResult.ToString">
@@ -5252,7 +5114,7 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.RapidStructuralChangeCount.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.RapidStructuralChangeCount"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.RapidStructuralChangeCount" /> class
             </summary>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.RapidStructuralChangeCount.ToString">
@@ -5264,7 +5126,7 @@
             <summary>
             What a RAPID symbol is declared as.
             <para>Returned by <c>RapidService.GetSymbolProperties()</c> and <c>RapidService.SearchSymbols()</c>.
-            A search fills in <see cref="P:UnderAutomation.ABB.Rws.Data.RapidSymbolProperties.Name"/> and leaves <see cref="P:UnderAutomation.ABB.Rws.Data.RapidSymbolProperties.Storage"/> alone, a direct read does the
+            A search fills in <see cref="P:UnderAutomation.ABB.Rws.Data.RapidSymbolProperties.Name" /> and leaves <see cref="P:UnderAutomation.ABB.Rws.Data.RapidSymbolProperties.Storage" /> alone, a direct read does the
             opposite on some controllers, so treat both as optional.</para>
             </summary>
         </member>
@@ -5340,7 +5202,7 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.RapidSymbolProperties.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.RapidSymbolProperties"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.RapidSymbolProperties" /> class
             </summary>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.RapidSymbolProperties.ToString">
@@ -5353,7 +5215,7 @@
             What a symbol search looks for.
             <para>Passed to <c>RapidService.SearchSymbols()</c>. Every property is optional; leaving one alone
             means the search does not filter on it. A search with no criterion at all walks the whole system,
-            which is slow, so at least set <see cref="P:UnderAutomation.ABB.Rws.Data.RapidSymbolSearchCriteria.BlockUrl"/>.</para>
+            which is slow, so at least set <see cref="P:UnderAutomation.ABB.Rws.Data.RapidSymbolSearchCriteria.BlockUrl" />.</para>
             </summary>
         </member>
         <member name="P:UnderAutomation.ABB.Rws.Data.RapidSymbolSearchCriteria.View">
@@ -5378,18 +5240,18 @@
         </member>
         <member name="P:UnderAutomation.ABB.Rws.Data.RapidSymbolSearchCriteria.PositionRow">
             <summary>
-            Line the search starts from, used together with <see cref="F:UnderAutomation.ABB.Rws.Data.RapidSymbolSearchView.Scope"/>
+            Line the search starts from, used together with <see cref="F:UnderAutomation.ABB.Rws.Data.RapidSymbolSearchView.Scope" />
             </summary>
         </member>
         <member name="P:UnderAutomation.ABB.Rws.Data.RapidSymbolSearchCriteria.PositionColumn">
             <summary>
-            Column the search starts from, used together with <see cref="F:UnderAutomation.ABB.Rws.Data.RapidSymbolSearchView.Scope"/>
+            Column the search starts from, used together with <see cref="F:UnderAutomation.ABB.Rws.Data.RapidSymbolSearchView.Scope" />
             </summary>
         </member>
         <member name="P:UnderAutomation.ABB.Rws.Data.RapidSymbolSearchCriteria.StackFrame">
             <summary>
             Frame of the call stack the search starts from, used together with
-            <see cref="F:UnderAutomation.ABB.Rws.Data.RapidSymbolSearchView.Stack"/>
+            <see cref="F:UnderAutomation.ABB.Rws.Data.RapidSymbolSearchView.Stack" />
             </summary>
         </member>
         <member name="P:UnderAutomation.ABB.Rws.Data.RapidSymbolSearchCriteria.OnlyUsed">
@@ -5419,7 +5281,7 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.RapidSymbolSearchCriteria.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.RapidSymbolSearchCriteria"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.RapidSymbolSearchCriteria" /> class
             </summary>
         </member>
         <member name="T:UnderAutomation.ABB.Rws.Data.RapidSymbolSearchView">
@@ -5569,7 +5431,7 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.RapidSymbolValue.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.RapidSymbolValue"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.RapidSymbolValue" /> class
             </summary>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.RapidSymbolValue.ToString">
@@ -5686,7 +5548,7 @@
             <summary>
             Everything the controller reports about one RAPID task.
             <para>Returned by <c>RapidService.GetTask()</c>; the task lists only carry the properties of the
-            <see cref="T:UnderAutomation.ABB.Rws.Data.RapidTaskItem"/> base class.</para>
+            <see cref="T:UnderAutomation.ABB.Rws.Data.RapidTaskItem" /> base class.</para>
             </summary>
         </member>
         <member name="P:UnderAutomation.ABB.Rws.Data.RapidTaskInfo.Trust">
@@ -5718,7 +5580,7 @@
             <summary>
             Number of cycles the task is set to run.
             <para>Only reported over a connection established with version 2, and left to
-            <see cref="F:UnderAutomation.ABB.Rws.Data.RapidExecutionCycle.Unknown"/> otherwise.</para>
+            <see cref="F:UnderAutomation.ABB.Rws.Data.RapidExecutionCycle.Unknown" /> otherwise.</para>
             </summary>
         </member>
         <member name="P:UnderAutomation.ABB.Rws.Data.RapidTaskInfo.ProductionEntryPoint">
@@ -5738,13 +5600,13 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.RapidTaskInfo.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.RapidTaskInfo"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.RapidTaskInfo" /> class
             </summary>
         </member>
         <member name="T:UnderAutomation.ABB.Rws.Data.RapidTaskItem">
             <summary>
             A RAPID task of the controller, as listed by <c>RapidService.GetTasks()</c>.
-            <para><c>RapidService.GetTask()</c> returns a <see cref="T:UnderAutomation.ABB.Rws.Data.RapidTaskInfo"/>, which adds everything the
+            <para><c>RapidService.GetTask()</c> returns a <see cref="T:UnderAutomation.ABB.Rws.Data.RapidTaskInfo" />, which adds everything the
             controller reports for a single task only.</para>
             </summary>
         </member>
@@ -5780,7 +5642,7 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.RapidTaskItem.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.RapidTaskItem"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.RapidTaskItem" /> class
             </summary>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.RapidTaskItem.ToString">
@@ -5833,7 +5695,7 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.RapidTaskSelectionItem.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.RapidTaskSelectionItem"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.RapidTaskSelectionItem" /> class
             </summary>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.RapidTaskSelectionItem.ToString">
@@ -5955,7 +5817,7 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.RapidTextPosition.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.RapidTextPosition"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.RapidTextPosition" /> class
             </summary>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.RapidTextPosition.ToString">
@@ -6006,7 +5868,7 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.RapidTextRange.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.RapidTextRange"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.RapidTextRange" /> class
             </summary>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.RapidTextRange.ToString">
@@ -6039,7 +5901,7 @@
             The dialogue a running RAPID program is currently asking an operator for.
             <para>Returned by <c>RapidService.GetActiveUiInstruction()</c>, which returns null when no
             instruction is pending. Answering one means writing its parameters with
-            <c>RapidService.SetUiInstructionParameter()</c>, using <see cref="P:UnderAutomation.ABB.Rws.Data.RapidUiInstruction.StackUrl"/> to address them.</para>
+            <c>RapidService.SetUiInstructionParameter()</c>, using <see cref="P:UnderAutomation.ABB.Rws.Data.RapidUiInstruction.StackUrl" /> to address them.</para>
             </summary>
         </member>
         <member name="P:UnderAutomation.ABB.Rws.Data.RapidUiInstruction.Instruction">
@@ -6069,7 +5931,7 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.RapidUiInstruction.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.RapidUiInstruction"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.RapidUiInstruction" /> class
             </summary>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.RapidUiInstruction.ToString">
@@ -6122,7 +5984,7 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.RapidUiInstructionParameter.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.RapidUiInstructionParameter"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.RapidUiInstructionParameter" /> class
             </summary>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.RapidUiInstructionParameter.ToString">
@@ -6194,7 +6056,7 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.SafetyConfiguration.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.SafetyConfiguration"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.SafetyConfiguration" /> class
             </summary>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.SafetyConfiguration.ToString">
@@ -6290,7 +6152,7 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.SafetyModeStatus.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.SafetyModeStatus"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.SafetyModeStatus" /> class
             </summary>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.SafetyModeStatus.ToString">
@@ -6376,7 +6238,7 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.SafetyViolationInfo.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.SafetyViolationInfo"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.SafetyViolationInfo" /> class
             </summary>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.SafetyViolationInfo.ToString">
@@ -6560,7 +6422,7 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.SmbData.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.SmbData"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.SmbData" /> class
             </summary>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.SmbData.ToString">
@@ -6685,7 +6547,7 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.SystemEnergy.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.SystemEnergy"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.SystemEnergy" /> class
             </summary>
         </member>
         <member name="P:UnderAutomation.ABB.Rws.Data.SystemEnergy.AveragePower">
@@ -6707,7 +6569,7 @@
         <member name="T:UnderAutomation.ABB.Rws.Data.SystemEnergyAxis">
             <summary>
             Energy consumed by one axis of a mechanical unit during the current measurement interval.
-            <para>Held by <see cref="T:UnderAutomation.ABB.Rws.Data.SystemEnergyMechanicalUnit"/>.</para>
+            <para>Held by <see cref="T:UnderAutomation.ABB.Rws.Data.SystemEnergyMechanicalUnit" />.</para>
             </summary>
         </member>
         <member name="P:UnderAutomation.ABB.Rws.Data.SystemEnergyAxis.Number">
@@ -6723,7 +6585,7 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.SystemEnergyAxis.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.SystemEnergyAxis"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.SystemEnergyAxis" /> class
             </summary>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.SystemEnergyAxis.ToString">
@@ -6734,7 +6596,7 @@
         <member name="T:UnderAutomation.ABB.Rws.Data.SystemEnergyMechanicalUnit">
             <summary>
             Energy consumed by one mechanical unit, broken down per axis.
-            <para>Held by <see cref="T:UnderAutomation.ABB.Rws.Data.SystemEnergy"/>.</para>
+            <para>Held by <see cref="T:UnderAutomation.ABB.Rws.Data.SystemEnergy" />.</para>
             </summary>
         </member>
         <member name="P:UnderAutomation.ABB.Rws.Data.SystemEnergyMechanicalUnit.Name">
@@ -6749,7 +6611,7 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.SystemEnergyMechanicalUnit.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.SystemEnergyMechanicalUnit"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.SystemEnergyMechanicalUnit" /> class
             </summary>
         </member>
         <member name="P:UnderAutomation.ABB.Rws.Data.SystemEnergyMechanicalUnit.AxisCount">
@@ -6918,7 +6780,7 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.SystemInfo.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.SystemInfo"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.SystemInfo" /> class
             </summary>
         </member>
         <member name="P:UnderAutomation.ABB.Rws.Data.SystemInfo.OptionCount">
@@ -6955,7 +6817,7 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.SystemProduct.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.SystemProduct"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.SystemProduct" /> class
             </summary>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.SystemProduct.ToString">
@@ -6982,7 +6844,7 @@
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.TimeServerInfo.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.TimeServerInfo"/> class
+            Initializes a new instance of the <see cref="T:UnderAutomation.ABB.Rws.Data.TimeServerInfo" /> class
             </summary>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Data.TimeServerInfo.ToString">
@@ -7062,71 +6924,6 @@
             Disconnect from the robot controller
             </summary>
         </member>
-        <member name="M:UnderAutomation.ABB.Rws.Internal.RwsClientBase.Get(System.String,System.String)">
-            <summary>
-            Perform a GET request (synchronous)
-            </summary>
-            <param name="url">Resource to read</param>
-            <param name="accept">Media type to ask for, null to use the one of the connection version.
-            A handful of resources only answer some of their representations to a more recent media type.</param>
-        </member>
-        <member name="M:UnderAutomation.ABB.Rws.Internal.RwsClientBase.Post(System.String)">
-            <summary>
-            Perform a POST request (synchronous)
-            </summary>
-        </member>
-        <member name="M:UnderAutomation.ABB.Rws.Internal.RwsClientBase.Post(System.String,System.Collections.Generic.Dictionary{System.String,System.String})">
-            <summary>
-            Perform a POST request with form data (synchronous)
-            </summary>
-        </member>
-        <member name="M:UnderAutomation.ABB.Rws.Internal.RwsClientBase.Put(System.String)">
-            <summary>
-            Perform a PUT request (synchronous)
-            </summary>
-        </member>
-        <member name="M:UnderAutomation.ABB.Rws.Internal.RwsClientBase.Put(System.String,System.Collections.Generic.Dictionary{System.String,System.String})">
-            <summary>
-            Perform a PUT request with form data (synchronous)
-            </summary>
-        </member>
-        <member name="M:UnderAutomation.ABB.Rws.Internal.RwsClientBase.Delete(System.String)">
-            <summary>
-            Perform a DELETE request (synchronous)
-            </summary>
-        </member>
-        <member name="M:UnderAutomation.ABB.Rws.Internal.RwsClientBase.Options(System.String)">
-            <summary>
-            Perform an OPTIONS request (synchronous)
-            </summary>
-        </member>
-        <member name="M:UnderAutomation.ABB.Rws.Internal.RwsClientBase.Head(System.String)">
-            <summary>
-            Perform a HEAD request (synchronous)
-            </summary>
-        </member>
-        <member name="M:UnderAutomation.ABB.Rws.Internal.RwsClientBase.GetBytes(System.String,System.String)">
-            <summary>
-            Perform a GET request and return raw bytes (synchronous)
-            </summary>
-        </member>
-        <member name="M:UnderAutomation.ABB.Rws.Internal.RwsClientBase.PutBytes(System.String,System.Byte[],System.String)">
-            <summary>
-            Perform a PUT request with raw bytes (synchronous)
-            </summary>
-        </member>
-        <member name="M:UnderAutomation.ABB.Rws.Internal.RwsClientBase.PutStream(System.String,System.IO.Stream,System.String)">
-            <summary>
-            Perform a PUT request with stream content (synchronous)
-            </summary>
-        </member>
-        <member name="M:UnderAutomation.ABB.Rws.Internal.RwsClientBase.GetStream(System.String,System.String)">
-            <summary>
-            Perform a GET request and return response as a stream (synchronous)
-            <para>Returns a read-only MemoryStream wrapper for .NET 3.5/4.0 compatibility.</para>
-            <para>For true HTTP streaming with large files, use GetStreamAsync() instead.</para>
-            </summary>
-        </member>
         <member name="P:UnderAutomation.ABB.Rws.Internal.RwsClientBase.File">
             <summary>
             File Service
@@ -7174,7 +6971,7 @@
         </member>
         <member name="T:UnderAutomation.ABB.Rws.Internal.RwsClientInternal">
             <summary>
-            Internal RWS client for use by <see cref="T:UnderAutomation.ABB.AbbController"/>.
+            Internal RWS client for use by <see cref="T:UnderAutomation.ABB.AbbController" />.
             This class is used internally and should not be instantiated directly.
             </summary>
         </member>
@@ -7211,49 +7008,16 @@
         </member>
         <member name="P:UnderAutomation.ABB.Rws.Internal.RwsConnectParametersBase.Version">
             <summary>
-            RWS protocol version to use. If not specified, <see cref="F:UnderAutomation.ABB.Rws.RwsVersion.OmniCore_V2_0"/> (RWS 2.0) is used.
+            RWS protocol version to use. If not specified, <see cref="F:UnderAutomation.ABB.Rws.RwsVersion.OmniCore_V2_0" /> (RWS 2.0) is used.
             <para>RWS 2.0 is available in RobotWare &gt;= 7, which ships the new OmniCore controller generation.
-            For older RobotWare versions running on IRC5 controllers, use <see cref="F:UnderAutomation.ABB.Rws.RwsVersion.Irc5_V1_0"/> (RWS 1.0).</para>
+            For older RobotWare versions running on IRC5 controllers, use <see cref="F:UnderAutomation.ABB.Rws.RwsVersion.Irc5_V1_0" /> (RWS 1.0).</para>
             </summary>
-        </member>
-        <member name="T:UnderAutomation.ABB.Rws.Internal.RwsTransportSecurity">
-            <summary>
-            Prepares the process for an HTTPS connection to a robot controller.
-            </summary>
-        </member>
-        <member name="M:UnderAutomation.ABB.Rws.Internal.RwsTransportSecurity.Prepare">
-            <summary>
-            Makes the process able to talk HTTPS to a robot controller.
-            <para>Called on every HTTPS connection, and does nothing for a plain HTTP one, so a program that
-            never uses HTTPS keeps the settings of its host untouched. Both steps only add what is missing,
-            so calling it again costs two comparisons and changes nothing.</para>
-            </summary>
-        </member>
-        <member name="M:UnderAutomation.ABB.Rws.Internal.RwsTransportSecurity.EnableModernTlsProtocols">
-            <summary>
-            Adds TLS 1.1 and TLS 1.2 to the protocols the process offers.
-            </summary>
-            <remarks>
-            A controller only accepts TLS 1.2, while a process hosted by an executable that declares no target
-            framework, or an old one, starts with SSL 3.0 and TLS 1.0 only. The handshake then fails before any
-            request is sent. Only the protocols are added, so a host that already chose its own set keeps it.
-            </remarks>
-        </member>
-        <member name="M:UnderAutomation.ABB.Rws.Internal.RwsTransportSecurity.AcceptControllerCertificate">
-            <summary>
-            Accepts the certificate a controller signs itself with.
-            </summary>
-            <remarks>
-            A controller ships a certificate no authority signed, so the default validation refuses it.
-            Recent target frameworks say so per request, or per client, which is done where the request is built.
-            The frameworks below cannot, and the setting of the whole process is the only place left.
-            </remarks>
         </member>
         <member name="T:UnderAutomation.ABB.Rws.RwsClient">
             <summary>
             Standalone public RWS client for ABB robot controllers.
             Supports both RWS v1 and v2.
-            Use this class when you want to connect to a robot without using the <see cref="T:UnderAutomation.ABB.AbbController"/> class.
+            Use this class when you want to connect to a robot without using the <see cref="T:UnderAutomation.ABB.AbbController" /> class.
             </summary>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.RwsClient.#ctor">
@@ -7271,7 +7035,7 @@
             <param name="port">RWS service port. If set to 0, the default port will be used (80 for HTTP, 443 for HTTPS).</param>
             <param name="timeout">HTTP request timeout in milliseconds (default: 10000)</param>
             <param name="useHttps">Whether to use HTTPS (default: false)</param>
-            <param name="version">RWS protocol version (default: <see cref="F:UnderAutomation.ABB.Rws.RwsVersion.OmniCore_V2_0"/>)</param>
+            <param name="version">RWS protocol version (default: <see cref="F:UnderAutomation.ABB.Rws.RwsVersion.OmniCore_V2_0" />)</param>
         </member>
         <member name="T:UnderAutomation.ABB.Rws.RwsConnectParameters">
             <summary>
@@ -7360,39 +7124,11 @@
             Creates a new RWS exception that explains the failure of another one, keeping its diagnostics
             </summary>
         </member>
-        <member name="M:UnderAutomation.ABB.Rws.RwsException.FromHttpResponse(System.String,System.String,System.Int32,System.String,System.String)">
-            <summary>
-            Builds an exception for an unsuccessful HTTP response.
-            <para>The public <see cref="P:System.Exception.Message"/> stays generic: it names the HTTP status code
-            and its reason phrase (Forbidden, Method Not Allowed, ...) plus a short hint about the likely
-            cause, but never the request URL.</para>
-            <para>The <see cref="P:System.Exception.InnerException"/> carries the full diagnostics: HTTP method,
-            full request URL, status line, the ABB error code and message read from the payload, and the
-            raw response body.</para>
-            </summary>
-        </member>
-        <member name="M:UnderAutomation.ABB.Rws.RwsException.FromTransportError(System.String,System.String,System.Exception)">
-            <summary>
-            Builds an exception for a request that never produced an HTTP response (timeout, DNS failure,
-            connection refused, TLS failure, ...). The public message names the failure kind only; the inner
-            exception carries the HTTP method, the full URL and the original transport error.
-            </summary>
-        </member>
-        <member name="M:UnderAutomation.ABB.Rws.RwsException.DescribeStatusCode(System.Int32)">
-            <summary>
-            Fallback reason phrase for the status codes RWS actually returns, when the transport did not give one.
-            </summary>
-        </member>
-        <member name="M:UnderAutomation.ABB.Rws.RwsException.ExplainStatusCode(System.Int32)">
-            <summary>
-            Short, RWS-flavoured hint about what usually causes each status code, to point at the source of the problem.
-            </summary>
-        </member>
         <member name="T:UnderAutomation.ABB.Rws.RwsVersion">
             <summary>
             Version of the ABB Robot Web Services (RWS) protocol exposed by the robot controller.
-            <para>The two versions differ in URL shapes, parameter placement and media types, so the client
-            has to know which one it talks to. Pick the value that matches the controller generation.</para>
+            <para>The two versions are not compatible, so the client has to know which one it talks to.
+            Pick the value that matches the controller generation.</para>
             </summary>
         </member>
         <member name="F:UnderAutomation.ABB.Rws.RwsVersion.Irc5_V1_0">
@@ -7440,7 +7176,7 @@
             <summary>
             Sets the system time of the controller (synchronous)
             <para>The controller clock is always UTC, pass a UTC date and time.</para>
-            <para>Instead of setting the time explicitly, a time server can be configured with <see cref="M:UnderAutomation.ABB.Rws.Services.ControllerService.SetTimeServer(System.String)"/>.</para>
+            <para>Instead of setting the time explicitly, a time server can be configured with <see cref="M:UnderAutomation.ABB.Rws.Services.ControllerService.SetTimeServer(System.String)" />.</para>
             </summary>
             <param name="dateTime">New controller date and time (UTC)</param>
             <exception cref="T:UnderAutomation.ABB.Rws.RwsException">Thrown when the request fails, for example on a virtual controller</exception>
@@ -7468,11 +7204,11 @@
             <param name="serverIp">Optional IP of a specific time server to query. Requires a connection established with version 2, leave null to get the default time server.</param>
             <returns>Time server information, or null when no time server is configured</returns>
             <remarks>
-            <paramref name="serverIp"/> requires a connection established with version 2. On a version 1 connection the
-            controller can only report its default time server, so an <see cref="T:UnderAutomation.ABB.Rws.RwsException"/> is thrown instead of
+            <paramref name="serverIp" /> requires a connection established with version 2. On a version 1 connection the
+            controller can only report its default time server, so an <see cref="T:UnderAutomation.ABB.Rws.RwsException" /> is thrown instead of
             silently returning a different server than the one requested.
             </remarks>
-            <exception cref="T:UnderAutomation.ABB.Rws.RwsException">Thrown when the request fails, or when <paramref name="serverIp"/> is used on an RWS v1 controller</exception>
+            <exception cref="T:UnderAutomation.ABB.Rws.RwsException">Thrown when the request fails, or when <paramref name="serverIp" /> is used on an RWS v1 controller</exception>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Services.ControllerService.SetTimeServer(System.String)">
             <summary>
@@ -7497,7 +7233,7 @@
             <param name="name">New name of the controller, null to leave it unchanged</param>
             <param name="id">New controller id, null to leave it unchanged</param>
             <remarks>
-            <paramref name="id"/> is only supported on a connection established with version 1. It is sent as provided,
+            <paramref name="id" /> is only supported on a connection established with version 1. It is sent as provided,
             a controller connected with version 2 may reject or ignore it.
             </remarks>
             <exception cref="T:UnderAutomation.ABB.Rws.RwsException">Thrown when the request fails</exception>
@@ -7524,9 +7260,9 @@
             <para>Not supported by a virtual controller.</para>
             </summary>
             <param name="method">IP configuration method</param>
-            <param name="address">IP address, required when <paramref name="method"/> is <see cref="F:UnderAutomation.ABB.Rws.Data.NetworkConfigurationMethod.FixIp"/></param>
-            <param name="mask">Subnet mask, required when <paramref name="method"/> is <see cref="F:UnderAutomation.ABB.Rws.Data.NetworkConfigurationMethod.FixIp"/></param>
-            <param name="gateway">Default gateway, applicable when <paramref name="method"/> is <see cref="F:UnderAutomation.ABB.Rws.Data.NetworkConfigurationMethod.FixIp"/></param>
+            <param name="address">IP address, required when <paramref name="method" /> is <see cref="F:UnderAutomation.ABB.Rws.Data.NetworkConfigurationMethod.FixIp" /></param>
+            <param name="mask">Subnet mask, required when <paramref name="method" /> is <see cref="F:UnderAutomation.ABB.Rws.Data.NetworkConfigurationMethod.FixIp" /></param>
+            <param name="gateway">Default gateway, applicable when <paramref name="method" /> is <see cref="F:UnderAutomation.ABB.Rws.Data.NetworkConfigurationMethod.FixIp" /></param>
             <exception cref="T:UnderAutomation.ABB.Rws.RwsException">Thrown when the request fails</exception>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Services.ControllerService.Restart(UnderAutomation.ABB.Rws.Data.ControllerRestartMode,System.Boolean)">
@@ -7578,16 +7314,12 @@
             </summary>
             <param name="backupPath">Path of the backup folder on the controller file system. Environment variables are allowed, written either "$temp/mybackup" or "~temp/mybackup", with or without the "/fileservice" prefix.</param>
             <returns>Name, versions and options of the backed up system</returns>
-            <remarks>
-            RWS v1 reads the backup information with a path relative to the file service ("~temp/mybackup") while RWS v2
-            expects the full file service path ("/fileservice/~temp/mybackup"), both are built from the same argument.
-            </remarks>
             <exception cref="T:UnderAutomation.ABB.Rws.RwsException">Thrown when the request fails</exception>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Services.ControllerService.GetBackupState">
             <summary>
             Gets the state of the backup operation of the controller (synchronous)
-            <para>Used to follow a backup started with <see cref="M:UnderAutomation.ABB.Rws.Services.ControllerService.CreateBackup(System.String,System.Boolean)"/>.</para>
+            <para>Used to follow a backup started with <see cref="M:UnderAutomation.ABB.Rws.Services.ControllerService.CreateBackup(System.String,System.Boolean)" />.</para>
             </summary>
             <returns>Current backup state</returns>
             <exception cref="T:UnderAutomation.ABB.Rws.RwsException">Thrown when the request fails</exception>
@@ -7596,7 +7328,7 @@
             <summary>
             Creates a backup of the current system on the controller file system (synchronous)
             <para>The backup is created asynchronously by the controller: this method returns as soon as the request is accepted.
-            Poll <see cref="M:UnderAutomation.ABB.Rws.Services.ControllerService.GetBackupState"/> to know when the backup is finished.</para>
+            Poll <see cref="M:UnderAutomation.ABB.Rws.Services.ControllerService.GetBackupState" /> to know when the backup is finished.</para>
             <para>Requires the UAS grant UAS_BACKUP. Creating a backup may affect RAPID execution and can cause system stops.</para>
             </summary>
             <param name="backupPath">
@@ -7606,8 +7338,7 @@
             </param>
             <param name="archive">When true, the backup is stored as an archive</param>
             <remarks>
-            The controller only accepts a file service path whose environment variables use the tilde form ("/fileservice/~temp/mybackup"),
-            the path given here is converted to that form. A destination that already exists is refused with a CONFLICT status.
+            A destination that already exists is refused with a CONFLICT status.
             </remarks>
             <exception cref="T:UnderAutomation.ABB.Rws.RwsException">Thrown when the request fails</exception>
         </member>
@@ -7615,7 +7346,7 @@
             <summary>
             Restores a backup stored on the controller file system (synchronous)
             <para>When the backup can be restored, the controller restarts.</para>
-            <para>Requires the UAS grant to restore a backup. Use <see cref="M:UnderAutomation.ABB.Rws.Services.ControllerService.CheckRestore(System.String,UnderAutomation.ABB.Rws.Data.BackupRestoreIgnore,System.Boolean,System.Boolean,UnderAutomation.ABB.Rws.Data.BackupRestoreInclude)"/> first to detect mismatches.</para>
+            <para>Requires the UAS grant to restore a backup. Use <see cref="M:UnderAutomation.ABB.Rws.Services.ControllerService.CheckRestore(System.String,UnderAutomation.ABB.Rws.Data.BackupRestoreIgnore,System.Boolean,System.Boolean,UnderAutomation.ABB.Rws.Data.BackupRestoreInclude)" /> first to detect mismatches.</para>
             </summary>
             <param name="backupPath">Path of the backup folder on the controller file system. Environment variables are allowed, written either "$temp/mybackup" or "~temp/mybackup", with or without the "/fileservice" prefix.</param>
             <param name="ignore">Mismatches between the backup and the current system that are ignored</param>
@@ -7660,7 +7391,7 @@
             Sets the safety mode of the controller (synchronous)
             <para>The controller must be in manual mode.</para>
             </summary>
-            <param name="mode">New safety mode, one of <see cref="F:UnderAutomation.ABB.Rws.Data.SafetyMode.Active"/>, <see cref="F:UnderAutomation.ABB.Rws.Data.SafetyMode.Commissioning"/> or <see cref="F:UnderAutomation.ABB.Rws.Data.SafetyMode.Service"/></param>
+            <param name="mode">New safety mode, one of <see cref="F:UnderAutomation.ABB.Rws.Data.SafetyMode.Active" />, <see cref="F:UnderAutomation.ABB.Rws.Data.SafetyMode.Commissioning" /> or <see cref="F:UnderAutomation.ABB.Rws.Data.SafetyMode.Service" /></param>
             <exception cref="T:System.ArgumentException">Thrown when the safety mode cannot be set by a client</exception>
             <exception cref="T:UnderAutomation.ABB.Rws.RwsException">Thrown when the request fails</exception>
         </member>
@@ -7675,7 +7406,7 @@
             <summary>
             Loads a safety configuration file into the controller (synchronous)
             <para>The configuration file must already exist on the controller file system.</para>
-            <para>Use <see cref="M:UnderAutomation.ABB.Rws.Services.ControllerService.GetSafetyLoadOperationStatus"/> to check whether loading is currently allowed.</para>
+            <para>Use <see cref="M:UnderAutomation.ABB.Rws.Services.ControllerService.GetSafetyLoadOperationStatus" /> to check whether loading is currently allowed.</para>
             </summary>
             <param name="filePath">Path of the safety configuration file on the controller (e.g. "$home/file.xml")</param>
             <exception cref="T:UnderAutomation.ABB.Rws.RwsException">Thrown when the request fails</exception>
@@ -7692,7 +7423,7 @@
             Checks whether a new safety configuration is allowed to be loaded (synchronous)
             <para>The user must have the safety services privileges.</para>
             </summary>
-            <returns><see cref="F:UnderAutomation.ABB.Rws.Data.SafetyLoadOperationStatus.Ok"/> when a configuration can be loaded, the blocking reason otherwise</returns>
+            <returns><see cref="F:UnderAutomation.ABB.Rws.Data.SafetyLoadOperationStatus.Ok" /> when a configuration can be loaded, the blocking reason otherwise</returns>
             <exception cref="T:UnderAutomation.ABB.Rws.RwsException">Thrown when the request fails</exception>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Services.ControllerService.GetCyclicBrakeCheckStatus(System.Int32)">
@@ -7785,28 +7516,6 @@
             </summary>
             <exception cref="T:UnderAutomation.ABB.Rws.RwsException">Thrown when the request fails</exception>
         </member>
-        <member name="M:UnderAutomation.ABB.Rws.Services.ControllerService.SafetyGet(System.String)">
-            <summary>
-            Reads a safety resource, translating a refused request into an explicit error
-            </summary>
-        </member>
-        <member name="M:UnderAutomation.ABB.Rws.Services.ControllerService.SafetyPost(System.String,System.Collections.Generic.Dictionary{System.String,System.String})">
-            <summary>
-            Writes a safety resource, translating a refused request into an explicit error
-            </summary>
-        </member>
-        <member name="M:UnderAutomation.ABB.Rws.Services.ControllerService.IsSafetyAccessDenied(UnderAutomation.ABB.Rws.RwsException)">
-            <summary>
-            The controller answers FORBIDDEN on the safety resources when the safety option is missing,
-            or when the connected user does not have the safety grants
-            </summary>
-        </member>
-        <member name="M:UnderAutomation.ABB.Rws.Services.ControllerService.SafetyAccessDenied(UnderAutomation.ABB.Rws.RwsException)">
-            <summary>
-            Builds the error thrown when the controller refuses a safety request, the raw status gives no clue
-            about what is missing
-            </summary>
-        </member>
         <member name="T:UnderAutomation.ABB.Rws.Services.ElogService">
             <summary>
             Event Log Service - Provides access to the messages the controller logs: the list of the log domains,
@@ -7827,11 +7536,11 @@
             <summary>
             Gets the number of messages one event log domain holds and the number it can hold (synchronous)
             </summary>
-            <param name="domain">Number of the domain, as reported by <see cref="M:UnderAutomation.ABB.Rws.Services.ElogService.GetDomains(System.String)"/></param>
+            <param name="domain">Number of the domain, as reported by <see cref="M:UnderAutomation.ABB.Rws.Services.ElogService.GetDomains(System.String)" /></param>
             <returns>The domain, without its name</returns>
             <exception cref="T:UnderAutomation.ABB.Rws.RwsException">Thrown when the request fails, when the domain does not exist or when the response cannot be parsed</exception>
             <remarks>
-            The controller does not report the name of the domain here. Read it from <see cref="M:UnderAutomation.ABB.Rws.Services.ElogService.GetDomains(System.String)"/>,
+            The controller does not report the name of the domain here. Read it from <see cref="M:UnderAutomation.ABB.Rws.Services.ElogService.GetDomains(System.String)" />,
             which returns the name of every domain at once.
             </remarks>
         </member>
@@ -7839,34 +7548,34 @@
             <summary>
             Gets the messages held by one event log domain (synchronous)
             </summary>
-            <param name="domain">Number of the domain, as reported by <see cref="M:UnderAutomation.ABB.Rws.Services.ElogService.GetDomains(System.String)"/></param>
+            <param name="domain">Number of the domain, as reported by <see cref="M:UnderAutomation.ABB.Rws.Services.ElogService.GetDomains(System.String)" /></param>
             <param name="order">Order the messages are returned in, most recent first by default</param>
             <param name="language">Two letter code of the language the message texts are wanted in, for example "en"
             or "de". Leave null to read only the code, the severity and the timestamp of each message.</param>
             <param name="maxCount">Largest number of messages to return, null to return every message of the domain</param>
             <returns>Messages of the domain, empty when the domain holds none</returns>
-            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when <paramref name="maxCount"/> is not strictly positive</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when <paramref name="maxCount" /> is not strictly positive</exception>
             <exception cref="T:UnderAutomation.ABB.Rws.RwsException">Thrown when the request fails, when the domain does not exist or when the response cannot be parsed</exception>
             <remarks>
             A domain can hold more messages than the controller returns at once: they are read page by page and
             gathered into a single result, so a domain holding hundreds of messages costs several requests.
-            Pass <paramref name="maxCount"/> to stop early, which is what reading only the latest events needs.
+            Pass <paramref name="maxCount" /> to stop early, which is what reading only the latest events needs.
             </remarks>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Services.ElogService.GetMessageTitles(System.Int32,System.String,UnderAutomation.ABB.Rws.Data.ElogMessageOrder,System.Nullable{System.Int32})">
             <summary>
             Gets the messages held by one event log domain, with their short text only (synchronous)
             </summary>
-            <param name="domain">Number of the domain, as reported by <see cref="M:UnderAutomation.ABB.Rws.Services.ElogService.GetDomains(System.String)"/></param>
+            <param name="domain">Number of the domain, as reported by <see cref="M:UnderAutomation.ABB.Rws.Services.ElogService.GetDomains(System.String)" /></param>
             <param name="language">Two letter code of the language the titles are wanted in, for example "en" or "de". Required.</param>
             <param name="order">Order the messages are returned in, most recent first by default</param>
             <param name="maxCount">Largest number of messages to return, null to return every message of the domain</param>
             <returns>Messages of the domain, carrying their severity, code, timestamp and title only</returns>
             <exception cref="T:System.ArgumentNullException">Thrown when no language is given</exception>
-            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when <paramref name="maxCount"/> is not strictly positive</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when <paramref name="maxCount" /> is not strictly positive</exception>
             <exception cref="T:UnderAutomation.ABB.Rws.RwsException">Thrown when the request fails, when the domain does not exist or when the response cannot be parsed</exception>
             <remarks>
-            This is the cheap form of <see cref="M:UnderAutomation.ABB.Rws.Services.ElogService.GetMessages(System.Int32,UnderAutomation.ABB.Rws.Data.ElogMessageOrder,System.String,System.Nullable{System.Int32})"/>: the controller
+            This is the cheap form of <see cref="M:UnderAutomation.ABB.Rws.Services.ElogService.GetMessages(System.Int32,UnderAutomation.ABB.Rws.Data.ElogMessageOrder,System.String,System.Nullable{System.Int32})" />: the controller
             leaves out the long texts and the arguments, which makes a large domain much faster to read when only a
             one line summary of each event is wanted.
             </remarks>
@@ -7875,7 +7584,7 @@
             <summary>
             Gets one message of an event log domain (synchronous)
             </summary>
-            <param name="domain">Number of the domain, as reported by <see cref="M:UnderAutomation.ABB.Rws.Services.ElogService.GetDomains(System.String)"/></param>
+            <param name="domain">Number of the domain, as reported by <see cref="M:UnderAutomation.ABB.Rws.Services.ElogService.GetDomains(System.String)" /></param>
             <param name="sequenceNumber">Number identifying the message inside its domain</param>
             <param name="language">Two letter code of the language the message texts are wanted in, for example "en"
             or "de". Leave null to read only the code, the severity and the timestamp.</param>
@@ -7883,7 +7592,7 @@
             <exception cref="T:UnderAutomation.ABB.Rws.RwsException">Thrown when the request fails, when the domain does not exist or when the response cannot be parsed</exception>
             <remarks>
             A sequence number larger than the most recent one does not fail: the controller answers with its most
-            recent message instead. Compare <see cref="P:UnderAutomation.ABB.Rws.Data.ElogMessage.SequenceNumber"/> with what was asked for when
+            recent message instead. Compare <see cref="P:UnderAutomation.ABB.Rws.Data.ElogMessage.SequenceNumber" /> with what was asked for when
             that matters.
             </remarks>
         </member>
@@ -7899,15 +7608,15 @@
             request fails or when the response cannot be parsed</exception>
             <remarks>
             Only a connection established with version 2 exposes this. On a version 1 connection an explicit
-            <see cref="T:UnderAutomation.ABB.Rws.RwsException"/> is thrown, because the message can only be read there by naming its domain
-            with <see cref="M:UnderAutomation.ABB.Rws.Services.ElogService.GetMessage(System.Int32,System.Int32,System.String)"/>.
+            <see cref="T:UnderAutomation.ABB.Rws.RwsException" /> is thrown, because the message can only be read there by naming its domain
+            with <see cref="M:UnderAutomation.ABB.Rws.Services.ElogService.GetMessage(System.Int32,System.Int32,System.String)" />.
             </remarks>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Services.ElogService.ClearMessages(System.Int32)">
             <summary>
             Deletes every message of one event log domain (synchronous)
             </summary>
-            <param name="domain">Number of the domain, as reported by <see cref="M:UnderAutomation.ABB.Rws.Services.ElogService.GetDomains(System.String)"/></param>
+            <param name="domain">Number of the domain, as reported by <see cref="M:UnderAutomation.ABB.Rws.Services.ElogService.GetDomains(System.String)" /></param>
             <exception cref="T:UnderAutomation.ABB.Rws.RwsException">Thrown when the request fails or when the domain does not exist</exception>
             <remarks>
             The messages are gone for good: the controller keeps no copy of what it cleared.
@@ -7950,7 +7659,7 @@
             <summary>
             Lists contents of a directory resource (synchronous)
             <para>Environment variables (e.g. $home, $temp) and devices are treated as directories.</para>
-            <para>When listing the root path ("/", null, or "\\"), the response includes available devices in <see cref="P:UnderAutomation.ABB.Rws.Data.DirectoryListing.Devices"/>.</para>
+            <para>When listing the root path ("/", null, or "\\"), the response includes available devices in <see cref="P:UnderAutomation.ABB.Rws.Data.DirectoryListing.Devices" />.</para>
             <para>The complete content is always returned, however many entries the directory holds.</para>
             </summary>
             <param name="path">Path to the directory (e.g. "$home", "$home/mydir", "hd0a:/data"), or null/"/"/"\\" for root</param>
@@ -8118,8 +7827,8 @@
             <summary>
             Searches the I/O networks matching a name and/or a physical state (synchronous)
             </summary>
-            <param name="name">Name of the searched networks, for example "Local". Optional when <paramref name="physicalState"/> is given.</param>
-            <param name="physicalState">Physical state of the searched networks, for example <see cref="F:UnderAutomation.ABB.Rws.Data.IoNetworkPhysicalState.Running"/>. Optional when <paramref name="name"/> is given.</param>
+            <param name="name">Name of the searched networks, for example "Local". Optional when <paramref name="physicalState" /> is given.</param>
+            <param name="physicalState">Physical state of the searched networks, for example <see cref="F:UnderAutomation.ABB.Rws.Data.IoNetworkPhysicalState.Running" />. Optional when <paramref name="name" /> is given.</param>
             <returns>I/O networks matching the criteria</returns>
             <exception cref="T:System.ArgumentException">Thrown when neither a name nor a physical state is given</exception>
             <exception cref="T:UnderAutomation.ABB.Rws.RwsException">Thrown when the request fails or the response cannot be parsed</exception>
@@ -8141,11 +7850,11 @@
             </summary>
             <param name="network">Name of the network, for example "Local"</param>
             <param name="configurationType">Part of the network to configure</param>
-            <returns>Action the client is expected to take, <see cref="F:UnderAutomation.ABB.Rws.Data.IoClientAction.Unknown"/> when the controller did not report one</returns>
+            <returns>Action the client is expected to take, <see cref="F:UnderAutomation.ABB.Rws.Data.IoClientAction.Unknown" /> when the controller did not report one</returns>
             <exception cref="T:UnderAutomation.ABB.Rws.RwsException">Thrown when the request fails</exception>
             <remarks>
             A client action is only reported on a connection established with version 2:
-            <see cref="F:UnderAutomation.ABB.Rws.Data.IoClientAction.Unknown"/> is always returned on a version 1 connection.
+            <see cref="F:UnderAutomation.ABB.Rws.Data.IoClientAction.Unknown" /> is always returned on a version 1 connection.
             </remarks>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Services.IoService.SetNetworkState(System.String,UnderAutomation.ABB.Rws.Data.IoNetworkLogicalState)">
@@ -8153,7 +7862,7 @@
             Starts or stops an I/O network (synchronous)
             </summary>
             <param name="network">Name of the network, for example "Local"</param>
-            <param name="logicalState">New logical state of the network, <see cref="F:UnderAutomation.ABB.Rws.Data.IoNetworkLogicalState.Started"/> or <see cref="F:UnderAutomation.ABB.Rws.Data.IoNetworkLogicalState.Stopped"/></param>
+            <param name="logicalState">New logical state of the network, <see cref="F:UnderAutomation.ABB.Rws.Data.IoNetworkLogicalState.Started" /> or <see cref="F:UnderAutomation.ABB.Rws.Data.IoNetworkLogicalState.Stopped" /></param>
             <exception cref="T:System.ArgumentException">Thrown when the requested state cannot be set</exception>
             <exception cref="T:UnderAutomation.ABB.Rws.RwsException">Thrown when the request fails</exception>
         </member>
@@ -8177,8 +7886,8 @@
             <summary>
             Searches the I/O devices matching a name and/or a logical state (synchronous)
             </summary>
-            <param name="name">Name of the searched devices, for example "DRV_1". Optional when <paramref name="logicalState"/> is given.</param>
-            <param name="logicalState">Logical state of the searched devices. Optional when <paramref name="name"/> is given.</param>
+            <param name="name">Name of the searched devices, for example "DRV_1". Optional when <paramref name="logicalState" /> is given.</param>
+            <param name="logicalState">Logical state of the searched devices. Optional when <paramref name="name" /> is given.</param>
             <param name="network">Name of the network the searched devices are connected to, for example "DeviceNet". Optional.</param>
             <returns>I/O devices matching the criteria</returns>
             <exception cref="T:System.ArgumentException">Thrown when neither a name nor a logical state is given</exception>
@@ -8212,7 +7921,7 @@
             </summary>
             <param name="network">Name of the network the device is connected to, for example "Local"</param>
             <param name="device">Name of the device, for example "DRV_1"</param>
-            <param name="logicalState">New logical state of the device, <see cref="F:UnderAutomation.ABB.Rws.Data.IoDeviceLogicalState.Enabled"/> or <see cref="F:UnderAutomation.ABB.Rws.Data.IoDeviceLogicalState.Disabled"/></param>
+            <param name="logicalState">New logical state of the device, <see cref="F:UnderAutomation.ABB.Rws.Data.IoDeviceLogicalState.Enabled" /> or <see cref="F:UnderAutomation.ABB.Rws.Data.IoDeviceLogicalState.Disabled" /></param>
             <exception cref="T:System.ArgumentException">Thrown when the requested state cannot be set</exception>
             <exception cref="T:UnderAutomation.ABB.Rws.RwsException">Thrown when the request fails</exception>
         </member>
@@ -8249,18 +7958,18 @@
             <param name="device">Name of the device, for example "Local_IO"</param>
             <param name="commandName">Name of the device command, for example "FIRMWARE_INFO"</param>
             <param name="value">Value of the command, an empty string when the command takes none</param>
-            <param name="valueLength">Number of bytes of <paramref name="value"/></param>
+            <param name="valueLength">Number of bytes of <paramref name="value" /></param>
             <param name="timeout">Maximum time in milliseconds to wait for the answer of the device</param>
             <exception cref="T:UnderAutomation.ABB.Rws.RwsException">Thrown when the request fails</exception>
             <remarks>
-            <paramref name="valueLength"/> is only used on a connection established with version 1. On a version 2
-            connection the controller derives the length from <paramref name="value"/> itself and the argument is ignored.
+            <paramref name="valueLength" /> is only used on a connection established with version 1. On a version 2
+            connection the controller derives the length from <paramref name="value" /> itself and the argument is ignored.
             </remarks>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Services.IoService.GetSignals">
             <summary>
             Gets every I/O signal defined in the controller (synchronous)
-            <para>A controller usually exposes several hundreds of signals. Use <see cref="M:UnderAutomation.ABB.Rws.Services.IoService.SearchSignals(UnderAutomation.ABB.Rws.Data.IoSignalSearchCriteria,UnderAutomation.ABB.Rws.Data.IoSignalSearchCriteria,System.Nullable{System.Int32},System.Nullable{System.Int32})"/> to
+            <para>A controller usually exposes several hundreds of signals. Use <see cref="M:UnderAutomation.ABB.Rws.Services.IoService.SearchSignals(UnderAutomation.ABB.Rws.Data.IoSignalSearchCriteria,UnderAutomation.ABB.Rws.Data.IoSignalSearchCriteria,System.Nullable{System.Int32},System.Nullable{System.Int32})" /> to
             narrow the result down to a network, a device, a category or a signal type.</para>
             </summary>
             <returns>I/O signals of every device</returns>
@@ -8325,7 +8034,7 @@
             <param name="logToEventLog">Whether the change is written to the event log of the controller</param>
             <exception cref="T:UnderAutomation.ABB.Rws.RwsException">Thrown when the request fails, for example when the signal cannot be inverted</exception>
             <remarks>
-            The controller rejects a write that carries no value, whatever the mode, so <paramref name="value"/>
+            The controller rejects a write that carries no value, whatever the mode, so <paramref name="value" />
             has to be supplied even though inverting does not use it on its own.
             </remarks>
         </member>
@@ -8344,7 +8053,7 @@
             <param name="logToEventLog">Whether the change is written to the event log of the controller</param>
             <exception cref="T:UnderAutomation.ABB.Rws.RwsException">Thrown when the request fails, for example when the signal cannot be pulsed</exception>
             <remarks>
-            The controller rejects a write that carries no value, whatever the mode, so <paramref name="value"/>
+            The controller rejects a write that carries no value, whatever the mode, so <paramref name="value" />
             has to be supplied even though pulsing does not use it on its own.
             </remarks>
         </member>
@@ -8363,7 +8072,7 @@
             <param name="logToEventLog">Whether the change is written to the event log of the controller</param>
             <exception cref="T:UnderAutomation.ABB.Rws.RwsException">Thrown when the request fails, for example when the signal cannot be toggled</exception>
             <remarks>
-            The controller rejects a write that carries no value, whatever the mode, so <paramref name="value"/>
+            The controller rejects a write that carries no value, whatever the mode, so <paramref name="value" />
             has to be supplied even though toggling does not use it on its own.
             </remarks>
         </member>
@@ -8382,7 +8091,7 @@
             <summary>
             Searches the I/O signals matching the given criteria (synchronous)
             <para>The returned signals carry their name, type, category, logical value and logical state.
-            Use <see cref="M:UnderAutomation.ABB.Rws.Services.IoService.SearchSignalsExtended(UnderAutomation.ABB.Rws.Data.IoSignalSearchCriteria,UnderAutomation.ABB.Rws.Data.IoSignalSearchCriteria,System.Nullable{System.Int32},System.Nullable{System.Int32})"/> to also get their physical value, time stamps and write access level.</para>
+            Use <see cref="M:UnderAutomation.ABB.Rws.Services.IoService.SearchSignalsExtended(UnderAutomation.ABB.Rws.Data.IoSignalSearchCriteria,UnderAutomation.ABB.Rws.Data.IoSignalSearchCriteria,System.Nullable{System.Int32},System.Nullable{System.Int32})" /> to also get their physical value, time stamps and write access level.</para>
             </summary>
             <param name="criteria">Search criteria, null to match every signal</param>
             <param name="secondCriteria">Optional second criteria, a signal is returned only when it matches both</param>
@@ -8394,7 +8103,7 @@
         <member name="M:UnderAutomation.ABB.Rws.Services.IoService.SearchSignalsExtended(UnderAutomation.ABB.Rws.Data.IoSignalSearchCriteria,UnderAutomation.ABB.Rws.Data.IoSignalSearchCriteria,System.Nullable{System.Int32},System.Nullable{System.Int32})">
             <summary>
             Searches the I/O signals matching the given criteria and returns their extended properties (synchronous)
-            <para>In addition to <see cref="M:UnderAutomation.ABB.Rws.Services.IoService.SearchSignals(UnderAutomation.ABB.Rws.Data.IoSignalSearchCriteria,UnderAutomation.ABB.Rws.Data.IoSignalSearchCriteria,System.Nullable{System.Int32},System.Nullable{System.Int32})"/>, the returned signals carry their physical value,
+            <para>In addition to <see cref="M:UnderAutomation.ABB.Rws.Services.IoService.SearchSignals(UnderAutomation.ABB.Rws.Data.IoSignalSearchCriteria,UnderAutomation.ABB.Rws.Data.IoSignalSearchCriteria,System.Nullable{System.Int32},System.Nullable{System.Int32})" />, the returned signals carry their physical value,
             quality, time stamps and write access level.</para>
             </summary>
             <param name="criteria">Search criteria, null to match every signal</param>
@@ -8414,9 +8123,9 @@
             <summary>
             Mastership Service - Takes and gives back the exclusive right to change a domain of the controller.
             <para>Most write operations are refused unless the client holds the mastership of the domain they belong
-            to: moving a mechanical unit needs <see cref="F:UnderAutomation.ABB.Rws.Data.MastershipDomain.Motion"/>, changing the system parameters
-            or the RAPID programs needs <see cref="F:UnderAutomation.ABB.Rws.Data.MastershipDomain.Edit"/>.</para>
-            <para>Only one client holds a domain at a time, and it keeps it until <see cref="M:UnderAutomation.ABB.Rws.Services.MastershipService.Release"/> is called or
+            to: moving a mechanical unit needs <see cref="F:UnderAutomation.ABB.Rws.Data.MastershipDomain.Motion" />, changing the system parameters
+            or the RAPID programs needs <see cref="F:UnderAutomation.ABB.Rws.Data.MastershipDomain.Edit" />.</para>
+            <para>Only one client holds a domain at a time, and it keeps it until <see cref="M:UnderAutomation.ABB.Rws.Services.MastershipService.Release" /> is called or
             the connection ends. Take it as late and give it back as early as possible: while it is held, the operator
             of the robot cannot change the same domain from the teach pendant.</para>
             <para>Mastership belongs to the connection that took it, so every call made through the same client is the
@@ -8428,7 +8137,7 @@
             Gets the domains the connected controller can give the mastership of (synchronous)
             </summary>
             <returns>Domains the controller exposes, which are not the same on a connection established with
-            version 1 and on one established with version 2. <see cref="F:UnderAutomation.ABB.Rws.Data.MastershipDomain.Edit"/> can be asked for
+            version 1 and on one established with version 2. <see cref="F:UnderAutomation.ABB.Rws.Data.MastershipDomain.Edit" /> can be asked for
             on either, even when it is not listed here: it then stands for the domains covering the same
             ground.</returns>
             <exception cref="T:UnderAutomation.ABB.Rws.RwsException">Thrown when the request fails or the response cannot be parsed</exception>
@@ -8445,7 +8154,7 @@
             Gets who holds the mastership of one domain (synchronous)
             </summary>
             <param name="domain">Domain to read the state of</param>
-            <returns>State of the domain, with <see cref="P:UnderAutomation.ABB.Rws.Data.MastershipInfo.HeldByMe"/> telling whether this
+            <returns>State of the domain, with <see cref="P:UnderAutomation.ABB.Rws.Data.MastershipInfo.HeldByMe" /> telling whether this
             connection is allowed to write in it</returns>
             <remarks>A domain the connected controller splits in several of its own is reported as held only when
             every part of it is held, and the holder returned is the one of the first part somebody holds.</remarks>
@@ -8529,7 +8238,7 @@
             Gets the serial measurement board data of a mechanical unit, as held by the controller cabinet and by
             the robot itself (synchronous)
             <para>The two copies are meant to agree. When they do not, one of them is written over the other with
-            <see cref="M:UnderAutomation.ABB.Rws.Services.MotionSystemService.SetSmbData(System.String,UnderAutomation.ABB.Rws.Data.SmbDataTransfer)"/>.</para>
+            <see cref="M:UnderAutomation.ABB.Rws.Services.MotionSystemService.SetSmbData(System.String,UnderAutomation.ABB.Rws.Data.SmbDataTransfer)" />.</para>
             </summary>
             <param name="mechanicalUnit">Name of the mechanical unit, for example "ROB_1"</param>
             <returns>Both copies of the measurement board data</returns>
@@ -8546,7 +8255,7 @@
             <exception cref="T:UnderAutomation.ABB.Rws.RwsException">Thrown when the request fails. The controller has to be in manual mode
             and the client has to be its local client.</exception>
             <remarks>
-            The overwritten copy is gone: read both with <see cref="M:UnderAutomation.ABB.Rws.Services.MotionSystemService.GetSmbData(System.String)"/> first and make sure the one you
+            The overwritten copy is gone: read both with <see cref="M:UnderAutomation.ABB.Rws.Services.MotionSystemService.GetSmbData(System.String)" /> first and make sure the one you
             keep is the good one.
             </remarks>
         </member>
@@ -8574,7 +8283,7 @@
         <member name="M:UnderAutomation.ABB.Rws.Services.MotionSystemService.HasChanged(System.Int32)">
             <summary>
             Tells whether the motion system changed since it reported the given change count (synchronous)
-            <para>Reading <see cref="P:UnderAutomation.ABB.Rws.Data.MotionSystemInfo.ChangeCount"/> once and asking this afterwards is cheaper
+            <para>Reading <see cref="P:UnderAutomation.ABB.Rws.Data.MotionSystemInfo.ChangeCount" /> once and asking this afterwards is cheaper
             than fetching the whole state again to find out that nothing moved.</para>
             </summary>
             <param name="changeCount">Change count a previous reading reported</param>
@@ -8631,13 +8340,13 @@
         <member name="M:UnderAutomation.ABB.Rws.Services.MotionSystemService.Jog(UnderAutomation.ABB.Common.RobotJoints,System.Int32,UnderAutomation.ABB.Rws.Data.JogIncrementMode)">
             <summary>
             Moves the mechanical unit currently selected for jogging (synchronous)
-            <para>The unit is the one <see cref="M:UnderAutomation.ABB.Rws.Services.MotionSystemService.SetJoggingMechanicalUnit(System.String)"/> chose, and how the six values are
+            <para>The unit is the one <see cref="M:UnderAutomation.ABB.Rws.Services.MotionSystemService.SetJoggingMechanicalUnit(System.String)" /> chose, and how the six values are
             interpreted depends on its jog mode: axis by axis, along the axes of a coordinate system, and so on.</para>
             </summary>
             <param name="axes">Value requested for each of the six axes</param>
             <param name="changeCount">Change count of the last reading of the motion system, which the controller
             uses to reject a command based on a state that has moved on since</param>
-            <param name="incrementMode">Size of the step to move by, <see cref="F:UnderAutomation.ABB.Rws.Data.JogIncrementMode.None"/> to move
+            <param name="incrementMode">Size of the step to move by, <see cref="F:UnderAutomation.ABB.Rws.Data.JogIncrementMode.None" /> to move
             continuously for as long as the command is repeated</param>
             <exception cref="T:System.ArgumentNullException">Thrown when the axis values are null</exception>
             <exception cref="T:UnderAutomation.ABB.Rws.RwsException">Thrown when the request fails, in particular when the client is not the
@@ -8680,8 +8389,8 @@
             the tool frame or the joint values are null</exception>
             <exception cref="T:UnderAutomation.ABB.Rws.RwsException">Thrown when the request fails or the response cannot be parsed</exception>
             <remarks>
-            This resource works in metres and radians, unlike <see cref="M:UnderAutomation.ABB.Rws.Services.MotionSystemService.GetRobTarget(System.String,UnderAutomation.ABB.Rws.Data.CoordinateSystem,System.String,System.String)"/> and
-            <see cref="M:UnderAutomation.ABB.Rws.Services.MotionSystemService.GetJointTarget(System.String,System.Boolean)"/>, which the controller answers in millimetres and degrees.
+            This resource works in metres and radians, unlike <see cref="M:UnderAutomation.ABB.Rws.Services.MotionSystemService.GetRobTarget(System.String,UnderAutomation.ABB.Rws.Data.CoordinateSystem,System.String,System.String)" /> and
+            <see cref="M:UnderAutomation.ABB.Rws.Services.MotionSystemService.GetJointTarget(System.String,System.Boolean)" />, which the controller answers in millimetres and degrees.
             </remarks>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Services.MotionSystemService.GetJointsFromCartesian(System.String,UnderAutomation.ABB.Common.Pose,UnderAutomation.ABB.Common.ExternalJoints,UnderAutomation.ABB.Common.Pose,UnderAutomation.ABB.Common.JointTarget,UnderAutomation.ABB.Common.RobotConfiguration,System.Boolean,System.Boolean)">
@@ -8705,9 +8414,9 @@
             <exception cref="T:UnderAutomation.ABB.Rws.RwsException">Thrown when the request fails, in particular when the pose cannot be
             reached, or when the response cannot be parsed</exception>
             <remarks>
-            This resource works in metres and radians, unlike <see cref="M:UnderAutomation.ABB.Rws.Services.MotionSystemService.GetRobTarget(System.String,UnderAutomation.ABB.Rws.Data.CoordinateSystem,System.String,System.String)"/> and
-            <see cref="M:UnderAutomation.ABB.Rws.Services.MotionSystemService.GetJointTarget(System.String,System.Boolean)"/>, which the controller answers in millimetres and degrees.
-            <para><see cref="M:UnderAutomation.ABB.Rws.Services.MotionSystemService.GetJointsFromPose(System.String,UnderAutomation.ABB.Common.Pose,UnderAutomation.ABB.Common.ExternalJoints,UnderAutomation.ABB.Common.Pose,UnderAutomation.ABB.Common.JointTarget,UnderAutomation.ABB.Common.RobotConfiguration,System.Boolean,System.Boolean)"/> answers the same question through a different calculation of
+            This resource works in metres and radians, unlike <see cref="M:UnderAutomation.ABB.Rws.Services.MotionSystemService.GetRobTarget(System.String,UnderAutomation.ABB.Rws.Data.CoordinateSystem,System.String,System.String)" /> and
+            <see cref="M:UnderAutomation.ABB.Rws.Services.MotionSystemService.GetJointTarget(System.String,System.Boolean)" />, which the controller answers in millimetres and degrees.
+            <para><see cref="M:UnderAutomation.ABB.Rws.Services.MotionSystemService.GetJointsFromPose(System.String,UnderAutomation.ABB.Common.Pose,UnderAutomation.ABB.Common.ExternalJoints,UnderAutomation.ABB.Common.Pose,UnderAutomation.ABB.Common.JointTarget,UnderAutomation.ABB.Common.RobotConfiguration,System.Boolean,System.Boolean)" /> answers the same question through a different calculation of
             the controller, and the two do not always return the same solution.</para>
             </remarks>
         </member>
@@ -8731,9 +8440,9 @@
             <exception cref="T:UnderAutomation.ABB.Rws.RwsException">Thrown when the request fails, in particular when the pose cannot be
             reached, or when the response cannot be parsed</exception>
             <remarks>
-            This resource works in metres and radians, unlike <see cref="M:UnderAutomation.ABB.Rws.Services.MotionSystemService.GetRobTarget(System.String,UnderAutomation.ABB.Rws.Data.CoordinateSystem,System.String,System.String)"/> and
-            <see cref="M:UnderAutomation.ABB.Rws.Services.MotionSystemService.GetJointTarget(System.String,System.Boolean)"/>, which the controller answers in millimetres and degrees.
-            <para><see cref="M:UnderAutomation.ABB.Rws.Services.MotionSystemService.GetJointsFromCartesian(System.String,UnderAutomation.ABB.Common.Pose,UnderAutomation.ABB.Common.ExternalJoints,UnderAutomation.ABB.Common.Pose,UnderAutomation.ABB.Common.JointTarget,UnderAutomation.ABB.Common.RobotConfiguration,System.Boolean,System.Boolean)"/> answers the same question through a different calculation
+            This resource works in metres and radians, unlike <see cref="M:UnderAutomation.ABB.Rws.Services.MotionSystemService.GetRobTarget(System.String,UnderAutomation.ABB.Rws.Data.CoordinateSystem,System.String,System.String)" /> and
+            <see cref="M:UnderAutomation.ABB.Rws.Services.MotionSystemService.GetJointTarget(System.String,System.Boolean)" />, which the controller answers in millimetres and degrees.
+            <para><see cref="M:UnderAutomation.ABB.Rws.Services.MotionSystemService.GetJointsFromCartesian(System.String,UnderAutomation.ABB.Common.Pose,UnderAutomation.ABB.Common.ExternalJoints,UnderAutomation.ABB.Common.Pose,UnderAutomation.ABB.Common.JointTarget,UnderAutomation.ABB.Common.RobotConfiguration,System.Boolean,System.Boolean)" /> answers the same question through a different calculation
             of the controller, and the two do not always return the same solution.</para>
             </remarks>
         </member>
@@ -8757,8 +8466,8 @@
             <exception cref="T:UnderAutomation.ABB.Rws.RwsException">Thrown when the request fails, in particular when the pose cannot be
             reached, or when the response cannot be parsed</exception>
             <remarks>
-            This resource works in metres and radians, unlike <see cref="M:UnderAutomation.ABB.Rws.Services.MotionSystemService.GetRobTarget(System.String,UnderAutomation.ABB.Rws.Data.CoordinateSystem,System.String,System.String)"/> and
-            <see cref="M:UnderAutomation.ABB.Rws.Services.MotionSystemService.GetJointTarget(System.String,System.Boolean)"/>, which the controller answers in millimetres and degrees.
+            This resource works in metres and radians, unlike <see cref="M:UnderAutomation.ABB.Rws.Services.MotionSystemService.GetRobTarget(System.String,UnderAutomation.ABB.Rws.Data.CoordinateSystem,System.String,System.String)" /> and
+            <see cref="M:UnderAutomation.ABB.Rws.Services.MotionSystemService.GetJointTarget(System.String,System.Boolean)" />, which the controller answers in millimetres and degrees.
             </remarks>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Services.MotionSystemService.GetMechanicalUnits">
@@ -8797,7 +8506,7 @@
             hold mastership of the motion domain</exception>
             <remarks>
             The controller answers with a success status even when it could not honour one of the properties:
-            read the unit back with <see cref="M:UnderAutomation.ABB.Rws.Services.MotionSystemService.GetMechanicalUnit(System.String)"/> to check what it actually applied.
+            read the unit back with <see cref="M:UnderAutomation.ABB.Rws.Services.MotionSystemService.GetMechanicalUnit(System.String)" /> to check what it actually applied.
             </remarks>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Services.MotionSystemService.GetAxisCount(System.String)">
@@ -8950,8 +8659,8 @@
             <param name="tool">Name of the tool to measure from, null to use the tool active on the unit</param>
             <param name="workObject">Name of the work object to measure against, null to use the one active on the unit</param>
             <param name="logErrors">True to have the controller write an event log message when the reading fails</param>
-            <returns>Position, orientation and axis configuration of the tool. <see cref="P:UnderAutomation.ABB.Common.RobTarget.ExternalAxes"/>
-            is null: this reading does not report them, use <see cref="M:UnderAutomation.ABB.Rws.Services.MotionSystemService.GetRobTarget(System.String,UnderAutomation.ABB.Rws.Data.CoordinateSystem,System.String,System.String)"/> when they are needed.</returns>
+            <returns>Position, orientation and axis configuration of the tool. <see cref="P:UnderAutomation.ABB.Common.RobTarget.ExternalAxes" />
+            is null: this reading does not report them, use <see cref="M:UnderAutomation.ABB.Rws.Services.MotionSystemService.GetRobTarget(System.String,UnderAutomation.ABB.Rws.Data.CoordinateSystem,System.String,System.String)" /> when they are needed.</returns>
             <exception cref="T:System.ArgumentNullException">Thrown when the mechanical unit name is null or empty</exception>
             <exception cref="T:UnderAutomation.ABB.Rws.RwsException">Thrown when the request fails or the response cannot be parsed</exception>
         </member>
@@ -9080,7 +8789,7 @@
             <summary>
             Gets the state of the controller (synchronous)
             </summary>
-            <returns>State of the controller, <see cref="F:UnderAutomation.ABB.Rws.Data.ControllerState.Unknown"/> when it reports a state this library does not know</returns>
+            <returns>State of the controller, <see cref="F:UnderAutomation.ABB.Rws.Data.ControllerState.Unknown" /> when it reports a state this library does not know</returns>
             <exception cref="T:UnderAutomation.ABB.Rws.RwsException">Thrown when the request fails or the response cannot be parsed</exception>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Services.PanelService.SetControllerState(UnderAutomation.ABB.Rws.Data.ControllerState)">
@@ -9088,7 +8797,7 @@
             Turns the motors of the robot on or off (synchronous)
             </summary>
             <param name="state">
-            State to switch to, which can only be <see cref="F:UnderAutomation.ABB.Rws.Data.ControllerState.MotorsOn"/> or <see cref="F:UnderAutomation.ABB.Rws.Data.ControllerState.MotorsOff"/>.
+            State to switch to, which can only be <see cref="F:UnderAutomation.ABB.Rws.Data.ControllerState.MotorsOn" /> or <see cref="F:UnderAutomation.ABB.Rws.Data.ControllerState.MotorsOff" />.
             Every other state is reached by the controller on its own and cannot be requested.
             </param>
             <exception cref="T:System.ArgumentException">Thrown when a state other than motors on or motors off is requested</exception>
@@ -9099,7 +8808,7 @@
             <summary>
             Gets the operating mode the controller runs in (synchronous)
             </summary>
-            <returns>Operating mode, <see cref="F:UnderAutomation.ABB.Rws.Data.OperationMode.Unknown"/> when the controller reports a mode this library does not know</returns>
+            <returns>Operating mode, <see cref="F:UnderAutomation.ABB.Rws.Data.OperationMode.Unknown" /> when the controller reports a mode this library does not know</returns>
             <exception cref="T:UnderAutomation.ABB.Rws.RwsException">Thrown when the request fails or the response cannot be parsed</exception>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Services.PanelService.AcknowledgeOperationMode(UnderAutomation.ABB.Rws.Data.OperationModeAcknowledgement)">
@@ -9116,7 +8825,7 @@
             <summary>
             Gets the lock state of the operating mode selector (synchronous)
             </summary>
-            <returns>Lock state, <see cref="F:UnderAutomation.ABB.Rws.Data.OperationModeLockState.Unknown"/> when the controller reports a state this library does not know</returns>
+            <returns>Lock state, <see cref="F:UnderAutomation.ABB.Rws.Data.OperationModeLockState.Unknown" /> when the controller reports a state this library does not know</returns>
             <exception cref="T:UnderAutomation.ABB.Rws.RwsException">Thrown when the request fails or the response cannot be parsed</exception>
             <remarks>
             A controller whose mode selector cannot be locked refuses this call instead of answering that it is
@@ -9130,7 +8839,7 @@
             <param name="pin">Four digit pin code, which will be needed again to unlock the selector</param>
             <param name="permanent">
             When true, the selector is locked permanently, which requires the key-less mode selector grant.
-            When false (default), the lock can be released with <see cref="M:UnderAutomation.ABB.Rws.Services.PanelService.UnlockOperationMode(System.String)"/>.
+            When false (default), the lock can be released with <see cref="M:UnderAutomation.ABB.Rws.Services.PanelService.UnlockOperationMode(System.String)" />.
             </param>
             <exception cref="T:System.ArgumentNullException">Thrown when the pin code is null</exception>
             <exception cref="T:System.ArgumentException">Thrown when the pin code is not four digits long</exception>
@@ -9172,7 +8881,7 @@
             <summary>
             Gets the collision detection state of the controller (synchronous)
             </summary>
-            <returns>Collision detection state, <see cref="F:UnderAutomation.ABB.Rws.Data.CollisionDetectionState.Unknown"/> when the controller reports
+            <returns>Collision detection state, <see cref="F:UnderAutomation.ABB.Rws.Data.CollisionDetectionState.Unknown" /> when the controller reports
             a state this library does not know</returns>
             <exception cref="T:UnderAutomation.ABB.Rws.RwsException">Thrown when the request fails or the response cannot be parsed</exception>
         </member>
@@ -9185,7 +8894,7 @@
             <exception cref="T:UnderAutomation.ABB.Rws.RwsException">Thrown when the request fails, in particular when the language is not installed
             on the controller or when the controller is in a system failure state</exception>
             <remarks>
-            <see cref="M:UnderAutomation.ABB.Rws.Services.ControllerService.SetLanguage(System.String)"/> changes the same setting through the controller resources
+            <see cref="M:UnderAutomation.ABB.Rws.Services.ControllerService.SetLanguage(System.String)" /> changes the same setting through the controller resources
             instead of the control panel ones, and either can be used.
             </remarks>
         </member>
@@ -9194,9 +8903,9 @@
             Restarts the controller (synchronous)
             </summary>
             <param name="mode">
-            How the controller restarts. The control panel accepts <see cref="F:UnderAutomation.ABB.Rws.Data.ControllerRestartMode.Restart"/>,
-            <see cref="F:UnderAutomation.ABB.Rws.Data.ControllerRestartMode.IStart"/>, <see cref="F:UnderAutomation.ABB.Rws.Data.ControllerRestartMode.PStart"/> and
-            <see cref="F:UnderAutomation.ABB.Rws.Data.ControllerRestartMode.BStart"/>; use <see cref="M:UnderAutomation.ABB.Rws.Services.ControllerService.Restart(UnderAutomation.ABB.Rws.Data.ControllerRestartMode,System.Boolean)"/> for the others.
+            How the controller restarts. The control panel accepts <see cref="F:UnderAutomation.ABB.Rws.Data.ControllerRestartMode.Restart" />,
+            <see cref="F:UnderAutomation.ABB.Rws.Data.ControllerRestartMode.IStart" />, <see cref="F:UnderAutomation.ABB.Rws.Data.ControllerRestartMode.PStart" /> and
+            <see cref="F:UnderAutomation.ABB.Rws.Data.ControllerRestartMode.BStart" />; use <see cref="M:UnderAutomation.ABB.Rws.Services.ControllerService.Restart(UnderAutomation.ABB.Rws.Data.ControllerRestartMode,System.Boolean)" /> for the others.
             </param>
             <param name="useImplicitMastership">
             A connection established with version 2 requires mastership on all domains to restart the controller. When true
@@ -9229,7 +8938,7 @@
             <summary>
             Starts executing the RAPID program from where the program pointer stands (synchronous)
             <para>The controller has to be in automatic mode with the motors on, or in manual mode with the
-            enabling device held. Reset the program pointer first with <see cref="M:UnderAutomation.ABB.Rws.Services.RapidService.ResetProgramPointer"/> to
+            enabling device held. Reset the program pointer first with <see cref="M:UnderAutomation.ABB.Rws.Services.RapidService.ResetProgramPointer" /> to
             start from the beginning.</para>
             </summary>
             <param name="regain">What the robot does about the distance between where it stands and where the
@@ -9270,18 +8979,18 @@
             <summary>
             Sets how many times the program runs before stopping (synchronous)
             </summary>
-            <param name="cycle">Number of cycles to run; only <see cref="F:UnderAutomation.ABB.Rws.Data.RapidExecutionCycle.Once"/> and
-            <see cref="F:UnderAutomation.ABB.Rws.Data.RapidExecutionCycle.Forever"/> are accepted</param>
+            <param name="cycle">Number of cycles to run; only <see cref="F:UnderAutomation.ABB.Rws.Data.RapidExecutionCycle.Once" /> and
+            <see cref="F:UnderAutomation.ABB.Rws.Data.RapidExecutionCycle.Forever" /> are accepted</param>
             <exception cref="T:UnderAutomation.ABB.Rws.RwsException">Thrown when the request fails or when the caller does not hold the
             RAPID mastership</exception>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Services.RapidService.SetHoldToRun(UnderAutomation.ABB.Rws.Data.RapidHoldToRunState)">
             <summary>
             Drives the hold-to-run control that lets the program run in manual mode (synchronous)
-            <para>Send <see cref="F:UnderAutomation.ABB.Rws.Data.RapidHoldToRunState.Press"/> to allow execution to start, then
-            <see cref="F:UnderAutomation.ABB.Rws.Data.RapidHoldToRunState.Held"/> about every two seconds to keep it running; the controller
+            <para>Send <see cref="F:UnderAutomation.ABB.Rws.Data.RapidHoldToRunState.Press" /> to allow execution to start, then
+            <see cref="F:UnderAutomation.ABB.Rws.Data.RapidHoldToRunState.Held" /> about every two seconds to keep it running; the controller
             stops the program as soon as it stops hearing from the client. Send
-            <see cref="F:UnderAutomation.ABB.Rws.Data.RapidHoldToRunState.Release"/> to stop it at once.</para>
+            <see cref="F:UnderAutomation.ABB.Rws.Data.RapidHoldToRunState.Release" /> to stop it at once.</para>
             </summary>
             <param name="state">State to put the control in</param>
             <exception cref="T:UnderAutomation.ABB.Rws.RwsException">Thrown when the request fails, in particular when the controller is
@@ -9349,7 +9058,7 @@
         <member name="M:UnderAutomation.ABB.Rws.Services.RapidService.GetModuleExtension(System.String,System.String)">
             <summary>
             Gets how many lines and columns the source of a module holds (synchronous)
-            <para>This is what it takes to ask for the whole of it with <see cref="M:UnderAutomation.ABB.Rws.Services.RapidService.GetModuleTextRange(System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32)"/>.</para>
+            <para>This is what it takes to ask for the whole of it with <see cref="M:UnderAutomation.ABB.Rws.Services.RapidService.GetModuleTextRange(System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32)" />.</para>
             </summary>
             <param name="task">Name of the task, for example "T_ROB1"</param>
             <param name="module">Name of the module, for example "MainModule"</param>
@@ -9623,7 +9332,7 @@
             <exception cref="T:UnderAutomation.ABB.Rws.RwsException">Thrown when the request fails, when the caller does not hold the
             RAPID mastership, or when the caller is not the local client</exception>
             <remarks>
-            Read <see cref="M:UnderAutomation.ABB.Rws.Services.RapidService.GetAllModifiablePositions"/> first to know what this is about to change.
+            Read <see cref="M:UnderAutomation.ABB.Rws.Services.RapidService.GetAllModifiablePositions" /> first to know what this is about to change.
             </remarks>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Services.RapidService.GetRobTarget(System.String,System.String,System.String)">
@@ -9662,7 +9371,7 @@
             <summary>
             Gets what each of the six external joints of a task is doing (synchronous)
             <para>This is what says how to read the corresponding value of
-            <see cref="M:UnderAutomation.ABB.Rws.Services.RapidService.GetJointTarget(System.String)"/>: a joint reported as not active carries no meaningful
+            <see cref="M:UnderAutomation.ABB.Rws.Services.RapidService.GetJointTarget(System.String)" />: a joint reported as not active carries no meaningful
             position.</para>
             </summary>
             <param name="task">Name of the task, for example "T_ROB1"</param>
@@ -9923,7 +9632,7 @@
             match the type of the symbol, or when the caller does not hold the RAPID mastership</exception>
             <remarks>
             This rewrites the declaration in the source of the module, so the module counts as changed
-            afterwards; <see cref="M:UnderAutomation.ABB.Rws.Services.RapidService.SetSymbolValue(System.String,System.String)"/> only changes what the symbol holds right now.
+            afterwards; <see cref="M:UnderAutomation.ABB.Rws.Services.RapidService.SetSymbolValue(System.String,System.String)" /> only changes what the symbol holds right now.
             </remarks>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Services.RapidService.SearchSymbols(UnderAutomation.ABB.Rws.Data.RapidSymbolSearchCriteria)">
@@ -10179,7 +9888,7 @@
             <param name="task">Name of the task, for example "T_ROB1"</param>
             <param name="start">Index of the first category to return, null to start from the beginning</param>
             <param name="limit">Maximum number of categories to return, null to let the controller decide</param>
-            <returns>One entry per category; the number of an entry is what <see cref="M:UnderAutomation.ABB.Rws.Services.RapidService.GetPallet(System.String,System.Int32,System.Nullable{System.Int32},System.Nullable{System.Int32})"/> takes</returns>
+            <returns>One entry per category; the number of an entry is what <see cref="M:UnderAutomation.ABB.Rws.Services.RapidService.GetPallet(System.String,System.Int32,System.Nullable{System.Int32},System.Nullable{System.Int32})" /> takes</returns>
             <exception cref="T:System.ArgumentNullException">Thrown when the task name is null or empty</exception>
             <exception cref="T:UnderAutomation.ABB.Rws.RwsException">Thrown when the request fails or the response cannot be parsed</exception>
         </member>
@@ -10188,7 +9897,7 @@
             Gets the entries of one category of the instruction palette (synchronous)
             </summary>
             <param name="task">Name of the task, for example "T_ROB1"</param>
-            <param name="palletNumber">Number of the category, as <see cref="M:UnderAutomation.ABB.Rws.Services.RapidService.GetPalletHeads(System.String,System.Nullable{System.Int32},System.Nullable{System.Int32})"/> reports it</param>
+            <param name="palletNumber">Number of the category, as <see cref="M:UnderAutomation.ABB.Rws.Services.RapidService.GetPalletHeads(System.String,System.Nullable{System.Int32},System.Nullable{System.Int32})" /> reports it</param>
             <param name="start">Index of the first entry to return, null to start from the beginning</param>
             <param name="limit">Maximum number of entries to return, null to let the controller decide</param>
             <returns>One entry per instruction of the category</returns>
@@ -10199,7 +9908,7 @@
             <summary>
             Gets the dialogue a running RAPID program is currently asking an operator for (synchronous)
             <para>Answering it means writing its parameters with
-            <see cref="M:UnderAutomation.ABB.Rws.Services.RapidService.SetUiInstructionParameter(System.String,System.String,System.String)"/>, addressed by the path this returns.</para>
+            <see cref="M:UnderAutomation.ABB.Rws.Services.RapidService.SetUiInstructionParameter(System.String,System.String,System.String)" />, addressed by the path this returns.</para>
             </summary>
             <returns>The pending instruction, null when the program is not asking for anything</returns>
             <exception cref="T:UnderAutomation.ABB.Rws.RwsException">Thrown when the request fails for a reason other than there being
@@ -10211,7 +9920,7 @@
             waiting for (synchronous)
             </summary>
             <param name="stackUrl">Path identifying the call, as
-            <see cref="M:UnderAutomation.ABB.Rws.Services.RapidService.GetActiveUiInstruction"/> reports it</param>
+            <see cref="M:UnderAutomation.ABB.Rws.Services.RapidService.GetActiveUiInstruction" /> reports it</param>
             <returns>One entry per parameter</returns>
             <exception cref="T:System.ArgumentNullException">Thrown when the path is null or empty</exception>
             <exception cref="T:UnderAutomation.ABB.Rws.RwsException">Thrown when the request fails, in particular when the instruction
@@ -10222,7 +9931,7 @@
             Gets the value of one parameter of a pending UI instruction (synchronous)
             </summary>
             <param name="stackUrl">Path identifying the call, as
-            <see cref="M:UnderAutomation.ABB.Rws.Services.RapidService.GetActiveUiInstruction"/> reports it</param>
+            <see cref="M:UnderAutomation.ABB.Rws.Services.RapidService.GetActiveUiInstruction" /> reports it</param>
             <param name="parameter">Name of the parameter, for example "TPCompleted"</param>
             <returns>Value of the parameter, written the way RAPID writes it</returns>
             <exception cref="T:System.ArgumentNullException">Thrown when the path or the parameter name is null or empty</exception>
@@ -10236,7 +9945,7 @@
             the one marking it as completed.</para>
             </summary>
             <param name="stackUrl">Path identifying the call, as
-            <see cref="M:UnderAutomation.ABB.Rws.Services.RapidService.GetActiveUiInstruction"/> reports it</param>
+            <see cref="M:UnderAutomation.ABB.Rws.Services.RapidService.GetActiveUiInstruction" /> reports it</param>
             <param name="parameter">Name of the parameter to write, for example "TPCompleted"</param>
             <param name="value">Value to write, written the way RAPID writes it</param>
             <exception cref="T:System.ArgumentNullException">Thrown when the path, the parameter name or the value is null or empty</exception>
@@ -10258,7 +9967,7 @@
             <exception cref="T:UnderAutomation.ABB.Rws.RwsException">Thrown when the request fails or the response cannot be parsed</exception>
             <remarks>
             A virtual controller leaves most of the detailed version fields empty, so read them as optional.
-            The options come along with this call, which makes <see cref="M:UnderAutomation.ABB.Rws.Services.SystemService.GetOptions"/> unnecessary when the
+            The options come along with this call, which makes <see cref="M:UnderAutomation.ABB.Rws.Services.SystemService.GetOptions" /> unnecessary when the
             rest of the description is wanted too.
             </remarks>
         </member>
@@ -10293,7 +10002,7 @@
             </summary>
             <param name="name">Name of a single product to report, null to report every installed product</param>
             <returns>Installed products, empty when the controller reports none</returns>
-            <exception cref="T:UnderAutomation.ABB.Rws.RwsException">Thrown when the request fails, when <paramref name="name"/> is not an
+            <exception cref="T:UnderAutomation.ABB.Rws.RwsException">Thrown when the request fails, when <paramref name="name" /> is not an
             installed product, or when the response cannot be parsed</exception>
             <remarks>
             The name has to match an installed product exactly: the controller rejects an unknown one instead of
@@ -10307,7 +10016,7 @@
             <returns>Energy measurement, broken down per mechanical unit and per axis</returns>
             <exception cref="T:UnderAutomation.ABB.Rws.RwsException">Thrown when the request fails or the response cannot be parsed</exception>
             <remarks>
-            Check <see cref="P:UnderAutomation.ABB.Rws.Data.SystemEnergy.IsMeasurementValid"/> before reading the values: the controller answers
+            Check <see cref="P:UnderAutomation.ABB.Rws.Data.SystemEnergy.IsMeasurementValid" /> before reading the values: the controller answers
             with a complete but meaningless measurement while it has none to report.
             </remarks>
         </member>
@@ -10319,7 +10028,7 @@
             <exception cref="T:UnderAutomation.ABB.Rws.RwsException">Thrown when the request fails or the response cannot be parsed</exception>
             <remarks>
             This is the cheap way to poll the energy consumption: the answer is a single number, and the whole
-            measurement only has to be read with <see cref="M:UnderAutomation.ABB.Rws.Services.SystemService.GetEnergy"/> once the counter has moved.
+            measurement only has to be read with <see cref="M:UnderAutomation.ABB.Rws.Services.SystemService.GetEnergy" /> once the counter has moved.
             </remarks>
         </member>
         <member name="M:UnderAutomation.ABB.Rws.Services.SystemService.ResetAccumulatedEnergy">
@@ -10329,9 +10038,137 @@
             <exception cref="T:UnderAutomation.ABB.Rws.RwsException">Thrown when the request fails</exception>
             <remarks>
             The energy accumulated so far is lost: the controller keeps no history of what it counted before the
-            reset, and the reset moment becomes the new reference reported by <see cref="P:UnderAutomation.ABB.Rws.Data.SystemEnergy.ResetTime"/>.
+            reset, and the reset moment becomes the new reference reported by <see cref="P:UnderAutomation.ABB.Rws.Data.SystemEnergy.ResetTime" />.
             The energy of the current interval is not affected.
             </remarks>
+        </member>
+        <member name="T:UnderAutomation.ABB.License.LicenseInfo">
+            <summary>
+            Information about a license key
+            </summary>
+        </member>
+        <member name="M:UnderAutomation.ABB.License.LicenseInfo.#ctor(System.String,System.String)">
+            <summary>
+            Create a new LicenseInfo instance to retrieve informations about a pair of identifier/key
+            This class should not be used to register your product. Please use static function RegisterLicense to specify your license.
+            </summary>
+            <param name="licenseIdentifier">The name of your organization (null for trial version)</param>
+            <param name="licenseKey">The key, associated to the identifier, supplied by UnderAutomation (null for trial version)</param>
+        </member>
+        <member name="P:UnderAutomation.ABB.License.LicenseInfo.IsLicensed">
+            <summary>
+            True if the license state is Licensed, Trial or ExtraTrial ; false otherwise
+            </summary>
+        </member>
+        <member name="P:UnderAutomation.ABB.License.LicenseInfo.LicenseKey">
+            <summary>
+            The license key supplied by UnderAutomation (null for trial period)
+            </summary>
+        </member>
+        <member name="P:UnderAutomation.ABB.License.LicenseInfo.Product">
+            <summary>
+            Commercial name of this .NET Software library
+            </summary>
+        </member>
+        <member name="P:UnderAutomation.ABB.License.LicenseInfo.EvaluationDaysLeft">
+            <summary>
+            Remaining days of the trial period. Null if the product is licensed. It could be negative if the trial period is ended since several days.
+            </summary>
+        </member>
+        <member name="P:UnderAutomation.ABB.License.LicenseInfo.EvaluationStartDate">
+            <summary>
+            The date the trial period starts. If the product is licensed, the date of the library first use.
+            </summary>
+        </member>
+        <member name="P:UnderAutomation.ABB.License.LicenseInfo.Licensee">
+            <summary>
+            Name of your organisation
+            </summary>
+        </member>
+        <member name="P:UnderAutomation.ABB.License.LicenseInfo.TrialPeriodExpirationDate">
+            <summary>
+            The date the product will expire. Null if the product is licensed.
+            </summary>
+        </member>
+        <member name="P:UnderAutomation.ABB.License.LicenseInfo.State">
+            <summary>
+            The current license state
+            </summary>
+        </member>
+        <member name="P:UnderAutomation.ABB.License.LicenseInfo.ProductReleaseDate">
+            <summary>
+            The date this version of the product was released.
+            </summary>
+        </member>
+        <member name="P:UnderAutomation.ABB.License.LicenseInfo.MaintenanceYears">
+            <summary>
+            Number of maintenance years included in your license
+            </summary>
+        </member>
+        <member name="P:UnderAutomation.ABB.License.LicenseInfo.LicenseIssuedDate">
+            <summary>
+            The date you get the license
+            </summary>
+        </member>
+        <member name="P:UnderAutomation.ABB.License.LicenseInfo.MaintenanceExpirationDate">
+            <summary>
+            The date your maintenance contract end and you no longer can use this license with newer versions.
+            </summary>
+        </member>
+        <member name="M:UnderAutomation.ABB.License.LicenseInfo.ToString">
+            <summary>
+            A human description of the license
+            </summary>
+        </member>
+        <member name="T:UnderAutomation.ABB.License.LicenseState">
+            <summary>
+            States that can take a license
+            </summary>
+        </member>
+        <member name="F:UnderAutomation.ABB.License.LicenseState.None">
+            <summary>
+            No license has been provided
+            </summary>
+        </member>
+        <member name="F:UnderAutomation.ABB.License.LicenseState.Invalid">
+            <summary>
+            The pair License Identifier and License Key are incompatible, you cannot use the library
+            </summary>
+        </member>
+        <member name="F:UnderAutomation.ABB.License.LicenseState.Trial">
+            <summary>
+            The library is in a trial period, you can use the library
+            </summary>
+        </member>
+        <member name="F:UnderAutomation.ABB.License.LicenseState.ExtraTrial">
+            <summary>
+            The library is in an extra trial period, you can use the library
+            </summary>
+        </member>
+        <member name="F:UnderAutomation.ABB.License.LicenseState.Expired">
+            <summary>
+            The trial period as expired, you no more can use the library
+            </summary>
+        </member>
+        <member name="F:UnderAutomation.ABB.License.LicenseState.MaintenanceNeeded">
+            <summary>
+            Your license does not allow you to use such a recent release. Please buy maintenance to use this version
+            </summary>
+        </member>
+        <member name="F:UnderAutomation.ABB.License.LicenseState.Licensed">
+            <summary>
+            Congratulations, the library is licensed.
+            </summary>
+        </member>
+        <member name="T:UnderAutomation.ABB.License.InvalidLicenseException">
+            <summary>
+            Exception thrown while using the product if the license is not valid.
+            </summary>
+        </member>
+        <member name="P:UnderAutomation.ABB.License.InvalidLicenseException.LicenseInfo">
+            <summary>
+            The license that causes this exception
+            </summary>
         </member>
     </members>
 </doc>

@@ -7,12 +7,12 @@ namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
 	/// How one joint of a mechanical unit was calibrated.
 	/// 
-	/// <p>Held by <xref href="UnderAutomation.ABB.Rws.Data.CalibrationInfo" data-throw-if-not-resolved="false"></xref>.</p>
+	/// <p>Held by <see cref="UnderAutomation.ABB.Rws.Data.CalibrationInfo"/>.</p>
 	/// </summary>
 	public class CalibrationJointInfo {
 
 		/// <summary>
-		/// Initializes a new instance of the <xref href="UnderAutomation.ABB.Rws.Data.CalibrationJointInfo" data-throw-if-not-resolved="false"></xref> class
+		/// Initializes a new instance of the <see cref="UnderAutomation.ABB.Rws.Data.CalibrationJointInfo"/> class
 		/// </summary>
 		public CalibrationJointInfo()
 		{

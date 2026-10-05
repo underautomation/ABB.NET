@@ -11,9 +11,9 @@ namespace UnderAutomation.ABB.Rws.Services {
 	/// Mastership Service - Takes and gives back the exclusive right to change a domain of the controller.
 	/// 
 	/// <p>Most write operations are refused unless the client holds the mastership of the domain they belong
-	/// to: moving a mechanical unit needs <xref href="UnderAutomation.ABB.Rws.Data.MastershipDomain.Motion" data-throw-if-not-resolved="false"></xref>, changing the system parameters
-	/// or the RAPID programs needs <xref href="UnderAutomation.ABB.Rws.Data.MastershipDomain.Edit" data-throw-if-not-resolved="false"></xref>.</p>
-	/// <p>Only one client holds a domain at a time, and it keeps it until <xref href="UnderAutomation.ABB.Rws.Services.MastershipService.Release" data-throw-if-not-resolved="false"></xref> is called or
+	/// to: moving a mechanical unit needs <see cref="UnderAutomation.ABB.Rws.Data.MastershipDomain.Motion"/>, changing the system parameters
+	/// or the RAPID programs needs <see cref="UnderAutomation.ABB.Rws.Data.MastershipDomain.Edit"/>.</p>
+	/// <p>Only one client holds a domain at a time, and it keeps it until <see cref="UnderAutomation.ABB.Rws.Services.MastershipService.Release"/> is called or
 	/// the connection ends. Take it as late and give it back as early as possible: while it is held, the operator
 	/// of the robot cannot change the same domain from the teach pendant.</p>
 	/// <p>Mastership belongs to the connection that took it, so every call made through the same client is the
@@ -25,7 +25,7 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// Gets the domains the connected controller can give the mastership of (synchronous)
 		/// </summary>
 		/// <returns>Domains the controller exposes, which are not the same on a connection established with
-		///             version 1 and on one established with version 2. <xref href="UnderAutomation.ABB.Rws.Data.MastershipDomain.Edit" data-throw-if-not-resolved="false"></xref> can be asked for
+		///             version 1 and on one established with version 2. <see cref="UnderAutomation.ABB.Rws.Data.MastershipDomain.Edit"/> can be asked for
 		///             on either, even when it is not listed here: it then stands for the domains covering the same
 		///             ground.</returns>
 		public MastershipDomain[] GetDomains()
@@ -39,7 +39,7 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// </summary>
 		/// <param name="cancellationToken">Cancellation token</param>
 		/// <returns>Domains the controller exposes, which are not the same on a connection established with
-		///             version 1 and on one established with version 2. <xref href="UnderAutomation.ABB.Rws.Data.MastershipDomain.Edit" data-throw-if-not-resolved="false"></xref> can be asked for
+		///             version 1 and on one established with version 2. <see cref="UnderAutomation.ABB.Rws.Data.MastershipDomain.Edit"/> can be asked for
 		///             on either, even when it is not listed here: it then stands for the domains covering the same
 		///             ground.</returns>
 		public Task<MastershipDomain[]> GetDomainsAsync(CancellationToken cancellationToken = default)
@@ -62,7 +62,7 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// Gets who holds the mastership of one domain (synchronous)
 		/// </summary>
 		/// <param name="domain">Domain to read the state of</param>
-		/// <returns>State of the domain, with <xref href="UnderAutomation.ABB.Rws.Data.MastershipInfo.HeldByMe" data-throw-if-not-resolved="false"></xref> telling whether this
+		/// <returns>State of the domain, with <see cref="UnderAutomation.ABB.Rws.Data.MastershipInfo.HeldByMe"/> telling whether this
 		///             connection is allowed to write in it</returns>
 		public MastershipInfo GetInfo(MastershipDomain domain)
 		{
@@ -86,7 +86,7 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// </summary>
 		/// <param name="domain">Domain to read the state of</param>
 		/// <param name="cancellationToken">Cancellation token</param>
-		/// <returns>State of the domain, with <xref href="UnderAutomation.ABB.Rws.Data.MastershipInfo.HeldByMe" data-throw-if-not-resolved="false"></xref> telling whether this
+		/// <returns>State of the domain, with <see cref="UnderAutomation.ABB.Rws.Data.MastershipInfo.HeldByMe"/> telling whether this
 		///             connection is allowed to write in it</returns>
 		public Task<MastershipInfo> GetInfoAsync(MastershipDomain domain, CancellationToken cancellationToken = default)
 		{

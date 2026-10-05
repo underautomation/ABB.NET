@@ -13,7 +13,7 @@ namespace UnderAutomation.ABB.Rws.Data {
 	public class RapidAliasIoItem {
 
 		/// <summary>
-		/// Initializes a new instance of the <xref href="UnderAutomation.ABB.Rws.Data.RapidAliasIoItem" data-throw-if-not-resolved="false"></xref> class
+		/// Initializes a new instance of the <see cref="UnderAutomation.ABB.Rws.Data.RapidAliasIoItem"/> class
 		/// </summary>
 		public RapidAliasIoItem()
 		{

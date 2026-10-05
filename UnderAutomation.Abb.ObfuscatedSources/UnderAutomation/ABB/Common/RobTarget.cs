@@ -5,7 +5,7 @@
 
 namespace UnderAutomation.ABB.Common {
 	/// <summary>
-	/// A complete robot target: a <xref href="UnderAutomation.ABB.Common.Pose" data-throw-if-not-resolved="false"></xref> extended with the axis configuration used to reach it
+	/// A complete robot target: a <see cref="UnderAutomation.ABB.Common.Pose"/> extended with the axis configuration used to reach it
 	/// and the external axis values that travel with it.
 	/// </summary>
 	public class RobTarget : Pose {

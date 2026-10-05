@@ -19,7 +19,7 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// <summary>
 		/// Gets the state of the controller (synchronous)
 		/// </summary>
-		/// <returns>State of the controller, <xref href="UnderAutomation.ABB.Rws.Data.ControllerState.Unknown" data-throw-if-not-resolved="false"></xref> when it reports a state this library does not know</returns>
+		/// <returns>State of the controller, <see cref="UnderAutomation.ABB.Rws.Data.ControllerState.Unknown"/> when it reports a state this library does not know</returns>
 		public ControllerState GetControllerState()
 		{
 			// Source is hidden, a Source licence is needed to access internal code...
@@ -30,7 +30,7 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// Gets the state of the controller (asynchronous)
 		/// </summary>
 		/// <param name="cancellationToken">Cancellation token</param>
-		/// <returns>State of the controller, <xref href="UnderAutomation.ABB.Rws.Data.ControllerState.Unknown" data-throw-if-not-resolved="false"></xref> when it reports a state this library does not know</returns>
+		/// <returns>State of the controller, <see cref="UnderAutomation.ABB.Rws.Data.ControllerState.Unknown"/> when it reports a state this library does not know</returns>
 		public Task<ControllerState> GetControllerStateAsync(CancellationToken cancellationToken = default)
 		{
 			// Source is hidden, a Source licence is needed to access internal code...
@@ -40,7 +40,7 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// <summary>
 		/// Turns the motors of the robot on or off (synchronous)
 		/// </summary>
-		/// <param name="state">State to switch to, which can only be <xref href="UnderAutomation.ABB.Rws.Data.ControllerState.MotorsOn" data-throw-if-not-resolved="false"></xref> or <xref href="UnderAutomation.ABB.Rws.Data.ControllerState.MotorsOff" data-throw-if-not-resolved="false"></xref>.
+		/// <param name="state">State to switch to, which can only be <see cref="UnderAutomation.ABB.Rws.Data.ControllerState.MotorsOn"/> or <see cref="UnderAutomation.ABB.Rws.Data.ControllerState.MotorsOff"/>.
 		/// Every other state is reached by the controller on its own and cannot be requested.</param>
 		public void SetControllerState(ControllerState state)
 		{
@@ -50,7 +50,7 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// <summary>
 		/// Turns the motors of the robot on or off (asynchronous)
 		/// </summary>
-		/// <param name="state">State to switch to, which can only be <xref href="UnderAutomation.ABB.Rws.Data.ControllerState.MotorsOn" data-throw-if-not-resolved="false"></xref> or <xref href="UnderAutomation.ABB.Rws.Data.ControllerState.MotorsOff" data-throw-if-not-resolved="false"></xref>.
+		/// <param name="state">State to switch to, which can only be <see cref="UnderAutomation.ABB.Rws.Data.ControllerState.MotorsOn"/> or <see cref="UnderAutomation.ABB.Rws.Data.ControllerState.MotorsOff"/>.
 		/// Every other state is reached by the controller on its own and cannot be requested.</param>
 		/// <param name="cancellationToken">Cancellation token</param>
 		public Task SetControllerStateAsync(ControllerState state, CancellationToken cancellationToken = default)
@@ -62,7 +62,7 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// <summary>
 		/// Gets the operating mode the controller runs in (synchronous)
 		/// </summary>
-		/// <returns>Operating mode, <xref href="UnderAutomation.ABB.Rws.Data.OperationMode.Unknown" data-throw-if-not-resolved="false"></xref> when the controller reports a mode this library does not know</returns>
+		/// <returns>Operating mode, <see cref="UnderAutomation.ABB.Rws.Data.OperationMode.Unknown"/> when the controller reports a mode this library does not know</returns>
 		public OperationMode GetOperationMode()
 		{
 			// Source is hidden, a Source licence is needed to access internal code...
@@ -73,7 +73,7 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// Gets the operating mode the controller runs in (asynchronous)
 		/// </summary>
 		/// <param name="cancellationToken">Cancellation token</param>
-		/// <returns>Operating mode, <xref href="UnderAutomation.ABB.Rws.Data.OperationMode.Unknown" data-throw-if-not-resolved="false"></xref> when the controller reports a mode this library does not know</returns>
+		/// <returns>Operating mode, <see cref="UnderAutomation.ABB.Rws.Data.OperationMode.Unknown"/> when the controller reports a mode this library does not know</returns>
 		public Task<OperationMode> GetOperationModeAsync(CancellationToken cancellationToken = default)
 		{
 			// Source is hidden, a Source licence is needed to access internal code...
@@ -109,7 +109,7 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// <summary>
 		/// Gets the lock state of the operating mode selector (synchronous)
 		/// </summary>
-		/// <returns>Lock state, <xref href="UnderAutomation.ABB.Rws.Data.OperationModeLockState.Unknown" data-throw-if-not-resolved="false"></xref> when the controller reports a state this library does not know</returns>
+		/// <returns>Lock state, <see cref="UnderAutomation.ABB.Rws.Data.OperationModeLockState.Unknown"/> when the controller reports a state this library does not know</returns>
 		public OperationModeLockState GetOperationModeLockState()
 		{
 			// Source is hidden, a Source licence is needed to access internal code...
@@ -120,7 +120,7 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// Gets the lock state of the operating mode selector (asynchronous)
 		/// </summary>
 		/// <param name="cancellationToken">Cancellation token</param>
-		/// <returns>Lock state, <xref href="UnderAutomation.ABB.Rws.Data.OperationModeLockState.Unknown" data-throw-if-not-resolved="false"></xref> when the controller reports a state this library does not know</returns>
+		/// <returns>Lock state, <see cref="UnderAutomation.ABB.Rws.Data.OperationModeLockState.Unknown"/> when the controller reports a state this library does not know</returns>
 		public Task<OperationModeLockState> GetOperationModeLockStateAsync(CancellationToken cancellationToken = default)
 		{
 			// Source is hidden, a Source licence is needed to access internal code...
@@ -132,7 +132,7 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// </summary>
 		/// <param name="pin">Four digit pin code, which will be needed again to unlock the selector</param>
 		/// <param name="permanent">When true, the selector is locked permanently, which requires the key-less mode selector grant.
-		/// When false (default), the lock can be released with <xref href="UnderAutomation.ABB.Rws.Services.PanelService.UnlockOperationMode(System.String)" data-throw-if-not-resolved="false"></xref>.</param>
+		/// When false (default), the lock can be released with <see cref="UnderAutomation.ABB.Rws.Services.PanelService.UnlockOperationMode(System.String)"/>.</param>
 		public void LockOperationMode(string pin, bool permanent = false)
 		{
 			// Source is hidden, a Source licence is needed to access internal code...
@@ -143,7 +143,7 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// </summary>
 		/// <param name="pin">Four digit pin code, which will be needed again to unlock the selector</param>
 		/// <param name="permanent">When true, the selector is locked permanently, which requires the key-less mode selector grant.
-		/// When false (default), the lock can be released with <xref href="UnderAutomation.ABB.Rws.Services.PanelService.UnlockOperationModeAsync(System.String%2cSystem.Threading.CancellationToken)" data-throw-if-not-resolved="false"></xref>.</param>
+		/// When false (default), the lock can be released with <see cref="UnderAutomation.ABB.Rws.Services.PanelService.UnlockOperationModeAsync(System.String,System.Threading.CancellationToken)"/>.</param>
 		/// <param name="cancellationToken">Cancellation token</param>
 		public Task LockOperationModeAsync(string pin, bool permanent = false, CancellationToken cancellationToken = default)
 		{
@@ -223,7 +223,7 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// <summary>
 		/// Gets the collision detection state of the controller (synchronous)
 		/// </summary>
-		/// <returns>Collision detection state, <xref href="UnderAutomation.ABB.Rws.Data.CollisionDetectionState.Unknown" data-throw-if-not-resolved="false"></xref> when the controller reports
+		/// <returns>Collision detection state, <see cref="UnderAutomation.ABB.Rws.Data.CollisionDetectionState.Unknown"/> when the controller reports
 		///             a state this library does not know</returns>
 		public CollisionDetectionState GetCollisionDetectionState()
 		{
@@ -235,7 +235,7 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// Gets the collision detection state of the controller (asynchronous)
 		/// </summary>
 		/// <param name="cancellationToken">Cancellation token</param>
-		/// <returns>Collision detection state, <xref href="UnderAutomation.ABB.Rws.Data.CollisionDetectionState.Unknown" data-throw-if-not-resolved="false"></xref> when the controller reports
+		/// <returns>Collision detection state, <see cref="UnderAutomation.ABB.Rws.Data.CollisionDetectionState.Unknown"/> when the controller reports
 		///             a state this library does not know</returns>
 		public Task<CollisionDetectionState> GetCollisionDetectionStateAsync(CancellationToken cancellationToken = default)
 		{
@@ -266,9 +266,9 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// <summary>
 		/// Restarts the controller (synchronous)
 		/// </summary>
-		/// <param name="mode">How the controller restarts. The control panel accepts <xref href="UnderAutomation.ABB.Rws.Data.ControllerRestartMode.Restart" data-throw-if-not-resolved="false"></xref>,
-		/// <xref href="UnderAutomation.ABB.Rws.Data.ControllerRestartMode.IStart" data-throw-if-not-resolved="false"></xref>, <xref href="UnderAutomation.ABB.Rws.Data.ControllerRestartMode.PStart" data-throw-if-not-resolved="false"></xref> and
-		/// <xref href="UnderAutomation.ABB.Rws.Data.ControllerRestartMode.BStart" data-throw-if-not-resolved="false"></xref>; use <xref href="UnderAutomation.ABB.Rws.Services.ControllerService.Restart(UnderAutomation.ABB.Rws.Data.ControllerRestartMode%2cSystem.Boolean)" data-throw-if-not-resolved="false"></xref> for the others.</param>
+		/// <param name="mode">How the controller restarts. The control panel accepts <see cref="UnderAutomation.ABB.Rws.Data.ControllerRestartMode.Restart"/>,
+		/// <see cref="UnderAutomation.ABB.Rws.Data.ControllerRestartMode.IStart"/>, <see cref="UnderAutomation.ABB.Rws.Data.ControllerRestartMode.PStart"/> and
+		/// <see cref="UnderAutomation.ABB.Rws.Data.ControllerRestartMode.BStart"/>; use <see cref="UnderAutomation.ABB.Rws.Services.ControllerService.Restart(UnderAutomation.ABB.Rws.Data.ControllerRestartMode,System.Boolean)"/> for the others.</param>
 		/// <param name="useImplicitMastership">A connection established with version 2 requires mastership on all domains to restart the controller. When true
 		/// (default), mastership is taken implicitly for this request. Ignored on a version 1 connection, which needs none.</param>
 		public void Restart(ControllerRestartMode mode, bool useImplicitMastership = true)
@@ -279,9 +279,9 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// <summary>
 		/// Restarts the controller (asynchronous)
 		/// </summary>
-		/// <param name="mode">How the controller restarts. The control panel accepts <xref href="UnderAutomation.ABB.Rws.Data.ControllerRestartMode.Restart" data-throw-if-not-resolved="false"></xref>,
-		/// <xref href="UnderAutomation.ABB.Rws.Data.ControllerRestartMode.IStart" data-throw-if-not-resolved="false"></xref>, <xref href="UnderAutomation.ABB.Rws.Data.ControllerRestartMode.PStart" data-throw-if-not-resolved="false"></xref> and
-		/// <xref href="UnderAutomation.ABB.Rws.Data.ControllerRestartMode.BStart" data-throw-if-not-resolved="false"></xref>; use <xref href="UnderAutomation.ABB.Rws.Services.ControllerService.RestartAsync(UnderAutomation.ABB.Rws.Data.ControllerRestartMode%2cSystem.Boolean%2cSystem.Threading.CancellationToken)" data-throw-if-not-resolved="false"></xref> for the others.</param>
+		/// <param name="mode">How the controller restarts. The control panel accepts <see cref="UnderAutomation.ABB.Rws.Data.ControllerRestartMode.Restart"/>,
+		/// <see cref="UnderAutomation.ABB.Rws.Data.ControllerRestartMode.IStart"/>, <see cref="UnderAutomation.ABB.Rws.Data.ControllerRestartMode.PStart"/> and
+		/// <see cref="UnderAutomation.ABB.Rws.Data.ControllerRestartMode.BStart"/>; use <see cref="UnderAutomation.ABB.Rws.Services.ControllerService.RestartAsync(UnderAutomation.ABB.Rws.Data.ControllerRestartMode,System.Boolean,System.Threading.CancellationToken)"/> for the others.</param>
 		/// <param name="useImplicitMastership">A connection established with version 2 requires mastership on all domains to restart the controller. When true
 		/// (default), mastership is taken implicitly for this request. Ignored on a version 1 connection, which needs none.</param>
 		/// <param name="cancellationToken">Cancellation token</param>

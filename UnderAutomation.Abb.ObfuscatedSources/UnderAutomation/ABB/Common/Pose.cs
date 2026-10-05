@@ -5,8 +5,8 @@
 
 namespace UnderAutomation.ABB.Common {
 	/// <summary>
-	/// A position and the orientation the robot holds there: a <xref href="UnderAutomation.ABB.Common.Position" data-throw-if-not-resolved="false"></xref> extended with a
-	/// <xref href="UnderAutomation.ABB.Common.Quaternion" data-throw-if-not-resolved="false"></xref>.
+	/// A position and the orientation the robot holds there: a <see cref="UnderAutomation.ABB.Common.Position"/> extended with a
+	/// <see cref="UnderAutomation.ABB.Common.Quaternion"/>.
 	/// </summary>
 	public class Pose : Position {
 

@@ -43,7 +43,7 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// <summary>
 		/// Gets the number of messages one event log domain holds and the number it can hold (synchronous)
 		/// </summary>
-		/// <param name="domain">Number of the domain, as reported by <xref href="UnderAutomation.ABB.Rws.Services.ElogService.GetDomains(System.String)" data-throw-if-not-resolved="false"></xref></param>
+		/// <param name="domain">Number of the domain, as reported by <see cref="UnderAutomation.ABB.Rws.Services.ElogService.GetDomains(System.String)"/></param>
 		/// <returns>The domain, without its name</returns>
 		public ElogDomain GetDomain(int domain)
 		{
@@ -54,7 +54,7 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// <summary>
 		/// Gets the number of messages one event log domain holds and the number it can hold (asynchronous)
 		/// </summary>
-		/// <param name="domain">Number of the domain, as reported by <xref href="UnderAutomation.ABB.Rws.Services.ElogService.GetDomainsAsync(System.String%2cSystem.Threading.CancellationToken)" data-throw-if-not-resolved="false"></xref></param>
+		/// <param name="domain">Number of the domain, as reported by <see cref="UnderAutomation.ABB.Rws.Services.ElogService.GetDomainsAsync(System.String,System.Threading.CancellationToken)"/></param>
 		/// <param name="cancellationToken">Cancellation token</param>
 		/// <returns>The domain, without its name</returns>
 		public Task<ElogDomain> GetDomainAsync(int domain, CancellationToken cancellationToken = default)
@@ -66,7 +66,7 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// <summary>
 		/// Gets the messages held by one event log domain (synchronous)
 		/// </summary>
-		/// <param name="domain">Number of the domain, as reported by <xref href="UnderAutomation.ABB.Rws.Services.ElogService.GetDomains(System.String)" data-throw-if-not-resolved="false"></xref></param>
+		/// <param name="domain">Number of the domain, as reported by <see cref="UnderAutomation.ABB.Rws.Services.ElogService.GetDomains(System.String)"/></param>
 		/// <param name="order">Order the messages are returned in, most recent first by default</param>
 		/// <param name="language">Two letter code of the language the message texts are wanted in, for example "en"
 		///             or "de". Leave null to read only the code, the severity and the timestamp of each message.</param>
@@ -81,7 +81,7 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// <summary>
 		/// Gets the messages held by one event log domain (asynchronous)
 		/// </summary>
-		/// <param name="domain">Number of the domain, as reported by <xref href="UnderAutomation.ABB.Rws.Services.ElogService.GetDomainsAsync(System.String%2cSystem.Threading.CancellationToken)" data-throw-if-not-resolved="false"></xref></param>
+		/// <param name="domain">Number of the domain, as reported by <see cref="UnderAutomation.ABB.Rws.Services.ElogService.GetDomainsAsync(System.String,System.Threading.CancellationToken)"/></param>
 		/// <param name="order">Order the messages are returned in, most recent first by default</param>
 		/// <param name="language">Two letter code of the language the message texts are wanted in, for example "en"
 		///             or "de". Leave null to read only the code, the severity and the timestamp of each message.</param>
@@ -97,7 +97,7 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// <summary>
 		/// Gets the messages held by one event log domain, with their short text only (synchronous)
 		/// </summary>
-		/// <param name="domain">Number of the domain, as reported by <xref href="UnderAutomation.ABB.Rws.Services.ElogService.GetDomains(System.String)" data-throw-if-not-resolved="false"></xref></param>
+		/// <param name="domain">Number of the domain, as reported by <see cref="UnderAutomation.ABB.Rws.Services.ElogService.GetDomains(System.String)"/></param>
 		/// <param name="language">Two letter code of the language the titles are wanted in, for example "en" or "de". Required.</param>
 		/// <param name="order">Order the messages are returned in, most recent first by default</param>
 		/// <param name="maxCount">Largest number of messages to return, null to return every message of the domain</param>
@@ -111,7 +111,7 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// <summary>
 		/// Gets the messages held by one event log domain, with their short text only (asynchronous)
 		/// </summary>
-		/// <param name="domain">Number of the domain, as reported by <xref href="UnderAutomation.ABB.Rws.Services.ElogService.GetDomainsAsync(System.String%2cSystem.Threading.CancellationToken)" data-throw-if-not-resolved="false"></xref></param>
+		/// <param name="domain">Number of the domain, as reported by <see cref="UnderAutomation.ABB.Rws.Services.ElogService.GetDomainsAsync(System.String,System.Threading.CancellationToken)"/></param>
 		/// <param name="language">Two letter code of the language the titles are wanted in, for example "en" or "de". Required.</param>
 		/// <param name="order">Order the messages are returned in, most recent first by default</param>
 		/// <param name="maxCount">Largest number of messages to return, null to return every message of the domain</param>
@@ -126,7 +126,7 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// <summary>
 		/// Gets one message of an event log domain (synchronous)
 		/// </summary>
-		/// <param name="domain">Number of the domain, as reported by <xref href="UnderAutomation.ABB.Rws.Services.ElogService.GetDomains(System.String)" data-throw-if-not-resolved="false"></xref></param>
+		/// <param name="domain">Number of the domain, as reported by <see cref="UnderAutomation.ABB.Rws.Services.ElogService.GetDomains(System.String)"/></param>
 		/// <param name="sequenceNumber">Number identifying the message inside its domain</param>
 		/// <param name="language">Two letter code of the language the message texts are wanted in, for example "en"
 		///             or "de". Leave null to read only the code, the severity and the timestamp.</param>
@@ -140,7 +140,7 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// <summary>
 		/// Gets one message of an event log domain (asynchronous)
 		/// </summary>
-		/// <param name="domain">Number of the domain, as reported by <xref href="UnderAutomation.ABB.Rws.Services.ElogService.GetDomainsAsync(System.String%2cSystem.Threading.CancellationToken)" data-throw-if-not-resolved="false"></xref></param>
+		/// <param name="domain">Number of the domain, as reported by <see cref="UnderAutomation.ABB.Rws.Services.ElogService.GetDomainsAsync(System.String,System.Threading.CancellationToken)"/></param>
 		/// <param name="sequenceNumber">Number identifying the message inside its domain</param>
 		/// <param name="language">Two letter code of the language the message texts are wanted in, for example "en"
 		///             or "de". Leave null to read only the code, the severity and the timestamp.</param>
@@ -182,7 +182,7 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// <summary>
 		/// Deletes every message of one event log domain (synchronous)
 		/// </summary>
-		/// <param name="domain">Number of the domain, as reported by <xref href="UnderAutomation.ABB.Rws.Services.ElogService.GetDomains(System.String)" data-throw-if-not-resolved="false"></xref></param>
+		/// <param name="domain">Number of the domain, as reported by <see cref="UnderAutomation.ABB.Rws.Services.ElogService.GetDomains(System.String)"/></param>
 		public void ClearMessages(int domain)
 		{
 			// Source is hidden, a Source licence is needed to access internal code...
@@ -191,7 +191,7 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// <summary>
 		/// Deletes every message of one event log domain (asynchronous)
 		/// </summary>
-		/// <param name="domain">Number of the domain, as reported by <xref href="UnderAutomation.ABB.Rws.Services.ElogService.GetDomainsAsync(System.String%2cSystem.Threading.CancellationToken)" data-throw-if-not-resolved="false"></xref></param>
+		/// <param name="domain">Number of the domain, as reported by <see cref="UnderAutomation.ABB.Rws.Services.ElogService.GetDomainsAsync(System.String,System.Threading.CancellationToken)"/></param>
 		/// <param name="cancellationToken">Cancellation token</param>
 		public Task ClearMessagesAsync(int domain, CancellationToken cancellationToken = default)
 		{

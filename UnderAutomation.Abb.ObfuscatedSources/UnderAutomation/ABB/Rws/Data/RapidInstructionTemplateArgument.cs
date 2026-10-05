@@ -8,12 +8,12 @@ namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
 	/// One argument of the template the controller suggests for an instruction or a data type.
 	/// 
-	/// <p>Carried by <xref href="UnderAutomation.ABB.Rws.Data.RapidInstructionTemplate" data-throw-if-not-resolved="false"></xref>.</p>
+	/// <p>Carried by <see cref="UnderAutomation.ABB.Rws.Data.RapidInstructionTemplate"/>.</p>
 	/// </summary>
 	public class RapidInstructionTemplateArgument {
 
 		/// <summary>
-		/// Initializes a new instance of the <xref href="UnderAutomation.ABB.Rws.Data.RapidInstructionTemplateArgument" data-throw-if-not-resolved="false"></xref> class
+		/// Initializes a new instance of the <see cref="UnderAutomation.ABB.Rws.Data.RapidInstructionTemplateArgument"/> class
 		/// </summary>
 		public RapidInstructionTemplateArgument()
 		{

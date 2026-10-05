@@ -12,7 +12,7 @@ namespace UnderAutomation.ABB.Rws.Data {
 	public class RapidExecutionInfo {
 
 		/// <summary>
-		/// Initializes a new instance of the <xref href="UnderAutomation.ABB.Rws.Data.RapidExecutionInfo" data-throw-if-not-resolved="false"></xref> class
+		/// Initializes a new instance of the <see cref="UnderAutomation.ABB.Rws.Data.RapidExecutionInfo"/> class
 		/// </summary>
 		public RapidExecutionInfo()
 		{

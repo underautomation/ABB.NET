@@ -46,7 +46,7 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// Starts executing the RAPID program from where the program pointer stands (synchronous)
 		/// 
 		/// <p>The controller has to be in automatic mode with the motors on, or in manual mode with the
-		/// enabling device held. Reset the program pointer first with <xref href="UnderAutomation.ABB.Rws.Services.RapidService.ResetProgramPointer" data-throw-if-not-resolved="false"></xref> to
+		/// enabling device held. Reset the program pointer first with <see cref="UnderAutomation.ABB.Rws.Services.RapidService.ResetProgramPointer"/> to
 		/// start from the beginning.</p>
 		/// </summary>
 		/// <param name="regain">What the robot does about the distance between where it stands and where the
@@ -66,7 +66,7 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// Starts executing the RAPID program from where the program pointer stands (asynchronous)
 		/// 
 		/// <p>The controller has to be in automatic mode with the motors on, or in manual mode with the
-		/// enabling device held. Reset the program pointer first with <xref href="UnderAutomation.ABB.Rws.Services.RapidService.ResetProgramPointerAsync(System.Threading.CancellationToken)" data-throw-if-not-resolved="false"></xref>
+		/// enabling device held. Reset the program pointer first with <see cref="UnderAutomation.ABB.Rws.Services.RapidService.ResetProgramPointerAsync(System.Threading.CancellationToken)"/>
 		/// to start from the beginning.</p>
 		/// </summary>
 		/// <param name="regain">What the robot does about the distance between where it stands and where the
@@ -147,8 +147,8 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// <summary>
 		/// Sets how many times the program runs before stopping (synchronous)
 		/// </summary>
-		/// <param name="cycle">Number of cycles to run; only <xref href="UnderAutomation.ABB.Rws.Data.RapidExecutionCycle.Once" data-throw-if-not-resolved="false"></xref> and
-		///             <xref href="UnderAutomation.ABB.Rws.Data.RapidExecutionCycle.Forever" data-throw-if-not-resolved="false"></xref> are accepted</param>
+		/// <param name="cycle">Number of cycles to run; only <see cref="UnderAutomation.ABB.Rws.Data.RapidExecutionCycle.Once"/> and
+		///             <see cref="UnderAutomation.ABB.Rws.Data.RapidExecutionCycle.Forever"/> are accepted</param>
 		public void SetExecutionCycle(RapidExecutionCycle cycle)
 		{
 			// Source is hidden, a Source licence is needed to access internal code...
@@ -157,8 +157,8 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// <summary>
 		/// Sets how many times the program runs before stopping (asynchronous)
 		/// </summary>
-		/// <param name="cycle">Number of cycles to run; only <xref href="UnderAutomation.ABB.Rws.Data.RapidExecutionCycle.Once" data-throw-if-not-resolved="false"></xref> and
-		///             <xref href="UnderAutomation.ABB.Rws.Data.RapidExecutionCycle.Forever" data-throw-if-not-resolved="false"></xref> are accepted</param>
+		/// <param name="cycle">Number of cycles to run; only <see cref="UnderAutomation.ABB.Rws.Data.RapidExecutionCycle.Once"/> and
+		///             <see cref="UnderAutomation.ABB.Rws.Data.RapidExecutionCycle.Forever"/> are accepted</param>
 		/// <param name="cancellationToken">Cancellation token</param>
 		public Task SetExecutionCycleAsync(RapidExecutionCycle cycle, CancellationToken cancellationToken = default)
 		{
@@ -169,10 +169,10 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// <summary>
 		/// Drives the hold-to-run control that lets the program run in manual mode (synchronous)
 		/// 
-		/// <p>Send <xref href="UnderAutomation.ABB.Rws.Data.RapidHoldToRunState.Press" data-throw-if-not-resolved="false"></xref> to allow execution to start, then
-		/// <xref href="UnderAutomation.ABB.Rws.Data.RapidHoldToRunState.Held" data-throw-if-not-resolved="false"></xref> about every two seconds to keep it running; the controller
+		/// <p>Send <see cref="UnderAutomation.ABB.Rws.Data.RapidHoldToRunState.Press"/> to allow execution to start, then
+		/// <see cref="UnderAutomation.ABB.Rws.Data.RapidHoldToRunState.Held"/> about every two seconds to keep it running; the controller
 		/// stops the program as soon as it stops hearing from the client. Send
-		/// <xref href="UnderAutomation.ABB.Rws.Data.RapidHoldToRunState.Release" data-throw-if-not-resolved="false"></xref> to stop it at once.</p>
+		/// <see cref="UnderAutomation.ABB.Rws.Data.RapidHoldToRunState.Release"/> to stop it at once.</p>
 		/// </summary>
 		/// <param name="state">State to put the control in</param>
 		public void SetHoldToRun(RapidHoldToRunState state)
@@ -183,10 +183,10 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// <summary>
 		/// Drives the hold-to-run control that lets the program run in manual mode (asynchronous)
 		/// 
-		/// <p>Send <xref href="UnderAutomation.ABB.Rws.Data.RapidHoldToRunState.Press" data-throw-if-not-resolved="false"></xref> to allow execution to start, then
-		/// <xref href="UnderAutomation.ABB.Rws.Data.RapidHoldToRunState.Held" data-throw-if-not-resolved="false"></xref> about every two seconds to keep it running; the controller
+		/// <p>Send <see cref="UnderAutomation.ABB.Rws.Data.RapidHoldToRunState.Press"/> to allow execution to start, then
+		/// <see cref="UnderAutomation.ABB.Rws.Data.RapidHoldToRunState.Held"/> about every two seconds to keep it running; the controller
 		/// stops the program as soon as it stops hearing from the client. Send
-		/// <xref href="UnderAutomation.ABB.Rws.Data.RapidHoldToRunState.Release" data-throw-if-not-resolved="false"></xref> to stop it at once.</p>
+		/// <see cref="UnderAutomation.ABB.Rws.Data.RapidHoldToRunState.Release"/> to stop it at once.</p>
 		/// </summary>
 		/// <param name="state">State to put the control in</param>
 		/// <param name="cancellationToken">Cancellation token</param>
@@ -326,7 +326,7 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// <summary>
 		/// Gets how many lines and columns the source of a module holds (synchronous)
 		/// 
-		/// <p>This is what it takes to ask for the whole of it with <xref href="UnderAutomation.ABB.Rws.Services.RapidService.GetModuleTextRange(System.String%2cSystem.String%2cSystem.Int32%2cSystem.Int32%2cSystem.Int32%2cSystem.Int32)" data-throw-if-not-resolved="false"></xref>.</p>
+		/// <p>This is what it takes to ask for the whole of it with <see cref="UnderAutomation.ABB.Rws.Services.RapidService.GetModuleTextRange(System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32)"/>.</p>
 		/// </summary>
 		/// <param name="task">Name of the task, for example "T_ROB1"</param>
 		/// <param name="module">Name of the module, for example "MainModule"</param>
@@ -340,7 +340,7 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// <summary>
 		/// Gets how many lines and columns the source of a module holds (asynchronous)
 		/// 
-		/// <p>This is what it takes to ask for the whole of it with <xref href="UnderAutomation.ABB.Rws.Services.RapidService.GetModuleTextRangeAsync(System.String%2cSystem.String%2cSystem.Int32%2cSystem.Int32%2cSystem.Int32%2cSystem.Int32%2cSystem.Threading.CancellationToken)" data-throw-if-not-resolved="false"></xref>.</p>
+		/// <p>This is what it takes to ask for the whole of it with <see cref="UnderAutomation.ABB.Rws.Services.RapidService.GetModuleTextRangeAsync(System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.Threading.CancellationToken)"/>.</p>
 		/// </summary>
 		/// <param name="task">Name of the task, for example "T_ROB1"</param>
 		/// <param name="module">Name of the module, for example "MainModule"</param>
@@ -969,7 +969,7 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// Gets what each of the six external joints of a task is doing (synchronous)
 		/// 
 		/// <p>This is what says how to read the corresponding value of
-		/// <xref href="UnderAutomation.ABB.Rws.Services.RapidService.GetJointTarget(System.String)" data-throw-if-not-resolved="false"></xref>: a joint reported as not active carries no meaningful
+		/// <see cref="UnderAutomation.ABB.Rws.Services.RapidService.GetJointTarget(System.String)"/>: a joint reported as not active carries no meaningful
 		/// position.</p>
 		/// </summary>
 		/// <param name="task">Name of the task, for example "T_ROB1"</param>
@@ -984,7 +984,7 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// Gets what each of the six external joints of a task is doing (asynchronous)
 		/// 
 		/// <p>This is what says how to read the corresponding value of
-		/// <xref href="UnderAutomation.ABB.Rws.Services.RapidService.GetJointTargetAsync(System.String%2cSystem.Threading.CancellationToken)" data-throw-if-not-resolved="false"></xref>: a joint reported as not active carries no meaningful
+		/// <see cref="UnderAutomation.ABB.Rws.Services.RapidService.GetJointTargetAsync(System.String,System.Threading.CancellationToken)"/>: a joint reported as not active carries no meaningful
 		/// position.</p>
 		/// </summary>
 		/// <param name="task">Name of the task, for example "T_ROB1"</param>
@@ -2100,7 +2100,7 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// <param name="task">Name of the task, for example "T_ROB1"</param>
 		/// <param name="start">Index of the first category to return, null to start from the beginning</param>
 		/// <param name="limit">Maximum number of categories to return, null to let the controller decide</param>
-		/// <returns>One entry per category; the number of an entry is what <xref href="UnderAutomation.ABB.Rws.Services.RapidService.GetPallet(System.String%2cSystem.Int32%2cSystem.Nullable%7bSystem.Int32%7d%2cSystem.Nullable%7bSystem.Int32%7d)" data-throw-if-not-resolved="false"></xref> takes</returns>
+		/// <returns>One entry per category; the number of an entry is what <see cref="UnderAutomation.ABB.Rws.Services.RapidService.GetPallet(System.String,System.Int32,System.Nullable{System.Int32},System.Nullable{System.Int32})"/> takes</returns>
 		public RapidPalletHeadItem[] GetPalletHeads(string task, int? start = null, int? limit = null)
 		{
 			// Source is hidden, a Source licence is needed to access internal code...
@@ -2114,7 +2114,7 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// <param name="start">Index of the first category to return, null to start from the beginning</param>
 		/// <param name="limit">Maximum number of categories to return, null to let the controller decide</param>
 		/// <param name="cancellationToken">Cancellation token</param>
-		/// <returns>One entry per category; the number of an entry is what <xref href="UnderAutomation.ABB.Rws.Services.RapidService.GetPalletAsync(System.String%2cSystem.Int32%2cSystem.Nullable%7bSystem.Int32%7d%2cSystem.Nullable%7bSystem.Int32%7d%2cSystem.Threading.CancellationToken)" data-throw-if-not-resolved="false"></xref> takes</returns>
+		/// <returns>One entry per category; the number of an entry is what <see cref="UnderAutomation.ABB.Rws.Services.RapidService.GetPalletAsync(System.String,System.Int32,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Threading.CancellationToken)"/> takes</returns>
 		public Task<RapidPalletHeadItem[]> GetPalletHeadsAsync(string task, int? start = null, int? limit = null, CancellationToken cancellationToken = default)
 		{
 			// Source is hidden, a Source licence is needed to access internal code...
@@ -2125,7 +2125,7 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// Gets the entries of one category of the instruction palette (synchronous)
 		/// </summary>
 		/// <param name="task">Name of the task, for example "T_ROB1"</param>
-		/// <param name="palletNumber">Number of the category, as <xref href="UnderAutomation.ABB.Rws.Services.RapidService.GetPalletHeads(System.String%2cSystem.Nullable%7bSystem.Int32%7d%2cSystem.Nullable%7bSystem.Int32%7d)" data-throw-if-not-resolved="false"></xref> reports it</param>
+		/// <param name="palletNumber">Number of the category, as <see cref="UnderAutomation.ABB.Rws.Services.RapidService.GetPalletHeads(System.String,System.Nullable{System.Int32},System.Nullable{System.Int32})"/> reports it</param>
 		/// <param name="start">Index of the first entry to return, null to start from the beginning</param>
 		/// <param name="limit">Maximum number of entries to return, null to let the controller decide</param>
 		/// <returns>One entry per instruction of the category</returns>
@@ -2139,7 +2139,7 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// Gets the entries of one category of the instruction palette (asynchronous)
 		/// </summary>
 		/// <param name="task">Name of the task, for example "T_ROB1"</param>
-		/// <param name="palletNumber">Number of the category, as <xref href="UnderAutomation.ABB.Rws.Services.RapidService.GetPalletHeadsAsync(System.String%2cSystem.Nullable%7bSystem.Int32%7d%2cSystem.Nullable%7bSystem.Int32%7d%2cSystem.Threading.CancellationToken)" data-throw-if-not-resolved="false"></xref> reports it</param>
+		/// <param name="palletNumber">Number of the category, as <see cref="UnderAutomation.ABB.Rws.Services.RapidService.GetPalletHeadsAsync(System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Threading.CancellationToken)"/> reports it</param>
 		/// <param name="start">Index of the first entry to return, null to start from the beginning</param>
 		/// <param name="limit">Maximum number of entries to return, null to let the controller decide</param>
 		/// <param name="cancellationToken">Cancellation token</param>
@@ -2154,7 +2154,7 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// Gets the dialogue a running RAPID program is currently asking an operator for (synchronous)
 		/// 
 		/// <p>Answering it means writing its parameters with
-		/// <xref href="UnderAutomation.ABB.Rws.Services.RapidService.SetUiInstructionParameter(System.String%2cSystem.String%2cSystem.String)" data-throw-if-not-resolved="false"></xref>, addressed by the path this returns.</p>
+		/// <see cref="UnderAutomation.ABB.Rws.Services.RapidService.SetUiInstructionParameter(System.String,System.String,System.String)"/>, addressed by the path this returns.</p>
 		/// </summary>
 		/// <returns>The pending instruction, null when the program is not asking for anything</returns>
 		public RapidUiInstruction GetActiveUiInstruction()
@@ -2167,7 +2167,7 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// Gets the dialogue a running RAPID program is currently asking an operator for (asynchronous)
 		/// 
 		/// <p>Answering it means writing its parameters with
-		/// <xref href="UnderAutomation.ABB.Rws.Services.RapidService.SetUiInstructionParameterAsync(System.String%2cSystem.String%2cSystem.String%2cSystem.Threading.CancellationToken)" data-throw-if-not-resolved="false"></xref>, addressed by the path this returns.</p>
+		/// <see cref="UnderAutomation.ABB.Rws.Services.RapidService.SetUiInstructionParameterAsync(System.String,System.String,System.String,System.Threading.CancellationToken)"/>, addressed by the path this returns.</p>
 		/// </summary>
 		/// <param name="cancellationToken">Cancellation token</param>
 		/// <returns>The pending instruction, null when the program is not asking for anything</returns>
@@ -2182,7 +2182,7 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// waiting for (synchronous)
 		/// </summary>
 		/// <param name="stackUrl">Path identifying the call, as
-		///             <xref href="UnderAutomation.ABB.Rws.Services.RapidService.GetActiveUiInstruction" data-throw-if-not-resolved="false"></xref> reports it</param>
+		///             <see cref="UnderAutomation.ABB.Rws.Services.RapidService.GetActiveUiInstruction"/> reports it</param>
 		/// <returns>One entry per parameter</returns>
 		public RapidUiInstructionParameter[] GetUiInstructionParameters(string stackUrl)
 		{
@@ -2195,7 +2195,7 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// waiting for (asynchronous)
 		/// </summary>
 		/// <param name="stackUrl">Path identifying the call, as
-		///             <xref href="UnderAutomation.ABB.Rws.Services.RapidService.GetActiveUiInstructionAsync(System.Threading.CancellationToken)" data-throw-if-not-resolved="false"></xref> reports it</param>
+		///             <see cref="UnderAutomation.ABB.Rws.Services.RapidService.GetActiveUiInstructionAsync(System.Threading.CancellationToken)"/> reports it</param>
 		/// <param name="cancellationToken">Cancellation token</param>
 		/// <returns>One entry per parameter</returns>
 		public Task<RapidUiInstructionParameter[]> GetUiInstructionParametersAsync(string stackUrl, CancellationToken cancellationToken = default)
@@ -2208,7 +2208,7 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// Gets the value of one parameter of a pending UI instruction (synchronous)
 		/// </summary>
 		/// <param name="stackUrl">Path identifying the call, as
-		///             <xref href="UnderAutomation.ABB.Rws.Services.RapidService.GetActiveUiInstruction" data-throw-if-not-resolved="false"></xref> reports it</param>
+		///             <see cref="UnderAutomation.ABB.Rws.Services.RapidService.GetActiveUiInstruction"/> reports it</param>
 		/// <param name="parameter">Name of the parameter, for example "TPCompleted"</param>
 		/// <returns>Value of the parameter, written the way RAPID writes it</returns>
 		public string GetUiInstructionParameter(string stackUrl, string parameter)
@@ -2221,7 +2221,7 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// Gets the value of one parameter of a pending UI instruction (asynchronous)
 		/// </summary>
 		/// <param name="stackUrl">Path identifying the call, as
-		///             <xref href="UnderAutomation.ABB.Rws.Services.RapidService.GetActiveUiInstructionAsync(System.Threading.CancellationToken)" data-throw-if-not-resolved="false"></xref> reports it</param>
+		///             <see cref="UnderAutomation.ABB.Rws.Services.RapidService.GetActiveUiInstructionAsync(System.Threading.CancellationToken)"/> reports it</param>
 		/// <param name="parameter">Name of the parameter, for example "TPCompleted"</param>
 		/// <param name="cancellationToken">Cancellation token</param>
 		/// <returns>Value of the parameter, written the way RAPID writes it</returns>
@@ -2238,7 +2238,7 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// the one marking it as completed.</p>
 		/// </summary>
 		/// <param name="stackUrl">Path identifying the call, as
-		///             <xref href="UnderAutomation.ABB.Rws.Services.RapidService.GetActiveUiInstruction" data-throw-if-not-resolved="false"></xref> reports it</param>
+		///             <see cref="UnderAutomation.ABB.Rws.Services.RapidService.GetActiveUiInstruction"/> reports it</param>
 		/// <param name="parameter">Name of the parameter to write, for example "TPCompleted"</param>
 		/// <param name="value">Value to write, written the way RAPID writes it</param>
 		public void SetUiInstructionParameter(string stackUrl, string parameter, string value)
@@ -2253,7 +2253,7 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// the one marking it as completed.</p>
 		/// </summary>
 		/// <param name="stackUrl">Path identifying the call, as
-		///             <xref href="UnderAutomation.ABB.Rws.Services.RapidService.GetActiveUiInstructionAsync(System.Threading.CancellationToken)" data-throw-if-not-resolved="false"></xref> reports it</param>
+		///             <see cref="UnderAutomation.ABB.Rws.Services.RapidService.GetActiveUiInstructionAsync(System.Threading.CancellationToken)"/> reports it</param>
 		/// <param name="parameter">Name of the parameter to write, for example "TPCompleted"</param>
 		/// <param name="value">Value to write, written the way RAPID writes it</param>
 		/// <param name="cancellationToken">Cancellation token</param>

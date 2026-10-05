@@ -83,7 +83,7 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// Searches the I/O networks matching a name and/or a physical state (synchronous)
 		/// </summary>
 		/// <param name="name">Name of the searched networks, for example "Local". Optional when <code class="paramref">physicalState</code> is given.</param>
-		/// <param name="physicalState">Physical state of the searched networks, for example <xref href="UnderAutomation.ABB.Rws.Data.IoNetworkPhysicalState.Running" data-throw-if-not-resolved="false"></xref>. Optional when <code class="paramref">name</code> is given.</param>
+		/// <param name="physicalState">Physical state of the searched networks, for example <see cref="UnderAutomation.ABB.Rws.Data.IoNetworkPhysicalState.Running"/>. Optional when <code class="paramref">name</code> is given.</param>
 		/// <returns>I/O networks matching the criteria</returns>
 		public IoNetworkItem[] SearchNetworks(string name = null, IoNetworkPhysicalState? physicalState = null)
 		{
@@ -95,7 +95,7 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// Searches the I/O networks matching a name and/or a physical state (asynchronous)
 		/// </summary>
 		/// <param name="name">Name of the searched networks, for example "Local". Optional when <code class="paramref">physicalState</code> is given.</param>
-		/// <param name="physicalState">Physical state of the searched networks, for example <xref href="UnderAutomation.ABB.Rws.Data.IoNetworkPhysicalState.Running" data-throw-if-not-resolved="false"></xref>. Optional when <code class="paramref">name</code> is given.</param>
+		/// <param name="physicalState">Physical state of the searched networks, for example <see cref="UnderAutomation.ABB.Rws.Data.IoNetworkPhysicalState.Running"/>. Optional when <code class="paramref">name</code> is given.</param>
 		/// <param name="cancellationToken">Cancellation token</param>
 		/// <returns>I/O networks matching the criteria</returns>
 		public Task<IoNetworkItem[]> SearchNetworksAsync(string name = null, IoNetworkPhysicalState? physicalState = null, CancellationToken cancellationToken = default)
@@ -132,7 +132,7 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// </summary>
 		/// <param name="network">Name of the network, for example "Local"</param>
 		/// <param name="configurationType">Part of the network to configure</param>
-		/// <returns>Action the client is expected to take, <xref href="UnderAutomation.ABB.Rws.Data.IoClientAction.Unknown" data-throw-if-not-resolved="false"></xref> when the controller did not report one</returns>
+		/// <returns>Action the client is expected to take, <see cref="UnderAutomation.ABB.Rws.Data.IoClientAction.Unknown"/> when the controller did not report one</returns>
 		public IoClientAction SetNetworkConfigurationType(string network, IoNetworkConfigurationType configurationType)
 		{
 			// Source is hidden, a Source licence is needed to access internal code...
@@ -145,7 +145,7 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// <param name="network">Name of the network, for example "Local"</param>
 		/// <param name="configurationType">Part of the network to configure</param>
 		/// <param name="cancellationToken">Cancellation token</param>
-		/// <returns>Action the client is expected to take, <xref href="UnderAutomation.ABB.Rws.Data.IoClientAction.Unknown" data-throw-if-not-resolved="false"></xref> when the controller did not report one</returns>
+		/// <returns>Action the client is expected to take, <see cref="UnderAutomation.ABB.Rws.Data.IoClientAction.Unknown"/> when the controller did not report one</returns>
 		public Task<IoClientAction> SetNetworkConfigurationTypeAsync(string network, IoNetworkConfigurationType configurationType, CancellationToken cancellationToken = default)
 		{
 			// Source is hidden, a Source licence is needed to access internal code...
@@ -156,7 +156,7 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// Starts or stops an I/O network (synchronous)
 		/// </summary>
 		/// <param name="network">Name of the network, for example "Local"</param>
-		/// <param name="logicalState">New logical state of the network, <xref href="UnderAutomation.ABB.Rws.Data.IoNetworkLogicalState.Started" data-throw-if-not-resolved="false"></xref> or <xref href="UnderAutomation.ABB.Rws.Data.IoNetworkLogicalState.Stopped" data-throw-if-not-resolved="false"></xref></param>
+		/// <param name="logicalState">New logical state of the network, <see cref="UnderAutomation.ABB.Rws.Data.IoNetworkLogicalState.Started"/> or <see cref="UnderAutomation.ABB.Rws.Data.IoNetworkLogicalState.Stopped"/></param>
 		public void SetNetworkState(string network, IoNetworkLogicalState logicalState)
 		{
 			// Source is hidden, a Source licence is needed to access internal code...
@@ -166,7 +166,7 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// Starts or stops an I/O network (asynchronous)
 		/// </summary>
 		/// <param name="network">Name of the network, for example "Local"</param>
-		/// <param name="logicalState">New logical state of the network, <xref href="UnderAutomation.ABB.Rws.Data.IoNetworkLogicalState.Started" data-throw-if-not-resolved="false"></xref> or <xref href="UnderAutomation.ABB.Rws.Data.IoNetworkLogicalState.Stopped" data-throw-if-not-resolved="false"></xref></param>
+		/// <param name="logicalState">New logical state of the network, <see cref="UnderAutomation.ABB.Rws.Data.IoNetworkLogicalState.Started"/> or <see cref="UnderAutomation.ABB.Rws.Data.IoNetworkLogicalState.Stopped"/></param>
 		/// <param name="cancellationToken">Cancellation token</param>
 		public Task SetNetworkStateAsync(string network, IoNetworkLogicalState logicalState, CancellationToken cancellationToken = default)
 		{
@@ -306,7 +306,7 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// </summary>
 		/// <param name="network">Name of the network the device is connected to, for example "Local"</param>
 		/// <param name="device">Name of the device, for example "DRV_1"</param>
-		/// <param name="logicalState">New logical state of the device, <xref href="UnderAutomation.ABB.Rws.Data.IoDeviceLogicalState.Enabled" data-throw-if-not-resolved="false"></xref> or <xref href="UnderAutomation.ABB.Rws.Data.IoDeviceLogicalState.Disabled" data-throw-if-not-resolved="false"></xref></param>
+		/// <param name="logicalState">New logical state of the device, <see cref="UnderAutomation.ABB.Rws.Data.IoDeviceLogicalState.Enabled"/> or <see cref="UnderAutomation.ABB.Rws.Data.IoDeviceLogicalState.Disabled"/></param>
 		public void SetDeviceState(string network, string device, IoDeviceLogicalState logicalState)
 		{
 			// Source is hidden, a Source licence is needed to access internal code...
@@ -317,7 +317,7 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// </summary>
 		/// <param name="network">Name of the network the device is connected to, for example "Local"</param>
 		/// <param name="device">Name of the device, for example "DRV_1"</param>
-		/// <param name="logicalState">New logical state of the device, <xref href="UnderAutomation.ABB.Rws.Data.IoDeviceLogicalState.Enabled" data-throw-if-not-resolved="false"></xref> or <xref href="UnderAutomation.ABB.Rws.Data.IoDeviceLogicalState.Disabled" data-throw-if-not-resolved="false"></xref></param>
+		/// <param name="logicalState">New logical state of the device, <see cref="UnderAutomation.ABB.Rws.Data.IoDeviceLogicalState.Enabled"/> or <see cref="UnderAutomation.ABB.Rws.Data.IoDeviceLogicalState.Disabled"/></param>
 		/// <param name="cancellationToken">Cancellation token</param>
 		public Task SetDeviceStateAsync(string network, string device, IoDeviceLogicalState logicalState, CancellationToken cancellationToken = default)
 		{
@@ -426,7 +426,7 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// <summary>
 		/// Gets every I/O signal defined in the controller (synchronous)
 		/// 
-		/// <p>A controller usually exposes several hundreds of signals. Use <xref href="UnderAutomation.ABB.Rws.Services.IoService.SearchSignals(UnderAutomation.ABB.Rws.Data.IoSignalSearchCriteria%2cUnderAutomation.ABB.Rws.Data.IoSignalSearchCriteria%2cSystem.Nullable%7bSystem.Int32%7d%2cSystem.Nullable%7bSystem.Int32%7d)" data-throw-if-not-resolved="false"></xref> to
+		/// <p>A controller usually exposes several hundreds of signals. Use <see cref="UnderAutomation.ABB.Rws.Services.IoService.SearchSignals(UnderAutomation.ABB.Rws.Data.IoSignalSearchCriteria,UnderAutomation.ABB.Rws.Data.IoSignalSearchCriteria,System.Nullable{System.Int32},System.Nullable{System.Int32})"/> to
 		/// narrow the result down to a network, a device, a category or a signal type.</p>
 		/// </summary>
 		/// <returns>I/O signals of every device</returns>
@@ -439,7 +439,7 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// <summary>
 		/// Gets every I/O signal defined in the controller (asynchronous)
 		/// 
-		/// <p>A controller usually exposes several hundreds of signals. Use <xref href="UnderAutomation.ABB.Rws.Services.IoService.SearchSignalsAsync(UnderAutomation.ABB.Rws.Data.IoSignalSearchCriteria%2cUnderAutomation.ABB.Rws.Data.IoSignalSearchCriteria%2cSystem.Nullable%7bSystem.Int32%7d%2cSystem.Nullable%7bSystem.Int32%7d%2cSystem.Threading.CancellationToken)" data-throw-if-not-resolved="false"></xref> to
+		/// <p>A controller usually exposes several hundreds of signals. Use <see cref="UnderAutomation.ABB.Rws.Services.IoService.SearchSignalsAsync(UnderAutomation.ABB.Rws.Data.IoSignalSearchCriteria,UnderAutomation.ABB.Rws.Data.IoSignalSearchCriteria,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Threading.CancellationToken)"/> to
 		/// narrow the result down to a network, a device, a category or a signal type.</p>
 		/// </summary>
 		/// <param name="cancellationToken">Cancellation token</param>
@@ -708,7 +708,7 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// Searches the I/O signals matching the given criteria (synchronous)
 		/// 
 		/// <p>The returned signals carry their name, type, category, logical value and logical state.
-		/// Use <xref href="UnderAutomation.ABB.Rws.Services.IoService.SearchSignalsExtended(UnderAutomation.ABB.Rws.Data.IoSignalSearchCriteria%2cUnderAutomation.ABB.Rws.Data.IoSignalSearchCriteria%2cSystem.Nullable%7bSystem.Int32%7d%2cSystem.Nullable%7bSystem.Int32%7d)" data-throw-if-not-resolved="false"></xref> to also get their physical value, time stamps and write access level.</p>
+		/// Use <see cref="UnderAutomation.ABB.Rws.Services.IoService.SearchSignalsExtended(UnderAutomation.ABB.Rws.Data.IoSignalSearchCriteria,UnderAutomation.ABB.Rws.Data.IoSignalSearchCriteria,System.Nullable{System.Int32},System.Nullable{System.Int32})"/> to also get their physical value, time stamps and write access level.</p>
 		/// </summary>
 		/// <param name="criteria">Search criteria, null to match every signal</param>
 		/// <param name="secondCriteria">Optional second criteria, a signal is returned only when it matches both</param>
@@ -725,7 +725,7 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// Searches the I/O signals matching the given criteria (asynchronous)
 		/// 
 		/// <p>The returned signals carry their name, type, category, logical value and logical state.
-		/// Use <xref href="UnderAutomation.ABB.Rws.Services.IoService.SearchSignalsExtendedAsync(UnderAutomation.ABB.Rws.Data.IoSignalSearchCriteria%2cUnderAutomation.ABB.Rws.Data.IoSignalSearchCriteria%2cSystem.Nullable%7bSystem.Int32%7d%2cSystem.Nullable%7bSystem.Int32%7d%2cSystem.Threading.CancellationToken)" data-throw-if-not-resolved="false"></xref> to also get their physical value, time stamps and write access level.</p>
+		/// Use <see cref="UnderAutomation.ABB.Rws.Services.IoService.SearchSignalsExtendedAsync(UnderAutomation.ABB.Rws.Data.IoSignalSearchCriteria,UnderAutomation.ABB.Rws.Data.IoSignalSearchCriteria,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Threading.CancellationToken)"/> to also get their physical value, time stamps and write access level.</p>
 		/// </summary>
 		/// <param name="criteria">Search criteria, null to match every signal</param>
 		/// <param name="secondCriteria">Optional second criteria, a signal is returned only when it matches both</param>
@@ -742,7 +742,7 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// <summary>
 		/// Searches the I/O signals matching the given criteria and returns their extended properties (synchronous)
 		/// 
-		/// <p>In addition to <xref href="UnderAutomation.ABB.Rws.Services.IoService.SearchSignals(UnderAutomation.ABB.Rws.Data.IoSignalSearchCriteria%2cUnderAutomation.ABB.Rws.Data.IoSignalSearchCriteria%2cSystem.Nullable%7bSystem.Int32%7d%2cSystem.Nullable%7bSystem.Int32%7d)" data-throw-if-not-resolved="false"></xref>, the returned signals carry their physical value,
+		/// <p>In addition to <see cref="UnderAutomation.ABB.Rws.Services.IoService.SearchSignals(UnderAutomation.ABB.Rws.Data.IoSignalSearchCriteria,UnderAutomation.ABB.Rws.Data.IoSignalSearchCriteria,System.Nullable{System.Int32},System.Nullable{System.Int32})"/>, the returned signals carry their physical value,
 		/// quality, time stamps and write access level.</p>
 		/// </summary>
 		/// <param name="criteria">Search criteria, null to match every signal</param>
@@ -759,7 +759,7 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// <summary>
 		/// Searches the I/O signals matching the given criteria and returns their extended properties (asynchronous)
 		/// 
-		/// <p>In addition to <xref href="UnderAutomation.ABB.Rws.Services.IoService.SearchSignalsAsync(UnderAutomation.ABB.Rws.Data.IoSignalSearchCriteria%2cUnderAutomation.ABB.Rws.Data.IoSignalSearchCriteria%2cSystem.Nullable%7bSystem.Int32%7d%2cSystem.Nullable%7bSystem.Int32%7d%2cSystem.Threading.CancellationToken)" data-throw-if-not-resolved="false"></xref>, the returned signals carry their physical value,
+		/// <p>In addition to <see cref="UnderAutomation.ABB.Rws.Services.IoService.SearchSignalsAsync(UnderAutomation.ABB.Rws.Data.IoSignalSearchCriteria,UnderAutomation.ABB.Rws.Data.IoSignalSearchCriteria,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Threading.CancellationToken)"/>, the returned signals carry their physical value,
 		/// quality, time stamps and write access level.</p>
 		/// </summary>
 		/// <param name="criteria">Search criteria, null to match every signal</param>

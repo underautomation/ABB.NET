@@ -13,7 +13,7 @@ namespace UnderAutomation.ABB.Rws.Data {
 	public class CalibrationInfo {
 
 		/// <summary>
-		/// Initializes a new instance of the <xref href="UnderAutomation.ABB.Rws.Data.CalibrationInfo" data-throw-if-not-resolved="false"></xref> class
+		/// Initializes a new instance of the <see cref="UnderAutomation.ABB.Rws.Data.CalibrationInfo"/> class
 		/// </summary>
 		public CalibrationInfo()
 		{
@@ -41,8 +41,8 @@ namespace UnderAutomation.ABB.Rws.Data {
 		public int? ActiveJointCount { get; set; }
 
 		/// <summary>
-		/// Number of entries in <xref href="UnderAutomation.ABB.Rws.Data.CalibrationInfo.Joints" data-throw-if-not-resolved="false"></xref>, which is fixed and larger than
-		/// <xref href="UnderAutomation.ABB.Rws.Data.CalibrationInfo.ActiveJointCount" data-throw-if-not-resolved="false"></xref>. Null when the controller did not report it.
+		/// Number of entries in <see cref="UnderAutomation.ABB.Rws.Data.CalibrationInfo.Joints"/>, which is fixed and larger than
+		/// <see cref="UnderAutomation.ABB.Rws.Data.CalibrationInfo.ActiveJointCount"/>. Null when the controller did not report it.
 		/// </summary>
 		public int? JointCount { get; set; }
 
@@ -57,7 +57,7 @@ namespace UnderAutomation.ABB.Rws.Data {
 		public CalibrationJointInfo[] Joints { get; set; }
 
 		/// <summary>
-		/// Number of joints that exist on the unit, counted from <xref href="UnderAutomation.ABB.Rws.Data.CalibrationInfo.Joints" data-throw-if-not-resolved="false"></xref>
+		/// Number of joints that exist on the unit, counted from <see cref="UnderAutomation.ABB.Rws.Data.CalibrationInfo.Joints"/>
 		/// </summary>
 		public int ExistingJointCount { get; }
 	}

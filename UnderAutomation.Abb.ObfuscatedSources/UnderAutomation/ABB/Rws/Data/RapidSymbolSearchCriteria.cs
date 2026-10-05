@@ -10,12 +10,12 @@ namespace UnderAutomation.ABB.Rws.Data {
 	/// 
 	/// <p>Passed to <code>RapidService.SearchSymbols()</code>. Every property is optional; leaving one alone
 	/// means the search does not filter on it. A search with no criterion at all walks the whole system,
-	/// which is slow, so at least set <xref href="UnderAutomation.ABB.Rws.Data.RapidSymbolSearchCriteria.BlockUrl" data-throw-if-not-resolved="false"></xref>.</p>
+	/// which is slow, so at least set <see cref="UnderAutomation.ABB.Rws.Data.RapidSymbolSearchCriteria.BlockUrl"/>.</p>
 	/// </summary>
 	public class RapidSymbolSearchCriteria {
 
 		/// <summary>
-		/// Initializes a new instance of the <xref href="UnderAutomation.ABB.Rws.Data.RapidSymbolSearchCriteria" data-throw-if-not-resolved="false"></xref> class
+		/// Initializes a new instance of the <see cref="UnderAutomation.ABB.Rws.Data.RapidSymbolSearchCriteria"/> class
 		/// </summary>
 		public RapidSymbolSearchCriteria()
 		{
@@ -43,18 +43,18 @@ namespace UnderAutomation.ABB.Rws.Data {
 		public bool? Recursive { get; set; }
 
 		/// <summary>
-		/// Line the search starts from, used together with <xref href="UnderAutomation.ABB.Rws.Data.RapidSymbolSearchView.Scope" data-throw-if-not-resolved="false"></xref>
+		/// Line the search starts from, used together with <see cref="UnderAutomation.ABB.Rws.Data.RapidSymbolSearchView.Scope"/>
 		/// </summary>
 		public int? PositionRow { get; set; }
 
 		/// <summary>
-		/// Column the search starts from, used together with <xref href="UnderAutomation.ABB.Rws.Data.RapidSymbolSearchView.Scope" data-throw-if-not-resolved="false"></xref>
+		/// Column the search starts from, used together with <see cref="UnderAutomation.ABB.Rws.Data.RapidSymbolSearchView.Scope"/>
 		/// </summary>
 		public int? PositionColumn { get; set; }
 
 		/// <summary>
 		/// Frame of the call stack the search starts from, used together with
-		/// <xref href="UnderAutomation.ABB.Rws.Data.RapidSymbolSearchView.Stack" data-throw-if-not-resolved="false"></xref>
+		/// <see cref="UnderAutomation.ABB.Rws.Data.RapidSymbolSearchView.Stack"/>
 		/// </summary>
 		public int? StackFrame { get; set; }
 

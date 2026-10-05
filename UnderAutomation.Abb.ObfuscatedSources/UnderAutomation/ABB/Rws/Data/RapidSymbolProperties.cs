@@ -9,13 +9,13 @@ namespace UnderAutomation.ABB.Rws.Data {
 	/// What a RAPID symbol is declared as.
 	/// 
 	/// <p>Returned by <code>RapidService.GetSymbolProperties()</code> and <code>RapidService.SearchSymbols()</code>.
-	/// A search fills in <xref href="UnderAutomation.ABB.Rws.Data.RapidSymbolProperties.Name" data-throw-if-not-resolved="false"></xref> and leaves <xref href="UnderAutomation.ABB.Rws.Data.RapidSymbolProperties.Storage" data-throw-if-not-resolved="false"></xref> alone, a direct read does the
+	/// A search fills in <see cref="UnderAutomation.ABB.Rws.Data.RapidSymbolProperties.Name"/> and leaves <see cref="UnderAutomation.ABB.Rws.Data.RapidSymbolProperties.Storage"/> alone, a direct read does the
 	/// opposite on some controllers, so treat both as optional.</p>
 	/// </summary>
 	public class RapidSymbolProperties {
 
 		/// <summary>
-		/// Initializes a new instance of the <xref href="UnderAutomation.ABB.Rws.Data.RapidSymbolProperties" data-throw-if-not-resolved="false"></xref> class
+		/// Initializes a new instance of the <see cref="UnderAutomation.ABB.Rws.Data.RapidSymbolProperties"/> class
 		/// </summary>
 		public RapidSymbolProperties()
 		{

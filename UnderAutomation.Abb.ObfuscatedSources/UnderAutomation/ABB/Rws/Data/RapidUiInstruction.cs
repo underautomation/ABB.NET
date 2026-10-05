@@ -9,12 +9,12 @@ namespace UnderAutomation.ABB.Rws.Data {
 	/// 
 	/// <p>Returned by <code>RapidService.GetActiveUiInstruction()</code>, which returns null when no
 	/// instruction is pending. Answering one means writing its parameters with
-	/// <code>RapidService.SetUiInstructionParameter()</code>, using <xref href="UnderAutomation.ABB.Rws.Data.RapidUiInstruction.StackUrl" data-throw-if-not-resolved="false"></xref> to address them.</p>
+	/// <code>RapidService.SetUiInstructionParameter()</code>, using <see cref="UnderAutomation.ABB.Rws.Data.RapidUiInstruction.StackUrl"/> to address them.</p>
 	/// </summary>
 	public class RapidUiInstruction {
 
 		/// <summary>
-		/// Initializes a new instance of the <xref href="UnderAutomation.ABB.Rws.Data.RapidUiInstruction" data-throw-if-not-resolved="false"></xref> class
+		/// Initializes a new instance of the <see cref="UnderAutomation.ABB.Rws.Data.RapidUiInstruction"/> class
 		/// </summary>
 		public RapidUiInstruction()
 		{

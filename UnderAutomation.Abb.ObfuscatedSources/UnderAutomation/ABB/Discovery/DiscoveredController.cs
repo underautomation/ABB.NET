@@ -2,19 +2,18 @@
 // This file is an empty shell containing only public C# items.
 // The internal code is hidden; to access it, you need to obtain a Source licence of the library.
 
-using UnderAutomation.ABB;
 using UnderAutomation.ABB.Rws;
 
 namespace UnderAutomation.ABB.Discovery {
 	/// <summary>
 	/// An ABB robot controller found on the local network.
 	/// 
-	/// <p>Returned by <xref href="UnderAutomation.ABB.AbbController.Discover(System.Int32)" data-throw-if-not-resolved="false"></xref>.</p>
+	/// <p>Returned by <see cref="UnderAutomation.ABB.AbbController.Discover(System.Int32)"/>.</p>
 	/// </summary>
 	public class DiscoveredController {
 
 		/// <summary>
-		/// Build connection parameters pointing at this controller, ready for <xref href="UnderAutomation.ABB.AbbController.Connect(UnderAutomation.ABB.ConnectionParameters)" data-throw-if-not-resolved="false"></xref>.
+		/// Build connection parameters pointing at this controller, ready for <see cref="UnderAutomation.ABB.AbbController.Connect(UnderAutomation.ABB.ConnectionParameters)"/>.
 		/// 
 		/// <p>The address, the port, the scheme and the RWS version come from the discovery. The user name
 		/// and the password keep their default values, change them if the controller needs other ones.</p>
@@ -44,7 +43,7 @@ namespace UnderAutomation.ABB.Discovery {
 		public string SystemName { get; }
 
 		/// <summary>
-		/// Full name the controller publishes on the network. It contains <xref href="UnderAutomation.ABB.Discovery.DiscoveredController.SystemName" data-throw-if-not-resolved="false"></xref>.
+		/// Full name the controller publishes on the network. It contains <see cref="UnderAutomation.ABB.Discovery.DiscoveredController.SystemName"/>.
 		/// 
 		/// <p>Null when the controller did not announce itself.</p>
 		/// </summary>
@@ -88,16 +87,16 @@ namespace UnderAutomation.ABB.Discovery {
 		/// RWS version this controller most probably speaks.
 		/// 
 		/// <p>This is deduced from what the controller publishes, not from a request sent to it.
-		/// Check <xref href="UnderAutomation.ABB.Discovery.DiscoveredController.IsVersionDetected" data-throw-if-not-resolved="false"></xref> before relying on it.</p>
+		/// Check <see cref="UnderAutomation.ABB.Discovery.DiscoveredController.IsVersionDetected"/> before relying on it.</p>
 		/// </summary>
 		public RwsVersion ProbableVersion { get; }
 
 		/// <summary>
-		/// True when <xref href="UnderAutomation.ABB.Discovery.DiscoveredController.ProbableVersion" data-throw-if-not-resolved="false"></xref> is more than a guess.
+		/// True when <see cref="UnderAutomation.ABB.Discovery.DiscoveredController.ProbableVersion"/> is more than a guess.
 		/// 
 		/// <p>It is always true for a controller found by testing the ports of this machine, because the
 		/// controller was asked. For a controller heard announcing itself, it is false when the announcement
-		/// did not carry what the version is deduced from, and <xref href="UnderAutomation.ABB.Discovery.DiscoveredController.ProbableVersion" data-throw-if-not-resolved="false"></xref> then holds the
+		/// did not carry what the version is deduced from, and <see cref="UnderAutomation.ABB.Discovery.DiscoveredController.ProbableVersion"/> then holds the
 		/// most common value rather than a deduction.</p>
 		/// </summary>
 		public bool IsVersionDetected { get; }

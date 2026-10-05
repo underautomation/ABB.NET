@@ -8,13 +8,13 @@ namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
 	/// A RAPID task of the controller, as listed by <code>RapidService.GetTasks()</code>.
 	/// 
-	/// <p><code>RapidService.GetTask()</code> returns a <xref href="UnderAutomation.ABB.Rws.Data.RapidTaskInfo" data-throw-if-not-resolved="false"></xref>, which adds everything the
+	/// <p><code>RapidService.GetTask()</code> returns a <see cref="UnderAutomation.ABB.Rws.Data.RapidTaskInfo"/>, which adds everything the
 	/// controller reports for a single task only.</p>
 	/// </summary>
 	public class RapidTaskItem {
 
 		/// <summary>
-		/// Initializes a new instance of the <xref href="UnderAutomation.ABB.Rws.Data.RapidTaskItem" data-throw-if-not-resolved="false"></xref> class
+		/// Initializes a new instance of the <see cref="UnderAutomation.ABB.Rws.Data.RapidTaskItem"/> class
 		/// </summary>
 		public RapidTaskItem()
 		{

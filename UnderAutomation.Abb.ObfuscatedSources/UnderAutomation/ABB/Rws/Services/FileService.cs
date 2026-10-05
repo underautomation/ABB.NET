@@ -22,7 +22,7 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// Lists contents of a directory resource (synchronous)
 		/// 
 		/// <p>Environment variables (e.g. $home, $temp) and devices are treated as directories.</p>
-		/// <p>When listing the root path ("/", null, or "\\"), the response includes available devices in <xref href="UnderAutomation.ABB.Rws.Data.DirectoryListing.Devices" data-throw-if-not-resolved="false"></xref>.</p>
+		/// <p>When listing the root path ("/", null, or "\\"), the response includes available devices in <see cref="UnderAutomation.ABB.Rws.Data.DirectoryListing.Devices"/>.</p>
 		/// <p>The complete content is always returned, however many entries the directory holds.</p>
 		/// </summary>
 		/// <param name="path">Path to the directory (e.g. "$home", "$home/mydir", "hd0a:/data"), or null/"/"/"\\" for root</param>
@@ -37,7 +37,7 @@ namespace UnderAutomation.ABB.Rws.Services {
 		/// Lists contents of a directory resource (asynchronous)
 		/// 
 		/// <p>Environment variables (e.g. $home, $temp) and devices are treated as directories.</p>
-		/// <p>When listing the root path ("/", null, or "\\"), the response includes available devices in <xref href="UnderAutomation.ABB.Rws.Data.DirectoryListing.Devices" data-throw-if-not-resolved="false"></xref>.</p>
+		/// <p>When listing the root path ("/", null, or "\\"), the response includes available devices in <see cref="UnderAutomation.ABB.Rws.Data.DirectoryListing.Devices"/>.</p>
 		/// <p>The complete content is always returned, however many entries the directory holds.</p>
 		/// </summary>
 		/// <param name="path">Path to the directory (e.g. "$home", "$home/mydir", "hd0a:/data"), or null/"/"/"\\" for root</param>

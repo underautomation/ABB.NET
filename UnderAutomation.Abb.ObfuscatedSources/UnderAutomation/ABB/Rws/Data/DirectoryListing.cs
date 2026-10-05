@@ -8,13 +8,13 @@ namespace UnderAutomation.ABB.Rws.Data {
 	/// Represents a directory listing containing files, subdirectories, and devices.
 	/// 
 	/// <p>Returned by <code>FileService.ListDirectory(path)</code>.</p>
-	/// <p>When listing the root path ("/"), the <xref href="UnderAutomation.ABB.Rws.Data.DirectoryListing.Devices" data-throw-if-not-resolved="false"></xref> array contains available storage devices (C:, hd0a, etc.).</p>
-	/// <p>When listing a subdirectory, only <xref href="UnderAutomation.ABB.Rws.Data.DirectoryListing.Files" data-throw-if-not-resolved="false"></xref> and <xref href="UnderAutomation.ABB.Rws.Data.DirectoryListing.Directories" data-throw-if-not-resolved="false"></xref> are typically populated.</p>
+	/// <p>When listing the root path ("/"), the <see cref="UnderAutomation.ABB.Rws.Data.DirectoryListing.Devices"/> array contains available storage devices (C:, hd0a, etc.).</p>
+	/// <p>When listing a subdirectory, only <see cref="UnderAutomation.ABB.Rws.Data.DirectoryListing.Files"/> and <see cref="UnderAutomation.ABB.Rws.Data.DirectoryListing.Directories"/> are typically populated.</p>
 	/// </summary>
 	public class DirectoryListing {
 
 		/// <summary>
-		/// Initializes a new instance of the <xref href="UnderAutomation.ABB.Rws.Data.DirectoryListing" data-throw-if-not-resolved="false"></xref> class
+		/// Initializes a new instance of the <see cref="UnderAutomation.ABB.Rws.Data.DirectoryListing"/> class
 		/// </summary>
 		public DirectoryListing(string path)
 		{

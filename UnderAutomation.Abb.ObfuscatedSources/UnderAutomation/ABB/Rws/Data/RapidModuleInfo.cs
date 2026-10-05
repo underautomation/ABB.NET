@@ -8,12 +8,12 @@ namespace UnderAutomation.ABB.Rws.Data {
 	/// Everything the controller reports about one module.
 	/// 
 	/// <p>Returned by <code>RapidService.GetModule()</code>; the module lists only carry the properties of the
-	/// <xref href="UnderAutomation.ABB.Rws.Data.RapidModuleItem" data-throw-if-not-resolved="false"></xref> base class.</p>
+	/// <see cref="UnderAutomation.ABB.Rws.Data.RapidModuleItem"/> base class.</p>
 	/// </summary>
 	public class RapidModuleInfo : RapidModuleItem {
 
 		/// <summary>
-		/// Initializes a new instance of the <xref href="UnderAutomation.ABB.Rws.Data.RapidModuleInfo" data-throw-if-not-resolved="false"></xref> class
+		/// Initializes a new instance of the <see cref="UnderAutomation.ABB.Rws.Data.RapidModuleInfo"/> class
 		/// </summary>
 		public RapidModuleInfo()
 		{

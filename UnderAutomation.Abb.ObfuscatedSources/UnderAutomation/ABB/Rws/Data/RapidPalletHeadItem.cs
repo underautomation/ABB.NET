@@ -8,13 +8,13 @@ namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
 	/// One category of the instruction palette the FlexPendant editor offers, for example "Prog.Flow".
 	/// 
-	/// <p>Returned by <code>RapidService.GetPalletHeads()</code>; its <xref href="UnderAutomation.ABB.Rws.Data.RapidPalletHeadItem.Number" data-throw-if-not-resolved="false"></xref> is what
+	/// <p>Returned by <code>RapidService.GetPalletHeads()</code>; its <see cref="UnderAutomation.ABB.Rws.Data.RapidPalletHeadItem.Number"/> is what
 	/// <code>RapidService.GetPallet()</code> takes.</p>
 	/// </summary>
 	public class RapidPalletHeadItem {
 
 		/// <summary>
-		/// Initializes a new instance of the <xref href="UnderAutomation.ABB.Rws.Data.RapidPalletHeadItem" data-throw-if-not-resolved="false"></xref> class
+		/// Initializes a new instance of the <see cref="UnderAutomation.ABB.Rws.Data.RapidPalletHeadItem"/> class
 		/// </summary>
 		public RapidPalletHeadItem()
 		{

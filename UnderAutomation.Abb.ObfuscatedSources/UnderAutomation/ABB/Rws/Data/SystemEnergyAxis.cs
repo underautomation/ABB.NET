@@ -8,12 +8,12 @@ namespace UnderAutomation.ABB.Rws.Data {
 	/// <summary>
 	/// Energy consumed by one axis of a mechanical unit during the current measurement interval.
 	/// 
-	/// <p>Held by <xref href="UnderAutomation.ABB.Rws.Data.SystemEnergyMechanicalUnit" data-throw-if-not-resolved="false"></xref>.</p>
+	/// <p>Held by <see cref="UnderAutomation.ABB.Rws.Data.SystemEnergyMechanicalUnit"/>.</p>
 	/// </summary>
 	public class SystemEnergyAxis {
 
 		/// <summary>
-		/// Initializes a new instance of the <xref href="UnderAutomation.ABB.Rws.Data.SystemEnergyAxis" data-throw-if-not-resolved="false"></xref> class
+		/// Initializes a new instance of the <see cref="UnderAutomation.ABB.Rws.Data.SystemEnergyAxis"/> class
 		/// </summary>
 		public SystemEnergyAxis()
 		{

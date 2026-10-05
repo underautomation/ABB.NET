@@ -9,12 +9,12 @@ namespace UnderAutomation.ABB.Rws.Data {
 	/// Everything the controller reports about one RAPID task.
 	/// 
 	/// <p>Returned by <code>RapidService.GetTask()</code>; the task lists only carry the properties of the
-	/// <xref href="UnderAutomation.ABB.Rws.Data.RapidTaskItem" data-throw-if-not-resolved="false"></xref> base class.</p>
+	/// <see cref="UnderAutomation.ABB.Rws.Data.RapidTaskItem"/> base class.</p>
 	/// </summary>
 	public class RapidTaskInfo : RapidTaskItem {
 
 		/// <summary>
-		/// Initializes a new instance of the <xref href="UnderAutomation.ABB.Rws.Data.RapidTaskInfo" data-throw-if-not-resolved="false"></xref> class
+		/// Initializes a new instance of the <see cref="UnderAutomation.ABB.Rws.Data.RapidTaskInfo"/> class
 		/// </summary>
 		public RapidTaskInfo()
 		{
@@ -50,7 +50,7 @@ namespace UnderAutomation.ABB.Rws.Data {
 		/// Number of cycles the task is set to run.
 		/// 
 		/// <p>Only reported over a connection established with version 2, and left to
-		/// <xref href="UnderAutomation.ABB.Rws.Data.RapidExecutionCycle.Unknown" data-throw-if-not-resolved="false"></xref> otherwise.</p>
+		/// <see cref="UnderAutomation.ABB.Rws.Data.RapidExecutionCycle.Unknown"/> otherwise.</p>
 		/// </summary>
 		public RapidExecutionCycle ExecutionCycle { get; set; }
 
